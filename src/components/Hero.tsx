@@ -63,23 +63,13 @@ const CTAGroup = styled.div`
   justify-content: center;
 `;
 
-const ScreenshotPlaceholder = styled.div`
+const ScreenshotImage = styled.img`
   width: 100%;
-  max-width: 800px;
-  aspect-ratio: 16 / 9;
+  max-width: 900px;
   border-radius: 0.75rem;
   border: 1px solid ${colors.border};
-  background: linear-gradient(
-    135deg,
-    ${colors.bgSecondary} 0%,
-    ${colors.bgCard} 100%
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${colors.textMuted};
-  font-size: 0.875rem;
   margin-top: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 `;
 
 export default function Hero() {
@@ -98,7 +88,7 @@ export default function Hero() {
             {t(hero.secondaryCta.label)}
           </Button>
         </CTAGroup>
-        <ScreenshotPlaceholder>Screenshot coming soon</ScreenshotPlaceholder>
+        <ScreenshotImage src="/images/screenshot.png" alt="BeatMist" />
       </Container>
     </Section>
   );
