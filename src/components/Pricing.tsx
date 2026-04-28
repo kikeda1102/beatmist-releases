@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { colors, media, spacing } from "../styles/theme";
 import { pricingTiers } from "../data/content";
+import { useTranslation } from "../i18n";
 import Badge from "./shared/Badge";
 import Button from "./shared/Button";
 
@@ -119,10 +120,12 @@ const FeatureItem = styled.li`
 `;
 
 export default function Pricing() {
+  const { t } = useTranslation();
+
   return (
     <Section id="pricing">
       <Container>
-        <SectionTitle>Pricing</SectionTitle>
+        <SectionTitle>{t("料金プラン")}</SectionTitle>
         <Grid>
           {pricingTiers.map((tier) => (
             <Card key={tier.name} $recommended={tier.recommended}>
@@ -130,25 +133,27 @@ export default function Pricing() {
                 <TierNameRow>
                   <TierName>{tier.name}</TierName>
                   {tier.recommended && (
-                    <Badge text="Recommended" variant="recommended" />
+                    <Badge text={t("おすすめ")} variant="recommended" />
                   )}
                 </TierNameRow>
                 <Price>
                   {tier.price}
-                  {tier.priceNote && <PriceNote>{tier.priceNote}</PriceNote>}
+                  {tier.priceNote && (
+                    <PriceNote>{t(tier.priceNote)}</PriceNote>
+                  )}
                 </Price>
-                <TierDescription>{tier.description}</TierDescription>
+                <TierDescription>{t(tier.description)}</TierDescription>
               </CardHeader>
               <FeatureList>
                 {tier.features.map((feature) => (
-                  <FeatureItem key={feature}>{feature}</FeatureItem>
+                  <FeatureItem key={feature}>{t(feature)}</FeatureItem>
                 ))}
               </FeatureList>
               <Button
                 href={tier.cta.href}
                 variant={tier.recommended ? "primary" : "secondary"}
               >
-                {tier.cta.label}
+                {t(tier.cta.label)}
               </Button>
             </Card>
           ))}

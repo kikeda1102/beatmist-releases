@@ -1,5 +1,5 @@
 {
-  "name": "intergalactic-iron",
+  "name": "beatmist-releases",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check:i18n": "tsx scripts/check-translations.ts",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",
@@ -21,6 +23,8 @@
     "styled-components": "^6.4.1"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.36"
+    "@types/styled-components": "^5.1.36",
+    "husky": "^9.1.7",
+    "tsx": "^4.21.0"
   }
 }

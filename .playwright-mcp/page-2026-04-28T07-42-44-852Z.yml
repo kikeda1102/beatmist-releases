@@ -1,0 +1,159 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "BeatMist" [ref=e5]:
+          - /url: "#"
+        - generic [ref=e6]:
+          - navigation [ref=e7]:
+            - link "Features" [ref=e159]:
+              - /url: "#features"
+            - link "Pricing" [ref=e160]:
+              - /url: "#pricing"
+            - link "Download" [ref=e161]:
+              - /url: "#download"
+          - button "JA" [ref=e162] [cursor=pointer]
+    - main [ref=e12]:
+      - generic [ref=e14]:
+        - heading "BeatMist" [level=1] [ref=e15]
+        - paragraph [ref=e16]: Centralize scattered audio files. Tag, search, and preview to streamline your music production workflow.
+        - generic [ref=e17]:
+          - link "Purchase on BOOTH" [ref=e163] [cursor=pointer]:
+            - /url: https://booth.pm/placeholder
+          - link "Try for Free" [ref=e164] [cursor=pointer]:
+            - /url: "#download"
+        - generic [ref=e20]: Screenshot coming soon
+      - generic [ref=e22]:
+        - heading "Features" [level=2] [ref=e165]
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - generic [ref=e26]:
+              - generic [ref=e27]: 📁
+              - heading "Centralized Management" [level=3] [ref=e166]
+            - paragraph [ref=e29]: Flexible sound source management independent of folder structure. Browse across multiple storage locations at a glance.
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: 🏷️
+              - heading "Tag Management" [level=3] [ref=e167]
+            - paragraph [ref=e34]: Organize sound sources with free tagging. Build your own classification system by genre, instrument, BPM, and more.
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - generic [ref=e37]: 🔍
+              - heading "Fast Search" [level=3] [ref=e168]
+              - generic [ref=e39]: NEW
+            - paragraph [ref=e40]: Quickly access target sound sources with incremental search. Supports combining multiple search conditions.
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - generic [ref=e43]: 🎧
+              - heading "Preview Playback" [level=3] [ref=e169]
+            - paragraph [ref=e45]: Browse without launching your DAW. Quickly check sound sources with waveform display and loop playback.
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - generic [ref=e48]: 🔗
+              - heading "DAW Integration" [level=3] [ref=e170]
+            - paragraph [ref=e50]: Instantly import to your favorite DAW via drag & drop. Compatible with major DAWs.
+          - generic [ref=e51]:
+            - generic [ref=e52]:
+              - generic [ref=e53]: ☁️
+              - heading "Backup" [level=3] [ref=e171]
+            - paragraph [ref=e55]: Export your sound library settings. Easy environment migration and backup.
+      - generic [ref=e57]:
+        - heading "Pricing" [level=2] [ref=e172]
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - heading "Free" [level=3] [ref=e63]
+              - generic [ref=e64]: ¥0
+              - paragraph [ref=e65]: For those who want to try it first
+            - list [ref=e66]:
+              - listitem [ref=e67]: ✓ Manage up to 100 sound files
+              - listitem [ref=e68]: ✓ Basic tagging
+              - listitem [ref=e69]: ✓ Search
+              - listitem [ref=e70]: ✓ Preview Playback
+            - link "Free Download" [ref=e173] [cursor=pointer]:
+              - /url: "#download"
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - heading "Pro" [level=3] [ref=e75]
+                - generic [ref=e76]: Recommended
+              - generic [ref=e77]: ¥X,XXXOne-time purchase
+              - paragraph [ref=e78]: For serious music creators
+            - list [ref=e79]:
+              - listitem [ref=e80]: ✓ Unlimited sound files
+              - listitem [ref=e81]: ✓ Advanced tag management
+              - listitem [ref=e82]: ✓ Multi-folder management
+              - listitem [ref=e83]: ✓ DAW Integration
+              - listitem [ref=e84]: ✓ Batch tag editing
+              - listitem [ref=e85]: ✓ Export / Import
+              - listitem [ref=e86]: ✓ Priority support
+              - listitem [ref=e87]: ✓ All future updates
+            - link "Purchase on BOOTH" [ref=e174] [cursor=pointer]:
+              - /url: https://booth.pm/placeholder
+      - generic [ref=e90]:
+        - heading "Download" [level=2] [ref=e175]
+        - paragraph [ref=e92]: Download for your platform.
+        - generic [ref=e93]: v0.1.0
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e96]: 🪟
+            - generic [ref=e97]: Windows
+            - generic [ref=e98]: Windows 10+
+            - link "Download" [ref=e176] [cursor=pointer]:
+              - /url: "#"
+          - generic [ref=e100]:
+            - generic [ref=e101]: 🍎
+            - generic [ref=e102]: macOS
+            - generic [ref=e103]: macOS 12+
+            - link "Download" [ref=e177] [cursor=pointer]:
+              - /url: "#"
+    - contentinfo [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - heading "Product" [level=4] [ref=e178]
+            - list [ref=e110]:
+              - listitem [ref=e111]:
+                - link "Features" [ref=e179]:
+                  - /url: "#features"
+              - listitem [ref=e113]:
+                - link "Pricing" [ref=e180]:
+                  - /url: "#pricing"
+              - listitem [ref=e115]:
+                - link "Download" [ref=e181]:
+                  - /url: "#download"
+          - generic [ref=e117]:
+            - heading "Community" [level=4] [ref=e182]
+            - list [ref=e119]:
+              - listitem [ref=e120]:
+                - link "Discord" [ref=e121]:
+                  - /url: "#"
+              - listitem [ref=e122]:
+                - link "X (Twitter)" [ref=e123]:
+                  - /url: "#"
+          - generic [ref=e124]:
+            - heading "Legal" [level=4] [ref=e183]
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - link "Terms of Use" [ref=e184]:
+                  - /url: "#"
+              - listitem [ref=e129]:
+                - link "Privacy Policy" [ref=e185]:
+                  - /url: "#"
+        - separator [ref=e131]
+        - paragraph [ref=e132]: © 2026 BeatMist. All rights reserved.
+  - generic [ref=e135]:
+    - button "Menu" [ref=e136]:
+      - img [ref=e138]
+      - generic: Menu
+    - button "Inspect" [ref=e142]:
+      - img [ref=e144]
+      - generic: Inspect
+    - button "Audit" [ref=e146]:
+      - generic [ref=e147]:
+        - img [ref=e148]
+        - img [ref=e151]
+      - generic: Audit
+    - button "Settings" [ref=e154]:
+      - img [ref=e156]
+      - generic: Settings

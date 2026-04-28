@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors, media, spacing } from "../styles/theme";
 import { hero } from "../data/content";
+import { useTranslation } from "../i18n";
 import Button from "./shared/Button";
 
 const Section = styled.section`
@@ -83,17 +84,19 @@ const ScreenshotPlaceholder = styled.div`
 `;
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <Section>
       <Container>
         <Headline>{hero.headline}</Headline>
-        <Subheadline>{hero.description}</Subheadline>
+        <Subheadline>{t(hero.description)}</Subheadline>
         <CTAGroup>
           <Button href={hero.primaryCta.href} variant="primary" size="lg">
-            {hero.primaryCta.label}
+            {t(hero.primaryCta.label)}
           </Button>
           <Button href={hero.secondaryCta.href} variant="secondary" size="lg">
-            {hero.secondaryCta.label}
+            {t(hero.secondaryCta.label)}
           </Button>
         </CTAGroup>
         <ScreenshotPlaceholder>Screenshot coming soon</ScreenshotPlaceholder>

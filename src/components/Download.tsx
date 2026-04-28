@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors, media, spacing } from "../styles/theme";
 import { download } from "../data/content";
+import { useTranslation } from "../i18n";
 import Button from "./shared/Button";
 
 const Section = styled.section`
@@ -78,20 +79,22 @@ const PlatformNote = styled.span`
 `;
 
 export default function Download() {
+  const { t } = useTranslation();
+
   return (
     <Section id="download">
       <Container>
-        <SectionTitle>{download.heading}</SectionTitle>
-        <Description>{download.description}</Description>
+        <SectionTitle>{t(download.heading)}</SectionTitle>
+        <Description>{t(download.description)}</Description>
         <Version>{download.version}</Version>
         <PlatformGrid>
           {download.platforms.map((platform) => (
             <PlatformCard key={platform.name}>
               <PlatformIcon>{platform.icon}</PlatformIcon>
               <PlatformName>{platform.name}</PlatformName>
-              <PlatformNote>{platform.note}</PlatformNote>
+              <PlatformNote>{t(platform.note)}</PlatformNote>
               <Button href={platform.href} variant="secondary" size="sm">
-                Download
+                {t("ダウンロード")}
               </Button>
             </PlatformCard>
           ))}

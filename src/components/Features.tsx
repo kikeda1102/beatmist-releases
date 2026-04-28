@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors, media, spacing } from "../styles/theme";
 import { features } from "../data/content";
+import { useTranslation } from "../i18n";
 import Badge from "./shared/Badge";
 
 const Section = styled.section`
@@ -76,19 +77,21 @@ const CardDescription = styled.p`
 `;
 
 export default function Features() {
+  const { t } = useTranslation();
+
   return (
     <Section id="features">
       <Container>
-        <SectionTitle>Features</SectionTitle>
+        <SectionTitle>{t("機能紹介")}</SectionTitle>
         <Grid>
           {features.map((feature) => (
             <Card key={feature.title}>
               <CardHeader>
                 <CardIcon>{feature.icon}</CardIcon>
-                <CardTitle>{feature.title}</CardTitle>
+                <CardTitle>{t(feature.title)}</CardTitle>
                 {feature.badge && <Badge text={feature.badge} variant="new" />}
               </CardHeader>
-              <CardDescription>{feature.description}</CardDescription>
+              <CardDescription>{t(feature.description)}</CardDescription>
             </Card>
           ))}
         </Grid>

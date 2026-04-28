@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:synapserack.com)",
-      "WebFetch(domain:booth.pm)"
+      "WebFetch(domain:booth.pm)",
+      "Bash(pkill -f \"astro\")"
     ]
   }
 }

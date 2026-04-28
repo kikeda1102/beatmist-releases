@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors, media, spacing } from "../styles/theme";
 import { footer, site } from "../data/content";
+import { useTranslation } from "../i18n";
 
 const FooterWrapper = styled.footer`
   padding: 3rem 1.5rem 2rem;
@@ -65,22 +66,24 @@ const Copyright = styled.p`
 `;
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <FooterWrapper>
       <Container>
         <Grid>
           <Column>
-            <ColumnTitle>Product</ColumnTitle>
+            <ColumnTitle>{t("製品")}</ColumnTitle>
             <LinkList>
               {footer.product.map((link) => (
                 <li key={link.label}>
-                  <FooterLink href={link.href}>{link.label}</FooterLink>
+                  <FooterLink href={link.href}>{t(link.label)}</FooterLink>
                 </li>
               ))}
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>Community</ColumnTitle>
+            <ColumnTitle>{t("コミュニティ")}</ColumnTitle>
             <LinkList>
               {footer.community.map((link) => (
                 <li key={link.label}>
@@ -90,11 +93,11 @@ export default function Footer() {
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>Legal</ColumnTitle>
+            <ColumnTitle>{t("法的情報")}</ColumnTitle>
             <LinkList>
               {footer.legal.map((link) => (
                 <li key={link.label}>
-                  <FooterLink href={link.href}>{link.label}</FooterLink>
+                  <FooterLink href={link.href}>{t(link.label)}</FooterLink>
                 </li>
               ))}
             </LinkList>

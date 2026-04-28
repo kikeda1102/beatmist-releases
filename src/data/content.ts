@@ -1,25 +1,28 @@
 export const site = {
   name: "BeatMist",
-  tagline: "Sound source management, smarter.",
+  tagline: "音源管理を、もっとスマートに。",
   description:
-    "BeatMist is a sound source management software for music creators. Centralize scattered audio files and streamline your production workflow.",
+    "BeatMistは、音楽制作者のための音源管理ソフトウェアです。散らばった音源ファイルを一元管理し、制作ワークフローを効率化します。",
   url: "https://kikeda1102.github.io/beatmist-releases",
   ogImage: "/images/og-image.png",
 } as const;
 
 export const navigation = [
-  { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Download", href: "#download" },
+  { label: "機能", href: "#features" },
+  { label: "料金", href: "#pricing" },
+  { label: "ダウンロード", href: "#download" },
 ] as const;
 
 export const hero = {
   headline: "BeatMist",
-  subheadline: "Sound source management, smarter.",
+  subheadline: "音源管理を、もっとスマートに。",
   description:
-    "Centralize scattered audio files. Tag, search, and preview to streamline your music production workflow.",
-  primaryCta: { label: "Purchase on BOOTH", href: "https://booth.pm/placeholder" },
-  secondaryCta: { label: "Try for Free", href: "#download" },
+    "散らばった音源ファイルを一元管理。タグ付け、検索、プレビューで制作ワークフローを効率化する音源管理ソフトウェア。",
+  primaryCta: {
+    label: "BOOTHで購入",
+    href: "https://booth.pm/placeholder",
+  },
+  secondaryCta: { label: "無料で試す", href: "#download" },
 } as const;
 
 interface Feature {
@@ -32,40 +35,40 @@ interface Feature {
 export const features: readonly Feature[] = [
   {
     icon: "\u{1F4C1}",
-    title: "Centralized Management",
+    title: "一元管理",
     description:
-      "Flexible sound source management independent of folder structure. Browse across multiple storage locations at a glance.",
+      "フォルダ構造に依存しない柔軟な音源管理。複数の保存先を横断して一覧表示。",
   },
   {
     icon: "\u{1F3F7}️",
-    title: "Tag Management",
+    title: "タグ管理",
     description:
-      "Organize sound sources with free tagging. Build your own classification system by genre, instrument, BPM, and more.",
+      "自由なタグ付けで音源を整理。ジャンル、楽器、BPMなど自分だけの分類体系を構築。",
   },
   {
     icon: "\u{1F50D}",
-    title: "Fast Search",
+    title: "高速検索",
     description:
-      "Quickly access target sound sources with incremental search. Supports combining multiple search conditions.",
+      "インクリメンタル検索で目的の音源に素早くアクセス。複数条件の組み合わせにも対応。",
     badge: "NEW",
   },
   {
     icon: "\u{1F3A7}",
-    title: "Preview Playback",
+    title: "プレビュー再生",
     description:
-      "Browse without launching your DAW. Quickly check sound sources with waveform display and loop playback.",
+      "DAWを起動せずにブラウズ。波形表示とループ再生で音源を素早く確認。",
   },
   {
     icon: "\u{1F517}",
-    title: "DAW Integration",
+    title: "DAW連携",
     description:
-      "Instantly import to your favorite DAW via drag & drop. Compatible with major DAWs.",
+      "お気に入りのDAWへドラッグ&ドロップで即座にインポート。主要DAWに対応。",
   },
   {
     icon: "☁️",
-    title: "Backup",
+    title: "バックアップ",
     description:
-      "Export your sound library settings. Easy environment migration and backup.",
+      "音源ライブラリの設定をエクスポート。環境移行やバックアップも簡単。",
   },
 ];
 
@@ -84,59 +87,64 @@ export const pricingTiers: readonly PricingTier[] = [
     name: "Free",
     price: "¥0",
     priceNote: "",
-    description: "For those who want to try it first",
+    description: "まずは試してみたい方に",
     features: [
-      "Manage up to 100 sound files",
-      "Basic tagging",
-      "Search",
-      "Preview playback",
+      "音源ファイル100件まで管理",
+      "基本的なタグ付け",
+      "検索機能",
+      "プレビュー再生",
     ],
     recommended: false,
-    cta: { label: "Free Download", href: "#download" },
+    cta: { label: "無料ダウンロード", href: "#download" },
   },
   {
     name: "Pro",
     price: "¥X,XXX",
-    priceNote: "One-time purchase",
-    description: "For serious music creators",
+    priceNote: "買い切り",
+    description: "本格的な音楽制作者に",
     features: [
-      "Unlimited sound files",
-      "Advanced tag management",
-      "Multi-folder management",
-      "DAW integration",
-      "Batch tag editing",
-      "Export / Import",
-      "Priority support",
-      "All future updates",
+      "音源ファイル無制限",
+      "高度なタグ管理",
+      "複数フォルダ管理",
+      "DAW連携",
+      "バッチタグ編集",
+      "エクスポート / インポート",
+      "優先サポート",
+      "今後の全アップデート",
     ],
     recommended: true,
-    cta: { label: "Purchase on BOOTH", href: "https://booth.pm/placeholder" },
+    cta: { label: "BOOTHで購入", href: "https://booth.pm/placeholder" },
   },
 ];
 
 export const download = {
-  heading: "Download",
-  description: "Download for your platform.",
+  heading: "ダウンロード",
+  description: "お使いのプラットフォームに合わせてダウンロードしてください。",
   version: "v0.1.0",
   platforms: [
-    { name: "Windows", icon: "\u{1FA9F}", href: "#", note: "Windows 10+" },
-    { name: "macOS", icon: "\u{1F34E}", href: "#", note: "macOS 12+" },
+    {
+      name: "Windows",
+      icon: "\u{1FA9F}",
+      href: "#",
+      note: "Windows 10以降",
+    },
+    { name: "macOS", icon: "\u{1F34E}", href: "#", note: "macOS 12以降" },
   ],
 } as const;
 
 export const footer = {
   product: [
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Download", href: "#download" },
+    { label: "機能紹介", href: "#features" },
+    { label: "料金プラン", href: "#pricing" },
+    { label: "ダウンロード", href: "#download" },
   ],
   community: [
     { label: "Discord", href: "#" },
     { label: "X (Twitter)", href: "#" },
   ],
   legal: [
-    { label: "Terms of Use", href: "#" },
-    { label: "Privacy Policy", href: "#" },
+    { label: "利用規約", href: "#" },
+    { label: "プライバシーポリシー", href: "#" },
   ],
   copyright: "2026 BeatMist",
 } as const;

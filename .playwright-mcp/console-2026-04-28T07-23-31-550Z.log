@@ -1,0 +1,4 @@
+[      46ms] [INFO] Successfully preconnected to https://fonts.gstatic.com/ @ :0
+[      66ms] [INFO] Successfully preconnected to https://fonts.googleapis.com/ @ :0
+[      66ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4321/src/i18n/index.ts?t=1777358063335:0
+[      74ms] [ERROR] [astro-island] Error hydrating %s /src/components/App.tsx TypeError: Importing a module script failed. @ http://localhost:4321/?nocache=1:36
