@@ -54,21 +54,12 @@ function collectKeysFromComponents(): Set<string> {
   return keys;
 }
 
-function loadTranslation(locale: string): Record<string, string> {
+async function loadTranslation(
+  locale: string,
+): Promise<Record<string, string>> {
   const filePath = join(srcDir, "i18n", "translations", `${locale}.ts`);
-  const content = readFileSync(filePath, "utf-8");
-
-  const entries: Record<string, string> = {};
-  const entryRegex = /"([^"]+)":\s*(?:"([^"]*?)"|[\s\S]*?"([^"]*?)")/g;
-  let match;
-  while ((match = entryRegex.exec(content)) !== null) {
-    const key = match[1];
-    if (key) {
-      entries[key] = match[2] ?? match[3] ?? "";
-    }
-  }
-
-  return entries;
+  const mod = await import(filePath);
+  return mod.default;
 }
 
 function getAvailableLocales(): string[] {
@@ -78,7 +69,7 @@ function getAvailableLocales(): string[] {
     .map((f) => basename(f, ".ts"));
 }
 
-function main() {
+async function main() {
   const contentKeys = collectKeysFromContent();
   const componentKeys = collectKeysFromComponents();
   const allKeys = new Set([...contentKeys, ...componentKeys]);
@@ -90,7 +81,7 @@ function main() {
   console.log(`Checking ${locales.length} locale(s): ${locales.join(", ")}\n`);
 
   for (const locale of locales) {
-    const translation = loadTranslation(locale);
+    const translation = await loadTranslation(locale);
     const translationKeys = new Set(Object.keys(translation));
 
     const missing = [...allKeys].filter((key) => !translationKeys.has(key));
@@ -105,9 +96,10 @@ function main() {
     }
 
     if (unused.length > 0) {
-      console.warn(`[${locale}] Unused ${unused.length} translation(s):`);
+      hasErrors = true;
+      console.error(`[${locale}] Unused ${unused.length} translation(s):`);
       for (const key of unused) {
-        console.warn(`  - "${key}"`);
+        console.error(`  - "${key}"`);
       }
     }
 

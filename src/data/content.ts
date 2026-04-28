@@ -1,8 +1,8 @@
 export const site = {
   name: "BeatMist",
-  tagline: "音源管理を、もっとスマートに。",
+  tagline: "霧のように直感的。DJのための音源管理ツール",
   description:
-    "BeatMistは、音楽制作者のための音源管理ソフトウェアです。散らばった音源ファイルを一元管理し、制作ワークフローを効率化します。",
+    "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。",
   url: "https://kikeda1102.github.io/beatmist-releases",
   ogImage: "/images/og-image.png",
 } as const;
@@ -15,9 +15,6 @@ export const navigation = [
 
 export const hero = {
   headline: "BeatMist",
-  subheadline: "音源管理を、もっとスマートに。",
-  description:
-    "散らばった音源ファイルを一元管理。タグ付け、検索、プレビューで制作ワークフローを効率化する音源管理ソフトウェア。",
   primaryCta: {
     label: "BOOTHで購入",
     href: "https://booth.pm/placeholder",
@@ -35,40 +32,34 @@ interface Feature {
 export const features: readonly Feature[] = [
   {
     icon: "\u{1F4C1}",
-    title: "一元管理",
+    title: "楽曲ライブラリ管理",
     description:
-      "フォルダ構造に依存しない柔軟な音源管理。複数の保存先を横断して一覧表示。",
+      "フォルダを指定するだけでWAV / MP3 / AIFF / FLACを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示。",
   },
   {
     icon: "\u{1F3F7}️",
-    title: "タグ管理",
+    title: "Rekordbox互換メタデータ編集",
     description:
-      "自由なタグ付けで音源を整理。ジャンル、楽器、BPMなど自分だけの分類体系を構築。",
+      "ID3タグをアプリ上で編集し、ファイルに書き戻し。Rekordboxに再インポートするだけで反映。",
   },
   {
-    icon: "\u{1F50D}",
-    title: "高速検索",
+    icon: "\u{1F30A}",
+    title: "波形プレビュー",
     description:
-      "インクリメンタル検索で目的の音源に素早くアクセス。複数条件の組み合わせにも対応。",
-    badge: "NEW",
+      "楽曲を選択すると波形を即座に描画。視覚的に楽曲の構成を把握できる。",
   },
   {
     icon: "\u{1F3A7}",
-    title: "プレビュー再生",
+    title: "試聴",
     description:
-      "DAWを起動せずにブラウズ。波形表示とループ再生で音源を素早く確認。",
+      "アプリ内で楽曲を再生。シークバーで任意のポイントへジャンプし、素早く確認。",
   },
   {
-    icon: "\u{1F517}",
-    title: "DAW連携",
+    icon: "\u{1F504}",
+    title: "CDJ機種別フォーマット一括変換",
     description:
-      "お気に入りのDAWへドラッグ&ドロップで即座にインポート。主要DAWに対応。",
-  },
-  {
-    icon: "☁️",
-    title: "バックアップ",
-    description:
-      "音源ライブラリの設定をエクスポート。環境移行やバックアップも簡単。",
+      "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。",
+    badge: "NEW",
   },
 ];
 
@@ -89,10 +80,10 @@ export const pricingTiers: readonly PricingTier[] = [
     priceNote: "",
     description: "まずは試してみたい方に",
     features: [
-      "音源ファイル100件まで管理",
-      "基本的なタグ付け",
-      "検索機能",
-      "プレビュー再生",
+      "楽曲ファイル100曲まで管理",
+      "メタデータ閲覧",
+      "波形プレビュー",
+      "試聴",
     ],
     recommended: false,
     cta: { label: "無料ダウンロード", href: "#download" },
@@ -101,14 +92,12 @@ export const pricingTiers: readonly PricingTier[] = [
     name: "Pro",
     price: "¥X,XXX",
     priceNote: "買い切り",
-    description: "本格的な音楽制作者に",
+    description: "本格的なDJ / Composerに",
     features: [
-      "音源ファイル無制限",
-      "高度なタグ管理",
-      "複数フォルダ管理",
-      "DAW連携",
-      "バッチタグ編集",
-      "エクスポート / インポート",
+      "楽曲ファイル無制限",
+      "メタデータ編集・書き戻し",
+      "Rekordbox互換",
+      "CDJ機種別フォーマット一括変換",
       "優先サポート",
       "今後の全アップデート",
     ],
@@ -134,7 +123,7 @@ export const download = {
 
 export const footer = {
   product: [
-    { label: "機能紹介", href: "#features" },
+    { label: "機能", href: "#features" },
     { label: "料金プラン", href: "#pricing" },
     { label: "ダウンロード", href: "#download" },
   ],

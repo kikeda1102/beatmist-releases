@@ -82,7 +82,7 @@ export default function Features() {
   return (
     <Section id="features">
       <Container>
-        <SectionTitle>{t("機能紹介")}</SectionTitle>
+        <SectionTitle>{t("機能")}</SectionTitle>
         <Grid>
           {features.map((feature) => (
             <Card key={feature.title}>

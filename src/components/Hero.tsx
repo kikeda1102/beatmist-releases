@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors, media, spacing } from "../styles/theme";
-import { hero } from "../data/content";
+import { hero, site } from "../data/content";
 import { useTranslation } from "../i18n";
 import Button from "./shared/Button";
 
@@ -46,14 +46,13 @@ const Headline = styled.h1`
   }
 `;
 
-const Subheadline = styled.p`
-  font-size: 1.125rem;
-  color: ${colors.textSecondary};
-  max-width: 600px;
-  line-height: 1.8;
+const Tagline = styled.p`
+  font-size: 1.25rem;
+  color: ${colors.accentPurpleLight};
+  font-weight: 500;
 
   ${media.md} {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -90,7 +89,7 @@ export default function Hero() {
     <Section>
       <Container>
         <Headline>{hero.headline}</Headline>
-        <Subheadline>{t(hero.description)}</Subheadline>
+        <Tagline>{t(site.tagline)}</Tagline>
         <CTAGroup>
           <Button href={hero.primaryCta.href} variant="primary" size="lg">
             {t(hero.primaryCta.label)}
