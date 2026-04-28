@@ -1,6 +1,0 @@
-[     227ms] [INFO] Successfully preconnected to https://fonts.gstatic.com/ @ :0
-[     227ms] [INFO] Successfully preconnected to https://fonts.googleapis.com/ @ :0
-[     639ms] [WARNING] styled-components: it looks like an unknown prop "variant" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.) @ http://localhost:4321/node_modules/.vite/deps/styled-components.js?v=b79c5be0:1281
-[     795ms] [INFO] Successfully preconnected to https://fonts.googleapis.com/ @ :0
-[     795ms] [INFO] Successfully preconnected to https://fonts.gstatic.com/ @ :0
-[    1027ms] [WARNING] styled-components: it looks like an unknown prop "variant" is being sent through to the DOM, which will likely trigger a React console error. If you would like automatic filtering of unknown props, you can opt-into that behavior via `<StyleSheetManager shouldForwardProp={...}>` (connect an API like `@emotion/is-prop-valid`) or consider using transient props (`$` prefix for automatic filtering.) @ http://localhost:4321/node_modules/.vite/deps/styled-components.js?v=7c08292e:1281
