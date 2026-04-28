@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:synapserack.com)",
+      "WebFetch(domain:booth.pm)"
+    ]
+  }
+}

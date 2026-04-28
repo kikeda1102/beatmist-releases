@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import Pricing from "../components/Pricing";
+import Download from "../components/Download";
+import Footer from "../components/Footer";
+import { site } from "../data/content";
+---
+
+<Layout title={site.name} description={site.description}>
+  <Header client:only="react" />
+  <main>
+    <Hero client:only="react" />
+    <Features client:only="react" />
+    <Pricing client:only="react" />
+    <Download client:only="react" />
+  </main>
+  <Footer client:only="react" />
+</Layout>
