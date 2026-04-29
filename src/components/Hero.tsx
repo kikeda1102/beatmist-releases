@@ -10,7 +10,17 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   padding: 4rem 1.5rem;
-  background-color: ${colors.bgPrimary};
+  overflow: hidden;
+  background:
+    linear-gradient(
+      to bottom,
+      ${colors.bgPrimary} 0%,
+      transparent 40%,
+      transparent 70%,
+      ${colors.bgPrimary} 100%
+    ),
+    url("/images/hero-bg.png") center bottom / cover no-repeat
+      ${colors.bgPrimary};
 `;
 
 const Container = styled.div`
