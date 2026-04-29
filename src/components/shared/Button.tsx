@@ -90,8 +90,16 @@ export default function Button({
       </StyledButton>
     );
   }
+
+  const isExternal = href?.startsWith("http");
+
   return (
-    <StyledLink href={href} $variant={variant} $size={size}>
+    <StyledLink
+      href={href}
+      $variant={variant}
+      $size={size}
+      {...(isExternal && { target: "_blank", rel: "noopener noreferrer" })}
+    >
       {children}
     </StyledLink>
   );
