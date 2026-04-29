@@ -76,7 +76,7 @@ export const highlights: readonly Highlight[] = [
   },
   {
     title: "Windows / Mac 両対応",
-    description: "Windows / Mac 両対応です。",
+    description: "Windows / Mac 両対応です (macOSはApple Siliconのみ対応)。",
   },
   {
     title: "1ライセンスで3台まで",
@@ -129,13 +129,17 @@ export const pricingTiers: readonly PricingTier[] = [
       "無料での一生涯アップデート",
     ],
     recommended: true,
-    cta: { label: "ライセンスを購入", href: "https://buy.stripe.com/7sY00c0qvd7hf7B10zdMI00" },
+    cta: {
+      label: "ライセンスを購入",
+      href: "https://buy.stripe.com/7sY00c0qvd7hf7B10zdMI00",
+    },
   },
 ];
 
 export const contact = {
   title: "お問い合わせ",
-  description: "ご質問やご要望がありましたら、下記フォームよりお気軽にお問い合わせください。",
+  description:
+    "ご質問やご要望がありましたら、下記フォームよりお気軽にお問い合わせください。",
   fields: {
     name: "お名前",
     email: "メールアドレス",
@@ -144,9 +148,12 @@ export const contact = {
   required: "必須",
   submit: "送信する",
   submitting: "送信中...",
-  success: "お問い合わせを受け付けました。確認メールをお送りしましたのでご確認ください。\nもし届かない場合は、迷惑メールフォルダをご確認ください。",
-  error: "送信に失敗しました。お手数ですが、しばらく経ってからもう一度お試しください。",
-  rateLimit: "送信回数の上限に達しました。しばらく経ってからもう一度お試しください。",
+  success:
+    "お問い合わせを受け付けました。確認メールをお送りしましたのでご確認ください。\nもし届かない場合は、迷惑メールフォルダをご確認ください。",
+  error:
+    "送信に失敗しました。お手数ですが、しばらく経ってからもう一度お試しください。",
+  rateLimit:
+    "送信回数の上限に達しました。しばらく経ってからもう一度お試しください。",
   validationError: "入力内容に誤りがあります。",
   validation: {
     nameRequired: "お名前を入力してください",
@@ -166,11 +173,7 @@ export const footer = {
     { label: "料金プラン", href: "#pricing" },
     { label: "お問い合わせ", href: "#contact" },
   ],
-  legal: [
-    { label: "特定商取引法に基づく表記", href: "/tokushoho" },
-  ],
-  community: [
-    { label: "X (Twitter)", href: "https://x.com/purocura" },
-  ],
+  legal: [{ label: "特定商取引法に基づく表記", href: "/tokushoho" }],
+  community: [{ label: "X (Twitter)", href: "https://x.com/purocura" }],
   copyright: "2026 BeatMist",
 } as const;

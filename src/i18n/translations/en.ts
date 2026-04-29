@@ -34,7 +34,8 @@ const en: Record<string, string> = {
   "対象のCDJ機種を設定しておくだけで、非対応フォーマットを自動的に検出し、最適な形式へ変換します。":
     "Just set your target CDJ model, and unsupported formats are automatically detected and converted to the optimal format.",
   "Windows / Mac 両対応": "Windows / Mac Compatible",
-  "Windows / Mac 両対応です。": "Available on both Windows and Mac.",
+  "Windows / Mac 両対応です (macOSはApple Siliconのみ対応)。":
+    "Available on both Windows and Mac (Apple Silicon only for macOS).",
   "1ライセンスで3台まで": "1 License, Up to 3 Devices",
   "1つのご購入で、最大3台のPCにアクティベートできます。":
     "Activate on up to 3 PCs with a single purchase.",
@@ -64,6 +65,8 @@ const en: Record<string, string> = {
   "読み込み中...": "Loading...",
   "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。":
     "Failed to fetch download links. Please try again later.",
+  "動作環境: Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）":
+    "System Requirements: Windows 10+ / macOS 12+ (Apple Silicon only)",
 
   // contact section
   "お問い合わせ": "Contact",

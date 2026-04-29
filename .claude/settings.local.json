@@ -5,7 +5,8 @@
       "WebFetch(domain:booth.pm)",
       "Bash(pkill -f \"astro\")",
       "Bash(git checkout *)",
-      "Bash(npx astro *)"
+      "Bash(npx astro *)",
+      "Bash(xargs kill *)"
     ]
   }
 }

@@ -38,7 +38,7 @@ function collectKeysFromComponents(): Set<string> {
       if (entry.isDirectory()) {
         scanDir(fullPath);
       } else if (entry.name.endsWith(".tsx") || entry.name.endsWith(".ts")) {
-        const tCallRegex = /\bt\(\s*["']([^"']+)["']\s*\)/g;
+        const tCallRegex = /\bt\(\s*["']([^"']+)["']\s*,?\s*\)/g;
         const content = readFileSync(fullPath, "utf-8");
         let match;
         while ((match = tCallRegex.exec(content)) !== null) {
