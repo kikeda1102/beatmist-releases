@@ -144,6 +144,8 @@ export const contact = {
     name: "お名前",
     email: "メールアドレス",
     message: "お問い合わせ内容",
+    messageHint:
+      "不具合のご報告の際は、ご利用のOS（Windows / macOS）とバージョン、BeatMistのバージョンもあわせてご記載ください。エラーの様子がわかるスクリーンショットや動画を共有いただけると、よりスムーズにサポートさせていただくことができます。",
   },
   required: "必須",
   submit: "送信する",

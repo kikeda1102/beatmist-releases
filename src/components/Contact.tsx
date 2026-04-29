@@ -148,6 +148,13 @@ const SubmitButton = styled.button`
   }
 `;
 
+const HelperText = styled.p`
+  font-size: 0.8rem;
+  color: ${colors.textMuted};
+  line-height: 1.6;
+  margin: 0;
+`;
+
 const HoneypotField = styled.input`
   position: absolute;
   left: -9999px;
@@ -283,6 +290,7 @@ export default function Contact() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
+              <HelperText>{t(contact.fields.messageHint)}</HelperText>
               {errors?.message && (
                 <ErrorText>{t(errors.message[0])}</ErrorText>
               )}
