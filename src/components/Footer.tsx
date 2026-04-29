@@ -23,7 +23,7 @@ const Grid = styled.div`
   text-align: center;
 
   ${media.md} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 `;
 
@@ -78,6 +78,16 @@ export default function Footer() {
             <ColumnTitle>{t("製品")}</ColumnTitle>
             <LinkList>
               {footer.product.map((link) => (
+                <li key={link.label}>
+                  <FooterLink href={link.href}>{t(link.label)}</FooterLink>
+                </li>
+              ))}
+            </LinkList>
+          </Column>
+          <Column>
+            <ColumnTitle>{t("ドキュメント")}</ColumnTitle>
+            <LinkList>
+              {footer.docs.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{t(link.label)}</FooterLink>
                 </li>

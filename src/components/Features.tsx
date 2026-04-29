@@ -77,6 +77,19 @@ const CardDescription = styled.p`
   line-height: 1.7;
 `;
 
+const CardLink = styled.a`
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: ${colors.accent};
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${colors.accentHover};
+  }
+`;
+
 export default function Features() {
   const { t } = useTranslation();
 
@@ -93,6 +106,11 @@ export default function Features() {
                 {feature.badge && <Badge text={feature.badge} variant="new" />}
               </CardHeader>
               <CardDescription>{t(feature.description)}</CardDescription>
+              {feature.href && (
+                <CardLink href={feature.href}>
+                  {t("詳しい仕様を見る")} &rarr;
+                </CardLink>
+              )}
             </Card>
           ))}
         </Grid>

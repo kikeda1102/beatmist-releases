@@ -119,18 +119,125 @@ const en: Record<string, string> = {
     "Paste your key and click Activate",
 
   // release notes section
-  "過去のバージョンを表示": "Show older versions",
+  過去のバージョンを表示: "Show older versions",
   閉じる: "Show less",
   追加: "Added",
   変更: "Changed",
   修正: "Fixed",
-  "リリースノートの取得に失敗しました。":
-    "Failed to load release notes.",
+  "リリースノートの取得に失敗しました。": "Failed to load release notes.",
+
+  // navigation / shared
+  ドキュメント: "Docs",
+  詳しい仕様を見る: "View detailed specs",
 
   // footer
   製品: "Product",
+  BeatMistの変換仕様について: "About BeatMist's Conversion Specifications",
   法的事項: "Legal",
   特定商取引法に基づく表記: "Specified Commercial Transactions Act",
+
+  変換仕様について: "Conversion Specs",
+
+  // CDJ conversion docs
+  "BeatMistの「設定したCDJに自動最適化」機能は、登録した楽曲ファイルを設定済みのCDJ機種で再生可能なフォーマット・サンプルレート・ビット深度に自動変換します。このドキュメントでは、変換の挙動と仕様を詳しく説明します。":
+    'BeatMist\'s "Auto-optimize for configured CDJ" feature automatically converts registered tracks to a format, sample rate, and bit depth playable on your configured CDJ model. This document explains the conversion behavior and specifications in detail.',
+  目次: "Table of Contents",
+  対応CDJ機種と再生可能スペック: "Supported CDJ Models & Playback Specs",
+  自動最適化の変換ロジック: "Auto-Optimization Conversion Logic",
+  変換例: "Conversion Examples",
+  スキップされる変換: "Skipped Conversions",
+  安全機能: "Safety Features",
+  技術仕様: "Technical Specifications",
+
+  "BeatMistは以下の6機種に対応しています。各機種ごとに対応するフォーマット・サンプルレート・ビット深度が異なります。":
+    "BeatMist supports the following 6 CDJ models. Supported formats, sample rates, and bit depths vary by model.",
+  機種別対応フォーマット: "Supported Formats by Model",
+  機種: "Model",
+  対応: "Yes",
+  非対応: "No",
+  機種別サンプルレート・ビット深度: "Sample Rate & Bit Depth by Model",
+  "WAV サンプルレート": "WAV Sample Rate",
+  "AIFF サンプルレート": "AIFF Sample Rate",
+  "PCM ビット深度": "PCM Bit Depth",
+  "MP3 / AAC サンプルレート": "MP3 / AAC Sample Rate",
+  "注意:": "Note:",
+  "CDJ-2000NXS2はWAVフォーマットのみ88.2kHzに非対応です。AIFFでは88.2kHzに対応しています。88.2kHzのWAVファイルを再生したい場合は、変換先フォーマットにAIFFを選択してください。":
+    "CDJ-2000NXS2 does not support 88.2kHz for WAV format only. AIFF supports 88.2kHz. If you want to play 88.2kHz WAV files, select AIFF as the target format.",
+
+  "自動最適化モードでは、元のファイルのサンプルレートとビット深度を可能な限り維持しつつ、設定したCDJ機種で再生可能なスペックに変換します。":
+    "In auto-optimization mode, the original file's sample rate and bit depth are preserved as much as possible while converting to specs playable on your configured CDJ model.",
+  変換ルール: "Conversion Rules",
+  "元のサンプルレート・ビット深度がCDJ機種の許容範囲内の場合、スペックはそのまま維持されます。":
+    "If the original sample rate and bit depth are within the CDJ model's supported range, the specs are preserved as-is.",
+  "元の値がCDJ機種の許容範囲を超過する場合、許容範囲内で最大の値にダウンサンプリング・ダウンビットされます。":
+    "If the original values exceed the CDJ model's supported range, they are downsampled to the highest supported value within the allowed range.",
+  "元のファイルのメタデータが不明（サンプルレートやビット深度が取得できない場合）は、安全側のデフォルト値（44.1kHz / 16bit）が適用されます。":
+    "If the original file's metadata is unknown (sample rate or bit depth cannot be read), safe defaults of 44.1kHz / 16bit are applied.",
+  変換先フォーマット: "Target Format",
+  "選択可能なフォーマット: AIFF / WAV / MP3":
+    "Selectable formats: AIFF / WAV / MP3",
+  "デフォルトの変換先フォーマットはAIFFです。AIFFはロスレスかつ全CDJ機種で対応しているため、最も安全な選択肢です。":
+    "The default target format is AIFF. AIFF is lossless and supported by all CDJ models, making it the safest choice.",
+  "MP3に変換する場合、ビットレートは320kbpsで固定されます。":
+    "When converting to MP3, the bitrate is fixed at 320kbps.",
+
+  マニュアルモード: "Manual Mode",
+  "マニュアルモードでは、変換先のフォーマット・サンプルレート・ビット深度（またはビットレート）をユーザーが直接指定できます。":
+    "In manual mode, you can directly specify the target format, sample rate, and bit depth (or bitrate).",
+  選択可能なサンプルレート: "Available Sample Rates",
+  "選択可能なビット深度 / ビットレート": "Available Bit Depth / Bitrate",
+
+  "以下は、自動最適化モードでの具体的な変換例です。":
+    "Below are specific examples of auto-optimization conversions.",
+  例: "Example",
+  変換先: "Target",
+  変換不要: "No conversion needed",
+  "CDJ-2000NXS2のWAVは88.2kHz非対応。許容範囲内の最大値である48kHzにダウンサンプリング。ビット深度は24bitのまま維持。":
+    "CDJ-2000NXS2 WAV does not support 88.2kHz. Downsampled to 48kHz (highest supported value). Bit depth preserved at 24bit.",
+  "CDJ-2000NXS2のAIFFは88.2kHz対応。サンプルレート・ビット深度を維持したままフォーマットのみ変換。":
+    "CDJ-2000NXS2 AIFF supports 88.2kHz. Only the format is converted while preserving sample rate and bit depth.",
+  "CDJ-900のサンプルレート上限は48kHz、ビット深度上限は24bit。両方の値を許容範囲内の最大値にダウン。":
+    "CDJ-900 max sample rate is 48kHz, max bit depth is 24bit. Both values are downsampled to their respective maximums.",
+  "CDJ-3000XはMP3 44.1kHzに対応しているため、変換は行われない。":
+    "CDJ-3000X supports MP3 at 44.1kHz, so no conversion is performed.",
+  "FLACはCDJ-2000NXS2で対応しているが、変換先にAIFFを指定。AIFFは88.2kHz対応のため、スペックを維持したままフォーマットのみ変換。":
+    "FLAC is supported by CDJ-2000NXS2, but AIFF is specified as the target format. Since AIFF supports 88.2kHz, only the format is converted while preserving specs.",
+
+  "以下のケースでは、品質が向上しないため変換がスキップされます。":
+    "In the following cases, conversions are skipped because they would not improve quality.",
+  同一フォーマット変換: "Same-format conversion",
+  " — 元のフォーマットと変換先フォーマットが同じ場合（例: WAV → WAV）":
+    " — when the source and target formats are the same (e.g., WAV → WAV)",
+  "ロッシー → ロスレス変換": "Lossy → Lossless conversion",
+  " — MP3やAACなどのロッシー形式からWAVやAIFFなどのロスレス形式への変換（例: MP3 → WAV）。ロッシー圧縮で失われた情報はロスレス変換では復元できません。":
+    " — converting from lossy formats like MP3/AAC to lossless formats like WAV/AIFF (e.g., MP3 → WAV). Information lost during lossy compression cannot be recovered by lossless conversion.",
+  "補足:": "Note:",
+  "スキップ対象のトラックは変換実行時に自動的に除外され、変換の事前サマリに内訳が表示されます。":
+    "Skipped tracks are automatically excluded during conversion, and the breakdown is shown in the pre-conversion summary.",
+
+  バックアップと復元: "Backup & Restore",
+  "変換前のオリジナルファイルは自動的にバックアップディレクトリに保存されます。":
+    "Original files before conversion are automatically saved to a backup directory.",
+  "変換後でも、いつでもオリジナルのフォーマットに復元（リバート）できます。":
+    "Even after conversion, you can restore (revert) to the original format at any time.",
+  "変換中にアプリがクラッシュした場合、次回起動時に自動的に復旧処理が実行されます（オーファンリカバリ）。":
+    "If the app crashes during conversion, automatic recovery is performed on the next startup (orphan recovery).",
+  プラン別の制限: "Plan Limits",
+  プラン: "Plan",
+  一括変換の上限: "Batch Conversion Limit",
+  "100トラックまで": "Up to 100 tracks",
+  無制限: "Unlimited",
+
+  "音声変換にはFFmpegを使用しています。各フォーマットで使用されるコーデックは以下の通りです。":
+    "Audio conversion uses FFmpeg. The codecs used for each format are as follows.",
+  "WAVはリトルエンディアン、AIFFはビッグエンディアンのPCMコーデックを使用します。":
+    "WAV uses little-endian PCM codecs, AIFF uses big-endian PCM codecs.",
+  "変換時にオリジナルファイルのメタデータ（タイトル、アーティスト等）は保持されます。":
+    "Original file metadata (title, artist, etc.) is preserved during conversion.",
+  "変換後のファイルは元ファイルと同じディレクトリに出力されます。ファイル名が重複する場合は連番が付与されます。":
+    "Converted files are output to the same directory as the original file. If the filename already exists, a sequential number is appended.",
+
+  トップページに戻る: "Back to Home",
 };
 
 export default en;

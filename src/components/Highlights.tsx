@@ -49,6 +49,19 @@ const ItemDescription = styled.p`
   line-height: 1.7;
 `;
 
+const ItemLink = styled.a`
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: ${colors.accent};
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${colors.accentHover};
+  }
+`;
+
 export default function Highlights() {
   const { t } = useTranslation();
 
@@ -60,6 +73,11 @@ export default function Highlights() {
             <Item key={item.title}>
               <ItemTitle>{t(item.title)}</ItemTitle>
               <ItemDescription>{t(item.description)}</ItemDescription>
+              {item.href && (
+                <ItemLink href={item.href}>
+                  {t("詳しい仕様を見る")} &rarr;
+                </ItemLink>
+              )}
             </Item>
           ))}
         </List>

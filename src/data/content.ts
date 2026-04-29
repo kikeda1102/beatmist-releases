@@ -13,6 +13,7 @@ export const navigation = [
   { label: "リリースノート", href: "#release-notes" },
   { label: "料金", href: "#pricing" },
   { label: "お問い合わせ", href: "#contact" },
+  { label: "ドキュメント", href: "/docs" },
 ] as const;
 
 export const hero = {
@@ -28,6 +29,7 @@ interface Feature {
   readonly title: string;
   readonly description: string;
   readonly badge?: string;
+  readonly href?: string;
 }
 
 export const features: readonly Feature[] = [
@@ -61,12 +63,14 @@ export const features: readonly Feature[] = [
     description:
       "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。",
     badge: "NEW",
+    href: "/docs",
   },
 ];
 
 interface Highlight {
   readonly title: string;
   readonly description: string;
+  readonly href?: string;
 }
 
 export const highlights: readonly Highlight[] = [
@@ -74,6 +78,7 @@ export const highlights: readonly Highlight[] = [
     title: "CDJ機種を選ぶだけで自動変換",
     description:
       "対象のCDJ機種を設定しておくだけで、非対応フォーマットを自動的に検出し、最適な形式へ変換します。",
+    href: "/docs",
   },
   {
     title: "Windows / Mac 両対応",
@@ -177,7 +182,64 @@ export const footer = {
     { label: "料金プラン", href: "#pricing" },
     { label: "お問い合わせ", href: "#contact" },
   ],
+  docs: [{ label: "変換仕様について", href: "/docs" }],
   legal: [{ label: "特定商取引法に基づく表記", href: "/tokushoho" }],
   community: [{ label: "X (Twitter)", href: "https://x.com/purocura" }],
   copyright: "2026 BeatMist",
 } as const;
+
+export interface ConversionExample {
+  readonly title: string;
+  readonly input: string;
+  readonly model: string;
+  readonly targetFormat: string;
+  readonly output: string;
+  readonly reason: string;
+}
+
+export const conversionExamples: readonly ConversionExample[] = [
+  {
+    title: "WAV 88.2kHz → CDJ-2000NXS2 (WAV)",
+    input: "WAV 88.2kHz / 24bit",
+    model: "CDJ-2000NXS2",
+    targetFormat: "WAV",
+    output: "WAV 48kHz / 24bit",
+    reason:
+      "CDJ-2000NXS2のWAVは88.2kHz非対応。許容範囲内の最大値である48kHzにダウンサンプリング。ビット深度は24bitのまま維持。",
+  },
+  {
+    title: "WAV 88.2kHz → CDJ-2000NXS2 (AIFF)",
+    input: "WAV 88.2kHz / 24bit",
+    model: "CDJ-2000NXS2",
+    targetFormat: "AIFF",
+    output: "AIFF 88.2kHz / 24bit",
+    reason:
+      "CDJ-2000NXS2のAIFFは88.2kHz対応。サンプルレート・ビット深度を維持したままフォーマットのみ変換。",
+  },
+  {
+    title: "FLAC 96kHz/32bit → CDJ-900 (AIFF)",
+    input: "FLAC 96kHz / 32bit",
+    model: "CDJ-900",
+    targetFormat: "AIFF",
+    output: "AIFF 48kHz / 24bit",
+    reason:
+      "CDJ-900のサンプルレート上限は48kHz、ビット深度上限は24bit。両方の値を許容範囲内の最大値にダウン。",
+  },
+  {
+    title: "MP3 44.1kHz → CDJ-3000X",
+    input: "MP3 44.1kHz",
+    model: "CDJ-3000X",
+    targetFormat: "-",
+    output: "変換不要",
+    reason: "CDJ-3000XはMP3 44.1kHzに対応しているため、変換は行われない。",
+  },
+  {
+    title: "FLAC 88.2kHz → CDJ-2000NXS2 (AIFF)",
+    input: "FLAC 88.2kHz / 24bit",
+    model: "CDJ-2000NXS2",
+    targetFormat: "AIFF",
+    output: "AIFF 88.2kHz / 24bit",
+    reason:
+      "FLACはCDJ-2000NXS2で対応しているが、変換先にAIFFを指定。AIFFは88.2kHz対応のため、スペックを維持したままフォーマットのみ変換。",
+  },
+];
