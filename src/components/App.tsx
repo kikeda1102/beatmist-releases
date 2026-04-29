@@ -13,8 +13,8 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Features />
         <Highlights />
+        <Features />
         <Pricing />
         <BoothCta />
       </main>
