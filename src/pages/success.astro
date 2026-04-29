@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Success from "../components/Success";
+import { site } from "../data/content";
+---
+
+<Layout title={`${site.name} - Purchase Complete`} description="Your BeatMist Pro license key">
+  <Success client:only="react" />
+</Layout>
