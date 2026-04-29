@@ -10,6 +10,7 @@ export const site = {
 export const navigation = [
   { label: "機能", href: "#features" },
   { label: "ダウンロード", href: "#download" },
+  { label: "リリースノート", href: "#release-notes" },
   { label: "料金", href: "#pricing" },
   { label: "お問い合わせ", href: "#contact" },
 ] as const;
@@ -172,6 +173,7 @@ export const footer = {
   product: [
     { label: "機能", href: "#features" },
     { label: "ダウンロード", href: "#download" },
+    { label: "リリースノート", href: "#release-notes" },
     { label: "料金プラン", href: "#pricing" },
     { label: "お問い合わせ", href: "#contact" },
   ],

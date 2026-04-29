@@ -7,6 +7,7 @@ const en: Record<string, string> = {
 
   // navigation
   機能: "Features",
+  リリースノート: "Release Notes",
   料金: "Pricing",
 
   // hero
@@ -116,6 +117,15 @@ const en: Record<string, string> = {
   "設定 → ライセンス を開く": "Open Settings → License",
   "キーを貼り付けて「アクティベート」をクリック":
     "Paste your key and click Activate",
+
+  // release notes section
+  "過去のバージョンを表示": "Show older versions",
+  閉じる: "Show less",
+  追加: "Added",
+  変更: "Changed",
+  修正: "Fixed",
+  "リリースノートの取得に失敗しました。":
+    "Failed to load release notes.",
 
   // footer
   製品: "Product",
