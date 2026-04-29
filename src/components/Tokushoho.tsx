@@ -96,7 +96,7 @@ export default function Tokushoho() {
             </Row>
             <Row>
               <Header>販売URL</Header>
-              <Data>https://beatmist.pages.dev</Data>
+              <Data>https://beatmist.com</Data>
             </Row>
             <Row>
               <Header>販売価格</Header>
@@ -128,7 +128,9 @@ export default function Tokushoho() {
             </Row>
             <Row>
               <Header>動作環境</Header>
-              <Data>Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）</Data>
+              <Data>
+                Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）
+              </Data>
             </Row>
           </tbody>
         </Table>
