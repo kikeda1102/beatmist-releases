@@ -8,11 +8,10 @@ const en: Record<string, string> = {
   // navigation
   機能: "Features",
   料金: "Pricing",
-  ダウンロード: "Download",
 
   // hero
-  BOOTHで購入: "Purchase on BOOTH",
   無料で試す: "Try for Free",
+  BOOTHでDL: "Download on BOOTH",
 
   // features section
   楽曲ライブラリ管理: "Track Library Management",
@@ -31,26 +30,20 @@ const en: Record<string, string> = {
   "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。":
     "Just select your target CDJ — unsupported formats are auto-detected and batch-converted to the optimal format.",
 
+
   // pricing section
   料金プラン: "Pricing",
   まずは試してみたい方に: "For those who want to try it first",
   楽曲ファイル100曲まで管理: "Manage up to 100 tracks",
   メタデータ閲覧: "Metadata viewing",
-  無料ダウンロード: "Free Download",
   買い切り: "One-time purchase",
-  "本格的なDJ / Composerに": "For serious DJs and Composers",
+  すべてのDJに: "For every DJ",
   楽曲ファイル無制限: "Unlimited tracks",
   "メタデータ編集・書き戻し": "Metadata editing & write-back",
   Rekordbox互換: "Rekordbox compatible",
   優先サポート: "Priority support",
-  今後の全アップデート: "All future updates",
+  生涯アップデート: "Lifetime updates",
   おすすめ: "Recommended",
-
-  // download section
-  "お使いのプラットフォームに合わせてダウンロードしてください。":
-    "Download for your platform.",
-  "Windows 10以降": "Windows 10+",
-  "macOS 12以降": "macOS 12+",
 
   // footer
   製品: "Product",

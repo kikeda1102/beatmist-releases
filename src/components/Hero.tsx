@@ -56,13 +56,6 @@ const Tagline = styled.p`
   }
 `;
 
-const CTAGroup = styled.div`
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-`;
-
 const ScreenshotImage = styled.img`
   width: 100%;
   max-width: 900px;
@@ -80,14 +73,9 @@ export default function Hero() {
       <Container>
         <Headline>{hero.headline}</Headline>
         <Tagline>{t(site.tagline)}</Tagline>
-        <CTAGroup>
-          <Button href={hero.primaryCta.href} variant="primary" size="lg">
-            {t(hero.primaryCta.label)}
-          </Button>
-          <Button href={hero.secondaryCta.href} variant="secondary" size="lg">
-            {t(hero.secondaryCta.label)}
-          </Button>
-        </CTAGroup>
+        <Button href={hero.cta.href} variant="primary" size="lg">
+          {t(hero.cta.label)}
+        </Button>
         <ScreenshotImage src="/images/screenshot.png" alt="BeatMist" />
       </Container>
     </Section>

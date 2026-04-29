@@ -3,7 +3,7 @@ import Header from "./Header";
 import Hero from "./Hero";
 import Features from "./Features";
 import Pricing from "./Pricing";
-import Download from "./Download";
+import BoothCta from "./BoothCta";
 import Footer from "./Footer";
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
         <Hero />
         <Features />
         <Pricing />
-        <Download />
+        <BoothCta />
       </main>
       <Footer />
     </TranslationProvider>

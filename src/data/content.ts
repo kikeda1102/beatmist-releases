@@ -10,16 +10,19 @@ export const site = {
 export const navigation = [
   { label: "機能", href: "#features" },
   { label: "料金", href: "#pricing" },
-  { label: "ダウンロード", href: "#download" },
 ] as const;
 
 export const hero = {
   headline: "BeatMist",
-  primaryCta: {
-    label: "BOOTHで購入",
+  cta: {
+    label: "無料で試す",
     href: "https://booth.pm/placeholder",
   },
-  secondaryCta: { label: "無料で試す", href: "#download" },
+} as const;
+
+export const boothCta = {
+  label: "BOOTHでDL",
+  href: "https://booth.pm/placeholder",
 } as const;
 
 interface Feature {
@@ -86,46 +89,30 @@ export const pricingTiers: readonly PricingTier[] = [
       "試聴",
     ],
     recommended: false,
-    cta: { label: "無料ダウンロード", href: "#download" },
+    cta: { label: "BOOTHでDL", href: "https://booth.pm/placeholder" },
   },
   {
     name: "Pro",
-    price: "¥X,XXX",
+    price: "¥4,980",
     priceNote: "買い切り",
-    description: "本格的なDJ / Composerに",
+    description: "すべてのDJに",
     features: [
       "楽曲ファイル無制限",
       "メタデータ編集・書き戻し",
       "Rekordbox互換",
       "CDJ機種別フォーマット一括変換",
       "優先サポート",
-      "今後の全アップデート",
+      "生涯アップデート",
     ],
     recommended: true,
-    cta: { label: "BOOTHで購入", href: "https://booth.pm/placeholder" },
+    cta: { label: "BOOTHでDL", href: "https://booth.pm/placeholder" },
   },
 ];
-
-export const download = {
-  heading: "ダウンロード",
-  description: "お使いのプラットフォームに合わせてダウンロードしてください。",
-  version: "v0.1.0",
-  platforms: [
-    {
-      name: "Windows",
-      icon: "\u{1FA9F}",
-      href: "#",
-      note: "Windows 10以降",
-    },
-    { name: "macOS", icon: "\u{1F34E}", href: "#", note: "macOS 12以降" },
-  ],
-} as const;
 
 export const footer = {
   product: [
     { label: "機能", href: "#features" },
     { label: "料金プラン", href: "#pricing" },
-    { label: "ダウンロード", href: "#download" },
   ],
   community: [
     { label: "Discord", href: "#" },
