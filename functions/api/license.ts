@@ -54,7 +54,12 @@ export async function onRequestGet({
   );
 
   if (!stripeRes.ok) {
-    return Response.json({ error: "Invalid session" }, { status: 400 });
+    const stripeError = await stripeRes.text();
+    console.error("Stripe API error:", stripeRes.status, stripeError);
+    return Response.json(
+      { error: "Invalid session", detail: `Stripe returned ${stripeRes.status}` },
+      { status: 400 }
+    );
   }
 
   const session: StripeSession = await stripeRes.json();

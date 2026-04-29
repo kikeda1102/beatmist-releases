@@ -4,7 +4,8 @@
       "WebFetch(domain:synapserack.com)",
       "WebFetch(domain:booth.pm)",
       "Bash(pkill -f \"astro\")",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(npx astro *)"
     ]
   }
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors, fonts, media } from "../styles/theme";
+import { TranslationProvider, useTranslation } from "../i18n";
 
 const Page = styled.div`
   min-height: 100vh;
@@ -146,7 +147,8 @@ interface LicenseResponse {
   error?: string;
 }
 
-export default function Success() {
+function SuccessContent() {
+  const { t } = useTranslation();
   const [licenseKey, setLicenseKey] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -157,7 +159,7 @@ export default function Success() {
     const sessionId = params.get("session_id");
 
     if (!sessionId) {
-      setError("Invalid session");
+      setError(t("無効なセッションです"));
       setLoading(false);
       return;
     }
@@ -168,15 +170,15 @@ export default function Success() {
         if (data.licenseKey) {
           setLicenseKey(data.licenseKey);
         } else {
-          setError(data.error ?? "Failed to retrieve license key");
+          setError(data.error ?? t("ライセンスキーの取得に失敗しました"));
         }
         setLoading(false);
       })
       .catch(() => {
-        setError("Network error");
+        setError(t("ネットワークエラーが発生しました"));
         setLoading(false);
       });
-  }, []);
+  }, [t]);
 
   const handleCopy = () => {
     if (!licenseKey) return;
@@ -191,44 +193,58 @@ export default function Success() {
       <Card>
         <Logo>BeatMist</Logo>
 
-        {loading && <StatusText>Loading...</StatusText>}
+        {loading && <StatusText>{t("読み込み中...")}</StatusText>}
 
         {error && (
           <>
-            <ErrorText>An error occurred</ErrorText>
+            <ErrorText>{t("エラーが発生しました")}</ErrorText>
             <ErrorDetail>{error}</ErrorDetail>
+            <ErrorDetail style={{ marginTop: "1rem" }}>
+              {t("問題が解決しない場合は、こちらまでご連絡ください：")}{" "}
+              <HomeLink href="mailto:purocura@gmail.com">
+                purocura@gmail.com
+              </HomeLink>
+            </ErrorDetail>
             <HomeLink href="/" style={{ display: "block", marginTop: "2rem" }}>
-              &larr; Back to Home
+              &larr; {t("ホームに戻る")}
             </HomeLink>
           </>
         )}
 
         {licenseKey && (
           <>
-            <Title>Purchase Complete!</Title>
-            <Subtitle>Thank you for purchasing BeatMist Pro.</Subtitle>
+            <Title>{t("購入完了")}</Title>
+            <Subtitle>{t("BeatMist Pro をご購入いただきありがとうございます。")}</Subtitle>
 
-            <KeyLabel>Your License Key</KeyLabel>
+            <KeyLabel>{t("ライセンスキー")}</KeyLabel>
             <KeyBox>
               <KeyText>{licenseKey}</KeyText>
               <CopyButton onClick={handleCopy}>
-                {copied ? "Copied!" : "Copy"}
+                {copied ? t("コピー済み") : t("コピー")}
               </CopyButton>
             </KeyBox>
             <Warning>
-              Please save this key. You will need it to activate BeatMist Pro.
+              {t("このキーを保存してください。BeatMist Pro のアクティベーションに必要です。")}
             </Warning>
 
             <Steps>
-              <li>Download and install BeatMist</li>
-              <li>Open Settings &rarr; License</li>
-              <li>Paste your key and click Activate</li>
+              <li>{t("BeatMist をダウンロードしてインストール")}</li>
+              <li>{t("設定 → ライセンス を開く")}</li>
+              <li>{t("キーを貼り付けて「アクティベート」をクリック")}</li>
             </Steps>
 
-            <HomeLink href="/">&larr; Back to Home</HomeLink>
+            <HomeLink href="/">&larr; {t("ホームに戻る")}</HomeLink>
           </>
         )}
       </Card>
     </Page>
+  );
+}
+
+export default function Success() {
+  return (
+    <TranslationProvider>
+      <SuccessContent />
+    </TranslationProvider>
   );
 }

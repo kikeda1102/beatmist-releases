@@ -91,6 +91,27 @@ const en: Record<string, string> = {
   "お問い合わせ内容は2000文字以内で入力してください":
     "Message must be 2000 characters or fewer",
 
+  // success page
+  "無効なセッションです": "Invalid session",
+  "ライセンスキーの取得に失敗しました": "Failed to retrieve license key",
+  "ネットワークエラーが発生しました": "A network error occurred",
+  "エラーが発生しました": "An error occurred",
+  "問題が解決しない場合は、こちらまでご連絡ください：":
+    "If this issue persists, please contact us at",
+  "ホームに戻る": "Back to Home",
+  購入完了: "Purchase Complete!",
+  "BeatMist Pro をご購入いただきありがとうございます。":
+    "Thank you for purchasing BeatMist Pro.",
+  ライセンスキー: "Your License Key",
+  コピー済み: "Copied!",
+  コピー: "Copy",
+  "このキーを保存してください。BeatMist Pro のアクティベーションに必要です。":
+    "Please save this key. You will need it to activate BeatMist Pro.",
+  "BeatMist をダウンロードしてインストール": "Download and install BeatMist",
+  "設定 → ライセンス を開く": "Open Settings → License",
+  "キーを貼り付けて「アクティベート」をクリック":
+    "Paste your key and click Activate",
+
   // footer
   製品: "Product",
   法的事項: "Legal",
