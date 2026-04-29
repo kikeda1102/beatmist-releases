@@ -60,10 +60,6 @@ const en: Record<string, string> = {
 
   // footer
   製品: "Product",
-  コミュニティ: "Community",
-  法的情報: "Legal",
-  利用規約: "Terms of Use",
-  プライバシーポリシー: "Privacy Policy",
 };
 
 export default en;

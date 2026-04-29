@@ -19,9 +19,11 @@ const Grid = styled.div`
   grid-template-columns: 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+  justify-items: center;
+  text-align: center;
 
   ${media.md} {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -33,7 +35,6 @@ const ColumnTitle = styled.h4`
   font-weight: 600;
   color: ${colors.textPrimary};
   margin-bottom: 1rem;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
 `;
 
@@ -84,21 +85,11 @@ export default function Footer() {
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>{t("コミュニティ")}</ColumnTitle>
+            <ColumnTitle>CuraRmx</ColumnTitle>
             <LinkList>
               {footer.community.map((link) => (
                 <li key={link.label}>
-                  <FooterLink href={link.href}>{link.label}</FooterLink>
-                </li>
-              ))}
-            </LinkList>
-          </Column>
-          <Column>
-            <ColumnTitle>{t("法的情報")}</ColumnTitle>
-            <LinkList>
-              {footer.legal.map((link) => (
-                <li key={link.label}>
-                  <FooterLink href={link.href}>{t(link.label)}</FooterLink>
+                  <FooterLink href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</FooterLink>
                 </li>
               ))}
             </LinkList>

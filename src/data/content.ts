@@ -136,12 +136,7 @@ export const footer = {
     { label: "料金プラン", href: "#pricing" },
   ],
   community: [
-    { label: "Discord", href: "#" },
-    { label: "X (Twitter)", href: "#" },
-  ],
-  legal: [
-    { label: "利用規約", href: "#" },
-    { label: "プライバシーポリシー", href: "#" },
+    { label: "X (Twitter)", href: "https://x.com/purocura" },
   ],
   copyright: "2026 BeatMist",
 } as const;
