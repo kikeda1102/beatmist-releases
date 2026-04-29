@@ -107,7 +107,10 @@ export async function onRequestPost({
     body = await request.json();
   } catch {
     return Response.json(
-      { success: false, message: "不正なリクエストです。" } satisfies ContactResponse,
+      {
+        success: false,
+        message: "不正なリクエストです。",
+      } satisfies ContactResponse,
       { status: 400 },
     );
   }
@@ -146,7 +149,7 @@ export async function onRequestPost({
 
   const { name, email, message } = body;
   const toEmail = env.CONTACT_TO_EMAIL;
-  const fromEmail = `BeatMist <onboarding@resend.dev>`;
+  const fromEmail = `BeatMist <noreply@beatmist.com>`;
 
   try {
     const notificationSent = await sendEmail(

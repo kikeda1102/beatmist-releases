@@ -18,7 +18,7 @@ export default function App() {
         <Features />
         <Download />
         <Pricing />
-        {/* <Contact /> */}
+        <Contact />
       </main>
       <Footer />
     </TranslationProvider>
