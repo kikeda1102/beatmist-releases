@@ -48,6 +48,7 @@ const Tagline = styled.p`
   color: ${colors.textSecondary};
   font-weight: 400;
   max-width: 540px;
+  white-space: pre-line;
 
   ${media.md} {
     font-size: 1.375rem;

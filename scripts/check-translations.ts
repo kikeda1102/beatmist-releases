@@ -13,8 +13,9 @@ function extractJapaneseStrings(filePath: string): Set<string> {
   const stringRegex = /"([^"]*?)"|'([^']*?)'/g;
   let match;
   while ((match = stringRegex.exec(content)) !== null) {
-    const str = match[1] ?? match[2];
-    if (str && japaneseRegex.test(str)) {
+    const raw = match[1] ?? match[2];
+    if (raw && japaneseRegex.test(raw)) {
+      const str = raw.replace(/\\n/g, "\n").replace(/\\t/g, "\t");
       strings.add(str);
     }
   }

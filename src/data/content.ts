@@ -1,6 +1,6 @@
 export const site = {
   name: "BeatMist",
-  tagline: "霧のように直感的。DJのための音源管理ツール",
+  tagline: "霧のように直感的。\nDJのための本格的な音源管理ツール",
   description:
     "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。",
   url: "https://kikeda1102.github.io/beatmist-releases",
@@ -66,6 +66,27 @@ export const features: readonly Feature[] = [
   },
 ];
 
+interface Highlight {
+  readonly title: string;
+  readonly description: string;
+}
+
+export const highlights: readonly Highlight[] = [
+  {
+    title: "CDJ機種を選ぶだけで自動変換",
+    description:
+      "対象のCDJ機種を設定しておくだけで、非対応フォーマットを自動的に検出し、最適な形式へ変換します。",
+  },
+  {
+    title: "Windows / Mac 両対応",
+    description: "Windows / Mac 両対応です。",
+  },
+  {
+    title: "1ライセンスで3台まで",
+    description: "1つのご購入で、最大3台のPCにアクティベートできます。",
+  },
+];
+
 interface PricingTier {
   readonly name: string;
   readonly price: string;
@@ -84,8 +105,10 @@ export const pricingTiers: readonly PricingTier[] = [
     priceNote: "",
     description: "まずは試してみたい方に",
     features: [
-      "楽曲ファイル100曲まで管理",
-      "メタデータ閲覧",
+      "楽曲ファイル100曲まで一括変換",
+      "CDJ機種別フォーマット一括変換",
+      "Rekordbox互換",
+      "楽曲メタデータ閲覧",
       "波形プレビュー",
       "試聴",
     ],
@@ -99,12 +122,10 @@ export const pricingTiers: readonly PricingTier[] = [
     priceNote: "買い切り",
     description: "すべてのDJに",
     features: [
-      "楽曲ファイル無制限",
-      "メタデータ編集・書き戻し",
-      "Rekordbox互換",
-      "CDJ機種別フォーマット一括変換",
+      "楽曲ファイル数無制限に一括変換",
+      "楽曲メタデータの編集",
       "優先サポート",
-      "生涯アップデート",
+      "無料での一生涯アップデート",
     ],
     recommended: true,
     cta: { label: "購入する", href: "https://booth.pm/placeholder" },

@@ -1,7 +1,7 @@
 const en: Record<string, string> = {
   // site
-  "霧のように直感的。DJのための音源管理ツール":
-    "Intuitive like mist. A track management tool for DJs.",
+  "霧のように直感的。\nDJのための本格的な音源管理ツール":
+    "Intuitive like mist.\nA track management tool for DJs.",
   "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。":
     "A track management tool for DJs and Composers. Metadata overview, waveform preview, audition, and batch format conversion for large music libraries — intuitive like mist.",
 
@@ -30,18 +30,28 @@ const en: Record<string, string> = {
   "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。":
     "Just select your target CDJ — unsupported formats are auto-detected and batch-converted to the optimal format.",
 
+  // highlights section
+  "CDJ機種を選ぶだけで自動変換": "Auto-Convert by Selecting Your CDJ",
+  "対象のCDJ機種を設定しておくだけで、非対応フォーマットを自動的に検出し、最適な形式へ変換します。":
+    "Just set your target CDJ model, and unsupported formats are automatically detected and converted to the optimal format.",
+  "Windows / Mac 両対応": "Windows / Mac Compatible",
+  "Windows / Mac 両対応です。": "Available on both Windows and Mac.",
+  "1ライセンスで3台まで": "1 License, Up to 3 Devices",
+  "1つのご購入で、最大3台のPCにアクティベートできます。":
+    "Activate on up to 3 PCs with a single purchase.",
+
   // pricing section
   料金プラン: "Pricing",
   まずは試してみたい方に: "For those who want to try it first",
-  楽曲ファイル100曲まで管理: "Manage up to 100 tracks",
-  メタデータ閲覧: "Metadata viewing",
+  楽曲ファイル100曲まで一括変換: "Batch convert up to 100 tracks",
+  楽曲メタデータ閲覧: "Track metadata viewing",
   買い切り: "One-time purchase",
   すべてのDJに: "For every DJ",
-  楽曲ファイル無制限: "Unlimited tracks",
-  "メタデータ編集・書き戻し": "Metadata editing & write-back",
+  楽曲ファイル数無制限に一括変換: "Batch convert unlimited tracks",
+  楽曲メタデータの編集: "Track metadata editing",
   Rekordbox互換: "Rekordbox compatible",
   優先サポート: "Priority support",
-  生涯アップデート: "Lifetime updates",
+  無料での一生涯アップデート: "Free lifetime updates",
   おすすめ: "Recommended",
   無料ダウンロード: "Free Download",
   購入する: "Buy Now",
