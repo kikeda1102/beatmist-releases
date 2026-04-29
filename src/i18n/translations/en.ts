@@ -11,7 +11,7 @@ const en: Record<string, string> = {
 
   // hero
   無料で試す: "Try for Free",
-  BOOTHでDL: "Download on BOOTH",
+  "ダウンロードページ(BOOTH)へ": "Download on BOOTH",
 
   // features section
   楽曲ライブラリ管理: "Track Library Management",
@@ -29,7 +29,6 @@ const en: Record<string, string> = {
   CDJ機種別フォーマット一括変換: "CDJ-Specific Batch Format Conversion",
   "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。":
     "Just select your target CDJ — unsupported formats are auto-detected and batch-converted to the optimal format.",
-
 
   // pricing section
   料金プラン: "Pricing",

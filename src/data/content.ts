@@ -21,7 +21,7 @@ export const hero = {
 } as const;
 
 export const boothCta = {
-  label: "BOOTHでDL",
+  label: "ダウンロードページ(BOOTH)へ",
   href: "https://booth.pm/placeholder",
 } as const;
 
