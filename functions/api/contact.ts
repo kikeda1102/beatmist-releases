@@ -87,6 +87,11 @@ async function sendEmail(
     body: JSON.stringify(body),
   });
 
+  if (!res.ok) {
+    const errorBody = await res.text();
+    console.error("[Contact] Resend API error:", res.status, errorBody);
+  }
+
   return res.ok;
 }
 
