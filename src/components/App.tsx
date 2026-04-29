@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Features from "./Features";
 import Highlights from "./Highlights";
 import Pricing from "./Pricing";
+import Contact from "./Contact";
 import Footer from "./Footer";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Highlights />
         <Features />
         <Pricing />
+        <Contact />
       </main>
       <Footer />
     </TranslationProvider>

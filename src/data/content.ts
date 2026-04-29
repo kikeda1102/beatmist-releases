@@ -10,6 +10,7 @@ export const site = {
 export const navigation = [
   { label: "機能", href: "#features" },
   { label: "料金", href: "#pricing" },
+  { label: "お問い合わせ", href: "#contact" },
 ] as const;
 
 export const hero = {
@@ -125,10 +126,37 @@ export const pricingTiers: readonly PricingTier[] = [
   },
 ];
 
+export const contact = {
+  title: "お問い合わせ",
+  description: "ご質問やご要望がありましたら、下記フォームよりお気軽にお問い合わせください。",
+  fields: {
+    name: "お名前",
+    email: "メールアドレス",
+    message: "お問い合わせ内容",
+  },
+  required: "必須",
+  submit: "送信する",
+  submitting: "送信中...",
+  success: "お問い合わせを受け付けました。確認メールをお送りしましたのでご確認ください。\nもし届かない場合は、迷惑メールフォルダをご確認ください。",
+  error: "送信に失敗しました。お手数ですが、しばらく経ってからもう一度お試しください。",
+  rateLimit: "送信回数の上限に達しました。しばらく経ってからもう一度お試しください。",
+  validationError: "入力内容に誤りがあります。",
+  validation: {
+    nameRequired: "お名前を入力してください",
+    nameMax: "お名前は100文字以内で入力してください",
+    nameInvalid: "不正な文字が含まれています",
+    emailRequired: "メールアドレスを入力してください",
+    emailInvalid: "有効なメールアドレスを入力してください",
+    messageRequired: "お問い合わせ内容を入力してください",
+    messageMax: "お問い合わせ内容は2000文字以内で入力してください",
+  },
+} as const;
+
 export const footer = {
   product: [
     { label: "機能", href: "#features" },
     { label: "料金プラン", href: "#pricing" },
+    { label: "お問い合わせ", href: "#contact" },
   ],
   community: [
     { label: "X (Twitter)", href: "https://x.com/purocura" },
