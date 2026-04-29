@@ -44,6 +44,9 @@ const en: Record<string, string> = {
   優先サポート: "Priority support",
   生涯アップデート: "Lifetime updates",
   おすすめ: "Recommended",
+  無料ダウンロード: "Free Download",
+  購入する: "Buy Now",
+  "ベータ版期間中は 20% OFF": "Beta 20% OFF",
 
   // footer
   製品: "Product",

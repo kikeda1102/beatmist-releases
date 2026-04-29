@@ -84,6 +84,25 @@ const Price = styled.div`
   line-height: 1.2;
 `;
 
+const OriginalPrice = styled.span`
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: ${colors.textMuted};
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+`;
+
+const DiscountBadge = styled.span`
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: ${colors.accent};
+  background: ${colors.accentSubtle};
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  vertical-align: middle;
+`;
+
 const PriceNote = styled.span`
   font-size: 1rem;
   font-weight: 400;
@@ -140,11 +159,15 @@ export default function Pricing() {
                   )}
                 </TierNameRow>
                 <Price>
-                  {tier.price}
-                  {tier.priceNote && (
-                    <PriceNote>{t(tier.priceNote)}</PriceNote>
+                  {tier.originalPrice && (
+                    <OriginalPrice>{tier.originalPrice}</OriginalPrice>
                   )}
+                  {tier.price}
+                  {tier.priceNote && <PriceNote>{t(tier.priceNote)}</PriceNote>}
                 </Price>
+                {tier.originalPrice && (
+                  <DiscountBadge>{t("ベータ版期間中は 20% OFF")}</DiscountBadge>
+                )}
                 <TierDescription>{t(tier.description)}</TierDescription>
               </CardHeader>
               <FeatureList>

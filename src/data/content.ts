@@ -69,6 +69,7 @@ export const features: readonly Feature[] = [
 interface PricingTier {
   readonly name: string;
   readonly price: string;
+  readonly originalPrice?: string;
   readonly priceNote: string;
   readonly description: string;
   readonly features: readonly string[];
@@ -89,11 +90,12 @@ export const pricingTiers: readonly PricingTier[] = [
       "試聴",
     ],
     recommended: false,
-    cta: { label: "BOOTHでDL", href: "https://booth.pm/placeholder" },
+    cta: { label: "無料ダウンロード", href: "https://booth.pm/placeholder" },
   },
   {
     name: "Pro",
-    price: "¥4,980",
+    price: "¥3,980",
+    originalPrice: "¥4,980",
     priceNote: "買い切り",
     description: "すべてのDJに",
     features: [
@@ -105,7 +107,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "生涯アップデート",
     ],
     recommended: true,
-    cta: { label: "BOOTHでDL", href: "https://booth.pm/placeholder" },
+    cta: { label: "購入する", href: "https://booth.pm/placeholder" },
   },
 ];
 

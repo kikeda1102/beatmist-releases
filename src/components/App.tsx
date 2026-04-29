@@ -14,7 +14,6 @@ export default function App() {
         <Hero />
         <Features />
         <Pricing />
-        <BoothCta />
       </main>
       <Footer />
     </TranslationProvider>
