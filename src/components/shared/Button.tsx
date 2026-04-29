@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 import { colors } from "../../styles/theme";
 
-interface ButtonProps {
-  variant?: "primary" | "secondary";
-  size?: "sm" | "md" | "lg";
+interface ButtonStyleProps {
+  $variant?: "primary" | "secondary";
+  $size?: "sm" | "md" | "lg";
 }
 
 const sizeStyles = {
@@ -21,7 +21,7 @@ const sizeStyles = {
   `,
 };
 
-const StyledButton = styled.a<ButtonProps>`
+const buttonStyles = css<ButtonStyleProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -31,11 +31,13 @@ const StyledButton = styled.a<ButtonProps>`
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+  font-family: inherit;
+  text-decoration: none;
 
-  ${({ size = "md" }) => sizeStyles[size]}
+  ${({ $size = "md" }) => sizeStyles[$size]}
 
-  ${({ variant = "primary" }) =>
-    variant === "primary"
+  ${({ $variant = "primary" }) =>
+    $variant === "primary"
       ? css`
           background-color: ${colors.accent};
           color: white;
@@ -58,8 +60,17 @@ const StyledButton = styled.a<ButtonProps>`
         `}
 `;
 
+const StyledLink = styled.a<ButtonStyleProps>`
+  ${buttonStyles}
+`;
+
+const StyledButton = styled.button<ButtonStyleProps>`
+  ${buttonStyles}
+`;
+
 interface Props {
-  href: string;
+  href?: string;
+  onClick?: () => void;
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
@@ -67,13 +78,21 @@ interface Props {
 
 export default function Button({
   href,
+  onClick,
   variant = "primary",
   size = "md",
   children,
 }: Props) {
+  if (onClick) {
+    return (
+      <StyledButton type="button" onClick={onClick} $variant={variant} $size={size}>
+        {children}
+      </StyledButton>
+    );
+  }
   return (
-    <StyledButton href={href} variant={variant} size={size}>
+    <StyledLink href={href} $variant={variant} $size={size}>
       {children}
-    </StyledButton>
+    </StyledLink>
   );
 }
