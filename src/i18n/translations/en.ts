@@ -92,6 +92,8 @@ const en: Record<string, string> = {
 
   // footer
   製品: "Product",
+  法的事項: "Legal",
+  "特定商取引法に基づく表記": "Specified Commercial Transactions Act",
 };
 
 export default en;

@@ -158,6 +158,9 @@ export const footer = {
     { label: "料金プラン", href: "#pricing" },
     { label: "お問い合わせ", href: "#contact" },
   ],
+  legal: [
+    { label: "特定商取引法に基づく表記", href: "/tokushoho" },
+  ],
   community: [
     { label: "X (Twitter)", href: "https://x.com/purocura" },
   ],

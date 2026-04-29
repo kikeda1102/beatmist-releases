@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Tokushoho from "../components/Tokushoho";
+import { site } from "../data/content";
+---
+
+<Layout title={`${site.name} - 特定商取引法に基づく表記`} description="特定商取引法に基づく表記">
+  <Tokushoho client:only="react" />
+</Layout>
