@@ -1,9 +1,11 @@
+import { useState } from "react";
 import styled, { css } from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { pricingTiers } from "../data/content";
 import { useTranslation } from "../i18n";
 import Badge from "./shared/Badge";
 import Button from "./shared/Button";
+import DownloadModal from "./DownloadModal";
 
 const Section = styled.section`
   padding: ${spacing.sectionPadding} 1.5rem;
@@ -143,6 +145,7 @@ const FeatureItem = styled.li`
 
 export default function Pricing() {
   const { t } = useTranslation();
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
 
   return (
     <Section id="pricing">
@@ -175,16 +178,25 @@ export default function Pricing() {
                   <FeatureItem key={feature}>{t(feature)}</FeatureItem>
                 ))}
               </FeatureList>
-              <Button
-                href={tier.cta.href}
-                variant={tier.recommended ? "primary" : "secondary"}
-              >
-                {t(tier.cta.label)}
-              </Button>
+              {tier.name === "Free" ? (
+                <Button
+                  onClick={() => setShowDownloadModal(true)}
+                  variant="secondary"
+                >
+                  {t(tier.cta.label)}
+                </Button>
+              ) : (
+                <Button href={tier.cta.href} variant="primary">
+                  {t(tier.cta.label)}
+                </Button>
+              )}
             </Card>
           ))}
         </Grid>
       </Container>
+      {showDownloadModal && (
+        <DownloadModal onClose={() => setShowDownloadModal(false)} />
+      )}
     </Section>
   );
 }

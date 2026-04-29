@@ -107,7 +107,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "波形プレビュー、試聴",
     ],
     recommended: false,
-    cta: { label: "無料ダウンロード", href: "https://booth.pm/placeholder" },
+    cta: { label: "無料ダウンロード", href: "" },
   },
   {
     name: "Pro",
@@ -121,7 +121,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "無料での一生涯アップデート",
     ],
     recommended: true,
-    cta: { label: "購入する", href: "https://booth.pm/placeholder" },
+    cta: { label: "購入する", href: "https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" },
   },
 ];
 
