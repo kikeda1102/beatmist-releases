@@ -16,7 +16,7 @@ export default function App() {
         <Highlights />
         <Features />
         <Pricing />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </TranslationProvider>
