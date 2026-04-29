@@ -53,11 +53,12 @@ const en: Record<string, string> = {
   優先サポート: "Priority support",
   無料での一生涯アップデート: "Free lifetime updates",
   おすすめ: "Recommended",
-  無料ダウンロード: "Free Download",
-  購入する: "Buy Now",
+  無料で始める: "Get Started Free",
+  ライセンスを購入: "Buy License",
   "ベータ版期間中は 20% OFF": "Beta 20% OFF",
 
-  // download modal
+  // download section
+  "ダウンロード（無料）": "Download (Free)",
   ダウンロード: "Download",
   "お使いのOSを選択してください": "Select your operating system",
   "読み込み中...": "Loading...",

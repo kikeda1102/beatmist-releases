@@ -9,6 +9,7 @@ export const site = {
 
 export const navigation = [
   { label: "機能", href: "#features" },
+  { label: "ダウンロード", href: "#download" },
   { label: "料金", href: "#pricing" },
   { label: "お問い合わせ", href: "#contact" },
 ] as const;
@@ -17,7 +18,7 @@ export const hero = {
   headline: "BeatMist",
   cta: {
     label: "無料で試す",
-    href: "#pricing",
+    href: "#download",
   },
 } as const;
 
@@ -83,6 +84,12 @@ export const highlights: readonly Highlight[] = [
   },
 ];
 
+export const download = {
+  title: "ダウンロード（無料）",
+  description: "お使いのOSを選択してください",
+  githubRepo: "kikeda1102/beatmist-releases",
+} as const;
+
 interface PricingTier {
   readonly name: string;
   readonly price: string;
@@ -108,7 +115,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "波形プレビュー、試聴",
     ],
     recommended: false,
-    cta: { label: "無料ダウンロード", href: "" },
+    cta: { label: "無料で始める", href: "#download" },
   },
   {
     name: "Pro",
@@ -122,7 +129,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "無料での一生涯アップデート",
     ],
     recommended: true,
-    cta: { label: "購入する", href: "https://buy.stripe.com/REPLACE_WITH_YOUR_PAYMENT_LINK" },
+    cta: { label: "ライセンスを購入", href: "https://buy.stripe.com/7sY00c0qvd7hf7B10zdMI00" },
   },
 ];
 
@@ -155,6 +162,7 @@ export const contact = {
 export const footer = {
   product: [
     { label: "機能", href: "#features" },
+    { label: "ダウンロード", href: "#download" },
     { label: "料金プラン", href: "#pricing" },
     { label: "お問い合わせ", href: "#contact" },
   ],
