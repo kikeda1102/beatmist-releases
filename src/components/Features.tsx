@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, media, spacing } from "../styles/theme";
+import { colors, fonts, media, spacing } from "../styles/theme";
 import { features } from "../data/content";
 import { useTranslation } from "../i18n";
 import Badge from "./shared/Badge";
@@ -15,6 +15,7 @@ const Container = styled.div`
 `;
 
 const SectionTitle = styled.h2`
+  font-family: ${fonts.heading};
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -45,11 +46,10 @@ const Card = styled.div`
   border: 1px solid ${colors.border};
   border-radius: 0.75rem;
   padding: 1.5rem;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 
   &:hover {
     background-color: ${colors.bgCardHover};
-    transform: translateY(-2px);
   }
 `;
 
@@ -65,13 +65,14 @@ const CardIcon = styled.span`
 `;
 
 const CardTitle = styled.h3`
+  font-family: ${fonts.heading};
   font-size: 1.125rem;
   font-weight: 600;
   color: ${colors.textPrimary};
 `;
 
 const CardDescription = styled.p`
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   color: ${colors.textSecondary};
   line-height: 1.7;
 `;

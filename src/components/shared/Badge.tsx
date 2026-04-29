@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { colors } from "../../styles/theme";
 
 const StyledBadge = styled.span<{ $variant: "new" | "recommended" }>`
@@ -8,9 +8,18 @@ const StyledBadge = styled.span<{ $variant: "new" | "recommended" }>`
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.025em;
-  background-color: ${({ $variant }) =>
-    $variant === "new" ? colors.accentTeal : colors.accentPurple};
-  color: white;
+
+  ${({ $variant }) =>
+    $variant === "new"
+      ? css`
+          background-color: ${colors.accent};
+          color: white;
+        `
+      : css`
+          background-color: transparent;
+          border: 1px solid ${colors.accent};
+          color: ${colors.accent};
+        `}
 `;
 
 interface Props {

@@ -37,16 +37,12 @@ const StyledButton = styled.a<ButtonProps>`
   ${({ variant = "primary" }) =>
     variant === "primary"
       ? css`
-          background: linear-gradient(
-            135deg,
-            ${colors.accentPurple},
-            ${colors.accentTeal}
-          );
+          background-color: ${colors.accent};
           color: white;
           border: none;
 
           &:hover {
-            opacity: 0.9;
+            background-color: ${colors.accentHover};
             transform: translateY(-1px);
           }
         `
@@ -56,8 +52,8 @@ const StyledButton = styled.a<ButtonProps>`
           border: 1px solid ${colors.border};
 
           &:hover {
-            border-color: ${colors.accentPurple};
-            color: ${colors.accentPurpleLight};
+            border-color: ${colors.borderHover};
+            background-color: rgba(255, 255, 255, 0.03);
           }
         `}
 `;

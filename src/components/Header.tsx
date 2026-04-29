@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import { colors, media, spacing } from "../styles/theme";
+import { colors, fonts, media, spacing } from "../styles/theme";
 import { navigation, site } from "../data/content";
 import { useTranslation, type Locale } from "../i18n";
 
@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(10, 10, 15, 0.85);
+  background-color: rgba(13, 11, 15, 0.85);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid ${colors.border};
 `;
@@ -27,6 +27,7 @@ const Container = styled.div`
 `;
 
 const Logo = styled.a`
+  font-family: ${fonts.heading};
   font-size: 1.25rem;
   font-weight: 700;
   color: ${colors.textPrimary};
@@ -56,7 +57,7 @@ const Nav = styled.nav<{ $open: boolean }>`
     flex-direction: column;
     align-items: center;
     gap: 0;
-    background-color: rgba(10, 10, 15, 0.95);
+    background-color: rgba(13, 11, 15, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid ${colors.border};
     padding: 1rem 0;
@@ -103,7 +104,7 @@ const LangToggle = styled.button`
   transition: all 0.2s ease;
 
   &:hover {
-    border-color: ${colors.accentPurple};
+    border-color: ${colors.borderHover};
     color: ${colors.textPrimary};
   }
 `;

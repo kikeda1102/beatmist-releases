@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, media, spacing } from "../styles/theme";
+import { colors, fonts, media, spacing } from "../styles/theme";
 import { footer, site } from "../data/content";
 import { useTranslation } from "../i18n";
 
@@ -28,6 +28,7 @@ const Grid = styled.div`
 const Column = styled.div``;
 
 const ColumnTitle = styled.h4`
+  font-family: ${fonts.heading};
   font-size: 0.875rem;
   font-weight: 600;
   color: ${colors.textPrimary};

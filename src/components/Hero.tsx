@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, media, spacing } from "../styles/theme";
+import { colors, fonts, media, spacing } from "../styles/theme";
 import { hero, site } from "../data/content";
 import { useTranslation } from "../i18n";
 import Button from "./shared/Button";
@@ -10,11 +10,7 @@ const Section = styled.section`
   align-items: center;
   justify-content: center;
   padding: 4rem 1.5rem;
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(139, 92, 246, 0.08) 0%,
-    transparent 60%
-  );
+  background-color: ${colors.bgPrimary};
 `;
 
 const Container = styled.div`
@@ -28,6 +24,7 @@ const Container = styled.div`
 `;
 
 const Headline = styled.h1`
+  font-family: ${fonts.heading};
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -35,7 +32,7 @@ const Headline = styled.h1`
   background: linear-gradient(
     135deg,
     ${colors.textPrimary} 0%,
-    ${colors.accentPurpleLight} 100%
+    ${colors.accentHover} 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -48,11 +45,12 @@ const Headline = styled.h1`
 
 const Tagline = styled.p`
   font-size: 1.25rem;
-  color: ${colors.accentPurpleLight};
-  font-weight: 500;
+  color: ${colors.textSecondary};
+  font-weight: 400;
+  max-width: 540px;
 
   ${media.md} {
-    font-size: 1.5rem;
+    font-size: 1.375rem;
   }
 `;
 

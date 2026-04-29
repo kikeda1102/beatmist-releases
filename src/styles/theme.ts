@@ -1,22 +1,22 @@
 export const colors = {
-  bgPrimary: "#0a0a0f",
-  bgSecondary: "#12121a",
-  bgCard: "#1a1a2e",
-  bgCardHover: "#22223a",
-  textPrimary: "#e8e8f0",
-  textSecondary: "#9898b0",
-  textMuted: "#686880",
-  accentPurple: "#8b5cf6",
-  accentPurpleLight: "#a78bfa",
-  accentPurpleDark: "#7c3aed",
-  accentTeal: "#14b8a6",
-  accentTealLight: "#2dd4bf",
-  border: "#2a2a3e",
-  borderAccent: "rgba(139, 92, 246, 0.5)",
+  bgPrimary: "#0D0B0F",
+  bgSecondary: "#141218",
+  bgCard: "#1C1922",
+  bgCardHover: "#26222E",
+  textPrimary: "rgba(245, 240, 250, 0.95)",
+  textSecondary: "rgba(245, 240, 250, 0.78)",
+  textMuted: "rgba(245, 240, 250, 0.68)",
+  accent: "#C8387E",
+  accentHover: "#D94A90",
+  accentSubtle: "rgba(200, 56, 126, 0.12)",
+  success: "#34c759",
+  border: "#2E2838",
+  borderHover: "#3E3548",
 } as const;
 
 export const fonts = {
-  base: "'Inter', 'Noto Sans JP', system-ui, sans-serif",
+  heading: "'Outfit', 'Noto Sans JP', system-ui, sans-serif",
+  body: "'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif",
 } as const;
 
 export const breakpoints = {

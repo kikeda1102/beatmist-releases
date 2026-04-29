@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { colors, media, spacing } from "../styles/theme";
+import { colors, fonts, media, spacing } from "../styles/theme";
 import { pricingTiers } from "../data/content";
 import { useTranslation } from "../i18n";
 import Badge from "./shared/Badge";
@@ -16,6 +16,7 @@ const Container = styled.div`
 `;
 
 const SectionTitle = styled.h2`
+  font-family: ${fonts.heading};
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
@@ -50,8 +51,7 @@ const Card = styled.div<{ $recommended: boolean }>`
   ${({ $recommended }) =>
     $recommended
       ? css`
-          border: 2px solid ${colors.accentPurple};
-          box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+          border: 2px solid ${colors.accent};
         `
       : css`
           border: 1px solid ${colors.border};
@@ -70,12 +70,14 @@ const TierNameRow = styled.div`
 `;
 
 const TierName = styled.h3`
+  font-family: ${fonts.heading};
   font-size: 1.25rem;
   font-weight: 700;
   color: ${colors.textPrimary};
 `;
 
 const Price = styled.div`
+  font-family: ${fonts.heading};
   font-size: 2.5rem;
   font-weight: 700;
   color: ${colors.textPrimary};
@@ -83,14 +85,14 @@ const Price = styled.div`
 `;
 
 const PriceNote = styled.span`
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   color: ${colors.textSecondary};
   margin-left: 0.5rem;
 `;
 
 const TierDescription = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: ${colors.textSecondary};
   margin-top: 0.5rem;
 `;
@@ -108,12 +110,13 @@ const FeatureItem = styled.li`
   display: flex;
   align-items: flex-start;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  font-weight: 500;
   color: ${colors.textSecondary};
 
   &::before {
-    content: "✓";
-    color: ${colors.accentTeal};
+    content: "\\2713";
+    color: ${colors.success};
     font-weight: 700;
     flex-shrink: 0;
   }
