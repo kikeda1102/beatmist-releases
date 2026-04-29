@@ -7,8 +7,9 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:cf": "wrangler pages dev -- astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "wrangler pages dev dist",
     "astro": "astro",
     "check:i18n": "tsx scripts/check-translations.ts",
     "prepare": "husky"
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@types/styled-components": "^5.1.36",
     "husky": "^9.1.7",
-    "tsx": "^4.21.0"
+    "tsx": "^4.21.0",
+    "wrangler": "^4.86.0"
   }
 }
