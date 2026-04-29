@@ -3,7 +3,7 @@ export const site = {
   tagline: "霧のように直感的。\nDJのための本格的な音源管理ツール",
   description:
     "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。",
-  url: "https://kikeda1102.github.io/beatmist-releases",
+  url: "https://beatmist.com",
   ogImage: "/images/og-image.png",
 } as const;
 
