@@ -273,15 +273,6 @@ const HomeLink = styled.a`
   }
 `;
 
-interface ConversionExample {
-  title: string;
-  input: string;
-  model: string;
-  targetFormat: string;
-  output: string;
-  reason: string;
-}
-
 const tocSections = [
   { id: "cdj-specs", label: "対応CDJ機種と再生可能スペック" },
   { id: "auto-mode", label: "自動最適化の変換ロジック" },
