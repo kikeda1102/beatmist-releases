@@ -76,11 +76,11 @@ export default function Tokushoho() {
           <tbody>
             <Row>
               <Header>販売業者</Header>
-              <Data>TODO: 氏名または屋号を入力</Data>
+              <Data>CuraRmx</Data>
             </Row>
             <Row>
               <Header>運営統括責任者</Header>
-              <Data>TODO: 責任者名を入力</Data>
+              <Data>池田賢矢</Data>
             </Row>
             <Row>
               <Header>所在地</Header>
@@ -92,7 +92,7 @@ export default function Tokushoho() {
             </Row>
             <Row>
               <Header>メールアドレス</Header>
-              <Data>TODO: メールアドレスを入力</Data>
+              <Data>purocura@gmail.com</Data>
             </Row>
             <Row>
               <Header>販売URL</Header>
