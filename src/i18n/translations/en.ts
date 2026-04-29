@@ -57,6 +57,13 @@ const en: Record<string, string> = {
   購入する: "Buy Now",
   "ベータ版期間中は 20% OFF": "Beta 20% OFF",
 
+  // download modal
+  ダウンロード: "Download",
+  "お使いのOSを選択してください": "Select your operating system",
+  "読み込み中...": "Loading...",
+  "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。":
+    "Failed to fetch download links. Please try again later.",
+
   // footer
   製品: "Product",
 };
