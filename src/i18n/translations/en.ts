@@ -11,7 +11,6 @@ const en: Record<string, string> = {
 
   // hero
   無料で試す: "Try for Free",
-  "ダウンロードページ(BOOTH)へ": "Download on BOOTH",
 
   // features section
   楽曲ライブラリ管理: "Track Library Management",

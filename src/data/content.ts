@@ -16,13 +16,8 @@ export const hero = {
   headline: "BeatMist",
   cta: {
     label: "無料で試す",
-    href: "https://booth.pm/placeholder",
+    href: "#pricing",
   },
-} as const;
-
-export const boothCta = {
-  label: "ダウンロードページ(BOOTH)へ",
-  href: "https://booth.pm/placeholder",
 } as const;
 
 interface Feature {
