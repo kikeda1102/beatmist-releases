@@ -69,6 +69,11 @@ const LastUpdated = styled.p`
   margin-bottom: 0.75rem;
 `;
 
+const FooterText = styled.p`
+  font-size: 0.75rem;
+  color: ${colors.textSecondary};
+`;
+
 const Copyright = styled.p`
   font-size: 0.75rem;
   color: ${colors.textMuted};
@@ -128,19 +133,7 @@ export default function Footer() {
           </Column>
           <Column>
             <ColumnTitle>{t("ユーザーコミュニティ")}</ColumnTitle>
-            <LinkList>
-              {footer.community.map((link) => (
-                <li key={link.label}>
-                  <FooterLink
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {link.label}
-                  </FooterLink>
-                </li>
-              ))}
-            </LinkList>
+            <FooterText>{t(footer.communityNote)}</FooterText>
           </Column>
         </Grid>
         <Divider />

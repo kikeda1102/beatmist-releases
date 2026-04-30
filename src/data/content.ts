@@ -187,9 +187,7 @@ export const footer = {
     { label: "特定商取引法に基づく表記", href: "/tokushoho" },
   ],
   creator: [{ label: "X (Twitter)", href: "https://x.com/purocura" }],
-  community: [
-    { label: "Discord コミュニティ", href: "https://discord.gg/ZKdngEHKMQ" },
-  ],
+  communityNote: "Discordコミュニティへの招待リンクをソフト内に掲載しています",
   copyright: "2026 BeatMist",
 } as const;
 

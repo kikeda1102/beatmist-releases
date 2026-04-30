@@ -132,7 +132,7 @@ const en: Record<string, string> = {
 
   // footer
   サポート: "Support",
-  "Discord コミュニティ": "Discord Community",
+  "Discordコミュニティへの招待リンクをソフト内に掲載しています": "Discord community invite link is available in the app",
   ユーザーコミュニティ: "User Community",
   BeatMistの変換仕様について: "About BeatMist's Conversion Specifications",
   特定商取引法に基づく表記: "Specified Commercial Transactions Act",
