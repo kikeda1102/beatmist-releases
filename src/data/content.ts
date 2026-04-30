@@ -8,11 +8,11 @@ export const site = {
 } as const;
 
 export const navigation = [
-  { label: "機能", href: "#features" },
-  { label: "ダウンロード", href: "#download" },
-  { label: "リリースノート", href: "#release-notes" },
-  { label: "料金", href: "#pricing" },
-  { label: "お問い合わせ", href: "#contact" },
+  { label: "機能", href: "/#features" },
+  { label: "ダウンロード", href: "/#download" },
+  { label: "リリースノート", href: "/#release-notes" },
+  { label: "料金", href: "/#pricing" },
+  { label: "お問い合わせ", href: "/#contact" },
   { label: "ドキュメント", href: "/docs" },
 ] as const;
 
@@ -20,7 +20,7 @@ export const hero = {
   headline: "BeatMist",
   cta: {
     label: "無料で試す",
-    href: "#download",
+    href: "/#download",
   },
 } as const;
 
@@ -121,7 +121,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "波形プレビュー、試聴",
     ],
     recommended: false,
-    cta: { label: "無料で始める", href: "#download" },
+    cta: { label: "無料で始める", href: "/#download" },
   },
   {
     name: "Pro",
@@ -176,15 +176,18 @@ export const contact = {
 
 export const footer = {
   product: [
-    { label: "機能", href: "#features" },
-    { label: "ダウンロード", href: "#download" },
-    { label: "リリースノート", href: "#release-notes" },
-    { label: "料金プラン", href: "#pricing" },
-    { label: "お問い合わせ", href: "#contact" },
+    { label: "機能", href: "/#features" },
+    { label: "ダウンロード", href: "/#download" },
+    { label: "リリースノート", href: "/#release-notes" },
+    { label: "料金プラン", href: "/#pricing" },
+    { label: "お問い合わせ", href: "/#contact" },
   ],
   docs: [{ label: "変換仕様について", href: "/docs" }],
   legal: [{ label: "特定商取引法に基づく表記", href: "/tokushoho" }],
-  community: [{ label: "X (Twitter)", href: "https://x.com/purocura" }],
+  community: [
+    { label: "X (Twitter)", href: "https://x.com/purocura" },
+    { label: "Discord", href: "https://discord.gg/ZKdngEHKMQ" },
+  ],
   copyright: "2026 BeatMist",
 } as const;
 

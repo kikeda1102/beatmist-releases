@@ -15,17 +15,38 @@ export default function App() {
     const hash = window.location.hash;
     if (!hash) return;
 
-    // styled-componentsのスタイル注入とレイアウト完了を待つ
-    const frameId = requestAnimationFrame(() => {
-      setTimeout(() => {
-        const el = document.querySelector(hash);
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 0);
+    let cancelled = false;
+    let lastTop = -1;
+    let stableCount = 0;
+
+    const poll = () => {
+      if (cancelled) return;
+      const el = document.querySelector(hash);
+      if (!el) return;
+
+      const top = el.getBoundingClientRect().top + window.scrollY;
+      if (top === lastTop) {
+        stableCount++;
+      } else {
+        stableCount = 0;
+        lastTop = top;
+      }
+
+      if (stableCount >= 3) {
+        el.scrollIntoView();
+        return;
+      }
+
+      setTimeout(poll, 100);
+    };
+
+    document.fonts.ready.then(() => {
+      if (!cancelled) poll();
     });
 
-    return () => cancelAnimationFrame(frameId);
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (

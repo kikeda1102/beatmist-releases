@@ -121,7 +121,7 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <Container>
-        <Logo href="#">{site.name}</Logo>
+        <Logo href="/">{site.name}</Logo>
         <RightGroup>
           <Nav $open={menuOpen}>
             {navigation.map((item) => (
