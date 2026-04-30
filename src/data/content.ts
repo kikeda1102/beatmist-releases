@@ -180,13 +180,15 @@ export const footer = {
     { label: "ダウンロード", href: "/#download" },
     { label: "リリースノート", href: "/#release-notes" },
     { label: "料金プラン", href: "/#pricing" },
-    { label: "お問い合わせ", href: "/#contact" },
   ],
-  docs: [{ label: "変換仕様について", href: "/docs" }],
-  legal: [{ label: "特定商取引法に基づく表記", href: "/tokushoho" }],
+  support: [
+    { label: "お問い合わせ", href: "/#contact" },
+    { label: "変換仕様について", href: "/docs" },
+    { label: "特定商取引法に基づく表記", href: "/tokushoho" },
+  ],
+  creator: [{ label: "X (Twitter)", href: "https://x.com/purocura" }],
   community: [
-    { label: "X (Twitter)", href: "https://x.com/purocura" },
-    { label: "Discord", href: "https://discord.gg/ZKdngEHKMQ" },
+    { label: "Discord コミュニティ", href: "https://discord.gg/ZKdngEHKMQ" },
   ],
   copyright: "2026 BeatMist",
 } as const;

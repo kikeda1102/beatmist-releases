@@ -85,9 +85,9 @@ export default function Footer() {
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>{t("ドキュメント")}</ColumnTitle>
+            <ColumnTitle>{t("サポート")}</ColumnTitle>
             <LinkList>
-              {footer.docs.map((link) => (
+              {footer.support.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{t(link.label)}</FooterLink>
                 </li>
@@ -95,30 +95,40 @@ export default function Footer() {
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>{t("法的事項")}</ColumnTitle>
+            <ColumnTitle>{t("製作者")}</ColumnTitle>
             <LinkList>
-              {footer.legal.map((link) => (
+              {footer.creator.map((link) => (
                 <li key={link.label}>
-                  <FooterLink href={link.href}>{t(link.label)}</FooterLink>
+                  <FooterLink
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </FooterLink>
                 </li>
               ))}
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>CuraRmx</ColumnTitle>
+            <ColumnTitle>{t("ユーザーコミュニティ")}</ColumnTitle>
             <LinkList>
               {footer.community.map((link) => (
                 <li key={link.label}>
-                  <FooterLink href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</FooterLink>
+                  <FooterLink
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </FooterLink>
                 </li>
               ))}
             </LinkList>
           </Column>
         </Grid>
         <Divider />
-        <Copyright>
-          &copy; {footer.copyright}. All rights reserved.
-        </Copyright>
+        <Copyright>&copy; {footer.copyright}. All rights reserved.</Copyright>
       </Container>
     </FooterWrapper>
   );
