@@ -1,10 +1,11 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { footer, site } from "../data/content";
 import { useTranslation } from "../i18n";
 
 const FooterWrapper = styled.footer`
-  padding: 3rem 1.5rem 2rem;
+  padding: 3rem 1.5rem 3rem;
   background-color: ${colors.bgPrimary};
   border-top: 1px solid ${colors.border};
 `;
@@ -61,6 +62,13 @@ const Divider = styled.hr`
   margin-bottom: 1.5rem;
 `;
 
+const LastUpdated = styled.p`
+  font-size: 0.75rem;
+  color: ${colors.textSecondary};
+  text-align: center;
+  margin-bottom: 0.75rem;
+`;
+
 const Copyright = styled.p`
   font-size: 0.75rem;
   color: ${colors.textMuted};
@@ -69,13 +77,21 @@ const Copyright = styled.p`
 
 export default function Footer() {
   const { t } = useTranslation();
+  const [buildDate, setBuildDate] = useState("");
+
+  useEffect(() => {
+    const meta = document.querySelector('meta[name="build-date"]');
+    if (meta) {
+      setBuildDate(meta.getAttribute("content") ?? "");
+    }
+  }, []);
 
   return (
     <FooterWrapper>
       <Container>
         <Grid>
           <Column>
-            <ColumnTitle>{t("製品")}</ColumnTitle>
+            <ColumnTitle>BeatMistについて</ColumnTitle>
             <LinkList>
               {footer.product.map((link) => (
                 <li key={link.label}>
@@ -95,7 +111,7 @@ export default function Footer() {
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>{t("製作者")}</ColumnTitle>
+            <ColumnTitle>CuraRmx</ColumnTitle>
             <LinkList>
               {footer.creator.map((link) => (
                 <li key={link.label}>
@@ -128,6 +144,7 @@ export default function Footer() {
           </Column>
         </Grid>
         <Divider />
+        {buildDate && <LastUpdated>Last updated: {buildDate}</LastUpdated>}
         <Copyright>&copy; {footer.copyright}. All rights reserved.</Copyright>
       </Container>
     </FooterWrapper>

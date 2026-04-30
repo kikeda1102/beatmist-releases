@@ -131,9 +131,7 @@ const en: Record<string, string> = {
   詳しい仕様を見る: "View detailed specs",
 
   // footer
-  製品: "Product",
   サポート: "Support",
-  製作者: "Creator",
   "Discord コミュニティ": "Discord Community",
   ユーザーコミュニティ: "User Community",
   BeatMistの変換仕様について: "About BeatMist's Conversion Specifications",

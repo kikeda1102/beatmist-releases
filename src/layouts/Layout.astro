@@ -8,6 +8,11 @@ interface Props {
 
 const { title, description } = Astro.props;
 const pageTitle = import.meta.env.DEV ? `[DEV] ${title}` : title;
+const buildDate = new Date().toLocaleDateString("ja-JP", {
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
 const canonicalUrl = new URL(Astro.url.pathname, site.url).href;
 const ogImageUrl = new URL(site.ogImage, site.url).href;
 ---
@@ -34,6 +39,7 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="build-date" content={buildDate} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
