@@ -29,6 +29,9 @@ const en: Record<string, string> = {
   CDJ機種別フォーマット一括変換: "CDJ-Specific Batch Format Conversion",
   "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。":
     "Just select your target CDJ — unsupported formats are auto-detected and batch-converted to the optimal format.",
+  Rekordboxインポート状況の確認: "Rekordbox Import Status",
+  "Rekordboxのファイルパスを自動で取得し、各トラックがインポート済みかどうかを一覧で表示。":
+    "Automatically retrieves Rekordbox file paths and shows whether each track has been imported.",
 
   // highlights section
   CDJ機種を選ぶだけで自動変換: "Auto-Convert by Selecting Your CDJ",

@@ -65,6 +65,13 @@ export const features: readonly Feature[] = [
     badge: "NEW",
     href: "/docs",
   },
+  {
+    icon: "\u{1F4C2}",
+    title: "Rekordboxインポート状況の確認",
+    description:
+      "Rekordboxのファイルパスを自動で取得し、各トラックがインポート済みかどうかを一覧で表示。",
+    badge: "NEW",
+  },
 ];
 
 interface Highlight {
