@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Roadmap from "../components/Roadmap";
+import { site } from "../data/content";
+---
+
+<Layout
+  title={`${site.name} - 開発予定`}
+  description="BeatMistの今後の開発予定です。"
+>
+  <Roadmap client:only="react" />
+</Layout>

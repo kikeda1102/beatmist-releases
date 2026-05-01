@@ -1,0 +1,42 @@
+# BeatMist 開発予定
+# https://raw.githubusercontent.com/kikeda1102/beatmist-releases/main/roadmap.yml
+# このファイルを更新すると、約5分後にサイトに反映されます（GitHub CDNキャッシュ）
+
+last_updated: "2026-05-01"
+
+categories:
+  - id: planned
+    label: "対応予定"
+    label_en: "Planned"
+    items:
+      - title: "プレイリスト管理機能"
+        title_en: "Playlist Management"
+        description: "楽曲をプレイリストにまとめて管理する機能"
+        description_en: "Organize and manage tracks in playlists"
+        priority: high
+
+      - title: "ドラッグ&ドロップインポート"
+        title_en: "Drag & Drop Import"
+        description: "ファイルをウィンドウにドラッグ&ドロップして楽曲を追加"
+        description_en: "Add tracks by dragging and dropping files into the window"
+        priority: medium
+
+  - id: considering
+    label: "検討中"
+    label_en: "Under Consideration"
+    items:
+      - title: "Traktor連携"
+        title_en: "Traktor Integration"
+        description: "Native Instruments Traktorとの互換性"
+        description_en: "Compatibility with Native Instruments Traktor"
+        priority: low
+
+  - id: completed
+    label: "対応完了"
+    label_en: "Completed"
+    items:
+      - title: "Rekordboxインポート状況の確認"
+        title_en: "Rekordbox Import Status"
+        description: "v1.3.0で対応"
+        description_en: "Available since v1.3.0"
+        priority: high

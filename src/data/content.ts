@@ -14,6 +14,7 @@ export const navigation = [
   { label: "料金", href: "/#pricing" },
   { label: "お問い合わせ", href: "/#contact" },
   { label: "ドキュメント", href: "/docs" },
+  { label: "開発予定", href: "/roadmap" },
 ] as const;
 
 export const hero = {
@@ -187,6 +188,7 @@ export const footer = {
     { label: "ダウンロード", href: "/#download" },
     { label: "リリースノート", href: "/#release-notes" },
     { label: "料金プラン", href: "/#pricing" },
+    { label: "開発予定", href: "/roadmap" },
   ],
   support: [
     { label: "お問い合わせ", href: "/#contact" },

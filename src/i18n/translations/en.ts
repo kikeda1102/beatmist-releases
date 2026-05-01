@@ -129,13 +129,27 @@ const en: Record<string, string> = {
   修正: "Fixed",
   "リリースノートの取得に失敗しました。": "Failed to load release notes.",
 
+  // roadmap
+  開発予定: "Development Roadmap",
+  "BeatMistの今後の開発予定です。":
+    "View BeatMist's upcoming development plans.",
+  "開発予定の取得に失敗しました。": "Failed to load development roadmap.",
+"優先度: 高": "Priority: High",
+  "優先度: 中": "Priority: Medium",
+  "優先度: 低": "Priority: Low",
+  "最終更新:": "Last updated:",
+  今後のアップデート予定は: "For upcoming updates, see the ",
+  開発予定ページ: "Development Roadmap",
+  をご覧ください: ".",
+
   // navigation / shared
   ドキュメント: "Docs",
   詳しい仕様を見る: "View detailed specs",
 
   // footer
   サポート: "Support",
-  "Discordコミュニティへの招待リンクをソフト内に掲載しています": "Discord community invite link is available in the app",
+  Discordコミュニティへの招待リンクをソフト内に掲載しています:
+    "Discord community invite link is available in the app",
   ユーザーコミュニティ: "User Community",
   BeatMistの変換仕様について: "About BeatMist's Conversion Specifications",
   特定商取引法に基づく表記: "Specified Commercial Transactions Act",
