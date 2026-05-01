@@ -23,6 +23,31 @@ pnpm build      # プロダクションビルド
 | `pnpm dev` | Astro 開発サーバーのみ | UI・コンポーネントの開発。軽量で高速 |
 | `pnpm dev:cf` | Wrangler 経由で Astro + Cloudflare Functions | API エンドポイント（`/api/*`）を含む完全な環境。Functions の動作確認が必要なときに使用 |
 
+## 開発予定（ロードマップ）
+
+サイトの [/roadmap](https://beatmist.com/roadmap) ページに表示される開発予定は、リポジトリルートの `roadmap.yml` から動的に取得されます。
+
+### 更新方法
+
+GitHub 上で [`roadmap.yml`](https://github.com/kikeda1102/beatmist-releases/blob/main/roadmap.yml) を直接編集・コミットするだけでサイトに反映されます（デプロイ不要）。GitHub CDN のキャッシュにより、反映まで最大約5分かかります。
+
+### YAML の構造
+
+```yaml
+last_updated: "2026-05-01"
+
+categories:
+  - id: planned          # planned / considering / completed
+    label: "対応予定"      # 日本語表示名
+    label_en: "Planned"   # 英語表示名
+    items:
+      - title: "機能名"
+        title_en: "Feature Name"
+        description: "説明"
+        description_en: "Description"
+        priority: high    # high / medium / low
+```
+
 ## API エンドポイント
 
 ### `GET /api/downloads`
