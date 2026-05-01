@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { displayRoadmap } from "../config";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { TranslationProvider, useTranslation } from "../i18n";
 import {
@@ -263,6 +264,14 @@ function RoadmapContent() {
 }
 
 export default function Roadmap() {
+  useEffect(() => {
+    if (!displayRoadmap) {
+      window.location.replace("/");
+    }
+  }, []);
+
+  if (!displayRoadmap) return null;
+
   return (
     <TranslationProvider>
       <Header />

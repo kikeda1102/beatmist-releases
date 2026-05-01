@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { displayRoadmap } from "../config";
 import { TranslationProvider } from "../i18n";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -59,7 +60,7 @@ export default function App() {
         <Features />
         <Download />
         <ReleaseNotes />
-        <RoadmapBanner />
+        {displayRoadmap && <RoadmapBanner />}
         <Pricing />
         <Contact />
       </main>
