@@ -160,7 +160,7 @@ export default function Highlights() {
                     <ItemDescription>{t(item.description)}</ItemDescription>
                     {item.href && (
                       <ItemLink href={item.href}>
-                        {t("詳しい仕様を見る")} &rarr;
+                        {t(item.hrefLabel ?? "詳しい仕様を見る")} &rarr;
                       </ItemLink>
                     )}
                   </TextWrapper>
@@ -180,7 +180,7 @@ export default function Highlights() {
                 <ItemDescription>{t(item.description)}</ItemDescription>
                 {item.href && (
                   <ItemLink href={item.href}>
-                    {t("詳しい仕様を見る")} &rarr;
+                    {t(item.hrefLabel ?? "詳しい仕様を見る")} &rarr;
                   </ItemLink>
                 )}
               </TextOnlyItem>

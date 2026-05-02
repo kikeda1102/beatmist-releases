@@ -90,6 +90,7 @@ interface Highlight {
   readonly title: string;
   readonly description: string;
   readonly href?: string;
+  readonly hrefLabel?: string;
   readonly image?: string;
   readonly imageAlt?: string;
 }
@@ -113,7 +114,9 @@ export const highlights: readonly Highlight[] = [
   {
     title: "無料ですぐに始められる",
     description:
-      "Freeプランで全機能をお試しいただけます。\nProプランは買い切りで、追加費用はかかりません。",
+      "Freeプランでも全ての機能を本格的にご利用いただけます。",
+    href: "/#pricing",
+    hrefLabel: "料金プランを見る",
   },
 ];
 

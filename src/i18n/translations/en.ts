@@ -41,8 +41,9 @@ const en: Record<string, string> = {
   "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集もアプリ上で完結し、再インポートするだけで反映。":
     "Check the Rekordbox import status of each track at a glance.\nEdit metadata in-app — changes apply by simply re-importing.",
   無料ですぐに始められる: "Get Started Free",
-  "Freeプランで全機能をお試しいただけます。\nProプランは買い切りで、追加費用はかかりません。":
-    "Try all features with the Free plan.\nThe Pro plan is a one-time purchase with no additional fees.",
+  "Freeプランでも全ての機能を本格的にご利用いただけます。":
+    "All features are fully available on the Free plan.",
+  料金プランを見る: "View pricing plans",
 
   // feature / highlight images
   "CDJ-3000で非対応のビット深度・サンプルレートに赤いバッジが表示されている画面":
