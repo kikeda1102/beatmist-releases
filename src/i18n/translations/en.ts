@@ -73,8 +73,8 @@ const en: Record<string, string> = {
     "System Requirements: Windows 10+ / macOS 12+ (Apple Silicon only)",
   "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が出ます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。":
     'During Windows installation, you may see a "Windows protected your PC" warning. Click "More info" then "Run anyway" to proceed with the installation.',
-  "macOSで初回起動時に「開発元が未確認」と表示された場合は、右クリックから「開く」を選択してください。":
-    'On macOS, if you see "unidentified developer" on first launch, right-click the app and select "Open".',
+  "macOSで初回起動時に確認ダイアログが表示されます。「開く」ボタンをクリックしてください。":
+    'On macOS, a confirmation dialog will appear on first launch. Click the "Open" button to proceed.',
 
   // contact section
   お問い合わせ: "Contact",
@@ -305,8 +305,10 @@ const en: Record<string, string> = {
   ".dmgファイルを開いてアプリをApplicationsフォルダにドラッグ":
     "Open the .dmg and drag the app to Applications",
   初回起動時の確認: "First launch confirmation",
-  "「開発元が未確認」と表示された場合は、右クリックから「開く」を選択してください。":
-    'If you see "unidentified developer", right-click the app and select "Open".',
+  "初回起動時に以下のようなダイアログが表示されます。「開く」ボタンをクリックして起動してください。":
+    'On first launch, a dialog like the one below will appear. Click the "Open" button to start the app.',
+  "macOS Gatekeeperダイアログ":
+    "macOS Gatekeeper dialog",
   "アプリ内で新しいバージョンが利用可能になると通知が表示されます。通知に従ってアップデートするか、ダウンロードページから最新版を再ダウンロードしてインストールしてください。":
     "A notification will appear in the app when a new version is available. Follow the notification to update, or download and install the latest version from the download page.",
   "「設定」→「アプリ」→「インストールされているアプリ」からBeatMistを選択し、「アンインストール」をクリックします。":

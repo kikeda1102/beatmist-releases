@@ -165,6 +165,24 @@ const StepTitle = styled.span`
   color: ${colors.textPrimary};
 `;
 
+const ScreenshotBox = styled.div`
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+`;
+
+const ScreenshotImg = styled.img`
+  width: 100%;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  border: 1px solid ${colors.border};
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+
+  ${media.md} {
+    max-width: 340px;
+  }
+`;
+
 const HomeLink = styled.a`
   display: inline-block;
   margin-top: 2rem;
@@ -298,10 +316,17 @@ function InstallHelpContent() {
               <StepTitle>{t("初回起動時の確認")}</StepTitle>
               <br />
               {t(
-                "「開発元が未確認」と表示された場合は、右クリックから「開く」を選択してください。",
+                "初回起動時に以下のようなダイアログが表示されます。「開く」ボタンをクリックして起動してください。",
               )}
             </StepText>
           </StepItem>
+
+          <ScreenshotBox>
+            <ScreenshotImg
+              src="/images/macos-gatekeeper-dialog.png"
+              alt={t("macOS Gatekeeperダイアログ")}
+            />
+          </ScreenshotBox>
         </Section>
 
         {/* Update */}

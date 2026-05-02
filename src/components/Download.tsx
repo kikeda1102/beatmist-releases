@@ -128,6 +128,19 @@ const InstallNoteItem = styled.li`
   margin-bottom: 0.25rem;
 `;
 
+const InstallGuideLink = styled.a`
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: ${colors.textMuted};
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${colors.accent};
+  }
+`;
+
 interface GitHubAsset {
   name: string;
   browser_download_url: string;
@@ -237,10 +250,13 @@ export default function Download() {
               </InstallNoteItem>
               <InstallNoteItem>
                 {t(
-                  "macOSで初回起動時に「開発元が未確認」と表示された場合は、右クリックから「開く」を選択してください。",
+                  "macOSで初回起動時に確認ダイアログが表示されます。「開く」ボタンをクリックしてください。",
                 )}
               </InstallNoteItem>
             </InstallNotes>
+            <InstallGuideLink href="/install-help">
+              {t("インストールガイド")} &rarr;
+            </InstallGuideLink>
           </>
         )}
       </Container>
