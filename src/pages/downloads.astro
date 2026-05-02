@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import DownloadsDashboard from "../components/DownloadsDashboard";
+import { site } from "../data/content";
+---
+
+<Layout
+  title={`${site.name} - ダウンロード統計`}
+  description="BeatMistのダウンロード統計"
+>
+  <DownloadsDashboard client:only="react" />
+</Layout>

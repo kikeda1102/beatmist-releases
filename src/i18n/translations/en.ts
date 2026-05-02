@@ -142,6 +142,18 @@ const en: Record<string, string> = {
   開発予定ページ: "Development Roadmap",
   をご覧ください: ".",
 
+  // downloads dashboard
+  ダウンロード統計: "Download Statistics",
+  "BeatMistのダウンロード統計です。": "BeatMist download statistics.",
+  合計ダウンロード数: "Total Downloads",
+  プラットフォーム別: "By Platform",
+  リリース数: "Releases",
+  バージョン別ダウンロード数: "Downloads by Version",
+  リリース別内訳: "Breakdown by Release",
+  件: "",
+  "ダウンロード統計の取得に失敗しました。":
+    "Failed to load download statistics.",
+
   // navigation / shared
   ドキュメント: "Docs",
   詳しい仕様を見る: "View detailed specs",
