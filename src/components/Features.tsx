@@ -47,10 +47,29 @@ const Card = styled.div`
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: background-color 0.2s ease;
+  overflow: hidden;
 
   &:hover {
     background-color: ${colors.bgCardHover};
   }
+`;
+
+const CardImageWrapper = styled.div`
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid ${colors.border};
+  background-color: ${colors.bgPrimary};
+  overflow: hidden;
+  margin-bottom: 1rem;
+`;
+
+const CardImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
 
 const CardHeader = styled.div`
@@ -69,6 +88,7 @@ const CardTitle = styled.h3`
   font-size: 1.125rem;
   font-weight: 600;
   color: ${colors.textPrimary};
+  word-break: keep-all;
 `;
 
 const CardDescription = styled.p`
@@ -100,6 +120,14 @@ export default function Features() {
         <Grid>
           {features.map((feature) => (
             <Card key={feature.title}>
+              {feature.image && (
+                <CardImageWrapper>
+                  <CardImage
+                    src={feature.image}
+                    alt={feature.imageAlt ? t(feature.imageAlt) : ""}
+                  />
+                </CardImageWrapper>
+              )}
               <CardHeader>
                 <CardIcon>{feature.icon}</CardIcon>
                 <CardTitle>{t(feature.title)}</CardTitle>

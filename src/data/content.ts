@@ -33,6 +33,8 @@ interface Feature {
   readonly description: string;
   readonly badge?: string;
   readonly href?: string;
+  readonly image?: string;
+  readonly imageAlt?: string;
 }
 
 export const features: readonly Feature[] = [
@@ -42,6 +44,9 @@ export const features: readonly Feature[] = [
     description:
       "6機種のCDJに対応。非対応フォーマットを自動検出し、サンプルレート・ビット深度を最適値にスマートダウンスケーリング。自動モードとマニュアルモードを切り替えて、変換を完全にコントロールできます。",
     href: "/docs",
+    image: "/images/showcase/problem-badge.png",
+    imageAlt:
+      "CDJ-3000で非対応のビット深度・サンプルレートに赤いバッジが表示されている画面",
   },
   {
     icon: "\u{1F6E1}️",
@@ -49,12 +54,16 @@ export const features: readonly Feature[] = [
     description:
       "変換時に元のファイルは自動的にバックアップされます。変換後でもワンクリックでいつでも元に戻せるので、安心して変換できます。",
     badge: "NEW",
+    image: "/images/showcase/backup-revert.png",
+    imageAlt: "変換済みファイルのワンクリック復元UI",
   },
   {
     icon: "\u{1F3F7}️",
     title: "Rekordbox互換メタデータ編集",
     description:
       "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。Rekordboxに再インポートするだけで反映されます。",
+    image: "/images/showcase/metadata-edit.png",
+    imageAlt: "アプリ上でのメタデータ編集画面",
   },
   {
     icon: "\u{1F4C2}",
@@ -62,18 +71,24 @@ export const features: readonly Feature[] = [
     description:
       "Rekordboxのファイルパスを自動で取得し、各トラックがインポート済みかどうかを一覧で表示。",
     badge: "NEW",
+    image: "/images/showcase/rekordbox-status.png",
+    imageAlt: "各トラックのRekordboxインポート状況の一覧表示",
   },
   {
     icon: "\u{1F4C1}",
     title: "楽曲ライブラリ管理",
     description:
       "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。",
+    image: "/images/showcase/library.png",
+    imageAlt: "楽曲ライブラリの一覧表示画面",
   },
   {
     icon: "\u{1F3B5}",
     title: "波形プレビュー & 試聴",
     description:
       "楽曲を選択すると波形を即座に描画。アプリ内でそのまま再生でき、シークバーで任意のポイントへジャンプ。視覚と聴覚で楽曲をすばやく確認できます。",
+    image: "/images/showcase/waveform.png",
+    imageAlt: "波形プレビューと再生コントロールの画面",
   },
 ];
 
@@ -81,6 +96,8 @@ interface Highlight {
   readonly title: string;
   readonly description: string;
   readonly href?: string;
+  readonly image?: string;
+  readonly imageAlt?: string;
 }
 
 export const highlights: readonly Highlight[] = [
@@ -89,11 +106,15 @@ export const highlights: readonly Highlight[] = [
     description:
       "使用するCDJ機種を選ぶだけ。\n非対応フォーマットを自動で検出し、最適な形式に変換します。",
     href: "/docs",
+    image: "/images/showcase/cdj-select.png",
+    imageAlt: "CDJ機種選択と非対応フォーマットの自動検出画面",
   },
   {
     title: "Rekordboxとシームレスに連携",
     description:
       "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集もアプリ上で完結し、再インポートするだけで反映。",
+    image: "/images/showcase/rekordbox-status.png",
+    imageAlt: "各トラックのRekordboxインポート状況の一覧表示",
   },
   {
     title: "無料ですぐに始められる",

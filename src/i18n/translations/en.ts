@@ -44,6 +44,22 @@ const en: Record<string, string> = {
   "Freeプランで全機能をお試しいただけます。\nProプランは買い切りで、追加費用はかかりません。":
     "Try all features with the Free plan.\nThe Pro plan is a one-time purchase with no additional fees.",
 
+  // feature / highlight images
+  "CDJ-3000で非対応のビット深度・サンプルレートに赤いバッジが表示されている画面":
+    "Screen showing red badges on incompatible bit depth and sample rate for CDJ-3000",
+  "変換済みファイルのワンクリック復元UI":
+    "One-click revert UI for converted files",
+  "アプリ上でのメタデータ編集画面":
+    "In-app metadata editing screen",
+  "各トラックのRekordboxインポート状況の一覧表示":
+    "List view showing Rekordbox import status for each track",
+  "楽曲ライブラリの一覧表示画面":
+    "Track library list view",
+  "波形プレビューと再生コントロールの画面":
+    "Waveform preview and playback controls",
+  "CDJ機種選択と非対応フォーマットの自動検出画面":
+    "CDJ model selection and automatic incompatible format detection",
+
   // pricing section
   料金プラン: "Pricing",
   まずは試してみたい方に: "For those who want to try it first",
