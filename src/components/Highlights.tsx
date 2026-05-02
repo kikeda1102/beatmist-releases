@@ -2,6 +2,13 @@ import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { highlights } from "../data/content";
 import { useTranslation } from "../i18n";
+import CdjSelectMock from "./highlights/CdjSelectMock";
+import RekordboxStatusMock from "./highlights/RekordboxStatusMock";
+
+const svgMockComponents: Record<string, React.ComponentType> = {
+  "/images/showcase/cdj-select.png": CdjSelectMock,
+  "/images/showcase/rekordbox-status.png": RekordboxStatusMock,
+};
 
 const Section = styled.section`
   padding: ${spacing.sectionPadding} 1.5rem;
@@ -165,10 +172,17 @@ export default function Highlights() {
                     )}
                   </TextWrapper>
                   <ImageWrapper>
-                    <ItemImage
-                      src={item.image}
-                      alt={item.imageAlt ? t(item.imageAlt) : ""}
-                    />
+                    {item.image && svgMockComponents[item.image] ? (
+                      (() => {
+                        const MockComponent = svgMockComponents[item.image];
+                        return <MockComponent />;
+                      })()
+                    ) : (
+                      <ItemImage
+                        src={item.image}
+                        alt={item.imageAlt ? t(item.imageAlt) : ""}
+                      />
+                    )}
                   </ImageWrapper>
                 </ImageItem>
               );
