@@ -155,12 +155,6 @@ export default function Highlights() {
               imageIndex++;
               return (
                 <ImageItem key={item.title} $reverse={reverse}>
-                  <ImageWrapper>
-                    <ItemImage
-                      src={item.image}
-                      alt={item.imageAlt ? t(item.imageAlt) : ""}
-                    />
-                  </ImageWrapper>
                   <TextWrapper>
                     <ItemTitle>{t(item.title)}</ItemTitle>
                     <ItemDescription>{t(item.description)}</ItemDescription>
@@ -170,6 +164,12 @@ export default function Highlights() {
                       </ItemLink>
                     )}
                   </TextWrapper>
+                  <ImageWrapper>
+                    <ItemImage
+                      src={item.image}
+                      alt={item.imageAlt ? t(item.imageAlt) : ""}
+                    />
+                  </ImageWrapper>
                 </ImageItem>
               );
             }

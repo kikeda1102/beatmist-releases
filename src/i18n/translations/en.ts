@@ -37,27 +37,25 @@ const en: Record<string, string> = {
   CDJ機種を選ぶだけで自動変換: "Auto-Convert by Selecting Your CDJ",
   "使用するCDJ機種を選ぶだけ。\n非対応フォーマットを自動で検出し、最適な形式に変換します。":
     "Just select your CDJ model.\nIncompatible formats are auto-detected and converted to the optimal format.",
-  "Rekordboxとシームレスに連携": "Seamless Rekordbox Integration",
+  Rekordboxとシームレスに連携: "Seamless Rekordbox Integration",
   "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集もアプリ上で完結し、再インポートするだけで反映。":
     "Check the Rekordbox import status of each track at a glance.\nEdit metadata in-app — changes apply by simply re-importing.",
-  "無料ですぐに始められる": "Get Started Free",
+  無料ですぐに始められる: "Get Started Free",
   "Freeプランで全機能をお試しいただけます。\nProプランは買い切りで、追加費用はかかりません。":
     "Try all features with the Free plan.\nThe Pro plan is a one-time purchase with no additional fees.",
 
   // feature / highlight images
   "CDJ-3000で非対応のビット深度・サンプルレートに赤いバッジが表示されている画面":
     "Screen showing red badges on incompatible bit depth and sample rate for CDJ-3000",
-  "変換済みファイルのワンクリック復元UI":
+  変換済みファイルのワンクリック復元UI:
     "One-click revert UI for converted files",
-  "アプリ上でのメタデータ編集画面":
-    "In-app metadata editing screen",
-  "各トラックのRekordboxインポート状況の一覧表示":
+  アプリ上でのメタデータ編集画面: "In-app metadata editing screen",
+  各トラックのRekordboxインポート状況の一覧表示:
     "List view showing Rekordbox import status for each track",
-  "楽曲ライブラリの一覧表示画面":
-    "Track library list view",
-  "波形プレビューと再生コントロールの画面":
+  楽曲ライブラリの一覧表示画面: "Track library list view",
+  波形プレビューと再生コントロールの画面:
     "Waveform preview and playback controls",
-  "CDJ機種選択と非対応フォーマットの自動検出画面":
+  CDJ機種選択と非対応フォーマットの自動検出画面:
     "CDJ model selection and automatic incompatible format detection",
 
   // pricing section
@@ -87,7 +85,7 @@ const en: Record<string, string> = {
     "Failed to fetch download links. Please try again later.",
   "動作環境: Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）":
     "System Requirements: Windows 10+ / macOS 12+ (Apple Silicon only)",
-  "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が出ます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。":
+  "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が表示されます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。":
     'During Windows installation, you may see a "Windows protected your PC" warning. Click "More info" then "Run anyway" to proceed with the installation.',
   "macOSで初回起動時に確認ダイアログが表示されます。「開く」ボタンをクリックしてください。":
     'On macOS, a confirmation dialog will appear on first launch. Click the "Open" button to proceed.',

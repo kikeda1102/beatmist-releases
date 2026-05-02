@@ -245,7 +245,7 @@ export default function Download() {
             <InstallNotes>
               <InstallNoteItem>
                 {t(
-                  "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が出ます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。",
+                  "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が表示されます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。",
                 )}
               </InstallNoteItem>
               <InstallNoteItem>
