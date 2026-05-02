@@ -37,36 +37,24 @@ interface Feature {
 
 export const features: readonly Feature[] = [
   {
-    icon: "\u{1F4C1}",
-    title: "楽曲ライブラリ管理",
+    icon: "\u{1F504}",
+    title: "CDJ機種別フォーマット一括変換",
     description:
-      "フォルダを指定するだけでWAV / MP3 / AIFF / FLACを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示。",
+      "6機種のCDJに対応。非対応フォーマットを自動検出し、サンプルレート・ビット深度を最適値にスマートダウンスケーリング。自動モードとマニュアルモードを切り替えて、変換を完全にコントロールできます。",
+    href: "/docs",
+  },
+  {
+    icon: "\u{1F6E1}️",
+    title: "自動バックアップ & ワンクリック復元",
+    description:
+      "変換時に元のファイルは自動的にバックアップされます。変換後でもワンクリックでいつでも元に戻せるので、安心して変換できます。",
+    badge: "NEW",
   },
   {
     icon: "\u{1F3F7}️",
     title: "Rekordbox互換メタデータ編集",
     description:
-      "ID3タグをアプリ上で編集し、ファイルに書き戻し。Rekordboxに再インポートするだけで反映。",
-  },
-  {
-    icon: "\u{1F30A}",
-    title: "波形プレビュー",
-    description:
-      "楽曲を選択すると波形を即座に描画。視覚的に楽曲の構成を把握できる。",
-  },
-  {
-    icon: "\u{1F3A7}",
-    title: "試聴",
-    description:
-      "アプリ内で楽曲を再生。シークバーで任意のポイントへジャンプし、素早く確認。",
-  },
-  {
-    icon: "\u{1F504}",
-    title: "CDJ機種別フォーマット一括変換",
-    description:
-      "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。",
-    badge: "NEW",
-    href: "/docs",
+      "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。Rekordboxに再インポートするだけで反映されます。",
   },
   {
     icon: "\u{1F4C2}",
@@ -74,6 +62,18 @@ export const features: readonly Feature[] = [
     description:
       "Rekordboxのファイルパスを自動で取得し、各トラックがインポート済みかどうかを一覧で表示。",
     badge: "NEW",
+  },
+  {
+    icon: "\u{1F4C1}",
+    title: "楽曲ライブラリ管理",
+    description:
+      "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。",
+  },
+  {
+    icon: "\u{1F3B5}",
+    title: "波形プレビュー & 試聴",
+    description:
+      "楽曲を選択すると波形を即座に描画。アプリ内でそのまま再生でき、シークバーで任意のポイントへジャンプ。視覚と聴覚で楽曲をすばやく確認できます。",
   },
 ];
 

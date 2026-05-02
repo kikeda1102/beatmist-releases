@@ -14,24 +14,24 @@ const en: Record<string, string> = {
   無料で試す: "Try for Free",
 
   // features section
-  楽曲ライブラリ管理: "Track Library Management",
-  "フォルダを指定するだけでWAV / MP3 / AIFF / FLACを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示。":
-    "Auto-detect WAV / MP3 / AIFF / FLAC just by specifying a folder. View metadata like Title, Artist, BPM, and Key at a glance.",
-  Rekordbox互換メタデータ編集: "Rekordbox-Compatible Metadata Editing",
-  "ID3タグをアプリ上で編集し、ファイルに書き戻し。Rekordboxに再インポートするだけで反映。":
-    "Edit ID3 tags in-app and write back to files. Changes reflect in Rekordbox by simply re-importing.",
-  波形プレビュー: "Waveform Preview",
-  "楽曲を選択すると波形を即座に描画。視覚的に楽曲の構成を把握できる。":
-    "Instantly render waveforms when selecting a track. Visually grasp the structure of your music.",
-  試聴: "Audition",
-  "アプリ内で楽曲を再生。シークバーで任意のポイントへジャンプし、素早く確認。":
-    "Play tracks in-app. Jump to any point with the seek bar for quick review.",
   CDJ機種別フォーマット一括変換: "CDJ-Specific Batch Format Conversion",
-  "対象のCDJを選ぶだけで、非対応フォーマットを自動検出し最適な形式へ一括変換。":
-    "Just select your target CDJ — unsupported formats are auto-detected and batch-converted to the optimal format.",
+  "6機種のCDJに対応。非対応フォーマットを自動検出し、サンプルレート・ビット深度を最適値にスマートダウンスケーリング。自動モードとマニュアルモードを切り替えて、変換を完全にコントロールできます。":
+    "Supports 6 CDJ models. Auto-detects incompatible formats and smart-downscales sample rate and bit depth to optimal values. Switch between auto and manual modes for full conversion control.",
+  "自動バックアップ & ワンクリック復元": "Auto Backup & One-Click Revert",
+  "変換時に元のファイルは自動的にバックアップされます。変換後でもワンクリックでいつでも元に戻せるので、安心して変換できます。":
+    "Original files are automatically backed up before conversion. Revert to originals anytime with one click, ensuring safe conversion.",
+  Rekordbox互換メタデータ編集: "Rekordbox-Compatible Metadata Editing",
+  "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。Rekordboxに再インポートするだけで反映されます。":
+    "Edit ID3 tags (Title, Artist, Key, Comment, etc.) in-app and update file tags directly. Changes are reflected in Rekordbox by simply re-importing.",
   Rekordboxインポート状況の確認: "Rekordbox Import Status",
   "Rekordboxのファイルパスを自動で取得し、各トラックがインポート済みかどうかを一覧で表示。":
     "Automatically retrieves Rekordbox file paths and shows whether each track has been imported.",
+  楽曲ライブラリ管理: "Track Library Management",
+  "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。":
+    "Auto-detect WAV / MP3 / AIFF / FLAC / M4A from multiple folders. View metadata like Title, Artist, BPM, and Key at a glance, and quickly find tracks with search and sort.",
+  "波形プレビュー & 試聴": "Waveform Preview & Playback",
+  "楽曲を選択すると波形を即座に描画。アプリ内でそのまま再生でき、シークバーで任意のポイントへジャンプ。視覚と聴覚で楽曲をすばやく確認できます。":
+    "Instantly render waveforms when you select a track. Play back directly in-app and jump to any point with the seek bar. Quickly evaluate tracks by sight and sound.",
 
   // highlights section
   CDJ機種を選ぶだけで自動変換: "Auto-Convert by Selecting Your CDJ",
@@ -138,7 +138,7 @@ const en: Record<string, string> = {
   "BeatMistの今後の開発予定です。":
     "View BeatMist's upcoming development plans.",
   "開発予定の取得に失敗しました。": "Failed to load development roadmap.",
-"優先度: 高": "Priority: High",
+  "優先度: 高": "Priority: High",
   "優先度: 中": "Priority: Medium",
   "優先度: 低": "Priority: Low",
   "最終更新:": "Last updated:",
@@ -186,6 +186,10 @@ const en: Record<string, string> = {
 
   "BeatMistは以下の6機種に対応しています。各機種ごとに対応するフォーマット・サンプルレート・ビット深度が異なります。":
     "BeatMist supports the following 6 CDJ models. Supported formats, sample rates, and bit depths vary by model.",
+  BeatMistの対応入力フォーマット: "Supported Input Formats",
+  "BeatMistは以下のフォーマットの楽曲ファイルを読み込めます。":
+    "BeatMist can import track files in the following formats.",
+  "M4A（AAC / ALAC）": "M4A (AAC / ALAC)",
   機種別対応フォーマット: "Supported Formats by Model",
   機種: "Model",
   対応: "Yes",
@@ -282,24 +286,20 @@ const en: Record<string, string> = {
   アップデート方法: "How to Update",
   アンインストール方法: "How to Uninstall",
   トラブルシューティング: "Troubleshooting",
-  "インストーラー(.exe)をダウンロード":
-    "Download the installer (.exe)",
+  "インストーラー(.exe)をダウンロード": "Download the installer (.exe)",
   "ダウンロードページからWindows版をダウンロードします。":
     "Download the Windows version from the download page.",
-  ダウンロードしたファイルを実行:
-    "Run the downloaded file",
+  ダウンロードしたファイルを実行: "Run the downloaded file",
   "ダウンロードした .exe ファイルをダブルクリックして実行します。":
     "Double-click the downloaded .exe file to run it.",
   "「WindowsによってPCが保護されました」と表示された場合":
     'If you see "Windows protected your PC"',
   "BeatMistは個人開発ソフトウェアのため、WindowsのSmartScreenが警告を表示する場合があります。「詳細情報」をクリックし、「実行」ボタンを押してインストールを続行してください。":
     'Since BeatMist is independently developed software, Windows SmartScreen may display a warning. Click "More info", then click "Run anyway" to continue the installation.',
-  インストーラーの指示に従ってインストール:
-    "Follow the installer instructions",
+  インストーラーの指示に従ってインストール: "Follow the installer instructions",
   "表示される手順に沿ってインストールを完了します。":
     "Complete the installation following the on-screen instructions.",
-  "インストーラー(.dmg)をダウンロード":
-    "Download the installer (.dmg)",
+  "インストーラー(.dmg)をダウンロード": "Download the installer (.dmg)",
   "ダウンロードページからmacOS版をダウンロードします。":
     "Download the macOS version from the download page.",
   ".dmgファイルを開いてアプリをApplicationsフォルダにドラッグ":
@@ -307,8 +307,7 @@ const en: Record<string, string> = {
   初回起動時の確認: "First launch confirmation",
   "初回起動時に以下のようなダイアログが表示されます。「開く」ボタンをクリックして起動してください。":
     'On first launch, a dialog like the one below will appear. Click the "Open" button to start the app.',
-  "macOS Gatekeeperダイアログ":
-    "macOS Gatekeeper dialog",
+  "macOS Gatekeeperダイアログ": "macOS Gatekeeper dialog",
   "アプリ内で新しいバージョンが利用可能になると通知が表示されます。通知に従ってアップデートするか、ダウンロードページから最新版を再ダウンロードしてインストールしてください。":
     "A notification will appear in the app when a new version is available. Follow the notification to update, or download and install the latest version from the download page.",
   "「設定」→「アプリ」→「インストールされているアプリ」からBeatMistを選択し、「アンインストール」をクリックします。":

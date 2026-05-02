@@ -322,6 +322,20 @@ function CdjConversionContent() {
             )}
           </Paragraph>
 
+          <SubTitle>{t("BeatMistの対応入力フォーマット")}</SubTitle>
+          <Paragraph>
+            {t(
+              "BeatMistは以下のフォーマットの楽曲ファイルを読み込めます。",
+            )}
+          </Paragraph>
+          <BulletList>
+            <ListItem>WAV</ListItem>
+            <ListItem>AIFF</ListItem>
+            <ListItem>MP3</ListItem>
+            <ListItem>FLAC</ListItem>
+            <ListItem>{t("M4A（AAC / ALAC）")}</ListItem>
+          </BulletList>
+
           <SubTitle>{t("機種別対応フォーマット")}</SubTitle>
           <TableWrapper>
             <SpecTable>
