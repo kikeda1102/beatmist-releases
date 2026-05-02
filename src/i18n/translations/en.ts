@@ -71,6 +71,10 @@ const en: Record<string, string> = {
     "Failed to fetch download links. Please try again later.",
   "動作環境: Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）":
     "System Requirements: Windows 10+ / macOS 12+ (Apple Silicon only)",
+  "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が出ます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。":
+    'During Windows installation, you may see a "Windows protected your PC" warning. Click "More info" then "Run anyway" to proceed with the installation.',
+  "macOSで初回起動時に「開発元が未確認」と表示された場合は、右クリックから「開く」を選択してください。":
+    'On macOS, if you see "unidentified developer" on first launch, right-click the app and select "Open".',
 
   // contact section
   お問い合わせ: "Contact",
@@ -165,6 +169,7 @@ const en: Record<string, string> = {
   ユーザーコミュニティ: "User Community",
   BeatMistの変換仕様について: "About BeatMist's Conversion Specifications",
   特定商取引法に基づく表記: "Specified Commercial Transactions Act",
+  インストールガイド: "Installation Guide",
 
   変換仕様について: "Conversion Specs",
 
@@ -268,6 +273,52 @@ const en: Record<string, string> = {
     "Converted files are output to the same directory as the original file. If the filename already exists, a sequential number is appended.",
 
   トップページに戻る: "Back to Home",
+
+  // install-help page
+  "BeatMistのインストール方法、アップデート、アンインストール、トラブルシューティングについてご案内します。":
+    "Learn how to install, update, uninstall, and troubleshoot BeatMist.",
+  Windowsでのインストール: "Installing on Windows",
+  macOSでのインストール: "Installing on macOS",
+  アップデート方法: "How to Update",
+  アンインストール方法: "How to Uninstall",
+  トラブルシューティング: "Troubleshooting",
+  "インストーラー(.exe)をダウンロード":
+    "Download the installer (.exe)",
+  "ダウンロードページからWindows版をダウンロードします。":
+    "Download the Windows version from the download page.",
+  ダウンロードしたファイルを実行:
+    "Run the downloaded file",
+  "ダウンロードした .exe ファイルをダブルクリックして実行します。":
+    "Double-click the downloaded .exe file to run it.",
+  "「WindowsによってPCが保護されました」と表示された場合":
+    'If you see "Windows protected your PC"',
+  "BeatMistは個人開発ソフトウェアのため、WindowsのSmartScreenが警告を表示する場合があります。「詳細情報」をクリックし、「実行」ボタンを押してインストールを続行してください。":
+    'Since BeatMist is independently developed software, Windows SmartScreen may display a warning. Click "More info", then click "Run anyway" to continue the installation.',
+  インストーラーの指示に従ってインストール:
+    "Follow the installer instructions",
+  "表示される手順に沿ってインストールを完了します。":
+    "Complete the installation following the on-screen instructions.",
+  "インストーラー(.dmg)をダウンロード":
+    "Download the installer (.dmg)",
+  "ダウンロードページからmacOS版をダウンロードします。":
+    "Download the macOS version from the download page.",
+  ".dmgファイルを開いてアプリをApplicationsフォルダにドラッグ":
+    "Open the .dmg and drag the app to Applications",
+  初回起動時の確認: "First launch confirmation",
+  "「開発元が未確認」と表示された場合は、右クリックから「開く」を選択してください。":
+    'If you see "unidentified developer", right-click the app and select "Open".',
+  "アプリ内で新しいバージョンが利用可能になると通知が表示されます。通知に従ってアップデートするか、ダウンロードページから最新版を再ダウンロードしてインストールしてください。":
+    "A notification will appear in the app when a new version is available. Follow the notification to update, or download and install the latest version from the download page.",
+  "「設定」→「アプリ」→「インストールされているアプリ」からBeatMistを選択し、「アンインストール」をクリックします。":
+    'Go to Settings → Apps → Installed apps, select BeatMist, and click "Uninstall".',
+  "ApplicationsフォルダからBeatMistをゴミ箱にドラッグします。":
+    "Drag BeatMist from the Applications folder to the Trash.",
+  インストールが完了しない場合: "If installation does not complete",
+  "ウイルス対策ソフトが干渉している可能性があります。一時的に無効化してから再度お試しください。":
+    "Antivirus software may be interfering. Try temporarily disabling it and try again.",
+  アプリが起動しない場合: "If the app does not start",
+  "PCを再起動してからもう一度お試しください。問題が解決しない場合はお問い合わせフォームからご連絡ください。":
+    "Try restarting your PC. If the issue persists, please contact us via the contact form.",
 };
 
 export default en;

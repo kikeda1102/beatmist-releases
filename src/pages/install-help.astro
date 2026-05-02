@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import InstallHelp from "../components/InstallHelp";
+import { site } from "../data/content";
+---
+
+<Layout
+  title={`${site.name} - インストールガイド`}
+  description="インストールガイド"
+>
+  <InstallHelp client:only="react" />
+</Layout>

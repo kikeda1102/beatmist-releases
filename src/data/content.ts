@@ -195,6 +195,7 @@ export const footer = {
   support: [
     { label: "お問い合わせ", href: "/#contact" },
     { label: "変換仕様について", href: "/docs" },
+    { label: "インストールガイド", href: "/install-help" },
     { label: "特定商取引法に基づく表記", href: "/tokushoho" },
   ],
   creator: [{ label: "X (Twitter)", href: "https://x.com/purocura" }],

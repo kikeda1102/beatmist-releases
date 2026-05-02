@@ -114,6 +114,20 @@ const SystemRequirements = styled.p`
   margin-bottom: 2rem;
 `;
 
+const InstallNotes = styled.ul`
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  color: ${colors.textMuted};
+  line-height: 1.7;
+  text-align: left;
+`;
+
+const InstallNoteItem = styled.li`
+  margin-bottom: 0.25rem;
+`;
+
 interface GitHubAsset {
   name: string;
   browser_download_url: string;
@@ -215,6 +229,18 @@ export default function Download() {
               </DownloadButton>
             </ButtonGroup>
             {version && <VersionBadge>{version}</VersionBadge>}
+            <InstallNotes>
+              <InstallNoteItem>
+                {t(
+                  "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が出ます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。",
+                )}
+              </InstallNoteItem>
+              <InstallNoteItem>
+                {t(
+                  "macOSで初回起動時に「開発元が未確認」と表示された場合は、右クリックから「開く」を選択してください。",
+                )}
+              </InstallNoteItem>
+            </InstallNotes>
           </>
         )}
       </Container>
