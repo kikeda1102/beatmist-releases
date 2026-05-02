@@ -47,6 +47,7 @@ const ItemDescription = styled.p`
   font-size: 1rem;
   color: ${colors.textSecondary};
   line-height: 1.7;
+  white-space: pre-line;
 `;
 
 const ItemLink = styled.a`

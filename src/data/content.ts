@@ -87,16 +87,18 @@ export const highlights: readonly Highlight[] = [
   {
     title: "CDJ機種を選ぶだけで自動変換",
     description:
-      "対象のCDJ機種を設定しておくだけで、非対応フォーマットを自動的に検出し、最適な形式へ変換します。",
+      "使用するCDJ機種を選ぶだけ。\n非対応フォーマットを自動で検出し、最適な形式に変換します。",
     href: "/docs",
   },
   {
-    title: "Windows / Mac 両対応",
-    description: "Windows / Mac 両対応です (macOSはApple Siliconのみ対応)。",
+    title: "Rekordboxとシームレスに連携",
+    description:
+      "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集もアプリ上で完結し、再インポートするだけで反映。",
   },
   {
-    title: "1ライセンスで3台まで",
-    description: "1つのご購入で、最大3台のPCにアクティベートできます。",
+    title: "無料ですぐに始められる",
+    description:
+      "Freeプランで全機能をお試しいただけます。\nProプランは買い切りで、追加費用はかかりません。",
   },
 ];
 

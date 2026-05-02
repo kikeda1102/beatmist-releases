@@ -35,14 +35,14 @@ const en: Record<string, string> = {
 
   // highlights section
   CDJ機種を選ぶだけで自動変換: "Auto-Convert by Selecting Your CDJ",
-  "対象のCDJ機種を設定しておくだけで、非対応フォーマットを自動的に検出し、最適な形式へ変換します。":
-    "Just set your target CDJ model, and unsupported formats are automatically detected and converted to the optimal format.",
-  "Windows / Mac 両対応": "Windows / Mac Compatible",
-  "Windows / Mac 両対応です (macOSはApple Siliconのみ対応)。":
-    "Available on both Windows and Mac (Apple Silicon only for macOS).",
-  "1ライセンスで3台まで": "1 License, Up to 3 Devices",
-  "1つのご購入で、最大3台のPCにアクティベートできます。":
-    "Activate on up to 3 PCs with a single purchase.",
+  "使用するCDJ機種を選ぶだけ。\n非対応フォーマットを自動で検出し、最適な形式に変換します。":
+    "Just select your CDJ model.\nIncompatible formats are auto-detected and converted to the optimal format.",
+  "Rekordboxとシームレスに連携": "Seamless Rekordbox Integration",
+  "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集もアプリ上で完結し、再インポートするだけで反映。":
+    "Check the Rekordbox import status of each track at a glance.\nEdit metadata in-app — changes apply by simply re-importing.",
+  "無料ですぐに始められる": "Get Started Free",
+  "Freeプランで全機能をお試しいただけます。\nProプランは買い切りで、追加費用はかかりません。":
+    "Try all features with the Free plan.\nThe Pro plan is a one-time purchase with no additional fees.",
 
   // pricing section
   料金プラン: "Pricing",
