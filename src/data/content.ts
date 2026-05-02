@@ -28,7 +28,7 @@ export const hero = {
 } as const;
 
 interface Feature {
-  readonly icon: string;
+  readonly icon?: string;
   readonly title: string;
   readonly description: string;
   readonly badge?: string;
@@ -39,7 +39,6 @@ interface Feature {
 
 export const features: readonly Feature[] = [
   {
-    icon: "\u{1F504}",
     title: "CDJ機種別フォーマット一括変換",
     description:
       "6機種のCDJに対応。非対応フォーマットを自動検出し、サンプルレート・ビット深度を最適値にスマートダウンスケーリング。自動モードとマニュアルモードを切り替えて、変換を完全にコントロールできます。",
@@ -49,7 +48,6 @@ export const features: readonly Feature[] = [
       "CDJ-3000で非対応のビット深度・サンプルレートに赤いバッジが表示されている画面",
   },
   {
-    icon: "\u{1F6E1}️",
     title: "自動バックアップ & ワンクリック復元",
     description:
       "変換時に元のファイルは自動的にバックアップされます。変換後でもワンクリックでいつでも元に戻せるので、安心して変換できます。",
@@ -58,7 +56,6 @@ export const features: readonly Feature[] = [
     imageAlt: "変換済みファイルのワンクリック復元UI",
   },
   {
-    icon: "\u{1F3F7}️",
     title: "Rekordbox互換メタデータ編集",
     description:
       "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。Rekordboxに再インポートするだけで反映されます。",
@@ -66,7 +63,6 @@ export const features: readonly Feature[] = [
     imageAlt: "アプリ上でのメタデータ編集画面",
   },
   {
-    icon: "\u{1F4C2}",
     title: "Rekordboxインポート状況の確認",
     description:
       "Rekordboxのファイルパスを自動で取得し、各トラックがインポート済みかどうかを一覧で表示。",
@@ -75,7 +71,6 @@ export const features: readonly Feature[] = [
     imageAlt: "各トラックのRekordboxインポート状況の一覧表示",
   },
   {
-    icon: "\u{1F4C1}",
     title: "楽曲ライブラリ管理",
     description:
       "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。",
@@ -83,7 +78,6 @@ export const features: readonly Feature[] = [
     imageAlt: "楽曲ライブラリの一覧表示画面",
   },
   {
-    icon: "\u{1F3B5}",
     title: "波形プレビュー & 試聴",
     description:
       "楽曲を選択すると波形を即座に描画。アプリ内でそのまま再生でき、シークバーで任意のポイントへジャンプ。視覚と聴覚で楽曲をすばやく確認できます。",

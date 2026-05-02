@@ -129,7 +129,7 @@ export default function Features() {
                 </CardImageWrapper>
               )}
               <CardHeader>
-                <CardIcon>{feature.icon}</CardIcon>
+                {feature.icon && <CardIcon>{feature.icon}</CardIcon>}
                 <CardTitle>{t(feature.title)}</CardTitle>
                 {feature.badge && <Badge text={feature.badge} variant="new" />}
               </CardHeader>
