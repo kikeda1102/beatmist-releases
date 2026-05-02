@@ -4,6 +4,7 @@ import { TranslationProvider, useTranslation } from "../i18n";
 import { conversionExamples } from "../data/content";
 import Header from "./Header";
 import Footer from "./Footer";
+import Breadcrumb from "./shared/Breadcrumb";
 
 const Page = styled.div`
   min-height: 100vh;
@@ -288,6 +289,12 @@ function CdjConversionContent() {
   return (
     <Page>
       <Container>
+        <Breadcrumb
+          items={[
+            { label: "BeatMist", href: "/" },
+            { label: "変換仕様について" },
+          ]}
+        />
         <Title>{t("BeatMistの変換仕様について")}</Title>
         <Lead>
           {t(

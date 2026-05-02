@@ -3,6 +3,7 @@ import { colors, fonts, media, spacing } from "../styles/theme";
 import { TranslationProvider, useTranslation } from "../i18n";
 import Header from "./Header";
 import Footer from "./Footer";
+import Breadcrumb from "./shared/Breadcrumb";
 
 const Page = styled.div`
   min-height: 100vh;
@@ -209,6 +210,12 @@ function InstallHelpContent() {
   return (
     <Page>
       <Container>
+        <Breadcrumb
+          items={[
+            { label: "BeatMist", href: "/" },
+            { label: "インストールガイド" },
+          ]}
+        />
         <Title>{t("インストールガイド")}</Title>
         <Lead>
           {t(
