@@ -19,7 +19,7 @@ const Section = styled.section`
       transparent 70%,
       ${colors.bgPrimary} 100%
     ),
-    url("/images/hero-bg.png") center bottom / cover no-repeat
+    url("/images/hero-bg.webp") center bottom / cover no-repeat
       ${colors.bgPrimary};
 `;
 
