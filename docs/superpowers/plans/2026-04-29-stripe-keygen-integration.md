@@ -103,7 +103,7 @@ In the same file, update the hero CTA href from `"https://booth.pm/placeholder"`
 export const hero = {
   headline: "BeatMist",
   cta: {
-    label: "無料で試す",
+    label: "無料でダウンロード",
     href: "#pricing",
   },
 } as const;

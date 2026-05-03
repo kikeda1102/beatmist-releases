@@ -59,9 +59,9 @@ export default function App() {
         <Highlights />
         <Features />
         <Download />
-        <ReleaseNotes />
         {displayRoadmap && <RoadmapBanner />}
         <Pricing />
+        <ReleaseNotes />
         <Contact />
       </main>
       <Footer />

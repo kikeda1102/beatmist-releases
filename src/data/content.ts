@@ -22,7 +22,7 @@ export const navigation = [
 export const hero = {
   headline: "BeatMist",
   cta: {
-    label: "無料で試す",
+    label: "無料でダウンロード",
     href: "/#download",
   },
 } as const;
@@ -113,15 +113,14 @@ export const highlights: readonly Highlight[] = [
   },
   {
     title: "無料ですぐに始められる",
-    description:
-      "Freeプランでも全ての機能を本格的にご利用いただけます。",
+    description: "Freeプランでも全ての機能を本格的にご利用いただけます。",
     href: "/#pricing",
     hrefLabel: "料金プランを見る",
   },
 ];
 
 export const download = {
-  title: "ダウンロード（無料）",
+  title: "ダウンロード",
   description: "お使いのOSを選択してください",
   githubRepo: "kikeda1102/beatmist-releases",
 } as const;

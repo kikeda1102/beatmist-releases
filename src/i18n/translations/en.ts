@@ -10,9 +10,6 @@ const en: Record<string, string> = {
   リリースノート: "Release Notes",
   料金: "Pricing",
 
-  // hero
-  無料で試す: "Try for Free",
-
   // features section
   CDJ機種別フォーマット一括変換: "CDJ-Specific Batch Format Conversion",
   "6機種のCDJに対応。非対応フォーマットを自動検出し、サンプルレート・ビット深度を最適値にスマートダウンスケーリング。自動モードとマニュアルモードを切り替えて、変換を完全にコントロールできます。":
@@ -78,7 +75,7 @@ const en: Record<string, string> = {
   "ベータ版期間中は 20% OFF": "Beta 20% OFF",
 
   // download section
-  "ダウンロード（無料）": "Download (Free)",
+  無料でダウンロード: "Download (Free)",
   ダウンロード: "Download",
   お使いのOSを選択してください: "Select your operating system",
   "読み込み中...": "Loading...",
