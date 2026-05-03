@@ -30,17 +30,6 @@ const cycleCheck = keyframes`
   94%, 100%   { transform: translate(0, 0) }
 `;
 
-const specPulse = keyframes`
-  0%, 10%  { opacity: 0.5 }
-  14%, 22% { opacity: 1 }
-  26%, 38% { opacity: 0.5 }
-  42%, 50% { opacity: 1 }
-  54%, 66% { opacity: 0.5 }
-  70%, 78% { opacity: 1 }
-  82%, 94% { opacity: 0.5 }
-  98%, 100% { opacity: 1 }
-`;
-
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -63,28 +52,23 @@ const CheckGroup = styled.g`
   animation: ${cycleCheck} 18s ease-in-out infinite;
 `;
 
-const SpecText = styled.text`
-  animation: ${specPulse} 18s ease-in-out infinite;
-`;
-
 export default function CdjSelectMock() {
   const dropdownX = 30;
   const dropdownY = 18;
   const dropdownW = 420;
   const textX = dropdownX + 32;
-  const dropdownBottom = ROW_HEIGHT * 6;
 
   return (
     <Wrapper>
       <svg
-        viewBox="0 0 480 300"
+        viewBox="0 0 480 220"
         width="100%"
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         role="img"
         aria-label="CDJ機種選択ドロップダウンのアニメーション"
       >
-        <rect width="480" height="300" fill="#141218" rx="4" />
+        <rect width="480" height="220" fill="#141218" rx="4" />
 
         <rect
           x={dropdownX}
@@ -131,64 +115,6 @@ export default function CdjSelectMock() {
           </text>
         ))}
 
-        <line
-          x1={dropdownX}
-          y1={dropdownY + dropdownBottom + 20}
-          x2={dropdownX + dropdownW}
-          y2={dropdownY + dropdownBottom + 20}
-          stroke="#2E2838"
-          strokeWidth="1"
-        />
-
-        <text
-          x={dropdownX}
-          y={dropdownY + dropdownBottom + 42}
-          fill="rgba(245, 240, 250, 0.95)"
-          fontSize="13"
-          fontWeight="600"
-          fontFamily="'Noto Sans JP', system-ui, sans-serif"
-        >
-          変換されるスペック
-        </text>
-
-        <rect
-          x={dropdownX}
-          y={dropdownY + dropdownBottom + 50}
-          width="44"
-          height="22"
-          rx="4"
-          fill="#2E2838"
-        />
-        <text
-          x={dropdownX + 22}
-          y={dropdownY + dropdownBottom + 65}
-          fill="rgba(245, 240, 250, 0.95)"
-          fontSize="12"
-          fontFamily="'IBM Plex Sans', system-ui, sans-serif"
-          textAnchor="middle"
-        >
-          WAV
-        </text>
-
-        <SpecText
-          x={dropdownX + 56}
-          y={dropdownY + dropdownBottom + 65}
-          fill="rgba(245, 240, 250, 0.78)"
-          fontSize="12"
-          fontFamily="'IBM Plex Sans', system-ui, sans-serif"
-        >
-          44.1/48/88.2/96 kHz · 16/24 bit
-        </SpecText>
-
-        <text
-          x={dropdownX}
-          y={dropdownY + dropdownBottom + 86}
-          fill="rgba(245, 240, 250, 0.4)"
-          fontSize="10"
-          fontFamily="'Noto Sans JP', system-ui, sans-serif"
-        >
-          ※ WAV はメタデータ（タグ）編集に非対応です。
-        </text>
       </svg>
     </Wrapper>
   );
