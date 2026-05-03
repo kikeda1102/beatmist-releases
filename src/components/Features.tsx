@@ -4,6 +4,21 @@ import { colors, fonts, media, spacing } from "../styles/theme";
 import { features } from "../data/content";
 import { useTranslation } from "../i18n";
 import Badge from "./shared/Badge";
+import ProblemBadgeMock from "./features/ProblemBadgeMock";
+import BackupRevertMock from "./features/BackupRevertMock";
+import MetadataEditMock from "./features/MetadataEditMock";
+import RekordboxStatusMock from "./highlights/RekordboxStatusMock";
+import LibraryMock from "./features/LibraryMock";
+import WaveformMock from "./features/WaveformMock";
+
+const svgMockComponents: Record<string, React.ComponentType> = {
+  "/images/showcase/problem-badge.png": ProblemBadgeMock,
+  "/images/showcase/backup-revert.png": BackupRevertMock,
+  "/images/showcase/metadata-edit.png": MetadataEditMock,
+  "/images/showcase/rekordbox-status.png": RekordboxStatusMock,
+  "/images/showcase/library.png": LibraryMock,
+  "/images/showcase/waveform.png": WaveformMock,
+};
 
 const Section = styled.section`
   padding: ${spacing.sectionPadding} 1.5rem;
@@ -72,6 +87,13 @@ const CardImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+`;
+
+const LightboxMockWrapper = styled.div`
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.5rem;
+  overflow: hidden;
 `;
 
 const CardHeader = styled.div`
@@ -157,28 +179,34 @@ const CloseButton = styled.button`
   }
 `;
 
+type LightboxState =
+  | { type: "image"; src: string; alt: string }
+  | { type: "mock"; key: string; alt: string }
+  | null;
+
 export default function Features() {
   const { t } = useTranslation();
-  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
-  const [lightboxAlt, setLightboxAlt] = useState("");
+  const [lightbox, setLightbox] = useState<LightboxState>(null);
 
   const closeLightbox = useCallback(() => {
-    setLightboxSrc(null);
-    setLightboxAlt("");
+    setLightbox(null);
   }, []);
 
   useEffect(() => {
-    if (!lightboxSrc) return;
+    if (!lightbox) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeLightbox();
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [lightboxSrc, closeLightbox]);
+  }, [lightbox, closeLightbox]);
 
-  const openLightbox = (src: string, alt: string) => {
-    setLightboxSrc(src);
-    setLightboxAlt(alt);
+  const openLightbox = (imageKey: string, alt: string) => {
+    if (svgMockComponents[imageKey]) {
+      setLightbox({ type: "mock", key: imageKey, alt });
+    } else {
+      setLightbox({ type: "image", src: imageKey, alt });
+    }
   };
 
   return (
@@ -203,7 +231,14 @@ export default function Features() {
                       }
                     }}
                   >
-                    <CardImage src={image} alt={alt} />
+                    {svgMockComponents[image] ? (
+                      (() => {
+                        const MockComponent = svgMockComponents[image];
+                        return <MockComponent />;
+                      })()
+                    ) : (
+                      <CardImage src={image} alt={alt} />
+                    )}
                   </CardImageWrapper>
                 )}
                 <CardHeader>
@@ -224,14 +259,25 @@ export default function Features() {
           })}
         </Grid>
       </Container>
-      {lightboxSrc && (
+      {lightbox && (
         <Overlay
           role="dialog"
-          aria-label={lightboxAlt}
+          aria-label={lightbox.alt}
           onClick={closeLightbox}
         >
           <LightboxContent onClick={(e) => e.stopPropagation()}>
-            <LightboxImage src={lightboxSrc} alt={lightboxAlt} />
+            {lightbox.type === "mock" && svgMockComponents[lightbox.key] ? (
+              (() => {
+                const MockComponent = svgMockComponents[lightbox.key];
+                return (
+                  <LightboxMockWrapper>
+                    <MockComponent />
+                  </LightboxMockWrapper>
+                );
+              })()
+            ) : lightbox.type === "image" ? (
+              <LightboxImage src={lightbox.src} alt={lightbox.alt} />
+            ) : null}
             <CloseButton onClick={closeLightbox} aria-label="Close">
               &times;
             </CloseButton>
