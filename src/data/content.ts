@@ -141,7 +141,7 @@ export const pricingTiers: readonly PricingTier[] = [
     name: "Free",
     price: "¥0",
     priceNote: "",
-    description: "まずは試してみたい方に",
+    description: "基本機能はすべて無料で利用可能です",
     features: [
       "楽曲ファイル100曲まで一括変換",
       "CDJ機種別フォーマット一括変換",

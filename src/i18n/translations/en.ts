@@ -58,7 +58,8 @@ const en: Record<string, string> = {
 
   // pricing section
   料金プラン: "Pricing",
-  まずは試してみたい方に: "For those who want to try it first",
+  基本機能はすべて無料で利用可能です:
+    "All basic features are available for free",
   楽曲ファイル100曲まで一括変換: "Batch convert up to 100 tracks",
   "楽曲メタデータの閲覧、編集": "Track metadata viewing & editing",
   "波形プレビュー、試聴": "Waveform preview & audition",
