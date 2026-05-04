@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import { displayRoadmap } from "../config";
+import { displayRoadmap, displayUserVoices } from "../config";
 import { TranslationProvider } from "../i18n";
 import Header from "./Header";
 import Hero from "./Hero";
 import Features from "./Features";
 import Highlights from "./Highlights";
+import UserVoices from "./UserVoices";
 import Download from "./Download";
 import ReleaseNotes from "./ReleaseNotes";
 import RoadmapBanner from "./RoadmapBanner";
@@ -58,6 +59,7 @@ export default function App() {
         <Hero />
         <Highlights />
         <Features />
+        {displayUserVoices && <UserVoices />}
         <Download />
         {displayRoadmap && <RoadmapBanner />}
         <Pricing />

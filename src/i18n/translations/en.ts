@@ -9,6 +9,7 @@ const en: Record<string, string> = {
   機能: "Features",
   リリースノート: "Release Notes",
   料金: "Pricing",
+  ユーザーの声: "User Voices",
 
   // features section
   CDJ機種別フォーマット一括変換: "CDJ-Specific Batch Format Conversion",

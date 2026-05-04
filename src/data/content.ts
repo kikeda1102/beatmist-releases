@@ -1,4 +1,4 @@
-import { displayRoadmap } from "../config";
+import { displayRoadmap, displayUserVoices } from "../config";
 
 export const site = {
   name: "BeatMist",
@@ -17,6 +17,16 @@ export const navigation = [
   { label: "お問い合わせ", href: "/#contact" },
   { label: "ドキュメント", href: "/docs" },
   ...(displayRoadmap ? [{ label: "開発予定", href: "/roadmap" }] : []),
+  ...(displayUserVoices
+    ? [{ label: "ユーザーの声", href: "/#user-voices" }]
+    : []),
+] as const;
+
+export const userVoices = [
+  { id: "2050889538466447504" },
+  { id: "2050549215412318219" },
+  { id: "2049683478967693756" },
+  { id: "2049494675829280993" },
 ] as const;
 
 export const hero = {

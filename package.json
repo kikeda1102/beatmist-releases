@@ -19,9 +19,12 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "astro": "^6.1.9",
+    "embla-carousel-autoplay": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "js-yaml": "^4.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-tweet": "^3.3.0",
     "styled-components": "^6.4.1",
     "zod": "^4.3.6"
   },
