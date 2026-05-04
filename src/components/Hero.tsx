@@ -130,7 +130,6 @@ const AppIconBg = styled.img`
   transform: translate(-50%, -50%);
   width: 220px;
   height: 220px;
-  opacity: 0.9;
   pointer-events: none;
   user-select: none;
 
