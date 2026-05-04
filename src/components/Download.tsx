@@ -48,6 +48,7 @@ const ButtonGroup = styled.div`
 `;
 
 const DownloadButton = styled.a`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,10 +73,25 @@ const DownloadButton = styled.a`
     box-shadow: 0 4px 20px rgba(200, 56, 126, 0.15);
   }
 
+  &[data-clicked] {
+    border-color: ${colors.success};
+  }
+
   &[aria-disabled="true"] {
     opacity: 0.4;
     pointer-events: none;
   }
+`;
+
+const DownloadStatus = styled.span`
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: ${colors.success};
 `;
 
 const OsIcon = styled.span`
@@ -160,6 +176,10 @@ export default function Download() {
   const [version, setVersion] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [clicked, setClicked] = useState<{ win: boolean; mac: boolean }>({
+    win: false,
+    mac: false,
+  });
 
   useEffect(() => {
     fetch(`https://api.github.com/repos/${download.githubRepo}/releases/latest`)
@@ -210,6 +230,10 @@ export default function Download() {
               <DownloadButton
                 href={assets.win ?? undefined}
                 aria-disabled={!assets.win}
+                data-clicked={clicked.win || undefined}
+                onClick={() =>
+                  setClicked((prev) => ({ ...prev, win: true }))
+                }
               >
                 <OsIcon aria-hidden="true">
                   <svg
@@ -222,10 +246,19 @@ export default function Download() {
                   </svg>
                 </OsIcon>
                 Windows
+                {clicked.win && (
+                  <DownloadStatus>
+                    {t("ダウンロードを開始しました")}
+                  </DownloadStatus>
+                )}
               </DownloadButton>
               <DownloadButton
                 href={assets.mac ?? undefined}
                 aria-disabled={!assets.mac}
+                data-clicked={clicked.mac || undefined}
+                onClick={() =>
+                  setClicked((prev) => ({ ...prev, mac: true }))
+                }
               >
                 <OsIcon aria-hidden="true">
                   <svg
@@ -239,6 +272,11 @@ export default function Download() {
                 </OsIcon>
                 macOS
                 <OsSubLabel>Apple Silicon</OsSubLabel>
+                {clicked.mac && (
+                  <DownloadStatus>
+                    {t("ダウンロードを開始しました")}
+                  </DownloadStatus>
+                )}
               </DownloadButton>
             </ButtonGroup>
             {version && <VersionBadge>{version}</VersionBadge>}

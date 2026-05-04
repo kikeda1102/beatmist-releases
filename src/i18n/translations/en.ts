@@ -78,6 +78,7 @@ const en: Record<string, string> = {
   // download section
   無料でダウンロード: "Download (Free)",
   ダウンロード: "Download",
+  ダウンロードを開始しました: "Download started",
   お使いのOSを選択してください: "Select your operating system",
   "読み込み中...": "Loading...",
   "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。":
