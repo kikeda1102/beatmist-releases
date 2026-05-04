@@ -266,17 +266,25 @@ function InstallHelpContent() {
           <StepItem>
             <StepNumber>3</StepNumber>
             <StepText>
-              <StepTitle>
-                {t(
-                  "「WindowsによってPCが保護されました」と表示された場合",
-                )}
-              </StepTitle>
+              <StepTitle>{t("セキュリティ警告の確認")}</StepTitle>
+              <br />
+              {t(
+                "実行時に下記のようなセキュリティ警告が表示されます。「詳細情報」をクリックし、「実行」ボタンを押してインストールを続行してください。",
+              )}
             </StepText>
           </StepItem>
 
+          <ScreenshotBox>
+            <ScreenshotImg
+              src="/images/windows-smartscreen-warning.png"
+              alt={t("Windows SmartScreen警告ダイアログ")}
+            />
+          </ScreenshotBox>
+
           <NoteBox>
+            <NoteLabel>Note:</NoteLabel>
             {t(
-              "BeatMistは個人開発ソフトウェアのため、WindowsのSmartScreenが警告を表示する場合があります。「詳細情報」をクリックし、「実行」ボタンを押してインストールを続行してください。",
+              "この警告はコード署名のないアプリに対して表示されるものです。BeatMistは音源ファイルの管理に特化したアプリであり、不要なネットワーク通信やシステム変更は行いません。",
             )}
           </NoteBox>
 
@@ -335,6 +343,13 @@ function InstallHelpContent() {
               alt={t("macOS Gatekeeperダイアログ")}
             />
           </ScreenshotBox>
+
+          <NoteBox>
+            <NoteLabel>Note:</NoteLabel>
+            {t(
+              "この警告はコード署名のないアプリに対して表示されるものです。BeatMistは音源ファイルの管理に特化したアプリであり、不要なネットワーク通信やシステム変更は行いません。",
+            )}
+          </NoteBox>
         </Section>
 
         {/* Update */}

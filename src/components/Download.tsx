@@ -157,6 +157,24 @@ const InstallGuideLink = styled.a`
   }
 `;
 
+const InstallGuideBanner = styled.a`
+  display: block;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: ${colors.accentSubtle};
+  border: 1px solid ${colors.accent};
+  color: ${colors.accent};
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(200, 56, 126, 0.15);
+  }
+`;
+
 interface GitHubAsset {
   name: string;
   browser_download_url: string;
@@ -279,6 +297,11 @@ export default function Download() {
                 )}
               </DownloadButton>
             </ButtonGroup>
+            {(clicked.win || clicked.mac) && (
+              <InstallGuideBanner href="/install-help">
+                {t("インストールガイドを確認する")} &rarr;
+              </InstallGuideBanner>
+            )}
             {version && <VersionBadge>{version}</VersionBadge>}
             <InstallNotes>
               <InstallNoteItem>

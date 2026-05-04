@@ -306,10 +306,13 @@ const en: Record<string, string> = {
   ダウンロードしたファイルを実行: "Run the downloaded file",
   "ダウンロードした .exe ファイルをダブルクリックして実行します。":
     "Double-click the downloaded .exe file to run it.",
-  "「WindowsによってPCが保護されました」と表示された場合":
-    'If you see "Windows protected your PC"',
-  "BeatMistは個人開発ソフトウェアのため、WindowsのSmartScreenが警告を表示する場合があります。「詳細情報」をクリックし、「実行」ボタンを押してインストールを続行してください。":
-    'Since BeatMist is independently developed software, Windows SmartScreen may display a warning. Click "More info", then click "Run anyway" to continue the installation.',
+  セキュリティ警告の確認: "Security warning",
+  "実行時に下記のようなセキュリティ警告が表示されます。「詳細情報」をクリックし、「実行」ボタンを押してインストールを続行してください。":
+    'A security warning like the one below will appear. Click "More info", then click "Run anyway" to continue the installation.',
+  "Windows SmartScreen警告ダイアログ": "Windows SmartScreen warning dialog",
+  "この警告はコード署名のないアプリに対して表示されるものです。BeatMistは音源ファイルの管理に特化したアプリであり、不要なネットワーク通信やシステム変更は行いません。":
+    "This warning is displayed for apps without a code signature. BeatMist is an app dedicated to managing audio files and does not perform unnecessary network communication or system modifications.",
+  インストールガイドを確認する: "View install guide",
   インストーラーの指示に従ってインストール: "Follow the installer instructions",
   "表示される手順に沿ってインストールを完了します。":
     "Complete the installation following the on-screen instructions.",
