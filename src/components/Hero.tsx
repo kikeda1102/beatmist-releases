@@ -165,7 +165,7 @@ export default function Hero() {
     <Section>
       <Container>
         <HeadlineWrapper>
-          <AppIconBg src="/images/app-icon.png" alt="" aria-hidden="true" />
+          <AppIconBg src="/images/app-icon.webp" alt="" aria-hidden="true" />
           <Headline>{hero.headline}</Headline>
         </HeadlineWrapper>
         <Tagline>{t(site.tagline)}</Tagline>
