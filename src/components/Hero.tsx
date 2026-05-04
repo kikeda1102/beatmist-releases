@@ -9,7 +9,7 @@ const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4rem 1.5rem;
+  padding: 3rem 1.5rem;
   overflow: hidden;
   background:
     linear-gradient(
@@ -21,6 +21,14 @@ const Section = styled.section`
     ),
     url("/images/hero-bg.webp") center bottom / cover no-repeat
       ${colors.bgPrimary};
+
+  ${media.md} {
+    padding: 4rem 2rem;
+  }
+
+  ${media.lg} {
+    padding: 5rem 2rem;
+  }
 `;
 
 const Container = styled.div`
@@ -30,38 +38,66 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 2rem;
+  gap: 1.5rem;
+
+  ${media.md} {
+    gap: 2rem;
+  }
+
+  ${media.lg} {
+    gap: 2.5rem;
+  }
 `;
 
 const Headline = styled.h1`
   font-family: ${fonts.heading};
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.1;
+  letter-spacing: -0.05em;
+  line-height: 1.0;
   background: linear-gradient(
     135deg,
     ${colors.textPrimary} 0%,
+    ${colors.textPrimary} 30%,
     ${colors.accentHover} 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 40px rgba(200, 56, 126, 0.15));
 
   ${media.md} {
-    font-size: 4.5rem;
+    font-size: 7rem;
+  }
+
+  ${media.lg} {
+    font-size: 8.5rem;
+    letter-spacing: -0.06em;
+  }
+
+  ${media.xl} {
+    font-size: 10rem;
   }
 `;
 
 const Tagline = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.375rem;
+  line-height: 1.7;
   color: ${colors.textSecondary};
   font-weight: 400;
-  max-width: 540px;
+  max-width: 600px;
   white-space: pre-line;
 
   ${media.md} {
-    font-size: 1.375rem;
+    font-size: 1.5rem;
+  }
+
+  ${media.lg} {
+    font-size: 1.75rem;
+  }
+
+  ${media.xl} {
+    font-size: 1.875rem;
   }
 `;
 
@@ -70,7 +106,7 @@ const ScreenshotImage = styled.img`
   max-width: 900px;
   border-radius: 0.75rem;
   border: 1px solid ${colors.border};
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 `;
 
