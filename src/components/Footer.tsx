@@ -24,7 +24,7 @@ const Grid = styled.div`
   text-align: center;
 
   ${media.md} {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
@@ -72,6 +72,8 @@ const LastUpdated = styled.p`
 const FooterText = styled.p`
   font-size: 0.75rem;
   color: ${colors.textSecondary};
+  margin-top: 1rem;
+  white-space: pre-line;
 `;
 
 const Copyright = styled.p`
@@ -116,9 +118,9 @@ export default function Footer() {
             </LinkList>
           </Column>
           <Column>
-            <ColumnTitle>CuraRmx</ColumnTitle>
+            <ColumnTitle>{t("開発者・コミュニティ")}</ColumnTitle>
             <LinkList>
-              {footer.creator.map((link) => (
+              {footer.community.links.map((link) => (
                 <li key={link.label}>
                   <FooterLink
                     href={link.href}
@@ -130,10 +132,7 @@ export default function Footer() {
                 </li>
               ))}
             </LinkList>
-          </Column>
-          <Column>
-            <ColumnTitle>{t("ユーザーコミュニティ")}</ColumnTitle>
-            <FooterText>{t(footer.communityNote)}</FooterText>
+            <FooterText>{t(footer.community.note)}</FooterText>
           </Column>
         </Grid>
         <Divider />

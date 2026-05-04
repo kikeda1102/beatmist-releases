@@ -8,7 +8,6 @@ const en: Record<string, string> = {
   // navigation
   機能: "Features",
   リリースノート: "Release Notes",
-  料金: "Pricing",
   ユーザーの声: "User Voices",
 
   // features section
@@ -178,9 +177,9 @@ const en: Record<string, string> = {
 
   // footer
   サポート: "Support",
-  Discordコミュニティへの招待リンクをソフト内に掲載しています:
-    "Discord community invite link is available in the app",
-  ユーザーコミュニティ: "User Community",
+  "Discordコミュニティ:\n招待リンクをソフト内に掲載しています":
+    "Discord Community:\nInvite link is available in the app",
+  "開発者・コミュニティ": "Developer & Community",
   BeatMistの変換仕様について: "About BeatMist's Conversion Specifications",
   特定商取引法に基づく表記: "Specified Commercial Transactions Act",
   インストールガイド: "Installation Guide",
@@ -477,7 +476,7 @@ const en: Record<string, string> = {
   CDJ機種選択画面: "CDJ model selection screen",
   非対応フォーマットの自動検出画面:
     "Automatic incompatible format detection screen",
-  "バックアップからの復元UI": "Backup restore UI",
+  バックアップからの復元UI: "Backup restore UI",
   メタデータのインライン編集: "Inline metadata editing",
   Rekordboxインポート状況の表示: "Rekordbox import status display",
 

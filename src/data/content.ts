@@ -12,8 +12,8 @@ export const site = {
 export const navigation = [
   { label: "機能", href: "/#features" },
   { label: "ダウンロード", href: "/#download" },
+  { label: "料金プラン", href: "/#pricing" },
   { label: "リリースノート", href: "/#release-notes" },
-  { label: "料金", href: "/#pricing" },
   { label: "お問い合わせ", href: "/#contact" },
   { label: "ドキュメント", href: "/docs" },
   ...(displayRoadmap ? [{ label: "開発予定", href: "/roadmap" }] : []),
@@ -223,13 +223,15 @@ export const footer = {
   ],
   support: [
     { label: "お問い合わせ", href: "/#contact" },
+    { label: "インストールガイド", href: "/install-help" },
     { label: "使い方ガイド", href: "/docs/getting-started" },
     { label: "変換仕様について", href: "/docs/conversion" },
-    { label: "インストールガイド", href: "/install-help" },
     { label: "特定商取引法に基づく表記", href: "/tokushoho" },
   ],
-  creator: [{ label: "X (Twitter)", href: "https://x.com/purocura" }],
-  communityNote: "Discordコミュニティへの招待リンクをソフト内に掲載しています",
+  community: {
+    links: [{ label: "CuraRmx  X (Twitter)", href: "https://x.com/purocura" }],
+    note: "Discordコミュニティ:\n招待リンクをソフト内に掲載しています",
+  },
   copyright: "2026 BeatMist",
 } as const;
 
