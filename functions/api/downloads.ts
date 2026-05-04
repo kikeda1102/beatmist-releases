@@ -31,42 +31,54 @@ function detectPlatform(filename: string): string {
 }
 
 export const onRequestGet: PagesFunction = async () => {
-  const res = await fetch(
-    `https://api.github.com/repos/${GITHUB_REPO}/releases`,
-    { headers: { "User-Agent": "BeatMist-Downloads-API" } },
-  );
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/releases`,
+      { headers: { "User-Agent": "BeatMist-Downloads-API" } },
+    );
 
-  if (!res.ok) {
+    if (!res.ok) {
+      return Response.json(
+        { error: "Failed to fetch releases from GitHub" },
+        { status: 502 },
+      );
+    }
+
+    const data: GitHubRelease[] = await res.json();
+
+    let total = 0;
+    const releases: ReleaseSummary[] = data.map((release) => {
+      const assets: AssetSummary[] = release.assets
+        .filter((asset) => detectPlatform(asset.name) !== "other")
+        .map((asset) => {
+          total += asset.download_count;
+          return {
+            name: asset.name,
+            platform: detectPlatform(asset.name),
+            downloads: asset.download_count,
+          };
+        });
+
+      const subtotal = assets.reduce((sum, a) => sum + a.downloads, 0);
+
+      return {
+        version: release.tag_name,
+        date: release.published_at.split("T")[0],
+        assets,
+        subtotal,
+      };
+    });
+
+    return new Response(JSON.stringify({ total, releases }), {
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, s-maxage=300",
+      },
+    });
+  } catch {
     return Response.json(
       { error: "Failed to fetch releases from GitHub" },
       { status: 502 },
     );
   }
-
-  const data: GitHubRelease[] = await res.json();
-
-  let total = 0;
-  const releases: ReleaseSummary[] = data.map((release) => {
-    const assets: AssetSummary[] = release.assets
-      .filter((asset) => detectPlatform(asset.name) !== "other")
-      .map((asset) => {
-        total += asset.download_count;
-        return {
-          name: asset.name,
-          platform: detectPlatform(asset.name),
-          downloads: asset.download_count,
-        };
-      });
-
-    const subtotal = assets.reduce((sum, a) => sum + a.downloads, 0);
-
-    return {
-      version: release.tag_name,
-      date: release.published_at.split("T")[0],
-      assets,
-      subtotal,
-    };
-  });
-
-  return Response.json({ total, releases });
 };
