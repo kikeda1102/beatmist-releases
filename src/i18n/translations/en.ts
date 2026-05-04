@@ -2,6 +2,9 @@ const en: Record<string, string> = {
   // site
   "霧のように直感的。\nDJのための本格的な音源管理ツール":
     "Intuitive like mist.\nA track management tool for DJs.",
+  "霧のように直感的。": "Intuitive like mist.",
+  "DJのための本格的な": "A professional track management",
+  音源管理ツール: "tool for DJs.",
   "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。":
     "A track management tool for DJs and Composers. Metadata overview, waveform preview, audition, and batch format conversion for large music libraries — intuitive like mist.",
 

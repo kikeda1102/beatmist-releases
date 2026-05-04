@@ -149,6 +149,12 @@ const AppIconBg = styled.img`
   }
 `;
 
+const MobileBr = styled.br`
+  ${media.md} {
+    display: none;
+  }
+`;
+
 const ScreenshotImage = styled.img`
   width: 100%;
   max-width: 900px;
@@ -168,7 +174,13 @@ export default function Hero() {
           <AppIconBg src="/images/app-icon.webp" alt="" aria-hidden="true" />
           <Headline>{hero.headline}</Headline>
         </HeadlineWrapper>
-        <Tagline>{t(site.tagline)}</Tagline>
+        <Tagline>
+          {t("霧のように直感的。")}
+          {"\n"}
+          {t("DJのための本格的な")}
+          <MobileBr />
+          {t("音源管理ツール")}
+        </Tagline>
         <Button href={hero.cta.href} variant="primary" size="lg">
           {t(hero.cta.label)}
         </Button>
