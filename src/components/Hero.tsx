@@ -64,7 +64,10 @@ const Headline = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 40px rgba(200, 56, 126, 0.15));
+  filter:
+    drop-shadow(0 0 6px rgba(0, 0, 0, 0.8))
+    drop-shadow(0 0 20px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 48px rgba(200, 56, 126, 0.25));
 
   ${media.md} {
     font-size: 7rem;
@@ -83,8 +86,11 @@ const Headline = styled.h1`
 const Tagline = styled.p`
   font-size: 1.375rem;
   line-height: 1.7;
-  color: ${colors.textSecondary};
-  font-weight: 400;
+  color: ${colors.textPrimary};
+  font-weight: 500;
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.8),
+    0 0 24px rgba(0, 0, 0, 0.5);
   max-width: 600px;
   white-space: pre-line;
 
@@ -98,6 +104,49 @@ const Tagline = styled.p`
 
   ${media.xl} {
     font-size: 1.875rem;
+  }
+`;
+
+const HeadlineWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
+
+  ${media.md} {
+    padding: 7rem 0;
+  }
+
+  ${media.lg} {
+    padding: 9rem 0;
+  }
+`;
+
+const AppIconBg = styled.img`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  opacity: 0.9;
+  pointer-events: none;
+  user-select: none;
+
+  ${media.md} {
+    width: 320px;
+    height: 320px;
+  }
+
+  ${media.lg} {
+    width: 380px;
+    height: 380px;
+  }
+
+  ${media.xl} {
+    width: 440px;
+    height: 440px;
   }
 `;
 
@@ -116,7 +165,10 @@ export default function Hero() {
   return (
     <Section>
       <Container>
-        <Headline>{hero.headline}</Headline>
+        <HeadlineWrapper>
+          <AppIconBg src="/images/app-icon.png" alt="" aria-hidden="true" />
+          <Headline>{hero.headline}</Headline>
+        </HeadlineWrapper>
         <Tagline>{t(site.tagline)}</Tagline>
         <Button href={hero.cta.href} variant="primary" size="lg">
           {t(hero.cta.label)}
