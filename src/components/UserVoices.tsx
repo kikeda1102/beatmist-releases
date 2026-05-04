@@ -177,8 +177,7 @@ export default function UserVoices() {
               <Slide key={tweet.id}>
                 <Tweet
                   id={tweet.id}
-                  onError={() => handleError(tweet.id)}
-                  components={{ TweetNotFound: () => null }}
+                  onError={() => queueMicrotask(() => handleError(tweet.id))}
                 />
               </Slide>
             ))}
