@@ -333,6 +333,155 @@ const en: Record<string, string> = {
   アプリが起動しない場合: "If the app does not start",
   "PCを再起動してからもう一度お試しください。問題が解決しない場合はお問い合わせフォームからご連絡ください。":
     "Try restarting your PC. If the issue persists, please contact us via the contact form.",
+
+  // getting-started page
+  使い方ガイド: "Getting Started",
+  "BeatMistの基本的な使い方を説明します。":
+    "This guide covers the basics of using BeatMist.",
+
+  // getting-started: library
+  楽曲ライブラリの登録: "Setting Up Your Track Library",
+  "BeatMistでは、楽曲ファイルが保存されたフォルダを登録してスキャンすることで、ライブラリを構築します。":
+    "In BeatMist, you build your library by registering and scanning folders that contain your track files.",
+  フォルダの追加とスキャン: "Adding Folders & Scanning",
+  フォルダを追加: "Add a folder",
+  "ツールバーのフォルダ管理ボタンからフォルダを選択して追加します。":
+    "Click the folder management button in the toolbar to select and add a folder.",
+  自動スキャン: "Auto scan",
+  "フォルダを追加すると、自動的にフォルダ内の楽曲ファイルがスキャンされます。":
+    "Once added, the folder is automatically scanned for audio files.",
+  ライブラリに表示: "View in library",
+  "スキャンが完了すると、検出された楽曲がメタデータとともに一覧表示されます。":
+    "After scanning, detected tracks are displayed in a list with their metadata.",
+  対応フォーマット: "Supported Formats",
+  表示されるメタデータ: "Displayed Metadata",
+  "各トラックについて、以下のメタデータが自動的に読み取られ表示されます。":
+    "The following metadata is automatically extracted and displayed for each track.",
+  "Duration / Bitrate / Sample Rate / Bit Depth / File Size":
+    "Duration / Bitrate / Sample Rate / Bit Depth / File Size",
+  検索とソート: "Search & Sort",
+  "ファイル名、Title、Artist、Album、Genre、Commentでフルテキスト検索が可能です。各カラムのヘッダーをクリックするとソートできます。":
+    "Full-text search is available across filename, Title, Artist, Album, Genre, and Comment. Click column headers to sort.",
+
+  // getting-started: waveform
+  波形プレビューと試聴: "Waveform Preview & Playback",
+  "トラックを選択すると、画面下部に波形が描画されます。アプリ内でそのまま再生できるので、楽曲の内容をすばやく確認できます。":
+    "Select a track to render its waveform at the bottom of the screen. You can play it back directly in-app for quick evaluation.",
+  トラックをクリックして選択すると波形が表示されます:
+    "Click a track to select it and display its waveform",
+  再生ボタンまたは波形をクリックして再生できます:
+    "Click the play button or the waveform to start playback",
+  "シークバーで任意の位置にジャンプ、ボリュームスライダーで音量調整が可能です":
+    "Jump to any position with the seek bar and adjust volume with the slider",
+
+  // getting-started: conversion
+  CDJ機種別フォーマット変換: "CDJ-Specific Format Conversion",
+  "BeatMistの中核機能です。設定したCDJ機種に合わせて、楽曲ファイルのフォーマット・サンプルレート・ビット深度を自動的に最適化します。":
+    "The core feature of BeatMist. Automatically optimizes track format, sample rate, and bit depth to match your configured CDJ model.",
+  CDJ機種の設定: "CDJ Model Setup",
+  "設定画面からお使いのCDJ機種を選択してください。CDJ-3000X、CDJ-3000、CDJ-2000NXS2、CDJ-2000NXS、CDJ-900NXS、CDJ-900の6機種に対応しています。":
+    "Select your CDJ model from the Settings screen. Supports CDJ-3000X, CDJ-3000, CDJ-2000NXS2, CDJ-2000NXS, CDJ-900NXS, and CDJ-900.",
+  自動モード: "Auto Mode",
+  "自動モードでは、選択したCDJ機種で再生できないフォーマットのトラックを自動検出し、互換性のあるスペックに変換します。元のサンプルレート・ビット深度を可能な限り維持しつつ、CDJの許容範囲内に最適化します。":
+    "Auto mode detects tracks incompatible with your selected CDJ and converts them to compatible specs. Original sample rate and bit depth are preserved as much as possible while staying within the CDJ's supported range.",
+  "マニュアルモードでは、変換先のフォーマット（AIFF / WAV / MP3）、サンプルレート、ビット深度（またはビットレート）を直接指定して変換できます。":
+    "In manual mode, you can directly specify the target format (AIFF / WAV / MP3), sample rate, and bit depth (or bitrate) for conversion.",
+  "詳細:": "Details:",
+  変換ロジックや機種別スペックの詳細については:
+    "For details on conversion logic and model-specific specs, see the",
+  変換仕様ドキュメント: "Conversion Specifications",
+  " をご確認ください。": ".",
+
+  // getting-started: backup
+  自動バックアップ: "Auto Backup",
+  "変換を実行すると、変換前のオリジナルファイルはアプリのバックアップディレクトリに自動的に保存されます。ユーザーの操作は不要です。":
+    "When you run a conversion, the original file is automatically saved to the app's backup directory. No user action required.",
+  "フォーマット変換時にオリジナルファイルが失われないよう、自動バックアップ機能を搭載しています。":
+    "BeatMist includes an automatic backup feature to prevent loss of original files during format conversion.",
+  ワンクリック復元: "One-Click Revert",
+  "変換済みのトラックは、ツールバーのリバートボタンからワンクリックでオリジナルのフォーマットに復元できます。":
+    "Converted tracks can be reverted to their original format with one click using the revert button in the toolbar.",
+  バックアップの管理: "Backup Management",
+  "設定画面から、バックアップの合計サイズの確認や、バックアップファイルの一括削除が可能です。":
+    "From the Settings screen, you can check total backup size and delete all backup files at once.",
+  "バックアップを削除すると、そのトラックのオリジナルファイルへの復元ができなくなります。削除前にご確認ください。":
+    "Deleting backups permanently removes the ability to revert those tracks to their original format. Please confirm before deleting.",
+
+  // getting-started: metadata
+  メタデータ編集: "Metadata Editing",
+  "ライブラリに表示されたトラックのメタデータ（ID3タグ）をアプリ上で直接編集し、ファイルに書き戻すことができます。":
+    "Edit track metadata (ID3 tags) directly in-app and write changes back to the file.",
+  編集可能なフィールド: "Editable Fields",
+  "現在、メタデータの書き戻し（タグ編集）に対応しているフォーマットはMP3のみです。その他のフォーマットではメタデータの閲覧は可能ですが、編集・保存には対応していません。":
+    "Currently, metadata writing (tag editing) is only supported for MP3 files. Other formats allow metadata viewing but not editing or saving.",
+  "AIFF / WAV / FLAC 等への書き戻し対応は今後のアップデートで予定しています。":
+    "Support for writing tags to AIFF / WAV / FLAC and other formats is planned for future updates.",
+  Rekordboxへの反映: "Syncing with Rekordbox",
+  "BeatMistで編集したメタデータはファイルのID3タグに直接書き込まれます。Rekordboxで対象トラックを再インポート（またはコレクション更新）することで、変更内容がRekordbox側に反映されます。":
+    "Metadata edited in BeatMist is written directly to the file's ID3 tags. Re-import the track in Rekordbox (or refresh your collection) to reflect the changes.",
+
+  // getting-started: rekordbox
+  Rekordbox連携: "Rekordbox Integration",
+  "BeatMistはRekordboxのコレクションデータベースを自動的に検出し、各トラックのインポート状況を表示します。":
+    "BeatMist automatically detects Rekordbox's collection database and displays the import status of each track.",
+  自動検出: "Auto Detection",
+  "Rekordboxがインストールされている場合、そのデータベースファイルを自動的に検出します。特別な設定は不要です。":
+    "If Rekordbox is installed, its database file is automatically detected. No special configuration needed.",
+  インポート状況の表示: "Import Status Display",
+  "ライブラリの各トラックについて、Rekordboxへのインポート状況がバッジで表示されます。":
+    "Each track in the library displays a badge indicating its Rekordbox import status.",
+  "インポート済み — Rekordboxコレクションに登録されているトラック":
+    "Imported — tracks registered in the Rekordbox collection",
+  "未インポート — まだRekordboxに取り込まれていないトラック":
+    "Not imported — tracks not yet added to Rekordbox",
+  ステータスの更新: "Refreshing Status",
+  "Rekordboxでトラックを追加・削除した場合は、BeatMistのRekordboxステータスを手動で更新できます。キャッシュがあるため、通常は高速に反映されます。":
+    "After adding or removing tracks in Rekordbox, you can manually refresh the status in BeatMist. Caching ensures fast updates.",
+
+  // getting-started: license
+  ライセンスについて: "About Licensing",
+  "BeatMistはFreeプランとProプランの2つのプランを提供しています。Freeプランでもすべての機能を利用できますが、一括変換のトラック数に制限があります。":
+    "BeatMist offers Free and Pro plans. All features are available on the Free plan, but batch conversion has a track limit.",
+  利用可能な機能: "Available Features",
+  すべての機能: "All features",
+  "すべての機能 + 優先サポート": "All features + priority support",
+  Proライセンスのアクティベート: "Activating a Pro License",
+  購入後に届くライセンスキーを準備します:
+    "Prepare the license key you received after purchase",
+  "BeatMistの設定画面で「ライセンス」を開きます":
+    'Open "License" in BeatMist\'s Settings screen',
+  "ライセンスキーを入力して「アクティベート」をクリックします":
+    'Enter your license key and click "Activate"',
+  "1つのライセンスキーで最大3台のPCにアクティベートできます。使用しなくなったPCのアクティベーションは設定画面から解除できます。":
+    "One license key can be activated on up to 3 PCs. You can deactivate unused PCs from the Settings screen.",
+
+  // getting-started: cross-link from CDJ conversion page
+  "ヒント:": "Tip:",
+  BeatMistの基本的な使い方については: "For basic usage of BeatMist, see the",
+  " をご覧ください。": ".",
+
+  // docs hub page
+  "BeatMistの使い方や技術仕様について、以下のドキュメントをご用意しています。":
+    "We provide the following documentation about how to use BeatMist and its technical specifications.",
+  "ライブラリ登録、波形プレビュー、CDJ変換、メタデータ編集、Rekordbox連携など、BeatMistの基本的な使い方を説明します。":
+    "Covers the basics of BeatMist: library setup, waveform preview, CDJ conversion, metadata editing, and Rekordbox integration.",
+  "CDJ機種別の対応フォーマット、自動最適化の変換ロジック、変換例、安全機能、技術仕様を詳しく説明します。":
+    "Detailed documentation on CDJ-specific format support, auto-optimization conversion logic, conversion examples, safety features, and technical specifications.",
+  "Windows / macOS でのインストール方法、アップデート、アンインストール、トラブルシューティングについてご案内します。":
+    "Guides for installing on Windows / macOS, updating, uninstalling, and troubleshooting.",
+
+  // showcase image alts for getting-started
+  フォルダ管理画面: "Folder management screen",
+  波形プレビューとトラック一覧: "Waveform preview and track list",
+  CDJ機種選択画面: "CDJ model selection screen",
+  非対応フォーマットの自動検出画面:
+    "Automatic incompatible format detection screen",
+  "バックアップからの復元UI": "Backup restore UI",
+  メタデータのインライン編集: "Inline metadata editing",
+  Rekordboxインポート状況の表示: "Rekordbox import status display",
+
+  // docs shared
+  ドキュメント一覧に戻る: "Back to Docs",
 };
 
 export default en;

@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CdjConversion from "../../components/CdjConversion";
+import { site } from "../../data/content";
+---
+
+<Layout
+  title={`${site.name} - BeatMistの変換仕様について`}
+  description="BeatMistのCDJ機種別フォーマット変換の仕様ドキュメント"
+>
+  <CdjConversion client:only="react" />
+</Layout>

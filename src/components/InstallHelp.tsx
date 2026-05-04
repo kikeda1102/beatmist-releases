@@ -213,7 +213,8 @@ function InstallHelpContent() {
         <Breadcrumb
           items={[
             { label: "BeatMist", href: "/" },
-            { label: "インストールガイド" },
+            { label: t("ドキュメント"), href: "/docs" },
+            { label: t("インストールガイド") },
           ]}
         />
         <Title>{t("インストールガイド")}</Title>
@@ -384,7 +385,7 @@ function InstallHelpContent() {
           </Paragraph>
         </Section>
 
-        <HomeLink href="/">&larr; {t("トップページに戻る")}</HomeLink>
+        <HomeLink href="/docs">&larr; {t("ドキュメント一覧に戻る")}</HomeLink>
       </Container>
     </Page>
   );

@@ -292,7 +292,8 @@ function CdjConversionContent() {
         <Breadcrumb
           items={[
             { label: "BeatMist", href: "/" },
-            { label: "変換仕様について" },
+            { label: t("ドキュメント"), href: "/docs" },
+            { label: t("変換仕様について") },
           ]}
         />
         <Title>{t("BeatMistの変換仕様について")}</Title>
@@ -301,6 +302,18 @@ function CdjConversionContent() {
             "BeatMistの「設定したCDJに自動最適化」機能は、登録した楽曲ファイルを設定済みのCDJ機種で再生可能なフォーマット・サンプルレート・ビット深度に自動変換します。このドキュメントでは、変換の挙動と仕様を詳しく説明します。",
           )}
         </Lead>
+
+        <NoteBox>
+          <NoteLabel>{t("ヒント:")}</NoteLabel>
+          {t("BeatMistの基本的な使い方については")}{" "}
+          <a
+            href="/docs/getting-started"
+            style={{ color: "#C8387E", textDecoration: "none" }}
+          >
+            {t("使い方ガイド")}
+          </a>
+          {t(" をご覧ください。")}
+        </NoteBox>
 
         <TOC>
           <TOCTitle>{t("目次")}</TOCTitle>
@@ -779,7 +792,7 @@ MP3  : libmp3lame (CBR)`}
           </BulletList>
         </Section>
 
-        <HomeLink href="/">&larr; {t("トップページに戻る")}</HomeLink>
+        <HomeLink href="/docs">&larr; {t("ドキュメント一覧に戻る")}</HomeLink>
       </Container>
     </Page>
   );

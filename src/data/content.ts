@@ -42,7 +42,7 @@ export const features: readonly Feature[] = [
     title: "CDJ機種別フォーマット一括変換",
     description:
       "6機種のCDJに対応。非対応フォーマットを自動検出し、サンプルレート・ビット深度を最適値にスマートダウンスケーリング。自動モードとマニュアルモードを切り替えて、変換を完全にコントロールできます。",
-    href: "/docs",
+    href: "/docs/conversion",
     image: "/images/showcase/problem-badge.png",
     imageAlt:
       "CDJ-3000で非対応のビット深度・サンプルレートに赤いバッジが表示されている画面",
@@ -100,7 +100,7 @@ export const highlights: readonly Highlight[] = [
     title: "CDJ機種を選ぶだけで自動変換",
     description:
       "使用するCDJ機種を選ぶだけ。\n非対応フォーマットを自動で検出し、最適な形式に変換します。",
-    href: "/docs",
+    href: "/docs/conversion",
     image: "/images/showcase/cdj-select.png",
     imageAlt: "CDJ機種選択と非対応フォーマットの自動検出画面",
   },
@@ -213,7 +213,8 @@ export const footer = {
   ],
   support: [
     { label: "お問い合わせ", href: "/#contact" },
-    { label: "変換仕様について", href: "/docs" },
+    { label: "使い方ガイド", href: "/docs/getting-started" },
+    { label: "変換仕様について", href: "/docs/conversion" },
     { label: "インストールガイド", href: "/install-help" },
     { label: "特定商取引法に基づく表記", href: "/tokushoho" },
   ],

@@ -38,13 +38,18 @@ function collectKeysFromComponents(): Set<string> {
       if (entry.isDirectory()) {
         scanDir(fullPath);
       } else if (entry.name.endsWith(".tsx") || entry.name.endsWith(".ts")) {
-        const tCallRegex = /\bt\(\s*["']([^"']+)["']\s*,?\s*\)/g;
         const content = readFileSync(fullPath, "utf-8");
+        const tCallRegex = /\bt\(\s*["']([^"']+)["']\s*,?\s*\)/g;
         let match;
         while ((match = tCallRegex.exec(content)) !== null) {
           const key = match[1];
           if (key) {
             keys.add(key);
+          }
+        }
+        if (content.includes("useTranslation")) {
+          for (const str of extractJapaneseStrings(fullPath)) {
+            keys.add(str);
           }
         }
       }

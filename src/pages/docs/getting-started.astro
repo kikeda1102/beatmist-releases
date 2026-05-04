@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GettingStarted from "../../components/GettingStarted";
+import { site } from "../../data/content";
+---
+
+<Layout
+  title={`${site.name} - 使い方ガイド`}
+  description="BeatMistの基本的な使い方ガイド。楽曲ライブラリの登録、CDJ変換、メタデータ編集、Rekordbox連携の使い方を説明します。"
+>
+  <GettingStarted client:only="react" />
+</Layout>
