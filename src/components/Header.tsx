@@ -127,6 +127,7 @@ export default function Header() {
             if (window.location.pathname === "/") {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "instant" });
+              window.history.replaceState(null, "", "/");
             }
           }}
         >
