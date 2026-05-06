@@ -29,10 +29,12 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@types/js-yaml": "^4.0.9",
     "@types/styled-components": "^5.1.36",
     "husky": "^9.1.7",
     "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
     "wrangler": "^4.86.0"
   }
 }

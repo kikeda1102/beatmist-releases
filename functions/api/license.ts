@@ -1,8 +1,12 @@
+import { sendEmail } from "../lib/sendEmail";
+
 interface Env {
   STRIPE_SECRET_KEY: string;
   KEYGEN_ACCOUNT_ID: string;
   KEYGEN_POLICY_ID: string;
   KEYGEN_API_TOKEN: string;
+  RESEND_API_KEY: string;
+  CONTACT_TO_EMAIL: string;
 }
 
 interface StripeSession {
@@ -30,9 +34,11 @@ interface KeygenCreateResponse {
 export async function onRequestGet({
   request,
   env,
+  waitUntil,
 }: {
   request: Request;
   env: Env;
+  waitUntil: (promise: Promise<unknown>) => void;
 }): Promise<Response> {
   const url = new URL(request.url);
   const sessionId = url.searchParams.get("session_id");
@@ -136,7 +142,65 @@ export async function onRequestGet({
     );
   }
 
-  return Response.json({
-    licenseKey: createData.data.attributes.key,
-  });
+  const licenseKey = createData.data.attributes.key;
+  const fromEmail = "BeatMist <noreply@beatmist.com>";
+
+  waitUntil(
+    (async () => {
+      try {
+        await sendEmail(
+          env.RESEND_API_KEY,
+          fromEmail,
+          email,
+          "【BeatMist】Pro ライセンスキーのお届け",
+          [
+            `${email} 様`,
+            "",
+            "BeatMist Pro をご購入いただき誠にありがとうございます。",
+            "ライセンスキーを発行いたしました。",
+            "",
+            "以下があなたのライセンスキーです：",
+            "",
+            `  ${licenseKey}`,
+            "",
+            "--- アクティベーション手順 ---",
+            "",
+            "1. BeatMist をダウンロードしてインストール",
+            "2. 設定 → ライセンス を開く",
+            "3. 上記のキーを貼り付けて「アクティベート」をクリック",
+            "",
+            "1つのライセンスキーで最大3台のPCにアクティベートできます。",
+            "",
+            "ご不明な点がございましたら、お気軽にお問い合わせください。",
+            "https://beatmist.com/#contact",
+            "",
+            "BeatMist",
+          ].join("\n"),
+        );
+      } catch (err) {
+        console.error("[License] Failed to send customer email:", err);
+      }
+
+      try {
+        await sendEmail(
+          env.RESEND_API_KEY,
+          fromEmail,
+          env.CONTACT_TO_EMAIL,
+          "【BeatMist】新規ライセンス購入",
+          [
+            "新しい BeatMist Pro ライセンスが購入されました。",
+            "",
+            `メール: ${email}`,
+            `Stripe Session ID: ${sessionId}`,
+            `ライセンスキー: ${licenseKey}`,
+          ].join("\n"),
+          email,
+        );
+      } catch (err) {
+        console.error("[License] Failed to send admin notification:", err);
+      }
+    })(),
+  );
+
+  return Response.json({ licenseKey });
 }
