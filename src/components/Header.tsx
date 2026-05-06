@@ -121,7 +121,17 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <Container>
-        <Logo href="/">{site.name}</Logo>
+        <Logo
+          href="/"
+          onClick={(e: React.MouseEvent<HTMLAnchorElement>) => {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "instant" });
+            }
+          }}
+        >
+          {site.name}
+        </Logo>
         <RightGroup>
           <Nav $open={menuOpen}>
             {navigation.map((item) => (
