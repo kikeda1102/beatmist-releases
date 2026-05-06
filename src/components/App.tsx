@@ -10,6 +10,7 @@ import Download from "./Download";
 import ReleaseNotes from "./ReleaseNotes";
 import RoadmapBanner from "./RoadmapBanner";
 import Pricing from "./Pricing";
+import Faq from "./Faq";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
@@ -63,6 +64,7 @@ export default function App() {
         <Download />
         {displayRoadmap && <RoadmapBanner />}
         <Pricing />
+        <Faq />
         <ReleaseNotes />
         <Contact />
       </main>

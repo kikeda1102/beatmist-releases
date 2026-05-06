@@ -487,6 +487,37 @@ const en: Record<string, string> = {
   メタデータのインライン編集: "Inline metadata editing",
   Rekordboxインポート状況の表示: "Rekordbox import status display",
 
+  // tech trust section
+  変換エンジンについて: "About Our Conversion Engine",
+  "BeatMistの音声変換は、映像・音楽業界で世界標準として使われているオープンソースライブラリ「FFmpeg」を採用しています。":
+    "BeatMist's audio conversion uses FFmpeg, an open-source library trusted as the industry standard in video and music production.",
+  業界標準の変換品質: "Industry-Standard Conversion Quality",
+  "FFmpegは、YouTube・Spotify・Adobe製品をはじめ、世界中のプロフェッショナルが信頼する音声・映像処理エンジンです。BeatMistはこのFFmpegをそのまま使用しているため、独自の処理による予期しない音質劣化の心配がありません。":
+    "FFmpeg is the audio/video processing engine trusted by YouTube, Spotify, Adobe, and professionals worldwide. BeatMist uses FFmpeg directly, eliminating the risk of unexpected audio quality loss from proprietary processing.",
+  スペックを維持する設計思想: "Designed to Preserve Audio Specs",
+  "BeatMistの自動変換は、CDJで再生可能な範囲内で元のサンプルレート・ビット深度を最大限に維持します。不必要なダウンスケーリングは行いません。":
+    "BeatMist's auto-conversion preserves the original sample rate and bit depth as much as possible within your CDJ's supported range. No unnecessary downscaling.",
+  元ファイルは常に安全: "Original Files Always Safe",
+  "変換前のオリジナルファイルは自動バックアップされ、いつでもワンクリックで復元できます。万が一のときも安心です。":
+    "Original files are automatically backed up before conversion and can be restored anytime with one click.",
+  "変換の詳しい仕様を見る": "View detailed conversion specs",
+
+  // faq section
+  よくあるご質問: "FAQ",
+  "個人開発のソフトウェアですが、品質は大丈夫ですか？":
+    "This is developed by an individual. Is the quality reliable?",
+  "BeatMistは高い頻度でアップデートを行い、ユーザーからのフィードバックに基づいて継続的に品質改善を行っています。{releaseNotes}から更新履歴をご確認いただけます。音声変換の核心部分には業界標準のFFmpegを採用しており、独自アルゴリズムによる予期しない不具合のリスクを排除しています。また、変換前の自動バックアップ機能により、万が一の問題が発生してもオリジナルファイルは常に安全に保護されています。":
+    "BeatMist receives frequent updates with continuous quality improvements based on user feedback. You can check the update history in the {releaseNotes}. The core audio conversion uses industry-standard FFmpeg, eliminating the risk of unexpected bugs from proprietary algorithms. Additionally, the automatic pre-conversion backup ensures your original files are always protected.",
+  "使い方がわからなくなったらどうすればいいですか？":
+    "What if I don't know how to use it?",
+  "BeatMistには使い方ガイドと{docs}を用意しています。基本操作から変換ロジックの詳細まで、ステップバイステップで確認できます。また、{contact}や{twitter}、Discordコミュニティでもサポートを受け付けていますので、お気軽にご相談ください。":
+    "BeatMist provides a Getting Started guide and {docs}. You can follow step-by-step instructions from basic operations to conversion logic details. You can also reach out via the {contact}, {twitter}, or Discord community for support.",
+  お問い合わせフォーム: "contact form",
+  "楽曲ファイルが壊れたり、音質が劣化することはありませんか？":
+    "Could my audio files get corrupted or lose quality?",
+  "BeatMistは変換前に必ずオリジナルファイルを自動バックアップします。変換後も、ワンクリックでいつでも元の状態に戻せます。また、音声変換にはFFmpegを使用しており、ロスレス形式間の変換ではビット単位で完全な変換が行われます。ダウンサンプリングが必要な場合も、CDJの対応範囲内で最大のスペックを維持する設計です。":
+    "BeatMist always backs up original files automatically before conversion. You can revert to the original at any time with one click. Audio conversion uses FFmpeg, which performs bit-perfect conversion between lossless formats. When downsampling is necessary, it maintains the highest specs within your CDJ's supported range.",
+
   // docs shared
   ドキュメント一覧に戻る: "Back to Docs",
 };

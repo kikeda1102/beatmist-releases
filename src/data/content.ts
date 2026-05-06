@@ -11,15 +11,16 @@ export const site = {
 
 export const navigation = [
   { label: "機能", href: "/#features" },
+  ...(displayUserVoices
+    ? [{ label: "ユーザーの声", href: "/#user-voices" }]
+    : []),
   { label: "ダウンロード", href: "/#download" },
   { label: "料金プラン", href: "/#pricing" },
+  { label: "FAQ", href: "/#faq" },
   { label: "リリースノート", href: "/#release-notes" },
   { label: "お問い合わせ", href: "/#contact" },
   { label: "ドキュメント", href: "/docs" },
   ...(displayRoadmap ? [{ label: "開発予定", href: "/roadmap" }] : []),
-  ...(displayUserVoices
-    ? [{ label: "ユーザーの声", href: "/#user-voices" }]
-    : []),
 ] as const;
 
 export const userVoices = [
@@ -128,6 +129,98 @@ export const highlights: readonly Highlight[] = [
     hrefLabel: "料金プランを見る",
   },
 ];
+
+interface TechTrustItem {
+  readonly icon: string;
+  readonly title: string;
+  readonly description: string;
+}
+
+interface TechTrust {
+  readonly title: string;
+  readonly lead: string;
+  readonly items: readonly TechTrustItem[];
+  readonly link: { readonly label: string; readonly href: string };
+}
+
+export const techTrust: TechTrust = {
+  title: "変換エンジンについて",
+  lead: "BeatMistの音声変換は、映像・音楽業界で世界標準として使われているオープンソースライブラリ「FFmpeg」を採用しています。",
+  items: [
+    {
+      icon: "🏛️",
+      title: "業界標準の変換品質",
+      description:
+        "FFmpegは、YouTube・Spotify・Adobe製品をはじめ、世界中のプロフェッショナルが信頼する音声・映像処理エンジンです。BeatMistはこのFFmpegをそのまま使用しているため、独自の処理による予期しない音質劣化の心配がありません。",
+    },
+    {
+      icon: "🎚️",
+      title: "スペックを維持する設計思想",
+      description:
+        "BeatMistの自動変換は、CDJで再生可能な範囲内で元のサンプルレート・ビット深度を最大限に維持します。不必要なダウンスケーリングは行いません。",
+    },
+    {
+      icon: "🛡️",
+      title: "元ファイルは常に安全",
+      description:
+        "変換前のオリジナルファイルは自動バックアップされ、いつでもワンクリックで復元できます。万が一のときも安心です。",
+    },
+  ],
+  link: {
+    label: "変換の詳しい仕様を見る",
+    href: "/docs/conversion",
+  },
+};
+
+interface FaqLink {
+  readonly label: string;
+  readonly href: string;
+  readonly external?: boolean;
+}
+
+interface FaqItem {
+  readonly question: string;
+  readonly answer: string;
+  readonly links?: Readonly<Record<string, FaqLink>>;
+}
+
+interface Faq {
+  readonly title: string;
+  readonly items: readonly FaqItem[];
+}
+
+export const faq: Faq = {
+  title: "よくあるご質問",
+  items: [
+    {
+      question: "個人開発のソフトウェアですが、品質は大丈夫ですか？",
+      answer:
+        "BeatMistは高い頻度でアップデートを行い、ユーザーからのフィードバックに基づいて継続的に品質改善を行っています。{releaseNotes}から更新履歴をご確認いただけます。音声変換の核心部分には業界標準のFFmpegを採用しており、独自アルゴリズムによる予期しない不具合のリスクを排除しています。また、変換前の自動バックアップ機能により、万が一の問題が発生してもオリジナルファイルは常に安全に保護されています。",
+      links: {
+        releaseNotes: { label: "リリースノート", href: "/#release-notes" },
+      },
+    },
+    {
+      question: "使い方がわからなくなったらどうすればいいですか？",
+      answer:
+        "BeatMistには使い方ガイドと{docs}を用意しています。基本操作から変換ロジックの詳細まで、ステップバイステップで確認できます。また、{contact}や{twitter}、Discordコミュニティでもサポートを受け付けていますので、お気軽にご相談ください。",
+      links: {
+        docs: { label: "ドキュメント", href: "/docs" },
+        contact: { label: "お問い合わせフォーム", href: "/#contact" },
+        twitter: {
+          label: "X (Twitter)",
+          href: "https://x.com/purocura",
+          external: true,
+        },
+      },
+    },
+    {
+      question: "楽曲ファイルが壊れたり、音質が劣化することはありませんか？",
+      answer:
+        "BeatMistは変換前に必ずオリジナルファイルを自動バックアップします。変換後も、ワンクリックでいつでも元の状態に戻せます。また、音声変換にはFFmpegを使用しており、ロスレス形式間の変換ではビット単位で完全な変換が行われます。ダウンサンプリングが必要な場合も、CDJの対応範囲内で最大のスペックを維持する設計です。",
+    },
+  ],
+};
 
 export const download = {
   title: "ダウンロード",
