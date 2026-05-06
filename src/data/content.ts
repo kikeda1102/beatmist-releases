@@ -14,8 +14,8 @@ export const navigation = [
   ...(displayUserVoices
     ? [{ label: "ユーザーの声", href: "/#user-voices" }]
     : []),
-  { label: "ダウンロード", href: "/#download" },
   { label: "料金プラン", href: "/#pricing" },
+  { label: "ダウンロード", href: "/#download" },
   { label: "FAQ", href: "/#faq" },
   { label: "リリースノート", href: "/#release-notes" },
   { label: "お問い合わせ", href: "/#contact" },
@@ -29,6 +29,10 @@ export const userVoices = [
   { id: "2049683478967693756" },
   // { id: "2049494675829280993" },
 ] as const;
+
+export const introduction = {
+  body: "BeatMistは、CDJに適応する楽曲フォーマットへの一括変換や\nRekordboxとのシームレスな連携など、\nDJのための本格的な音源管理を提供するデスクトップアプリケーションです。",
+} as const;
 
 export const hero = {
   headline: "BeatMist",
@@ -224,7 +228,8 @@ export const faq: Faq = {
 
 export const download = {
   title: "ダウンロード",
-  description: "お使いのOSを選択してください",
+  description:
+    "さっそく使ってみましょう。すべての基本機能を無料でお使いいただけます。",
   githubRepo: "kikeda1102/beatmist-releases",
 } as const;
 
@@ -238,6 +243,12 @@ interface PricingTier {
   readonly recommended: boolean;
   readonly cta: { readonly label: string; readonly href: string };
 }
+
+export const pricing = {
+  title: "料金プラン",
+  description:
+    "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではすべての機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。",
+} as const;
 
 export const pricingTiers: readonly PricingTier[] = [
   {

@@ -3,10 +3,14 @@ const en: Record<string, string> = {
   "霧のように直感的。\nDJのための本格的な音源管理ツール":
     "Intuitive like mist.\nA track management tool for DJs.",
   "霧のように直感的。": "Intuitive like mist.",
-  "DJのための本格的な": "A professional track management",
+  DJのための本格的な: "A professional track management",
   音源管理ツール: "tool for DJs.",
   "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。":
     "A track management tool for DJs and Composers. Metadata overview, waveform preview, audition, and batch format conversion for large music libraries — intuitive like mist.",
+
+  // introduction
+  "BeatMistは、CDJに適応する楽曲フォーマットへの一括変換や\nRekordboxとのシームレスな連携など、\nDJのための本格的な音源管理を提供するデスクトップアプリケーションです。":
+    "BeatMist is a desktop application that provides\nprofessional track management for DJs, including\nbatch format conversion adapted to CDJs and seamless Rekordbox integration.",
 
   // navigation
   機能: "Features",
@@ -73,7 +77,9 @@ const en: Record<string, string> = {
   Rekordbox互換: "Rekordbox compatible",
   優先サポート: "Priority support",
   無料での一生涯アップデート: "Free lifetime updates",
-  おすすめ: "Recommended",
+  全機能解放: "Full Unlock",
+  "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではすべての機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。":
+    "All essential features are available with the Free plan.\nThe Pro license unlocks everything.\nIt's a one-time purchase — all future updates are included for free.",
   無料で始める: "Get Started Free",
   ライセンスを購入: "Buy License",
   "ベータ版期間中は 20% OFF": "Beta 20% OFF",
@@ -82,7 +88,8 @@ const en: Record<string, string> = {
   無料でダウンロード: "Download (Free)",
   ダウンロード: "Download",
   ダウンロードを開始しました: "Download started",
-  お使いのOSを選択してください: "Select your operating system",
+  "さっそく使ってみましょう。すべての基本機能を無料でお使いいただけます。":
+    "Get started now. All essential features are available for free.",
   "読み込み中...": "Loading...",
   "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。":
     "Failed to fetch download links. Please try again later.",
@@ -500,7 +507,7 @@ const en: Record<string, string> = {
   元ファイルは常に安全: "Original Files Always Safe",
   "変換前のオリジナルファイルは自動バックアップされ、いつでもワンクリックで復元できます。万が一のときも安心です。":
     "Original files are automatically backed up before conversion and can be restored anytime with one click.",
-  "変換の詳しい仕様を見る": "View detailed conversion specs",
+  変換の詳しい仕様を見る: "View detailed conversion specs",
 
   // faq section
   よくあるご質問: "FAQ",

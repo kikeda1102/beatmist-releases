@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
-import { highlights } from "../data/content";
+import { highlights, introduction } from "../data/content";
 import { useTranslation } from "../i18n";
 import CdjSelectMock from "./highlights/CdjSelectMock";
 import RekordboxStatusMock from "./highlights/RekordboxStatusMock";
@@ -11,7 +11,7 @@ const svgMockComponents: Record<string, React.ComponentType> = {
 };
 
 const Section = styled.section`
-  padding: ${spacing.sectionPadding} 1.5rem;
+  padding: 2.5rem 1.5rem ${spacing.sectionPadding};
   background-color: ${colors.bgPrimary};
 `;
 
@@ -32,6 +32,20 @@ const dividerStyle = `
     height: 1px;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+  }
+`;
+
+const LeadText = styled.p`
+  font-size: 1.125rem;
+  color: ${colors.textPrimary};
+  text-align: center;
+  line-height: 1.8;
+  max-width: 860px;
+  margin: 0 auto 4rem;
+
+  ${media.md} {
+    font-size: 1.25rem;
+    white-space: pre-line;
   }
 `;
 
@@ -155,6 +169,7 @@ export default function Highlights() {
   return (
     <Section>
       <Container>
+        <LeadText>{t(introduction.body)}</LeadText>
         <List>
           {highlights.map((item) => {
             if (item.image) {

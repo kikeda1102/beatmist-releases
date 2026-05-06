@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
-import { pricingTiers } from "../data/content";
+import { pricing, pricingTiers } from "../data/content";
 import { useTranslation } from "../i18n";
 import Badge from "./shared/Badge";
 import Button from "./shared/Button";
@@ -20,12 +20,22 @@ const SectionTitle = styled.h2`
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: ${colors.textPrimary};
 
   ${media.md} {
     font-size: 2.5rem;
   }
+`;
+
+const SectionDescription = styled.p`
+  font-size: 1rem;
+  color: ${colors.textSecondary};
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  white-space: pre-line;
 `;
 
 const Grid = styled.div`
@@ -147,7 +157,10 @@ export default function Pricing() {
   return (
     <Section id="pricing">
       <Container>
-        <SectionTitle>{t("料金プラン")}</SectionTitle>
+        <SectionTitle>{t(pricing.title)}</SectionTitle>
+        <SectionDescription>
+          {t(pricing.description)}
+        </SectionDescription>
         <Grid>
           {pricingTiers.map((tier) => (
             <Card key={tier.name} $recommended={tier.recommended}>
@@ -155,7 +168,7 @@ export default function Pricing() {
                 <TierNameRow>
                   <TierName>{tier.name}</TierName>
                   {tier.recommended && (
-                    <Badge text={t("おすすめ")} variant="recommended" />
+                    <Badge text={t("全機能解放")} variant="recommended" />
                   )}
                 </TierNameRow>
                 <Price>
