@@ -39,7 +39,7 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preload" as="image" type="image/webp" href="/images/hero-bg.webp" />
+    <link rel="preload" as="image" type="image/webp" href="/images/hero-bg.webp" imagesrcset="/images/hero-bg-960w.webp 960w, /images/hero-bg.webp 1920w" imagesizes="100vw" fetchpriority="high" />
     <meta name="build-date" content={buildDate} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

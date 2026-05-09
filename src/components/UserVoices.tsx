@@ -2,10 +2,13 @@ import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { Tweet } from "react-tweet";
 import { colors, fonts, media, spacing } from "../styles/theme";
-import { userVoices } from "../data/content";
 import { useTranslation } from "../i18n";
+import TweetCard from "./TweetCard";
+import type { CachedTweet } from "./TweetCard";
+import tweetsData from "../data/tweets.json";
+
+const tweets = tweetsData as CachedTweet[];
 
 const Section = styled.section`
   padding: ${spacing.sectionPadding} 1.5rem;
@@ -33,11 +36,6 @@ const SectionTitle = styled.h2`
 const Viewport = styled.div`
   overflow: hidden;
   position: relative;
-  cursor: grab;
-
-  &:active {
-    cursor: grabbing;
-  }
 
   &::before,
   &::after {
@@ -70,40 +68,35 @@ const Viewport = styled.div`
 
 const EmblaContainer = styled.div`
   display: flex;
+  align-items: stretch;
 `;
 
 const Slide = styled.div`
   flex: 0 0 85%;
   min-width: 0;
-  padding: 0 0.375rem;
+  padding: 0 2rem;
+  display: flex;
 
   ${media.md} {
-    flex: 0 0 55%;
-    padding: 0 0.5rem;
+    flex: 0 0 50%;
+    padding: 0 2rem;
   }
 
-  & > div {
-    --tweet-body-font-size: 1rem;
-    --tweet-body-line-height: 1.35rem;
-    --tweet-header-font-size: 0.85rem;
-    --tweet-quoted-body-font-size: 0.82rem;
-    --tweet-quoted-body-line-height: 1.1rem;
-    --tweet-info-font-size: 0.82rem;
-    --tweet-actions-font-size: 0.78rem;
-    --tweet-container-margin: 0;
+  & > * {
+    width: 100%;
   }
 `;
 
 const Dots = styled.div`
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
+  gap: 0.75rem;
+  margin-top: 3rem;
 `;
 
 const Dot = styled.button<{ $active: boolean }>`
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -121,15 +114,16 @@ const Dot = styled.button<{ $active: boolean }>`
 export default function UserVoices() {
   const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [failedIds, setFailedIds] = useState<Set<string>>(() => new Set());
-
-  const visibleTweets = userVoices.filter(
-    (tweet) => !failedIds.has(tweet.id),
-  );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "center" },
-    [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })],
+    [
+      Autoplay({
+        delay: 5000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    ],
   );
 
   const onSelect = useCallback(() => {
@@ -146,10 +140,6 @@ export default function UserVoices() {
     };
   }, [emblaApi, onSelect]);
 
-  useEffect(() => {
-    emblaApi?.reInit();
-  }, [emblaApi, failedIds]);
-
   const goTo = useCallback(
     (index: number) => {
       emblaApi?.scrollTo(index);
@@ -157,37 +147,26 @@ export default function UserVoices() {
     [emblaApi],
   );
 
-  const handleError = useCallback((id: string) => {
-    setFailedIds((prev) => {
-      const next = new Set(prev);
-      next.add(id);
-      return next;
-    });
-  }, []);
-
-  if (visibleTweets.length === 0) return null;
+  if (tweets.length === 0) return null;
 
   return (
-    <Section id="user-voices" data-theme="dark">
+    <Section id="user-voices">
       <Container>
         <SectionTitle>{t("ユーザーの声")}</SectionTitle>
         <Viewport ref={emblaRef}>
           <EmblaContainer>
-            {visibleTweets.map((tweet) => (
-              <Slide key={tweet.id}>
-                <Tweet
-                  id={tweet.id}
-                  onError={() => queueMicrotask(() => handleError(tweet.id))}
-                />
+            {tweets.map((tweet) => (
+              <Slide key={tweet.id_str}>
+                <TweetCard tweet={tweet} />
               </Slide>
             ))}
           </EmblaContainer>
         </Viewport>
-        {visibleTweets.length > 1 && (
+        {tweets.length > 1 && (
           <Dots>
-            {visibleTweets.map((tweet, i) => (
+            {tweets.map((tweet, i) => (
               <Dot
-                key={tweet.id}
+                key={tweet.id_str}
                 $active={i === selectedIndex}
                 onClick={() => goTo(i)}
                 aria-label={`Tweet ${i + 1}`}
