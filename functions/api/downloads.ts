@@ -1,5 +1,9 @@
 const GITHUB_REPO = "kikeda1102/beatmist-releases";
 
+interface Env {
+  GITHUB_TOKEN: string;
+}
+
 interface GitHubAsset {
   name: string;
   download_count: number;
@@ -30,11 +34,16 @@ function detectPlatform(filename: string): string {
   return "other";
 }
 
-export const onRequestGet: PagesFunction = async () => {
+export const onRequestGet: PagesFunction<Env> = async ({ env }) => {
   try {
     const res = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/releases`,
-      { headers: { "User-Agent": "BeatMist-Downloads-API" } },
+      {
+        headers: {
+          "User-Agent": "BeatMist-Downloads-API",
+          Authorization: `token ${env.GITHUB_TOKEN}`,
+        },
+      },
     );
 
     if (!res.ok) {
