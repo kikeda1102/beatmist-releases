@@ -11,8 +11,12 @@ import tweetsData from "../data/tweets.json";
 const tweets = tweetsData as CachedTweet[];
 
 const Section = styled.section`
-  padding: ${spacing.sectionPadding} 1.5rem;
+  padding: ${spacing.sectionPadding} 0;
   background-color: ${colors.bgSecondary};
+
+  ${media.md} {
+    padding: ${spacing.sectionPadding} 1.5rem;
+  }
 `;
 
 const Container = styled.div`
@@ -43,7 +47,7 @@ const Viewport = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 8%;
+    width: 4%;
     z-index: 1;
     pointer-events: none;
   }
@@ -61,7 +65,7 @@ const Viewport = styled.div`
   ${media.md} {
     &::before,
     &::after {
-      width: 12%;
+      width: 8%;
     }
   }
 `;
@@ -72,9 +76,9 @@ const EmblaContainer = styled.div`
 `;
 
 const Slide = styled.div`
-  flex: 0 0 85%;
+  flex: 0 0 92%;
   min-width: 0;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   display: flex;
 
   ${media.md} {
