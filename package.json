@@ -22,6 +22,7 @@
     "astro": "^6.1.9",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
+    "embla-carousel-wheel-gestures": "^8.1.0",
     "js-yaml": "^4.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",

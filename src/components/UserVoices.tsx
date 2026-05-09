@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { useTranslation } from "../i18n";
 import TweetCard from "./TweetCard";
@@ -124,9 +125,10 @@ export default function UserVoices() {
     [
       Autoplay({
         delay: 5000,
-        stopOnInteraction: false,
+        stopOnInteraction: true,
         stopOnMouseEnter: true,
       }),
+      WheelGesturesPlugin(),
     ],
   );
 
