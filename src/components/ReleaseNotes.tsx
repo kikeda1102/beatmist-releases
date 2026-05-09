@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
-import { download } from "../data/content";
 import { useTranslation } from "../i18n";
 import { parseReleaseBody, type ReleaseChange } from "../lib/parseReleaseBody";
 
@@ -183,9 +182,7 @@ export default function ReleaseNotes() {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch(
-      `https://api.github.com/repos/${download.githubRepo}/releases`,
-    )
+    fetch("/api/releases")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch releases");
         return res.json();

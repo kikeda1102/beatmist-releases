@@ -200,7 +200,7 @@ export default function Download() {
   });
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/${download.githubRepo}/releases/latest`)
+    fetch("/api/releases/latest")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch releases");
         return res.json();
