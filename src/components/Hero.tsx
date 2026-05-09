@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { hero, site } from "../data/content";
 import { useTranslation } from "../i18n";
-import Button from "./shared/Button";
 
 const Section = styled.section`
   min-height: calc(100vh - ${spacing.headerHeight});
@@ -155,6 +154,95 @@ const MobileBr = styled.br`
   }
 `;
 
+const CtaButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.125rem 2.75rem;
+  font-size: 1.2rem;
+  font-family: ${fonts.heading};
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.75rem;
+  background: linear-gradient(
+    135deg,
+    #00E5C8 0%,
+    #2DB8B0 15%,
+    #4A7EB0 30%,
+    #6A50B0 45%,
+    #8B2FB0 60%,
+    ${colors.accent} 80%,
+    ${colors.accentHover} 100%
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 200, 0.3);
+  border-top-color: rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 24px rgba(200, 56, 126, 0.3),
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(
+      135deg,
+      #00FFD9 0%,
+      #30C8B8 15%,
+      #5588B8 30%,
+      #7858B8 45%,
+      #A035C8 60%,
+      ${colors.accentHover} 80%,
+      #E85CA5 100%
+    );
+    border-color: rgba(0, 229, 200, 0.5);
+    border-top-color: rgba(255, 255, 255, 0.3);
+    box-shadow:
+      0 0 36px rgba(200, 56, 126, 0.4),
+      0 12px 32px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  &:active {
+    transform: translateY(0);
+    background: linear-gradient(
+      135deg,
+      #00CCB0 0%,
+      #28A8A0 15%,
+      #4470A0 30%,
+      #6048A0 45%,
+      #7A28A0 60%,
+      #B03068 80%,
+      ${colors.accent} 100%
+    );
+  }
+
+  &:focus-visible {
+    outline: 2px solid ${colors.accentHover};
+    outline-offset: 3px;
+  }
+
+  ${media.md} {
+    padding: 1.25rem 3rem;
+    font-size: 1.3rem;
+  }
+
+  ${media.lg} {
+    padding: 1.375rem 3.25rem;
+    font-size: 1.375rem;
+  }
+`;
+
 const ScreenshotImage = styled.img`
   width: 100%;
   max-width: 900px;
@@ -181,9 +269,9 @@ export default function Hero() {
           <MobileBr />
           {t("音源管理ツール")}
         </Tagline>
-        <Button href={hero.cta.href} variant="primary" size="lg">
+        <CtaButton href={hero.cta.href}>
           {t(hero.cta.label)}
-        </Button>
+        </CtaButton>
         <ScreenshotImage src="/images/screenshot.png" alt="BeatMist" />
       </Container>
     </Section>

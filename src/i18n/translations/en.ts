@@ -85,7 +85,7 @@ const en: Record<string, string> = {
   "ベータ版期間中は 20% OFF": "Beta 20% OFF",
 
   // download section
-  無料でダウンロード: "Download (Free)",
+  無料ではじめる: "Get Started Free",
   ダウンロード: "Download",
   ダウンロードを開始しました: "Download started",
   "さっそく使ってみましょう。すべての基本機能を無料でお使いいただけます。":

@@ -37,7 +37,7 @@ export const introduction = {
 export const hero = {
   headline: "BeatMist",
   cta: {
-    label: "無料でダウンロード",
+    label: "無料ではじめる",
     href: "/#download",
   },
 } as const;
