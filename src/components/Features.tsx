@@ -62,12 +62,7 @@ const Card = styled.div`
   border: 1px solid ${colors.border};
   border-radius: 0.75rem;
   padding: 1.5rem;
-  transition: background-color 0.2s ease;
   overflow: hidden;
-
-  &:hover {
-    background-color: ${colors.bgCardHover};
-  }
 `;
 
 const CardImageWrapper = styled.div`

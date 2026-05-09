@@ -24,6 +24,7 @@ export interface CachedTweet {
   id_str: string;
   text: string;
   created_at: string;
+  formatted_date: string;
   favorite_count: number;
   conversation_count: number;
   user: TweetUser;
@@ -293,20 +294,6 @@ const VerifiedBadge = () => (
   </svg>
 );
 
-function formatDate(iso: string): string {
-  const d = new Date(iso);
-  const time = d.toLocaleTimeString("en-US", {
-    hour: "numeric",
-    minute: "2-digit",
-    hour12: true,
-  });
-  const date = d.toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  });
-  return `${time} · ${date}`;
-}
 
 function VideoThumbnail({
   video,
@@ -401,7 +388,7 @@ export default function TweetCard({ tweet }: { tweet: CachedTweet }) {
 
       <Footer>
         <DateText dateTime={tweet.created_at}>
-          {formatDate(tweet.created_at)}
+          {tweet.formatted_date}
         </DateText>
         <InfoIcon viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="12" r="10" fill="none" stroke="#71767b" strokeWidth="1.5" />

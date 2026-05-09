@@ -28,6 +28,7 @@ interface CachedTweet {
   id_str: string;
   text: string;
   created_at: string;
+  formatted_date: string;
   favorite_count: number;
   conversation_count: number;
   user: {
@@ -49,10 +50,18 @@ async function main() {
       continue;
     }
 
+    const d = new Date(tweet.created_at);
+    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const h = d.getHours() % 12 || 12;
+    const min = d.getMinutes().toString().padStart(2, "0");
+    const ampm = d.getHours() >= 12 ? "PM" : "AM";
+    const formattedDate = `${h}:${min} ${ampm} · ${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+
     const cached: CachedTweet = {
       id_str: tweet.id_str,
       text: tweet.text,
       created_at: tweet.created_at,
+      formatted_date: formattedDate,
       favorite_count: tweet.favorite_count,
       conversation_count: tweet.conversation_count,
       user: {
