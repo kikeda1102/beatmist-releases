@@ -125,7 +125,7 @@ export default function UserVoices() {
     [
       Autoplay({
         delay: 5000,
-        stopOnInteraction: true,
+        stopOnInteraction: false,
         stopOnMouseEnter: true,
       }),
       WheelGesturesPlugin(),
