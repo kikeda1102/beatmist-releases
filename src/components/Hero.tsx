@@ -3,34 +3,7 @@ import { colors, fonts, media, spacing } from "../styles/theme";
 import { hero, site } from "../data/content";
 import { useTranslation } from "../i18n";
 
-const Section = styled.section`
-  min-height: calc(100vh - ${spacing.headerHeight});
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1.5rem;
-  overflow: hidden;
-  background:
-    linear-gradient(
-      to bottom,
-      transparent 0%,
-      transparent 70%,
-      ${colors.bgPrimary} 100%
-    ),
-    url("/images/hero-bg.webp") center bottom / cover no-repeat,
-    radial-gradient(ellipse 50% 35% at 55% 10%, #FF2D8A 0%, rgba(200, 56, 126, 0.3) 40%, transparent 70%),
-    radial-gradient(ellipse 30% 25% at 10% 30%, rgba(200, 56, 126, 0.35) 0%, transparent 65%),
-    radial-gradient(ellipse 25% 20% at 90% 20%, rgba(255, 45, 138, 0.25) 0%, transparent 60%),
-    ${colors.bgPrimary};
-
-  ${media.md} {
-    padding: 4rem 2rem;
-  }
-
-  ${media.lg} {
-    padding: 5rem 2rem;
-  }
-`;
+const Section = styled.section``;
 
 const Container = styled.div`
   max-width: ${spacing.containerMax};
@@ -288,7 +261,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <Section>
+    <Section data-hero>
       <Container>
         <HeadlineWrapper>
           <AppIconBg src="/images/app-icon.webp" alt="" aria-hidden="true" />
