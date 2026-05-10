@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { useTranslation } from "../i18n";
-import { parseReleaseBody, type ReleaseChange } from "../lib/parseReleaseBody";
+import {
+  parseReleaseBody,
+  renderInlineMarkdown,
+  type ReleaseChange,
+} from "../lib/parseReleaseBody";
 
 const INITIALLY_VISIBLE = 2;
 
@@ -96,6 +100,11 @@ const ChangeItem = styled.li`
   font-size: 0.9375rem;
   color: ${colors.textSecondary};
   line-height: 1.7;
+
+  strong {
+    color: ${colors.textPrimary};
+    font-weight: 600;
+  }
 `;
 
 const TypeBadge = styled.span<{ $variant: ReleaseChange["type"] }>`
@@ -239,7 +248,7 @@ export default function ReleaseNotes() {
                     <TypeBadge $variant={change.type}>
                       {getTypeLabel(change.type, t)}
                     </TypeBadge>
-                    {change.description}
+                    {renderInlineMarkdown(change.description)}
                   </ChangeItem>
                 ))}
               </ChangeList>

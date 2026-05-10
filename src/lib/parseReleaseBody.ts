@@ -1,6 +1,16 @@
+import { createElement, type ReactNode } from "react";
+
 export interface ReleaseChange {
   readonly type: "added" | "changed" | "fixed";
   readonly description: string;
+}
+
+export function renderInlineMarkdown(text: string): ReactNode {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) =>
+    i % 2 === 1 ? createElement("strong", { key: i }, part) : part,
+  );
 }
 
 const sectionMap: Record<string, ReleaseChange["type"]> = {
