@@ -13,6 +13,7 @@ interface GitHubRelease {
   tag_name: string;
   published_at: string;
   assets: GitHubAsset[];
+  prerelease: boolean;
 }
 
 interface AssetSummary {
@@ -56,7 +57,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ env }) => {
     const data: GitHubRelease[] = await res.json();
 
     let total = 0;
-    const releases: ReleaseSummary[] = data.map((release) => {
+    const releases: ReleaseSummary[] = data.filter((r) => !r.prerelease).map((release) => {
       const assets: AssetSummary[] = release.assets
         .filter((asset) => detectPlatform(asset.name) !== "other")
         .map((asset) => {

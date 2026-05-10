@@ -8,6 +8,7 @@ interface GitHubRelease {
   tag_name: string;
   published_at: string;
   body: string | null;
+  prerelease: boolean;
 }
 
 export const onRequestGet: PagesFunction<Env> = async ({ env }) => {
@@ -31,7 +32,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ env }) => {
 
     const data: GitHubRelease[] = await res.json();
 
-    const releases = data.map((r) => ({
+    const releases = data.filter((r) => !r.prerelease).map((r) => ({
       tag_name: r.tag_name,
       published_at: r.published_at,
       body: r.body,
