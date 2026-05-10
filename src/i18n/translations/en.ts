@@ -511,8 +511,7 @@ const en: Record<string, string> = {
 
   // faq section
   よくあるご質問: "FAQ",
-  "個人開発のソフトウェアですが、品質は大丈夫ですか？":
-    "This is developed by an individual. Is the quality reliable?",
+  "ソフトウェアとしての品質は大丈夫ですか？": "Is the quality reliable?",
   "BeatMistは高い頻度でアップデートを行い、ユーザーからのフィードバックに基づいて継続的に品質改善を行っています。{releaseNotes}から更新履歴をご確認いただけます。音声変換の核心部分には業界標準のFFmpegを採用しており、独自アルゴリズムによる予期しない不具合のリスクを排除しています。また、変換前の自動バックアップ機能により、万が一の問題が発生してもオリジナルファイルは常に安全に保護されています。":
     "BeatMist receives frequent updates with continuous quality improvements based on user feedback. You can check the update history in the {releaseNotes}. The core audio conversion uses industry-standard FFmpeg, eliminating the risk of unexpected bugs from proprietary algorithms. Additionally, the automatic pre-conversion backup ensures your original files are always protected.",
   "使い方がわからなくなったらどうすればいいですか？":
