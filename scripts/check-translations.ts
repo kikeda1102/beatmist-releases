@@ -48,8 +48,14 @@ function collectKeysFromComponents(): Set<string> {
           }
         }
         if (content.includes("useTranslation")) {
+          const excluded = new Set<string>();
+          const xCallRegex = /\bx\(\s*["']([^"']+)["']\s*\)/g;
+          let xMatch;
+          while ((xMatch = xCallRegex.exec(content)) !== null) {
+            if (xMatch[1]) excluded.add(xMatch[1]);
+          }
           for (const str of extractJapaneseStrings(fullPath)) {
-            keys.add(str);
+            if (!excluded.has(str)) keys.add(str);
           }
         }
       }

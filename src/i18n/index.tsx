@@ -44,3 +44,7 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
 export function useTranslation() {
   return useContext(TranslationContext);
 }
+
+export function x(s: string): string {
+  return s;
+}
