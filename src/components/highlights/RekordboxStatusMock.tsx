@@ -48,7 +48,7 @@ function Dash({ x, y }: { x: number; y: number }) {
   );
 }
 
-export default function rekordboxStatusMock() {
+export default function RekordboxStatusMock() {
   const firstRowY = HEADER_Y + ROW_HEIGHT + 8;
 
   return (

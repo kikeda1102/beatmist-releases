@@ -213,7 +213,7 @@ const tocSections = [
   { id: "running-restriction", label: "rekordbox起動中の制限" },
 ];
 
-function rekordboxLibrarySyncContent() {
+function RekordboxLibrarySyncContent() {
   const { t } = useTranslation();
 
   return (
@@ -437,11 +437,11 @@ function rekordboxLibrarySyncContent() {
   );
 }
 
-export default function rekordboxLibrarySync() {
+export default function RekordboxLibrarySync() {
   return (
     <TranslationProvider>
       <Header />
-      <rekordboxLibrarySyncContent />
+      <RekordboxLibrarySyncContent />
       <Footer />
     </TranslationProvider>
   );

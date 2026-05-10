@@ -77,7 +77,7 @@ function CueFlag({ x, marker }: { x: number; marker: CueMarker }) {
   );
 }
 
-export default function rekordboxCueMock() {
+export default function RekordboxCueMock() {
   return (
     <Wrapper>
       <svg

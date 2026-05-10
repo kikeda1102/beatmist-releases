@@ -6,9 +6,9 @@ import { useTranslation } from "../i18n";
 import ProblemBadgeMock from "./features/ProblemBadgeMock";
 import BackupRevertMock from "./features/BackupRevertMock";
 import MetadataEditMock from "./features/MetadataEditMock";
-import rekordboxStatusMock from "./highlights/rekordboxStatusMock";
-import rekordboxCueMock from "./highlights/rekordboxCueMock";
-import rekordboxPlaylistMock from "./features/rekordboxPlaylistMock";
+import RekordboxStatusMock from "./highlights/RekordboxStatusMock";
+import RekordboxCueMock from "./highlights/RekordboxCueMock";
+import RekordboxPlaylistMock from "./features/RekordboxPlaylistMock";
 import MyTagEditMock from "./features/MyTagEditMock";
 import LibraryMock from "./features/LibraryMock";
 import WaveformMock from "./features/WaveformMock";
@@ -17,9 +17,9 @@ const svgMockComponents: Record<string, React.ComponentType> = {
   "/images/showcase/problem-badge.png": ProblemBadgeMock,
   "/images/showcase/backup-revert.png": BackupRevertMock,
   "/images/showcase/metadata-edit.png": MetadataEditMock,
-  "/images/showcase/rekordbox-status.png": rekordboxStatusMock,
-  "/images/showcase/rekordbox-cue.png": rekordboxCueMock,
-  "/images/showcase/rekordbox-playlist.png": rekordboxPlaylistMock,
+  "/images/showcase/rekordbox-status.png": RekordboxStatusMock,
+  "/images/showcase/rekordbox-cue.png": RekordboxCueMock,
+  "/images/showcase/rekordbox-playlist.png": RekordboxPlaylistMock,
   "/images/showcase/mytag-edit.png": MyTagEditMock,
   "/images/showcase/library.png": LibraryMock,
   "/images/showcase/waveform.png": WaveformMock,

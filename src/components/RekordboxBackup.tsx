@@ -241,7 +241,7 @@ const tocSections = [
   { id: "notes", label: "注意事項" },
 ];
 
-function rekordboxBackupContent() {
+function RekordboxBackupContent() {
   const { t } = useTranslation();
 
   return (
@@ -442,11 +442,11 @@ function rekordboxBackupContent() {
   );
 }
 
-export default function rekordboxBackup() {
+export default function RekordboxBackup() {
   return (
     <TranslationProvider>
       <Header />
-      <rekordboxBackupContent />
+      <RekordboxBackupContent />
       <Footer />
     </TranslationProvider>
   );

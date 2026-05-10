@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export default function rekordboxPlaylistMock() {
+export default function RekordboxPlaylistMock() {
   const headerY = 20;
   const listStartY = headerY + 32;
 
