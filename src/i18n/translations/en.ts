@@ -97,7 +97,7 @@ const en: Record<string, string> = {
   "Freeプランの全機能に加え、以下の機能が利用可能に":
     "All Free plan features, plus:",
   ファイル数無制限での一括フォーマット変換: "Batch convert unlimited tracks",
-  "Rekordboxプレイリスト・MyTagの一括編集":
+  "rekordboxプレイリスト・MyTagの一括編集":
     "Rekordbox playlist & MyTag batch editing",
   Rekordbox互換: "Rekordbox compatible",
   優先サポート: "Priority support",
@@ -599,7 +599,7 @@ const en: Record<string, string> = {
 
   // docs - rekordbox library sync
   rekordboxライブラリの自動更新: "Auto-Updating Your rekordbox Library",
-  "ファイル変換やプレイリスト・MyTagの操作をrekordboxデータベースに自動反映する機能について説明します。":
+  "ファイル変換やrekordboxプレイリスト・MyTagの操作をrekordboxデータベースに自動反映する機能について説明します。":
     "Learn about the feature that automatically syncs file conversions, playlist and MyTag changes to the rekordbox database.",
   "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・MyTagの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。":
     'When you enable "Update rekordbox library" in BeatMist settings, file conversions and playlist/MyTag changes in BeatMist are automatically reflected in the rekordbox database. This keeps your BeatMist and rekordbox libraries in sync at all times.',
@@ -631,7 +631,7 @@ const en: Record<string, string> = {
   ファイル変換後のrekordbox更新: "rekordbox update after conversion",
   自動: "Automatic",
   "なし（手動管理が必要）": "None (manual management required)",
-  "BeatMist上で可能": "Available in BeatMist",
+  BeatMist上で可能: "Available in BeatMist",
   不可: "Not available",
   変換後にrekordboxでトラックが見つかるか:
     "Tracks found in rekordbox after conversion",
@@ -642,7 +642,7 @@ const en: Record<string, string> = {
   なし: "No",
   "オンにするメリット・デメリット": "Pros and Cons of Enabling",
   メリット: "Pros",
-  "ファイル変換後にrekordbox側での手動操作が不要になる":
+  ファイル変換後にrekordbox側での手動操作が不要になる:
     "No manual rekordbox operations needed after file conversion",
   "プレイリスト・MyTagをBeatMist上で一括管理できる":
     "Manage playlists and MyTags in bulk from BeatMist",
@@ -675,7 +675,7 @@ const en: Record<string, string> = {
   "非対応バージョンの場合、設定画面でチェックボックスがグレーアウトされ、有効化できません":
     "For unsupported versions, the checkbox in settings is grayed out and cannot be enabled",
   Freeプランでの制限: "Free Plan Limitations",
-  "プレイリスト・MyTagの一括編集（複数トラック × 複数プレイリスト / MyTagの同時操作）にはProプランが必要です":
+  "rekordboxプレイリスト・MyTagの一括編集（複数トラック × 複数プレイリスト / MyTagの同時操作）にはProプランが必要です":
     "Batch editing of playlists/MyTags (multiple tracks × multiple playlists/MyTags simultaneously) requires a Pro plan",
   "単一トラックと単一プレイリスト / MyTagの操作はFreeプランでも利用いただけます":
     "Single track and single playlist/MyTag operations are available on the Free plan",

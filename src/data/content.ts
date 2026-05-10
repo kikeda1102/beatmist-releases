@@ -295,7 +295,7 @@ export const pricingTiers: readonly PricingTier[] = [
     description: "Freeプランの全機能に加え、以下の機能が利用可能に",
     features: [
       "ファイル数無制限での一括フォーマット変換",
-      "Rekordboxプレイリスト・MyTagの一括編集",
+      "rekordboxプレイリスト・MyTagの一括編集",
       "優先サポート",
       "無料での一生涯アップデート",
     ],

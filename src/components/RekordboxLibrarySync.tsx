@@ -247,9 +247,7 @@ function RekordboxLibrarySyncContent() {
         <Section id="features">
           <SectionTitle>{t("この機能でできること")}</SectionTitle>
 
-          <SubTitle>
-            {t("ファイル変換後のライブラリ自動追従")}
-          </SubTitle>
+          <SubTitle>{t("ファイル変換後のライブラリ自動追従")}</SubTitle>
           <Paragraph>
             {t(
               "BeatMistでファイルを別フォーマットに変換すると、rekordboxのデータベースが自動で更新されます。ファイルパス・ファイルサイズ・フォーマット種別が書き換わるため、rekordbox上でトラックが「見つからない」状態になることはありません。CUEポイントやループなど、rekordboxで設定済みの情報もそのまま保持されます。",
@@ -317,9 +315,7 @@ function RekordboxLibrarySyncContent() {
                   <Td>{t("不可")}</Td>
                 </Tr>
                 <Tr>
-                  <Td>
-                    {t("変換後にrekordboxでトラックが見つかるか")}
-                  </Td>
+                  <Td>{t("変換後にrekordboxでトラックが見つかるか")}</Td>
                   <Td>{t("自動で追従")}</Td>
                   <Td>{t("見つからない状態になる")}</Td>
                 </Tr>
@@ -334,21 +330,15 @@ function RekordboxLibrarySyncContent() {
         </Section>
 
         <Section id="pros-cons">
-          <SectionTitle>
-            {t("オンにするメリット・デメリット")}
-          </SectionTitle>
+          <SectionTitle>{t("オンにするメリット・デメリット")}</SectionTitle>
 
           <SubTitle>{t("メリット")}</SubTitle>
           <BulletList>
             <ListItem>
-              {t(
-                "ファイル変換後にrekordbox側での手動操作が不要になる",
-              )}
+              {t("ファイル変換後にrekordbox側での手動操作が不要になる")}
             </ListItem>
             <ListItem>
-              {t(
-                "プレイリスト・MyTagをBeatMist上で一括管理できる",
-              )}
+              {t("プレイリスト・MyTagをBeatMist上で一括管理できる")}
             </ListItem>
             <ListItem>
               {t(
@@ -365,13 +355,9 @@ function RekordboxLibrarySyncContent() {
               )}
             </ListItem>
             <ListItem>
-              {t(
-                "rekordboxが起動中は操作できない（終了する必要がある）",
-              )}
+              {t("rekordboxが起動中は操作できない（終了する必要がある）")}
             </ListItem>
-            <ListItem>
-              {t("rekordbox 6.x / 7.xのみに対応している")}
-            </ListItem>
+            <ListItem>{t("rekordbox 6.x / 7.xのみに対応している")}</ListItem>
           </BulletList>
         </Section>
 
@@ -411,9 +397,7 @@ function RekordboxLibrarySyncContent() {
         <Section id="supported-versions">
           <SectionTitle>{t("対応バージョン")}</SectionTitle>
           <BulletList>
-            <ListItem>
-              {t("rekordbox 6.xおよび7.xに対応しています")}
-            </ListItem>
+            <ListItem>{t("rekordbox 6.xおよび7.xに対応しています")}</ListItem>
             <ListItem>
               {t(
                 "非対応バージョンの場合、設定画面でチェックボックスがグレーアウトされ、有効化できません",
@@ -427,7 +411,7 @@ function RekordboxLibrarySyncContent() {
           <BulletList>
             <ListItem>
               {t(
-                "プレイリスト・MyTagの一括編集（複数トラック × 複数プレイリスト / MyTagの同時操作）にはProプランが必要です",
+                "rekordboxプレイリスト・MyTagの一括編集（複数トラック × 複数プレイリスト / MyTagの同時操作）にはProプランが必要です",
               )}
             </ListItem>
             <ListItem>
