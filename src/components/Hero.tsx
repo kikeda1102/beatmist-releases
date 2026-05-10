@@ -13,13 +13,18 @@ const Section = styled.section`
   background:
     linear-gradient(
       to bottom,
-      ${colors.bgPrimary} 0%,
-      transparent 40%,
+      rgba(13, 11, 15, 0.25) 0%,
+      transparent 20%,
       transparent 70%,
       ${colors.bgPrimary} 100%
     ),
-    url("/images/hero-bg.webp") center bottom / cover no-repeat
-      ${colors.bgPrimary};
+    url("/images/hero-bg.webp") center bottom / cover no-repeat,
+    linear-gradient(
+      to bottom,
+      #FF2D8A 0%,
+      ${colors.accent} 40%,
+      ${colors.bgPrimary} 70%
+    );
 
   ${media.md} {
     padding: 4rem 2rem;
