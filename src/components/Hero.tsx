@@ -13,18 +13,15 @@ const Section = styled.section`
   background:
     linear-gradient(
       to bottom,
-      rgba(13, 11, 15, 0.25) 0%,
-      transparent 20%,
+      transparent 0%,
       transparent 70%,
       ${colors.bgPrimary} 100%
     ),
     url("/images/hero-bg.webp") center bottom / cover no-repeat,
-    linear-gradient(
-      to bottom,
-      #FF2D8A 0%,
-      ${colors.accent} 40%,
-      ${colors.bgPrimary} 70%
-    );
+    radial-gradient(ellipse 50% 35% at 55% 10%, #FF2D8A 0%, rgba(200, 56, 126, 0.3) 40%, transparent 70%),
+    radial-gradient(ellipse 30% 25% at 10% 30%, rgba(200, 56, 126, 0.35) 0%, transparent 65%),
+    radial-gradient(ellipse 25% 20% at 90% 20%, rgba(255, 45, 138, 0.25) 0%, transparent 60%),
+    ${colors.bgPrimary};
 
   ${media.md} {
     padding: 4rem 2rem;
