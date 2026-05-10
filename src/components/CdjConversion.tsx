@@ -337,9 +337,7 @@ function CdjConversionContent() {
 
           <SubTitle>{t("BeatMistの対応入力フォーマット")}</SubTitle>
           <Paragraph>
-            {t(
-              "BeatMistは以下のフォーマットの楽曲ファイルを読み込めます。",
-            )}
+            {t("BeatMistは以下のフォーマットの楽曲ファイルを読み込めます。")}
           </Paragraph>
           <BulletList>
             <ListItem>WAV</ListItem>
@@ -535,9 +533,7 @@ function CdjConversionContent() {
                 </Tr>
                 <Tr>
                   <Td>CDJ-2000NXS2</Td>
-                  <Td>
-                    44.1 / 48 / <UnsupportedMark>88.2</UnsupportedMark> / 96 kHz
-                  </Td>
+                  <Td>44.1 / 48 / 96 kHz</Td>
                   <Td>44.1 / 48 / 88.2 / 96 kHz</Td>
                   <Td>16 / 24 bit</Td>
                   <Td>44.1 / 48 kHz</Td>
@@ -566,13 +562,6 @@ function CdjConversionContent() {
               </tbody>
             </SpecTable>
           </TableWrapper>
-
-          <NoteBox>
-            <NoteLabel>{t("注意:")}</NoteLabel>
-            {t(
-              "CDJ-2000NXS2はWAVフォーマットのみ88.2kHzに非対応です。AIFFでは88.2kHzに対応しています。88.2kHzのWAVファイルを再生したい場合は、変換先フォーマットにAIFFを選択してください。",
-            )}
-          </NoteBox>
         </Section>
 
         {/* Section 2: Auto Mode Logic */}

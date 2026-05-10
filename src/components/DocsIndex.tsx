@@ -109,6 +109,12 @@ const docPages = [
       "CDJ機種別の対応フォーマット、自動最適化の変換ロジック、変換例、安全機能、技術仕様を詳しく説明します。",
   },
   {
+    href: "/docs/rekordbox-library-sync",
+    title: "rekordboxライブラリの自動更新",
+    description:
+      "ファイル変換やプレイリスト・MyTagの操作をrekordboxデータベースに自動反映する機能について説明します。",
+  },
+  {
     href: "/docs/rekordbox-backup",
     title: "rekordboxデータベースのバックアップと復元",
     description:

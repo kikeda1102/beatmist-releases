@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import RekordboxLibrarySync from "../../components/RekordboxLibrarySync";
+import { site } from "../../data/content";
+---
+
+<Layout
+  title={`${site.name} - rekordboxライブラリの自動更新`}
+  description="BeatMistの設定でrekordboxライブラリ更新を有効にすると、ファイル変換やプレイリスト・MyTagの操作がrekordboxデータベースに自動で反映されます。"
+>
+  <RekordboxLibrarySync client:only="react" />
+</Layout>

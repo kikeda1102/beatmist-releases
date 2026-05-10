@@ -249,9 +249,6 @@ const en: Record<string, string> = {
   "PCM ビット深度": "PCM Bit Depth",
   "MP3 / AAC サンプルレート": "MP3 / AAC Sample Rate",
   "注意:": "Note:",
-  "CDJ-2000NXS2はWAVフォーマットのみ88.2kHzに非対応です。AIFFでは88.2kHzに対応しています。88.2kHzのWAVファイルを再生したい場合は、変換先フォーマットにAIFFを選択してください。":
-    "CDJ-2000NXS2 does not support 88.2kHz for WAV format only. AIFF supports 88.2kHz. If you want to play 88.2kHz WAV files, select AIFF as the target format.",
-
   "自動最適化モードでは、元のファイルのサンプルレートとビット深度を可能な限り維持しつつ、設定したCDJ機種で再生可能なスペックに変換します。":
     "In auto-optimization mode, the original file's sample rate and bit depth are preserved as much as possible while converting to specs playable on your configured CDJ model.",
   変換ルール: "Conversion Rules",
@@ -599,6 +596,92 @@ const en: Record<string, string> = {
     'You can create a backup when enabling "Update rekordbox library" in BeatMist settings',
   "復元作業を行う前に、必ずrekordboxが完全に終了していることを確認してください。rekordboxが起動中にデータベースファイルを上書きすると、データが破損する可能性があります。":
     "Before restoring, make sure rekordbox is completely closed. Overwriting the database files while rekordbox is running may cause data corruption.",
+
+  // docs - rekordbox library sync
+  rekordboxライブラリの自動更新: "Auto-Updating Your rekordbox Library",
+  "ファイル変換やプレイリスト・MyTagの操作をrekordboxデータベースに自動反映する機能について説明します。":
+    "Learn about the feature that automatically syncs file conversions, playlist and MyTag changes to the rekordbox database.",
+  "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・MyTagの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。":
+    'When you enable "Update rekordbox library" in BeatMist settings, file conversions and playlist/MyTag changes in BeatMist are automatically reflected in the rekordbox database. This keeps your BeatMist and rekordbox libraries in sync at all times.',
+  この機能でできること: "What This Feature Does",
+  ファイル変換後のライブラリ自動追従:
+    "Automatic Library Tracking After Conversion",
+  "BeatMistでファイルを別フォーマットに変換すると、rekordboxのデータベースが自動で更新されます。ファイルパス・ファイルサイズ・フォーマット種別が書き換わるため、rekordbox上でトラックが「見つからない」状態になることはありません。CUEポイントやループなど、rekordboxで設定済みの情報もそのまま保持されます。":
+    'When you convert a file to another format in BeatMist, the rekordbox database is automatically updated. The file path, file size, and format type are rewritten, so tracks never appear as "missing" in rekordbox. CUE points, loops, and other settings configured in rekordbox are preserved.',
+  プレイリスト操作: "Playlist Management",
+  "BeatMistのサイドバーにrekordboxのプレイリストツリーが表示されます。以下の操作が可能です:":
+    "The rekordbox playlist tree is displayed in the BeatMist sidebar. The following operations are available:",
+  プレイリストの新規作成: "Create new playlists",
+  プレイリストの削除: "Delete playlists",
+  トラックをプレイリストに追加: "Add tracks to playlists",
+  トラックをプレイリストから削除: "Remove tracks from playlists",
+  MyTag操作: "MyTag Management",
+  "BeatMistの右パネルでrekordboxのMyTagを管理できます。以下の操作が可能です:":
+    "You can manage rekordbox MyTags in the BeatMist right panel. The following operations are available:",
+  "トラックへのMyTag付与・解除": "Assign or remove MyTags from tracks",
+  MyTagの新規作成: "Create new MyTags",
+  MyTagの削除: "Delete MyTags",
+  変換の巻き戻し: "Reverting Conversions",
+  "変換前のフォーマットに戻す（リバート）際も、rekordboxのデータベースが自動で元のファイルを参照するように書き戻されます。":
+    "When reverting to the original format, the rekordbox database is automatically updated to reference the original file.",
+  オンとオフの比較: "On vs. Off Comparison",
+  項目: "Item",
+  オン: "On",
+  オフ: "Off",
+  ファイル変換後のrekordbox更新: "rekordbox update after conversion",
+  自動: "Automatic",
+  "なし（手動管理が必要）": "None (manual management required)",
+  "BeatMist上で可能": "Available in BeatMist",
+  不可: "Not available",
+  変換後にrekordboxでトラックが見つかるか:
+    "Tracks found in rekordbox after conversion",
+  自動で追従: "Automatically tracked",
+  見つからない状態になる: "Tracks become missing",
+  rekordboxデータベースへの書き込み: "Writing to rekordbox database",
+  あり: "Yes",
+  なし: "No",
+  "オンにするメリット・デメリット": "Pros and Cons of Enabling",
+  メリット: "Pros",
+  "ファイル変換後にrekordbox側での手動操作が不要になる":
+    "No manual rekordbox operations needed after file conversion",
+  "プレイリスト・MyTagをBeatMist上で一括管理できる":
+    "Manage playlists and MyTags in bulk from BeatMist",
+  "rekordboxでのファイル参照が自動で追従するため、CUEポイントやループなどの既存設定がそのまま保持される":
+    "File references in rekordbox are automatically tracked, so existing settings like CUE points and loops are preserved",
+  デメリット: "Cons",
+  "rekordboxのデータベースを直接書き換えるため、不整合が発生する可能性があります。バックアップの保存を推奨しています（後述の自動バックアップで対応可能です）":
+    "Since it directly modifies the rekordbox database, inconsistencies may occur. We recommend saving backups (handled by the automatic backup feature described below)",
+  "rekordboxが起動中は操作できない（終了する必要がある）":
+    "Cannot operate while rekordbox is running (it must be closed)",
+  "rekordbox 6.x / 7.xのみに対応している":
+    "Only compatible with rekordbox 6.x / 7.x",
+  "安全策: 自動バックアップ": "Safety: Automatic Backups",
+  "BeatMistはrekordboxのデータベースを安全に扱うために、以下のバックアップ機能を備えています。":
+    "BeatMist includes the following backup features to safely handle the rekordbox database.",
+  有効化時のバックアップ: "Backup on activation",
+  " — 「rekordboxライブラリを更新する」を初めてオンにする際、rekordboxデータベースのバックアップを作成するモーダルが表示されます。任意のフォルダにバックアップを保存できます。":
+    ' — When enabling "Update rekordbox library" for the first time, a dialog appears to create a backup of the rekordbox database. You can save the backup to any folder.',
+  " — 以降、rekordboxデータベースへの書き込みが発生するたびに、BeatMistが自動でタイムスタンプ付きのバックアップを作成します。":
+    " — From then on, each time the rekordbox database is written to, BeatMist automatically creates a timestamped backup.",
+  "復元について:": "About restoring:",
+  "万が一データベースに問題が発生した場合は、バックアップから復元できます。復元手順の詳細は":
+    "If any issues occur with the database, you can restore from a backup. For detailed restore instructions, see ",
+  "「rekordboxデータベースのバックアップと復元」":
+    '"Backing Up and Restoring the rekordbox Database"',
+  "を参照してください。": ".",
+  対応バージョン: "Supported Versions",
+  "rekordbox 6.xおよび7.xに対応しています":
+    "Compatible with rekordbox 6.x and 7.x",
+  "非対応バージョンの場合、設定画面でチェックボックスがグレーアウトされ、有効化できません":
+    "For unsupported versions, the checkbox in settings is grayed out and cannot be enabled",
+  Freeプランでの制限: "Free Plan Limitations",
+  "プレイリスト・MyTagの一括編集（複数トラック × 複数プレイリスト / MyTagの同時操作）にはProプランが必要です":
+    "Batch editing of playlists/MyTags (multiple tracks × multiple playlists/MyTags simultaneously) requires a Pro plan",
+  "単一トラックと単一プレイリスト / MyTagの操作はFreeプランでも利用いただけます":
+    "Single track and single playlist/MyTag operations are available on the Free plan",
+  rekordbox起動中の制限: "Restrictions While rekordbox Is Running",
+  "rekordboxが起動している間はデータベースがロックされるため、BeatMistからの書き込みができません。ファイル変換やプレイリスト・MyTagの操作を行う前に、rekordboxを終了してください。rekordboxの起動が検出された場合は、BeatMistが終了を促すメッセージを表示します。":
+    "While rekordbox is running, the database is locked and BeatMist cannot write to it. Please close rekordbox before performing file conversions or playlist/MyTag operations. If rekordbox is detected as running, BeatMist will display a message prompting you to close it.",
 
   // docs shared
   ドキュメント一覧に戻る: "Back to Docs",
