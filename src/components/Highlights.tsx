@@ -38,14 +38,15 @@ const dividerStyle = `
 const LeadText = styled.p`
   font-size: 1.125rem;
   color: ${colors.textPrimary};
-  text-align: center;
+  text-align: left;
   line-height: 1.8;
   max-width: 860px;
   margin: 0 auto 4rem;
+  white-space: pre-line;
 
   ${media.md} {
     font-size: 1.25rem;
-    white-space: pre-line;
+    text-align: center;
   }
 `;
 
@@ -58,11 +59,15 @@ const List = styled.div`
 `;
 
 const TextOnlyItem = styled.div`
-  text-align: center;
+  text-align: left;
   max-width: 640px;
   margin: 0 auto;
   padding: 2rem 0;
   ${dividerStyle}
+
+  ${media.md} {
+    text-align: center;
+  }
 
   &:first-child {
     padding-top: 0;
@@ -125,7 +130,7 @@ const ItemImage = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  text-align: center;
+  text-align: left;
 
   ${media.md} {
     text-align: left;
@@ -139,6 +144,7 @@ const ItemTitle = styled.h3`
   font-weight: 700;
   color: ${colors.textPrimary};
   margin-bottom: 0.5rem;
+  text-align: center;
 `;
 
 const ItemDescription = styled.p`
