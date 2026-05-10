@@ -88,23 +88,27 @@ const Tagline = styled.p`
   font-size: 1.625rem;
   line-height: 1.7;
   color: ${colors.textPrimary};
-  font-weight: 500;
+  font-weight: 700;
   text-shadow:
-    0 0 8px rgba(0, 0, 0, 0.8),
-    0 0 24px rgba(0, 0, 0, 0.5);
+    0 0 16px rgba(0, 0, 0, 1),
+    0 0 40px rgba(0, 0, 0, 0.9),
+    0 2px 6px rgba(0, 0, 0, 1),
+    0 0 80px rgba(0, 0, 0, 0.6);
   max-width: 600px;
   white-space: pre-line;
 
   ${media.md} {
-    font-size: 1.875rem;
+    font-size: 2.125rem;
+    max-width: 700px;
   }
 
   ${media.lg} {
-    font-size: 2.125rem;
+    font-size: 2.5rem;
+    max-width: 800px;
   }
 
   ${media.xl} {
-    font-size: 2.375rem;
+    font-size: 2.75rem;
   }
 `;
 
@@ -151,28 +155,29 @@ const AppIconBg = styled.img`
 `;
 
 const Subtext = styled.p`
-  font-size: 1rem;
+  font-size: 1.0625rem;
   line-height: 1.8;
   color: ${colors.textPrimary};
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.02em;
   text-shadow:
-    0 0 12px rgba(0, 0, 0, 1),
-    0 0 32px rgba(0, 0, 0, 0.8),
-    0 2px 4px rgba(0, 0, 0, 0.9);
+    0 0 16px rgba(0, 0, 0, 1),
+    0 0 40px rgba(0, 0, 0, 0.9),
+    0 2px 6px rgba(0, 0, 0, 1),
+    0 0 80px rgba(0, 0, 0, 0.6);
   max-width: 600px;
   white-space: pre-line;
 
   ${media.md} {
-    font-size: 1.1rem;
-  }
-
-  ${media.lg} {
     font-size: 1.2rem;
   }
 
+  ${media.lg} {
+    font-size: 1.3rem;
+  }
+
   ${media.xl} {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
   }
 `;
 
