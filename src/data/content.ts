@@ -48,7 +48,6 @@ interface Feature {
   readonly icon?: string;
   readonly title: string;
   readonly description: string;
-  readonly badge?: string;
   readonly href?: string;
   readonly image?: string;
   readonly imageAlt?: string;
@@ -68,7 +67,6 @@ export const features: readonly Feature[] = [
     title: "自動バックアップ & ワンクリック復元",
     description:
       "変換時に元のファイルは自動的にバックアップされます。変換後でもワンクリックでいつでも元に戻せるので、安心して変換できます。",
-    badge: "NEW",
     image: "/images/showcase/backup-revert.png",
     imageAlt: "変換済みファイルのワンクリック復元UI",
   },
@@ -83,7 +81,6 @@ export const features: readonly Feature[] = [
     title: "CUEポイント読み込み",
     description:
       "Rekordboxで設定したCUEポイント（Hot Cue A〜Hなど）を自動で読み込み、各トラックのCUE情報を一覧表示。DJプレイで設定したポイントをBeatMist上で確認できます。",
-    badge: "NEW",
     image: "/images/showcase/rekordbox-cue.png",
     imageAlt: "RekordboxのCUEポイント読み込み画面",
   },
@@ -91,7 +88,6 @@ export const features: readonly Feature[] = [
     title: "プレイリスト読み込み・編集",
     description:
       "Rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。",
-    badge: "Pro",
     image: "/images/showcase/rekordbox-playlist.png",
     imageAlt: "Rekordboxプレイリスト読み込み・編集画面",
   },
@@ -99,7 +95,6 @@ export const features: readonly Feature[] = [
     title: "MyTag編集",
     description:
       "RekordboxのMyTag（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。",
-    badge: "Pro",
     image: "/images/showcase/mytag-edit.png",
     imageAlt: "MyTag編集画面",
   },

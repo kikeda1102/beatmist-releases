@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { features } from "../data/content";
 import { useTranslation } from "../i18n";
-import Badge from "./shared/Badge";
 import ProblemBadgeMock from "./features/ProblemBadgeMock";
 import BackupRevertMock from "./features/BackupRevertMock";
 import MetadataEditMock from "./features/MetadataEditMock";
@@ -245,12 +244,6 @@ export default function Features() {
                 <CardHeader>
                   {feature.icon && <CardIcon>{feature.icon}</CardIcon>}
                   <CardTitle>{t(feature.title)}</CardTitle>
-                  {feature.badge && (
-                    <Badge
-                      text={feature.badge}
-                      variant={feature.badge === "Pro" ? "pro" : "new"}
-                    />
-                  )}
                 </CardHeader>
                 <CardDescription>{t(feature.description)}</CardDescription>
                 {feature.href && (
