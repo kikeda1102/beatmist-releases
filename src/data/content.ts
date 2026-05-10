@@ -234,7 +234,7 @@ export const faq: Faq = {
         contact: { label: "お問い合わせフォーム", href: "/#contact" },
         twitter: {
           label: "X (Twitter)",
-          href: "https://x.com/purocura",
+          href: "https://x.com/beat_mist",
           external: true,
         },
       },
@@ -355,7 +355,7 @@ export const footer = {
     { label: "特定商取引法に基づく表記", href: "/tokushoho" },
   ],
   community: {
-    links: [{ label: "CuraRmx  X (Twitter)", href: "https://x.com/purocura" }],
+    links: [{ label: "BeatMist X (Twitter)", href: "https://x.com/beat_mist" }],
     note: "Discordコミュニティ:\n招待リンクをソフト内に掲載しています",
   },
   copyright: "2026 BeatMist",
