@@ -733,7 +733,7 @@ function CdjConversionContent() {
                 <tr>
                   <Th>{t("プラン")}</Th>
                   <Th>{t("一括変換の上限")}</Th>
-                  <Th>{t("プレイリスト・MyTag一括編集")}</Th>
+                  <Th>{t("プレイリスト・マイタグ一括編集")}</Th>
                 </tr>
               </Thead>
               <tbody>

@@ -565,7 +565,7 @@ function GettingStartedContent() {
           <SectionTitle>{t("ライセンスについて")}</SectionTitle>
           <Paragraph>
             {t(
-              "BeatMistはFreeプランとProプランの2つのプランを提供しています。Freeプランでは基本機能を利用できますが、一括変換のトラック数に制限があり、プレイリスト・MyTagの一括編集はProプランで利用可能です。",
+              "BeatMistはFreeプランとProプランの2つのプランを提供しています。Freeプランでは基本機能を利用できますが、一括変換のトラック数に制限があり、プレイリスト・マイタグの一括編集はProプランで利用可能です。",
             )}
           </Paragraph>
 
@@ -575,7 +575,7 @@ function GettingStartedContent() {
                 <tr>
                   <Th>{t("プラン")}</Th>
                   <Th>{t("一括変換の上限")}</Th>
-                  <Th>{t("プレイリスト・MyTag一括編集")}</Th>
+                  <Th>{t("プレイリスト・マイタグ一括編集")}</Th>
                 </tr>
               </Thead>
               <tbody>

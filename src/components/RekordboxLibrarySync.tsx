@@ -229,7 +229,7 @@ function RekordboxLibrarySyncContent() {
         <Title>{t("rekordboxライブラリの自動更新")}</Title>
         <Lead>
           {t(
-            "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・MyTagの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。",
+            "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・マイタグの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。",
           )}
         </Lead>
 
@@ -267,16 +267,16 @@ function RekordboxLibrarySyncContent() {
             <ListItem>{t("トラックをプレイリストから削除")}</ListItem>
           </BulletList>
 
-          <SubTitle>{t("MyTag操作")}</SubTitle>
+          <SubTitle>{t("マイタグ操作")}</SubTitle>
           <Paragraph>
             {t(
-              "BeatMistの右パネルでrekordboxのMyTagを管理できます。以下の操作が可能です:",
+              "BeatMistの右パネルでrekordboxのマイタグを管理できます。以下の操作が可能です:",
             )}
           </Paragraph>
           <BulletList>
-            <ListItem>{t("トラックへのMyTag付与・解除")}</ListItem>
-            <ListItem>{t("MyTagの新規作成")}</ListItem>
-            <ListItem>{t("MyTagの削除")}</ListItem>
+            <ListItem>{t("トラックへのマイタグ付与・解除")}</ListItem>
+            <ListItem>{t("マイタグの新規作成")}</ListItem>
+            <ListItem>{t("マイタグの削除")}</ListItem>
           </BulletList>
 
           <SubTitle>{t("変換の巻き戻し")}</SubTitle>
@@ -310,7 +310,7 @@ function RekordboxLibrarySyncContent() {
                   <Td>{t("不可")}</Td>
                 </Tr>
                 <Tr>
-                  <Td>{t("MyTag操作")}</Td>
+                  <Td>{t("マイタグ操作")}</Td>
                   <Td>{t("BeatMist上で可能")}</Td>
                   <Td>{t("不可")}</Td>
                 </Tr>
@@ -338,7 +338,7 @@ function RekordboxLibrarySyncContent() {
               {t("ファイル変換後にrekordbox側での手動操作が不要になる")}
             </ListItem>
             <ListItem>
-              {t("プレイリスト・MyTagをBeatMist上で一括管理できる")}
+              {t("プレイリスト・マイタグをBeatMist上で一括管理できる")}
             </ListItem>
             <ListItem>
               {t(
@@ -411,12 +411,12 @@ function RekordboxLibrarySyncContent() {
           <BulletList>
             <ListItem>
               {t(
-                "rekordboxプレイリスト・MyTagの一括編集（複数トラック × 複数プレイリスト / MyTagの同時操作）にはProプランが必要です",
+                "rekordboxプレイリスト・マイタグの一括編集（複数トラック × 複数プレイリスト / マイタグの同時操作）にはProプランが必要です",
               )}
             </ListItem>
             <ListItem>
               {t(
-                "単一トラックと単一プレイリスト / MyTagの操作はFreeプランでも利用いただけます",
+                "単一トラックと単一プレイリスト / マイタグの操作はFreeプランでも利用いただけます",
               )}
             </ListItem>
           </BulletList>
@@ -426,7 +426,7 @@ function RekordboxLibrarySyncContent() {
           <SectionTitle>{t("rekordbox起動中の制限")}</SectionTitle>
           <Paragraph>
             {t(
-              "rekordboxが起動している間はデータベースがロックされるため、BeatMistからの書き込みができません。ファイル変換やプレイリスト・MyTagの操作を行う前に、rekordboxを終了してください。rekordboxの起動が検出された場合は、BeatMistが終了を促すメッセージを表示します。",
+              "rekordboxが起動している間はデータベースがロックされるため、BeatMistからの書き込みができません。ファイル変換やプレイリスト・マイタグの操作を行う前に、rekordboxを終了してください。rekordboxの起動が検出された場合は、BeatMistが終了を促すメッセージを表示します。",
             )}
           </Paragraph>
         </Section>

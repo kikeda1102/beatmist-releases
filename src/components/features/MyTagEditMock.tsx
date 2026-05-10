@@ -124,7 +124,7 @@ export default function MyTagEditMock() {
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         role="img"
-        aria-label="MyTag編集パネル"
+        aria-label="マイタグ編集パネル"
       >
         <rect width="480" height="300" fill="#141218" rx="4" />
 

@@ -279,7 +279,7 @@ export default function Hero() {
           <MobileBr />
           {t("自動変換。")}
           {"\n"}
-          {t("rekordboxのプレイリスト、MyTagも")}
+          {t("rekordboxのプレイリスト、マイタグも")}
           <MobileBr />
           {t("一括編集可能。")}
         </Subtext>

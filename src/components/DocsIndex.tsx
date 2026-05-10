@@ -112,7 +112,7 @@ const docPages = [
     href: "/docs/rekordbox-library-sync",
     title: "rekordboxライブラリの自動更新",
     description:
-      "ファイル変換やrekordboxプレイリスト・MyTagの操作をrekordboxデータベースに自動反映する機能について説明します。",
+      "ファイル変換やrekordboxプレイリスト・マイタグの操作をrekordboxデータベースに自動反映する機能について説明します。",
   },
   {
     href: "/docs/rekordbox-backup",

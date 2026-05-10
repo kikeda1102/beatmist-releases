@@ -5,15 +5,15 @@ const en: Record<string, string> = {
   DJのための: "",
   プロフェッショナルな: "Professional ",
   音源ライブラリ管理ツール: "music library management tool for DJs",
-  "DJのための音源ライブラリ管理ツール。楽曲をCDJごとの対応フォーマットに自動変換。rekordboxのプレイリスト、MyTagも一括編集可能。":
+  "DJのための音源ライブラリ管理ツール。楽曲をCDJごとの対応フォーマットに自動変換。rekordboxのプレイリスト、マイタグも一括編集可能。":
     "Professional music library management tool for DJs. Auto-convert tracks to CDJ-compatible formats. Batch edit rekordbox playlists and MyTags.",
 
   // hero subtext
-  "楽曲をCDJごとの対応フォーマットに自動変換。\nrekordboxのプレイリスト、MyTagも一括編集可能。":
+  "楽曲をCDJごとの対応フォーマットに自動変換。\nrekordboxのプレイリスト、マイタグも一括編集可能。":
     "Auto-convert tracks to CDJ-compatible formats.\nBatch edit rekordbox playlists and MyTags.",
   楽曲をCDJごとの対応フォーマットに: "Auto-convert tracks to ",
   "自動変換。": "CDJ-compatible formats.",
-  "rekordboxのプレイリスト、MyTagも": "Batch edit rekordbox playlists ",
+  "rekordboxのプレイリスト、マイタグも": "Batch edit rekordbox playlists ",
   "一括編集可能。": "and MyTags.",
 
   // introduction
@@ -44,8 +44,8 @@ const en: Record<string, string> = {
   "プレイリスト読み込み・編集": "Playlist Import & Edit",
   "rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。":
     "Import rekordbox playlist structure into BeatMist for playlist-based track management. Create playlists and add or remove tracks directly in BeatMist.",
-  MyTag編集: "MyTag Editing",
-  "rekordboxのMyTag（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。":
+  マイタグ編集: "MyTag Editing",
+  "rekordboxのマイタグ（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。":
     "Edit rekordbox MyTags (custom tags like Genre, Components, Situation) in BeatMist. Categorize tracks without leaving the app.",
   楽曲ライブラリ管理: "Track Library Management",
   "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。":
@@ -59,10 +59,10 @@ const en: Record<string, string> = {
   "使用するCDJ機種を選ぶだけ。\n非対応フォーマットを自動で検出し、最適な形式に変換します。":
     "Just select your CDJ model.\nIncompatible formats are auto-detected and converted to the optimal format.",
   rekordboxとシームレスに連携: "Seamless rekordbox Integration",
-  "各トラックのrekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、MyTagの一括編集もBeatMist上で完結。":
+  "各トラックのrekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、マイタグの一括編集もBeatMist上で完結。":
     "Check the rekordbox import status of each track at a glance.\nEdit metadata, playlists, and MyTags in-app — changes apply by simply re-importing.",
   無料ですぐに始められる: "Get Started Free",
-  "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・MyTagの一括編集はProプランで利用可能です。":
+  "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・マイタグの一括編集はProプランで利用可能です。":
     "All essential features are fully available on the Free plan.\nPlaylist & MyTag batch editing requires the Pro plan.",
   料金プランを見る: "View pricing plans",
 
@@ -79,7 +79,7 @@ const en: Record<string, string> = {
   rekordboxのCUEポイント読み込み画面: "rekordbox CUE point import screen",
   "rekordboxプレイリスト読み込み・編集画面":
     "rekordbox playlist import and edit screen",
-  MyTag編集画面: "MyTag editing screen",
+  マイタグ編集画面: "MyTag editing screen",
   楽曲ライブラリの一覧表示画面: "Track library list view",
   波形プレビューと再生コントロールの画面:
     "Waveform preview and playback controls",
@@ -97,13 +97,13 @@ const en: Record<string, string> = {
   "Freeプランの全機能に加え、以下の機能が利用可能に":
     "All Free plan features, plus:",
   ファイル数無制限での一括フォーマット変換: "Batch convert unlimited tracks",
-  "rekordboxプレイリスト・MyTagの一括編集":
+  "rekordboxプレイリスト・マイタグの一括編集":
     "rekordbox playlist & MyTag batch editing",
   rekordbox互換: "rekordbox compatible",
   優先サポート: "Priority support",
   無料での一生涯アップデート: "Free lifetime updates",
   全機能解放: "Full Unlock",
-  "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではプレイリスト・MyTagの一括編集など全機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。":
+  "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではプレイリスト・マイタグの一括編集など全機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。":
     "All essential features are available with the Free plan.\nThe Pro license unlocks everything, including playlist & MyTag batch editing.\nIt's a one-time purchase — all future updates are included for free.",
   無料で始める: "Get Started Free",
   ライセンスを購入: "Buy License",
@@ -476,9 +476,9 @@ const en: Record<string, string> = {
 
   // getting-started: license
   ライセンスについて: "About Licensing",
-  "BeatMistはFreeプランとProプランの2つのプランを提供しています。Freeプランでは基本機能を利用できますが、一括変換のトラック数に制限があり、プレイリスト・MyTagの一括編集はProプランで利用可能です。":
+  "BeatMistはFreeプランとProプランの2つのプランを提供しています。Freeプランでは基本機能を利用できますが、一括変換のトラック数に制限があり、プレイリスト・マイタグの一括編集はProプランで利用可能です。":
     "BeatMist offers Free and Pro plans. The Free plan includes essential features, but has limits on batch conversion tracks. Playlist & MyTag batch editing is available on the Pro plan.",
-  "プレイリスト・MyTag一括編集": "Playlist & MyTag Batch Edit",
+  "プレイリスト・マイタグ一括編集": "Playlist & MyTag Batch Edit",
   "1曲ずつ": "One at a time",
   一括編集可能: "Batch editing",
   Proライセンスのアクティベート: "Activating a Pro License",
@@ -599,9 +599,9 @@ const en: Record<string, string> = {
 
   // docs - rekordbox library sync
   rekordboxライブラリの自動更新: "Auto-Updating Your rekordbox Library",
-  "ファイル変換やrekordboxプレイリスト・MyTagの操作をrekordboxデータベースに自動反映する機能について説明します。":
+  "ファイル変換やrekordboxプレイリスト・マイタグの操作をrekordboxデータベースに自動反映する機能について説明します。":
     "Learn about the feature that automatically syncs file conversions, playlist and MyTag changes to the rekordbox database.",
-  "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・MyTagの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。":
+  "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・マイタグの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。":
     'When you enable "Update rekordbox library" in BeatMist settings, file conversions and playlist/MyTag changes in BeatMist are automatically reflected in the rekordbox database. This keeps your BeatMist and rekordbox libraries in sync at all times.',
   この機能でできること: "What This Feature Does",
   ファイル変換後のライブラリ自動追従:
@@ -615,12 +615,12 @@ const en: Record<string, string> = {
   プレイリストの削除: "Delete playlists",
   トラックをプレイリストに追加: "Add tracks to playlists",
   トラックをプレイリストから削除: "Remove tracks from playlists",
-  MyTag操作: "MyTag Management",
-  "BeatMistの右パネルでrekordboxのMyTagを管理できます。以下の操作が可能です:":
+  マイタグ操作: "MyTag Management",
+  "BeatMistの右パネルでrekordboxのマイタグを管理できます。以下の操作が可能です:":
     "You can manage rekordbox MyTags in the BeatMist right panel. The following operations are available:",
-  "トラックへのMyTag付与・解除": "Assign or remove MyTags from tracks",
-  MyTagの新規作成: "Create new MyTags",
-  MyTagの削除: "Delete MyTags",
+  "トラックへのマイタグ付与・解除": "Assign or remove MyTags from tracks",
+  マイタグの新規作成: "Create new MyTags",
+  マイタグの削除: "Delete MyTags",
   変換の巻き戻し: "Reverting Conversions",
   "変換前のフォーマットに戻す（リバート）際も、rekordboxのデータベースが自動で元のファイルを参照するように書き戻されます。":
     "When reverting to the original format, the rekordbox database is automatically updated to reference the original file.",
@@ -644,7 +644,7 @@ const en: Record<string, string> = {
   メリット: "Pros",
   ファイル変換後にrekordbox側での手動操作が不要になる:
     "No manual rekordbox operations needed after file conversion",
-  "プレイリスト・MyTagをBeatMist上で一括管理できる":
+  "プレイリスト・マイタグをBeatMist上で一括管理できる":
     "Manage playlists and MyTags in bulk from BeatMist",
   "rekordboxでのファイル参照が自動で追従するため、CUEポイントやループなどの既存設定がそのまま保持される":
     "File references in rekordbox are automatically tracked, so existing settings like CUE points and loops are preserved",
@@ -675,12 +675,12 @@ const en: Record<string, string> = {
   "非対応バージョンの場合、設定画面でチェックボックスがグレーアウトされ、有効化できません":
     "For unsupported versions, the checkbox in settings is grayed out and cannot be enabled",
   Freeプランでの制限: "Free Plan Limitations",
-  "rekordboxプレイリスト・MyTagの一括編集（複数トラック × 複数プレイリスト / MyTagの同時操作）にはProプランが必要です":
+  "rekordboxプレイリスト・マイタグの一括編集（複数トラック × 複数プレイリスト / マイタグの同時操作）にはProプランが必要です":
     "Batch editing of playlists/MyTags (multiple tracks × multiple playlists/MyTags simultaneously) requires a Pro plan",
-  "単一トラックと単一プレイリスト / MyTagの操作はFreeプランでも利用いただけます":
+  "単一トラックと単一プレイリスト / マイタグの操作はFreeプランでも利用いただけます":
     "Single track and single playlist/MyTag operations are available on the Free plan",
   rekordbox起動中の制限: "Restrictions While rekordbox Is Running",
-  "rekordboxが起動している間はデータベースがロックされるため、BeatMistからの書き込みができません。ファイル変換やプレイリスト・MyTagの操作を行う前に、rekordboxを終了してください。rekordboxの起動が検出された場合は、BeatMistが終了を促すメッセージを表示します。":
+  "rekordboxが起動している間はデータベースがロックされるため、BeatMistからの書き込みができません。ファイル変換やプレイリスト・マイタグの操作を行う前に、rekordboxを終了してください。rekordboxの起動が検出された場合は、BeatMistが終了を促すメッセージを表示します。":
     "While rekordbox is running, the database is locked and BeatMist cannot write to it. Please close rekordbox before performing file conversions or playlist/MyTag operations. If rekordbox is detected as running, BeatMist will display a message prompting you to close it.",
 
   // docs shared

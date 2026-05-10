@@ -4,7 +4,7 @@ export const site = {
   name: "BeatMist",
   tagline: "DJのためのプロフェッショナルな音源ライブラリ管理ツール",
   description:
-    "DJのための音源ライブラリ管理ツール。楽曲をCDJごとの対応フォーマットに自動変換。rekordboxのプレイリスト、MyTagも一括編集可能。",
+    "DJのための音源ライブラリ管理ツール。楽曲をCDJごとの対応フォーマットに自動変換。rekordboxのプレイリスト、マイタグも一括編集可能。",
   url: "https://beatmist.com",
   ogImage: "/images/og-image.png",
 } as const;
@@ -37,7 +37,7 @@ export const introduction = {
 export const hero = {
   headline: "BeatMist",
   subtext:
-    "楽曲をCDJごとの対応フォーマットに自動変換。\nrekordboxのプレイリスト、MyTagも一括編集可能。",
+    "楽曲をCDJごとの対応フォーマットに自動変換。\nrekordboxのプレイリスト、マイタグも一括編集可能。",
   cta: {
     label: "無料ではじめる",
     href: "/#download",
@@ -92,11 +92,11 @@ export const features: readonly Feature[] = [
     imageAlt: "rekordboxプレイリスト読み込み・編集画面",
   },
   {
-    title: "MyTag編集",
+    title: "マイタグ編集",
     description:
-      "rekordboxのMyTag（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。",
+      "rekordboxのマイタグ（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。",
     image: "/images/showcase/mytag-edit.png",
-    imageAlt: "MyTag編集画面",
+    imageAlt: "マイタグ編集画面",
   },
   {
     title: "rekordbox互換メタデータ編集",
@@ -142,14 +142,14 @@ export const highlights: readonly Highlight[] = [
   {
     title: "rekordboxとシームレスに連携",
     description:
-      "各トラックのrekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、MyTagの一括編集もBeatMist上で完結。",
+      "各トラックのrekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、マイタグの一括編集もBeatMist上で完結。",
     image: "/images/showcase/rekordbox-status.png",
     imageAlt: "各トラックのrekordboxインポート状況の一覧表示",
   },
   {
     title: "無料ですぐに始められる",
     description:
-      "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・MyTagの一括編集はProプランで利用可能です。",
+      "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・マイタグの一括編集はProプランで利用可能です。",
     href: "/#pricing",
     hrefLabel: "料金プランを見る",
   },
@@ -268,7 +268,7 @@ interface PricingTier {
 export const pricing = {
   title: "料金プラン",
   description:
-    "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではプレイリスト・MyTagの一括編集など全機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。",
+    "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではプレイリスト・マイタグの一括編集など全機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。",
 } as const;
 
 export const pricingTiers: readonly PricingTier[] = [
@@ -295,7 +295,7 @@ export const pricingTiers: readonly PricingTier[] = [
     description: "Freeプランの全機能に加え、以下の機能が利用可能に",
     features: [
       "ファイル数無制限での一括フォーマット変換",
-      "rekordboxプレイリスト・MyTagの一括編集",
+      "rekordboxプレイリスト・マイタグの一括編集",
       "優先サポート",
       "無料での一生涯アップデート",
     ],
