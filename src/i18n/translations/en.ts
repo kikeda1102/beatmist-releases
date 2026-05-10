@@ -62,8 +62,8 @@ const en: Record<string, string> = {
   "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、MyTagの一括編集もBeatMist上で完結。":
     "Check the Rekordbox import status of each track at a glance.\nEdit metadata, playlists, and MyTags in-app — changes apply by simply re-importing.",
   無料ですぐに始められる: "Get Started Free",
-  "Freeプランでも全ての機能を本格的にご利用いただけます。":
-    "All features are fully available on the Free plan.",
+  "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・MyTagの一括編集はProプランで利用可能です。":
+    "All essential features are fully available on the Free plan.\nPlaylist & MyTag batch editing requires the Pro plan.",
   料金プランを見る: "View pricing plans",
 
   // feature / highlight images
@@ -96,13 +96,15 @@ const en: Record<string, string> = {
   買い切り: "One-time purchase",
   "Freeプランの全機能に加え、以下の機能が利用可能に":
     "All Free plan features, plus:",
-  ファイル数無制限での一括変換: "Batch convert unlimited tracks",
+  ファイル数無制限での一括フォーマット変換: "Batch convert unlimited tracks",
+  "Rekordboxプレイリスト・MyTagの一括編集":
+    "Rekordbox playlist & MyTag batch editing",
   Rekordbox互換: "Rekordbox compatible",
   優先サポート: "Priority support",
   無料での一生涯アップデート: "Free lifetime updates",
   全機能解放: "Full Unlock",
-  "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではすべての機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。":
-    "All essential features are available with the Free plan.\nThe Pro license unlocks everything.\nIt's a one-time purchase — all future updates are included for free.",
+  "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではプレイリスト・MyTagの一括編集など全機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。":
+    "All essential features are available with the Free plan.\nThe Pro license unlocks everything, including playlist & MyTag batch editing.\nIt's a one-time purchase — all future updates are included for free.",
   無料で始める: "Get Started Free",
   ライセンスを購入: "Buy License",
   "ベータ版期間中は 20% OFF": "Beta 20% OFF",
@@ -477,11 +479,11 @@ const en: Record<string, string> = {
 
   // getting-started: license
   ライセンスについて: "About Licensing",
-  "BeatMistはFreeプランとProプランの2つのプランを提供しています。Freeプランでもすべての機能を利用できますが、一括変換のトラック数に制限があります。":
-    "BeatMist offers Free and Pro plans. All features are available on the Free plan, but batch conversion has a track limit.",
-  利用可能な機能: "Available Features",
-  すべての機能: "All features",
-  "すべての機能 + 優先サポート": "All features + priority support",
+  "BeatMistはFreeプランとProプランの2つのプランを提供しています。Freeプランでは基本機能を利用できますが、一括変換のトラック数に制限があり、プレイリスト・MyTagの一括編集はProプランで利用可能です。":
+    "BeatMist offers Free and Pro plans. The Free plan includes essential features, but has limits on batch conversion tracks. Playlist & MyTag batch editing is available on the Pro plan.",
+  "プレイリスト・MyTag一括編集": "Playlist & MyTag Batch Edit",
+  "1曲ずつ": "One at a time",
+  一括編集可能: "Batch editing",
   Proライセンスのアクティベート: "Activating a Pro License",
   購入後に届くライセンスキーを準備します:
     "Prepare the license key you received after purchase",
@@ -550,7 +552,7 @@ const en: Record<string, string> = {
   "、": ", ",
 
   // docs: rekordbox backup
-  "rekordboxデータベースのバックアップと復元":
+  rekordboxデータベースのバックアップと復元:
     "Backing Up and Restoring the rekordbox Database",
   "BeatMistの「rekordboxライブラリを更新する」機能を有効にすると、ファイル変換時にrekordboxのデータベースを直接書き換えます。この機能を有効にする際に、BeatMistからデータベースのバックアップを作成できます。":
     'When you enable the "Update rekordbox library" feature in BeatMist, the rekordbox database is directly modified during file conversion. You can create a database backup from BeatMist when enabling this feature.',
@@ -560,8 +562,7 @@ const en: Record<string, string> = {
   "BeatMistはrekordboxのデータベースファイルを、指定したフォルダにコピーします。":
     "BeatMist copies the rekordbox database files to a folder you specify.",
   バックアップフォルダ: "Backup folder",
-  "には以下のファイルが含まれます:":
-    " contains the following files:",
+  "には以下のファイルが含まれます:": " contains the following files:",
   ファイル: "File",
   説明: "Description",
   rekordboxのメインデータベース: "rekordbox main database",
@@ -577,13 +578,12 @@ const en: Record<string, string> = {
   "バックアップフォルダを開き、中にあるファイルを確認する":
     "Open the backup folder and verify the files inside",
   Finderを開く: "Open Finder",
-  "メニューバーから": "From the menu bar, select ",
+  メニューバーから: "From the menu bar, select ",
   "移動 > フォルダへ移動": "Go > Go to Folder",
   を選択する: "",
   "以下のパスを入力して移動する:": "Enter the following path:",
-  "見つからない場合は以下を試す:":
-    "If not found, try the following:",
-  "フォルダ内の": "Replace ",
+  "見つからない場合は以下を試す:": "If not found, try the following:",
+  フォルダ内の: "Replace ",
   "（および": " (and ",
   "があればそれも）をバックアップフォルダ内のファイルで上書きする":
     " if present) in the folder with the files from your backup folder",

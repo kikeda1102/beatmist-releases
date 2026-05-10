@@ -91,7 +91,7 @@ export const features: readonly Feature[] = [
     title: "プレイリスト読み込み・編集",
     description:
       "Rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。",
-    badge: "NEW",
+    badge: "Pro",
     image: "/images/showcase/rekordbox-playlist.png",
     imageAlt: "Rekordboxプレイリスト読み込み・編集画面",
   },
@@ -99,7 +99,7 @@ export const features: readonly Feature[] = [
     title: "MyTag編集",
     description:
       "RekordboxのMyTag（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。",
-    badge: "NEW",
+    badge: "Pro",
     image: "/images/showcase/mytag-edit.png",
     imageAlt: "MyTag編集画面",
   },
@@ -153,7 +153,8 @@ export const highlights: readonly Highlight[] = [
   },
   {
     title: "無料ですぐに始められる",
-    description: "Freeプランでも全ての機能を本格的にご利用いただけます。",
+    description:
+      "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・MyTagの一括編集はProプランで利用可能です。",
     href: "/#pricing",
     hrefLabel: "料金プランを見る",
   },
@@ -272,7 +273,7 @@ interface PricingTier {
 export const pricing = {
   title: "料金プラン",
   description:
-    "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではすべての機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。",
+    "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではプレイリスト・MyTagの一括編集など全機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。",
 } as const;
 
 export const pricingTiers: readonly PricingTier[] = [
@@ -298,7 +299,8 @@ export const pricingTiers: readonly PricingTier[] = [
     priceNote: "買い切り",
     description: "Freeプランの全機能に加え、以下の機能が利用可能に",
     features: [
-      "ファイル数無制限での一括変換",
+      "ファイル数無制限での一括フォーマット変換",
+      "Rekordboxプレイリスト・MyTagの一括編集",
       "優先サポート",
       "無料での一生涯アップデート",
     ],

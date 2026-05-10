@@ -744,16 +744,19 @@ function CdjConversionContent() {
                 <tr>
                   <Th>{t("プラン")}</Th>
                   <Th>{t("一括変換の上限")}</Th>
+                  <Th>{t("プレイリスト・MyTag一括編集")}</Th>
                 </tr>
               </Thead>
               <tbody>
                 <Tr>
                   <Td>Free</Td>
                   <Td>{t("100トラックまで")}</Td>
+                  <Td>{t("1曲ずつ")}</Td>
                 </Tr>
                 <Tr>
                   <Td>Pro</Td>
                   <Td>{t("無制限")}</Td>
+                  <Td>{t("一括編集可能")}</Td>
                 </Tr>
               </tbody>
             </SpecTable>

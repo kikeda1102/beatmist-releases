@@ -120,10 +120,22 @@ const PriceNote = styled.span`
   margin-left: 0.5rem;
 `;
 
-const TierDescription = styled.p`
+const TierDescription = styled.p<{ $highlighted?: boolean }>`
   font-size: 1rem;
   color: ${colors.textSecondary};
   margin-top: 0.5rem;
+
+  ${({ $highlighted }) =>
+    $highlighted &&
+    css`
+      color: ${colors.textPrimary};
+      font-weight: 600;
+      font-size: 0.9375rem;
+      background: ${colors.accentSubtle};
+      border-radius: 0.375rem;
+      padding: 0.5rem 0.75rem;
+      margin-top: 0.75rem;
+    `}
 `;
 
 const FeatureList = styled.ul`
@@ -181,7 +193,9 @@ export default function Pricing() {
                 {tier.originalPrice && (
                   <DiscountBadge>{t("ベータ版期間中は 20% OFF")}</DiscountBadge>
                 )}
-                <TierDescription>{t(tier.description)}</TierDescription>
+                <TierDescription $highlighted={tier.recommended}>
+                  {t(tier.description)}
+                </TierDescription>
               </CardHeader>
               <FeatureList>
                 {tier.features.map((feature) => (

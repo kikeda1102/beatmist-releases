@@ -246,7 +246,10 @@ export default function Features() {
                   {feature.icon && <CardIcon>{feature.icon}</CardIcon>}
                   <CardTitle>{t(feature.title)}</CardTitle>
                   {feature.badge && (
-                    <Badge text={feature.badge} variant="new" />
+                    <Badge
+                      text={feature.badge}
+                      variant={feature.badge === "Pro" ? "pro" : "new"}
+                    />
                   )}
                 </CardHeader>
                 <CardDescription>{t(feature.description)}</CardDescription>
