@@ -1,6 +1,6 @@
 const en: Record<string, string> = {
   // site
-  "DJのためのプロフェッショナルな音源ライブラリ管理ツール":
+  DJのためのプロフェッショナルな音源ライブラリ管理ツール:
     "Professional music library management tool for DJs",
   DJのための: "",
   プロフェッショナルな: "Professional ",
@@ -35,9 +35,18 @@ const en: Record<string, string> = {
   Rekordbox互換メタデータ編集: "Rekordbox-Compatible Metadata Editing",
   "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。Rekordboxに再インポートするだけで反映されます。":
     "Edit ID3 tags (Title, Artist, Key, Comment, etc.) in-app and update file tags directly. Changes are reflected in Rekordbox by simply re-importing.",
-  Rekordboxインポート状況の確認: "Rekordbox Import Status",
-  "Rekordboxのファイルパスを自動で取得し、各トラックがインポート済みかどうかを一覧で表示。":
-    "Automatically retrieves Rekordbox file paths and shows whether each track has been imported.",
+  "Rekordboxインポート・CUE状況の確認": "Rekordbox Import & CUE Status",
+  "Rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUEポイントの有無を一覧で表示。":
+    "Automatically reads the Rekordbox database and shows each track's import status along with CUE point availability.",
+  CUEポイント読み込み: "CUE Point Import",
+  "Rekordboxで設定したCUEポイント（Hot Cue A〜Hなど）を自動で読み込み、各トラックのCUE情報を一覧表示。DJプレイで設定したポイントをBeatMist上で確認できます。":
+    "Automatically imports CUE points (Hot Cue A–H, etc.) set in Rekordbox and displays CUE info for each track. View your DJ play points directly in BeatMist.",
+  "プレイリスト読み込み・編集": "Playlist Import & Edit",
+  "Rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。":
+    "Import Rekordbox playlist structure into BeatMist for playlist-based track management. Create playlists and add or remove tracks directly in BeatMist.",
+  MyTag編集: "MyTag Editing",
+  "RekordboxのMyTag（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。":
+    "Edit Rekordbox MyTags (custom tags like Genre, Components, Situation) in BeatMist. Categorize tracks without leaving the app.",
   楽曲ライブラリ管理: "Track Library Management",
   "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。":
     "Auto-detect WAV / MP3 / AIFF / FLAC / M4A from multiple folders. View metadata like Title, Artist, BPM, and Key at a glance, and quickly find tracks with search and sort.",
@@ -50,8 +59,8 @@ const en: Record<string, string> = {
   "使用するCDJ機種を選ぶだけ。\n非対応フォーマットを自動で検出し、最適な形式に変換します。":
     "Just select your CDJ model.\nIncompatible formats are auto-detected and converted to the optimal format.",
   Rekordboxとシームレスに連携: "Seamless Rekordbox Integration",
-  "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集もアプリ上で完結し、再インポートするだけで反映。":
-    "Check the Rekordbox import status of each track at a glance.\nEdit metadata in-app — changes apply by simply re-importing.",
+  "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、MyTagの一括編集もBeatMist上で完結。":
+    "Check the Rekordbox import status of each track at a glance.\nEdit metadata, playlists, and MyTags in-app — changes apply by simply re-importing.",
   無料ですぐに始められる: "Get Started Free",
   "Freeプランでも全ての機能を本格的にご利用いただけます。":
     "All features are fully available on the Free plan.",
@@ -65,6 +74,12 @@ const en: Record<string, string> = {
   アプリ上でのメタデータ編集画面: "In-app metadata editing screen",
   各トラックのRekordboxインポート状況の一覧表示:
     "List view showing Rekordbox import status for each track",
+  "各トラックのRekordboxインポート・CUE状況の一覧表示":
+    "List view showing Rekordbox import and CUE status for each track",
+  RekordboxのCUEポイント読み込み画面: "Rekordbox CUE point import screen",
+  "Rekordboxプレイリスト読み込み・編集画面":
+    "Rekordbox playlist import and edit screen",
+  MyTag編集画面: "MyTag editing screen",
   楽曲ライブラリの一覧表示画面: "Track library list view",
   波形プレビューと再生コントロールの画面:
     "Waveform preview and playback controls",

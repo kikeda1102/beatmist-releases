@@ -6,11 +6,11 @@ const COL_NAME_X = 40;
 const COL_RB_X = 380;
 
 const TRACKS = [
-  { name: "Sunrise.wav", rb: true },
-  { name: "Night_Manager.mp3", rb: true },
-  { name: "Coffee_Shop.wav", rb: false },
-  { name: "Shadow.m4a", rb: true },
-  { name: "Deep_Flow.aiff", rb: false },
+  { name: "Sunrise.wav", rb: true, cue: true },
+  { name: "Night_Manager.mp3", rb: true, cue: false },
+  { name: "Coffee_Shop.wav", rb: false, cue: false },
+  { name: "Shadow.m4a", rb: true, cue: true },
+  { name: "Deep_Flow.aiff", rb: false, cue: false },
 ];
 
 const Wrapper = styled.div`
@@ -124,7 +124,21 @@ export default function RekordboxStatusMock() {
               </text>
 
               {track.rb ? (
-                <Check x={COL_RB_X} y={centerY} />
+                <>
+                  <Check x={COL_RB_X - (track.cue ? 12 : 0)} y={centerY} />
+                  {track.cue && (
+                    <text
+                      x={COL_RB_X + 6}
+                      y={centerY + 4}
+                      fill="#34c759"
+                      fontSize="10"
+                      fontWeight="600"
+                      fontFamily="'IBM Plex Sans', system-ui, sans-serif"
+                    >
+                      CUE
+                    </text>
+                  )}
+                </>
               ) : (
                 <Dash x={COL_RB_X} y={centerY} />
               )}

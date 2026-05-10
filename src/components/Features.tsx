@@ -8,6 +8,9 @@ import ProblemBadgeMock from "./features/ProblemBadgeMock";
 import BackupRevertMock from "./features/BackupRevertMock";
 import MetadataEditMock from "./features/MetadataEditMock";
 import RekordboxStatusMock from "./highlights/RekordboxStatusMock";
+import RekordboxCueMock from "./highlights/RekordboxCueMock";
+import RekordboxPlaylistMock from "./features/RekordboxPlaylistMock";
+import MyTagEditMock from "./features/MyTagEditMock";
 import LibraryMock from "./features/LibraryMock";
 import WaveformMock from "./features/WaveformMock";
 
@@ -16,6 +19,9 @@ const svgMockComponents: Record<string, React.ComponentType> = {
   "/images/showcase/backup-revert.png": BackupRevertMock,
   "/images/showcase/metadata-edit.png": MetadataEditMock,
   "/images/showcase/rekordbox-status.png": RekordboxStatusMock,
+  "/images/showcase/rekordbox-cue.png": RekordboxCueMock,
+  "/images/showcase/rekordbox-playlist.png": RekordboxPlaylistMock,
+  "/images/showcase/mytag-edit.png": MyTagEditMock,
   "/images/showcase/library.png": LibraryMock,
   "/images/showcase/waveform.png": WaveformMock,
 };
