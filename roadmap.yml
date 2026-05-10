@@ -35,8 +35,8 @@ categories:
     label: "対応完了"
     label_en: "Completed"
     items:
-      - title: "Rekordboxインポート状況の確認"
-        title_en: "Rekordbox Import Status"
+      - title: "rekordboxインポート状況の確認"
+        title_en: "rekordbox Import Status"
         description: "v1.3.0で対応"
         description_en: "Available since v1.3.0"
         priority: high

@@ -241,7 +241,7 @@ const tocSections = [
   { id: "notes", label: "注意事項" },
 ];
 
-function RekordboxBackupContent() {
+function rekordboxBackupContent() {
   const { t } = useTranslation();
 
   return (
@@ -254,9 +254,7 @@ function RekordboxBackupContent() {
             { label: t("rekordboxデータベースのバックアップと復元") },
           ]}
         />
-        <Title>
-          {t("rekordboxデータベースのバックアップと復元")}
-        </Title>
+        <Title>{t("rekordboxデータベースのバックアップと復元")}</Title>
         <Lead>
           {t(
             "BeatMistの「rekordboxライブラリを更新する」機能を有効にすると、ファイル変換時にrekordboxのデータベースを直接書き換えます。この機能を有効にする際に、BeatMistからデータベースのバックアップを作成できます。",
@@ -282,8 +280,8 @@ function RekordboxBackupContent() {
             )}
           </Paragraph>
           <Paragraph>
-            {t("バックアップフォルダ")}
-            （<InlineCode>rekordbox-backup-YYYY-MM-DD-...</InlineCode>）
+            {t("バックアップフォルダ")}（
+            <InlineCode>rekordbox-backup-YYYY-MM-DD-...</InlineCode>）
             {t("には以下のファイルが含まれます:")}
           </Paragraph>
 
@@ -306,17 +304,13 @@ function RekordboxBackupContent() {
                   <Td>
                     <InlineCode>master.db-wal</InlineCode>
                   </Td>
-                  <Td>
-                    {t("Write-Ahead Log（存在する場合）")}
-                  </Td>
+                  <Td>{t("Write-Ahead Log（存在する場合）")}</Td>
                 </Tr>
                 <Tr>
                   <Td>
                     <InlineCode>master.db-shm</InlineCode>
                   </Td>
-                  <Td>
-                    {t("Shared Memory（存在する場合）")}
-                  </Td>
+                  <Td>{t("Shared Memory（存在する場合）")}</Td>
                 </Tr>
               </tbody>
             </SpecTable>
@@ -344,9 +338,7 @@ function RekordboxBackupContent() {
           <StepItem>
             <StepNumber>2</StepNumber>
             <StepText>
-              {t(
-                "バックアップフォルダを開き、中にあるファイルを確認する",
-              )}
+              {t("バックアップフォルダを開き、中にあるファイルを確認する")}
             </StepText>
           </StepItem>
 
@@ -358,28 +350,24 @@ function RekordboxBackupContent() {
           <StepItem>
             <StepNumber>2</StepNumber>
             <StepText>
-              {t("メニューバーから")} <strong>{t("移動 > フォルダへ移動")}</strong>{" "}
-              {t("を選択する")}
+              {t("メニューバーから")}{" "}
+              <strong>{t("移動 > フォルダへ移動")}</strong> {t("を選択する")}
             </StepText>
           </StepItem>
           <StepItem>
             <StepNumber>3</StepNumber>
-            <StepText>
-              {t("以下のパスを入力して移動する:")}
-            </StepText>
+            <StepText>{t("以下のパスを入力して移動する:")}</StepText>
           </StepItem>
           <CodeBlock>~/Library/Application Support/Pioneer/rekordbox</CodeBlock>
-          <Paragraph>
-            {t("見つからない場合は以下を試す:")}
-          </Paragraph>
+          <Paragraph>{t("見つからない場合は以下を試す:")}</Paragraph>
           <CodeBlock>~/Library/Pioneer/rekordbox</CodeBlock>
           <StepItem>
             <StepNumber>4</StepNumber>
             <StepText>
-              {t("フォルダ内の")}{" "}
-              <InlineCode>master.db</InlineCode>
+              {t("フォルダ内の")} <InlineCode>master.db</InlineCode>
               {t("（および")} <InlineCode>master.db-wal</InlineCode>
-              {"、"}<InlineCode>master.db-shm</InlineCode>{" "}
+              {"、"}
+              <InlineCode>master.db-shm</InlineCode>{" "}
               {t(
                 "があればそれも）をバックアップフォルダ内のファイルで上書きする",
               )}
@@ -388,9 +376,7 @@ function RekordboxBackupContent() {
           <StepItem>
             <StepNumber>5</StepNumber>
             <StepText>
-              {t(
-                "rekordboxを起動し、ライブラリが復元されていることを確認する",
-              )}
+              {t("rekordboxを起動し、ライブラリが復元されていることを確認する")}
             </StepText>
           </StepItem>
 
@@ -406,17 +392,15 @@ function RekordboxBackupContent() {
             </StepText>
           </StepItem>
           <CodeBlock>%APPDATA%\Pioneer\rekordbox</CodeBlock>
-          <Paragraph>
-            {t("見つからない場合は以下を試す:")}
-          </Paragraph>
+          <Paragraph>{t("見つからない場合は以下を試す:")}</Paragraph>
           <CodeBlock>%LOCALAPPDATA%\Pioneer\rekordbox</CodeBlock>
           <StepItem>
             <StepNumber>3</StepNumber>
             <StepText>
-              {t("フォルダ内の")}{" "}
-              <InlineCode>master.db</InlineCode>
+              {t("フォルダ内の")} <InlineCode>master.db</InlineCode>
               {t("（および")} <InlineCode>master.db-wal</InlineCode>
-              {"、"}<InlineCode>master.db-shm</InlineCode>{" "}
+              {"、"}
+              <InlineCode>master.db-shm</InlineCode>{" "}
               {t(
                 "があればそれも）をバックアップフォルダ内のファイルで上書きする",
               )}
@@ -425,9 +409,7 @@ function RekordboxBackupContent() {
           <StepItem>
             <StepNumber>4</StepNumber>
             <StepText>
-              {t(
-                "rekordboxを起動し、ライブラリが復元されていることを確認する",
-              )}
+              {t("rekordboxを起動し、ライブラリが復元されていることを確認する")}
             </StepText>
           </StepItem>
         </Section>
@@ -460,11 +442,11 @@ function RekordboxBackupContent() {
   );
 }
 
-export default function RekordboxBackup() {
+export default function rekordboxBackup() {
   return (
     <TranslationProvider>
       <Header />
-      <RekordboxBackupContent />
+      <rekordboxBackupContent />
       <Footer />
     </TranslationProvider>
   );

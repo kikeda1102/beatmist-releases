@@ -3,11 +3,11 @@ import { colors, fonts, media, spacing } from "../styles/theme";
 import { highlights, introduction } from "../data/content";
 import { useTranslation } from "../i18n";
 import CdjSelectMock from "./highlights/CdjSelectMock";
-import RekordboxStatusMock from "./highlights/RekordboxStatusMock";
+import rekordboxStatusMock from "./highlights/rekordboxStatusMock";
 
 const svgMockComponents: Record<string, React.ComponentType> = {
   "/images/showcase/cdj-select.png": CdjSelectMock,
-  "/images/showcase/rekordbox-status.png": RekordboxStatusMock,
+  "/images/showcase/rekordbox-status.png": rekordboxStatusMock,
 };
 
 const Section = styled.section`

@@ -22,11 +22,7 @@ const PLAYLISTS: PlaylistItem[] = [
   { name: "Classics", count: 52 },
 ];
 
-const SUBMENU_ITEMS = [
-  "Friday_Set",
-  "Club_Mix_01",
-  "Chill_Lounge",
-];
+const SUBMENU_ITEMS = ["Friday_Set", "Club_Mix_01", "Chill_Lounge"];
 
 const Wrapper = styled.div`
   width: 100%;
@@ -36,7 +32,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-export default function RekordboxPlaylistMock() {
+export default function rekordboxPlaylistMock() {
   const headerY = 20;
   const listStartY = headerY + 32;
 
@@ -48,7 +44,7 @@ export default function RekordboxPlaylistMock() {
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         role="img"
-        aria-label="Rekordboxプレイリスト読み込み・編集"
+        aria-label="rekordboxプレイリスト読み込み・編集"
       >
         <rect width="480" height="300" fill="#141218" rx="4" />
 

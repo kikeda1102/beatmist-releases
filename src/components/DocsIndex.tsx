@@ -100,7 +100,7 @@ const docPages = [
     href: "/docs/getting-started",
     title: "使い方ガイド",
     description:
-      "ライブラリ登録、波形プレビュー、CDJ変換、メタデータ編集、Rekordbox連携など、BeatMistの基本的な使い方を説明します。",
+      "ライブラリ登録、波形プレビュー、CDJ変換、メタデータ編集、rekordbox連携など、BeatMistの基本的な使い方を説明します。",
   },
   {
     href: "/docs/conversion",

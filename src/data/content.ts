@@ -31,7 +31,7 @@ export const userVoices = [
 ] as const;
 
 export const introduction = {
-  body: "BeatMistは、CDJに適応する楽曲フォーマットへの一括変換や\nRekordboxとのシームレスな連携など、\nDJのための本格的な音源管理を提供するデスクトップアプリケーションです。",
+  body: "BeatMistは、CDJに適応する楽曲フォーマットへの一括変換や\nrekordboxとのシームレスな連携など、\nDJのための本格的な音源管理を提供するデスクトップアプリケーションです。",
 } as const;
 
 export const hero = {
@@ -71,37 +71,37 @@ export const features: readonly Feature[] = [
     imageAlt: "変換済みファイルのワンクリック復元UI",
   },
   {
-    title: "Rekordboxインポート・CUE状況の確認",
+    title: "rekordboxインポート・CUE状況の確認",
     description:
-      "Rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUEポイントの有無を一覧で表示。",
+      "rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUEポイントの有無を一覧で表示。",
     image: "/images/showcase/rekordbox-status.png",
-    imageAlt: "各トラックのRekordboxインポート・CUE状況の一覧表示",
+    imageAlt: "各トラックのrekordboxインポート・CUE状況の一覧表示",
   },
   {
     title: "CUEポイント読み込み",
     description:
-      "Rekordboxで設定したCUEポイント（Hot Cue A〜Hなど）を自動で読み込み、各トラックのCUE情報を一覧表示。DJプレイで設定したポイントをBeatMist上で確認できます。",
+      "rekordboxで設定したCUEポイント（Hot Cue A〜Hなど）を自動で読み込み、各トラックのCUE情報を一覧表示。DJプレイで設定したポイントをBeatMist上で確認できます。",
     image: "/images/showcase/rekordbox-cue.png",
-    imageAlt: "RekordboxのCUEポイント読み込み画面",
+    imageAlt: "rekordboxのCUEポイント読み込み画面",
   },
   {
     title: "プレイリスト読み込み・編集",
     description:
-      "Rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。",
+      "rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。",
     image: "/images/showcase/rekordbox-playlist.png",
-    imageAlt: "Rekordboxプレイリスト読み込み・編集画面",
+    imageAlt: "rekordboxプレイリスト読み込み・編集画面",
   },
   {
     title: "MyTag編集",
     description:
-      "RekordboxのMyTag（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。",
+      "rekordboxのMyTag（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。",
     image: "/images/showcase/mytag-edit.png",
     imageAlt: "MyTag編集画面",
   },
   {
-    title: "Rekordbox互換メタデータ編集",
+    title: "rekordbox互換メタデータ編集",
     description:
-      "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。Rekordboxに再インポートするだけで反映されます。",
+      "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。rekordboxに再インポートするだけで反映されます。",
     image: "/images/showcase/metadata-edit.png",
     imageAlt: "アプリ上でのメタデータ編集画面",
   },
@@ -140,11 +140,11 @@ export const highlights: readonly Highlight[] = [
     imageAlt: "CDJ機種選択と非対応フォーマットの自動検出画面",
   },
   {
-    title: "Rekordboxとシームレスに連携",
+    title: "rekordboxとシームレスに連携",
     description:
-      "各トラックのRekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、MyTagの一括編集もBeatMist上で完結。",
+      "各トラックのrekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、MyTagの一括編集もBeatMist上で完結。",
     image: "/images/showcase/rekordbox-status.png",
-    imageAlt: "各トラックのRekordboxインポート状況の一覧表示",
+    imageAlt: "各トラックのrekordboxインポート状況の一覧表示",
   },
   {
     title: "無料ですぐに始められる",
@@ -281,7 +281,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "楽曲ファイル100曲まで一括変換",
       "CDJ機種別フォーマット一括変換",
       "楽曲メタデータの閲覧、編集",
-      "Rekordbox互換",
+      "rekordbox互換",
       "波形プレビュー、試聴",
     ],
     recommended: false,

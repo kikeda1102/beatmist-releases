@@ -48,7 +48,7 @@ function Dash({ x, y }: { x: number; y: number }) {
   );
 }
 
-export default function RekordboxStatusMock() {
+export default function rekordboxStatusMock() {
   const firstRowY = HEADER_Y + ROW_HEIGHT + 8;
 
   return (
@@ -59,7 +59,7 @@ export default function RekordboxStatusMock() {
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         role="img"
-        aria-label="Rekordboxインポート状況テーブル"
+        aria-label="rekordboxインポート状況テーブル"
       >
         <rect width="480" height="300" fill="#141218" rx="4" />
 

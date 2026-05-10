@@ -244,7 +244,7 @@ const tocSections = [
   { id: "conversion", label: "CDJ機種別フォーマット変換" },
   { id: "backup", label: "バックアップと復元" },
   { id: "metadata", label: "メタデータ編集" },
-  { id: "rekordbox", label: "Rekordbox連携" },
+  { id: "rekordbox", label: "rekordbox連携" },
   { id: "license", label: "ライセンスについて" },
 ];
 
@@ -421,7 +421,9 @@ function GettingStartedContent() {
           <NoteBox>
             <NoteLabel>{t("詳細:")}</NoteLabel>
             {t("変換ロジックや機種別スペックの詳細については")}{" "}
-            <InlineLink href="/docs/conversion">{t("変換仕様ドキュメント")}</InlineLink>
+            <InlineLink href="/docs/conversion">
+              {t("変換仕様ドキュメント")}
+            </InlineLink>
             {t(" をご確認ください。")}
           </NoteBox>
         </Section>
@@ -505,55 +507,55 @@ function GettingStartedContent() {
             )}
           </NoteBox>
 
-          <SubTitle>{t("Rekordboxへの反映")}</SubTitle>
+          <SubTitle>{t("rekordboxへの反映")}</SubTitle>
           <Paragraph>
             {t(
-              "BeatMistで編集したメタデータはファイルのID3タグに直接書き込まれます。Rekordboxで対象トラックを再インポート（またはコレクション更新）することで、変更内容がRekordbox側に反映されます。",
+              "BeatMistで編集したメタデータはファイルのID3タグに直接書き込まれます。rekordboxで対象トラックを再インポート（またはコレクション更新）することで、変更内容がrekordbox側に反映されます。",
             )}
           </Paragraph>
         </Section>
 
-        {/* Section 6: Rekordbox */}
+        {/* Section 6: rekordbox */}
         <Section id="rekordbox">
-          <SectionTitle>{t("Rekordbox連携")}</SectionTitle>
+          <SectionTitle>{t("rekordbox連携")}</SectionTitle>
           <Paragraph>
             {t(
-              "BeatMistはRekordboxのコレクションデータベースを自動的に検出し、各トラックのインポート状況を表示します。",
+              "BeatMistはrekordboxのコレクションデータベースを自動的に検出し、各トラックのインポート状況を表示します。",
             )}
           </Paragraph>
 
           <SubTitle>{t("自動検出")}</SubTitle>
           <Paragraph>
             {t(
-              "Rekordboxがインストールされている場合、そのデータベースファイルを自動的に検出します。特別な設定は不要です。",
+              "rekordboxがインストールされている場合、そのデータベースファイルを自動的に検出します。特別な設定は不要です。",
             )}
           </Paragraph>
 
           <SubTitle>{t("インポート状況の表示")}</SubTitle>
           <Paragraph>
             {t(
-              "ライブラリの各トラックについて、Rekordboxへのインポート状況がバッジで表示されます。",
+              "ライブラリの各トラックについて、rekordboxへのインポート状況がバッジで表示されます。",
             )}
           </Paragraph>
           <ShowcaseImage
             src="/images/showcase/rekordbox-status.png"
-            alt={t("Rekordboxインポート状況の表示")}
+            alt={t("rekordboxインポート状況の表示")}
           />
           <BulletList>
             <ListItem>
               {t(
-                "インポート済み — Rekordboxコレクションに登録されているトラック",
+                "インポート済み — rekordboxコレクションに登録されているトラック",
               )}
             </ListItem>
             <ListItem>
-              {t("未インポート — まだRekordboxに取り込まれていないトラック")}
+              {t("未インポート — まだrekordboxに取り込まれていないトラック")}
             </ListItem>
           </BulletList>
 
           <SubTitle>{t("ステータスの更新")}</SubTitle>
           <Paragraph>
             {t(
-              "Rekordboxでトラックを追加・削除した場合は、BeatMistのRekordboxステータスを手動で更新できます。キャッシュがあるため、通常は高速に反映されます。",
+              "rekordboxでトラックを追加・削除した場合は、BeatMistのrekordboxステータスを手動で更新できます。キャッシュがあるため、通常は高速に反映されます。",
             )}
           </Paragraph>
         </Section>

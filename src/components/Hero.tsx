@@ -214,7 +214,6 @@ const CtaButton = styled.a`
   );
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(0, 229, 200, 0.3);
   border-top-color: rgba(255, 255, 255, 0.2);
   box-shadow:
     0 0 24px rgba(200, 56, 126, 0.3),

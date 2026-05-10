@@ -8,13 +8,12 @@ const WAVE_X_END = 440;
 const WAVE_WIDTH = WAVE_X_END - WAVE_X_START;
 
 const AMPLITUDES = [
-  6, 12, 8, 16, 10, 20, 14, 26, 18, 12, 22, 16, 28, 20, 14,
-  24, 10, 18, 30, 22, 16, 26, 12, 20, 32, 24, 18, 28, 14, 22,
-  8, 16, 26, 20, 32, 24, 12, 28, 18, 34, 26, 16, 22, 30, 20,
-  14, 24, 34, 26, 18, 30, 22, 36, 28, 20, 16, 32, 24, 38, 30,
-  22, 34, 26, 18, 36, 28, 20, 32, 24, 16, 30, 38, 26, 34, 22,
-  28, 18, 24, 32, 20, 36, 26, 14, 30, 22, 34, 18, 28, 24, 12,
-  20, 16, 26, 22, 32, 18, 28, 14, 24, 20, 10, 16, 22, 12, 8,
+  6, 12, 8, 16, 10, 20, 14, 26, 18, 12, 22, 16, 28, 20, 14, 24, 10, 18, 30, 22,
+  16, 26, 12, 20, 32, 24, 18, 28, 14, 22, 8, 16, 26, 20, 32, 24, 12, 28, 18, 34,
+  26, 16, 22, 30, 20, 14, 24, 34, 26, 18, 30, 22, 36, 28, 20, 16, 32, 24, 38,
+  30, 22, 34, 26, 18, 36, 28, 20, 32, 24, 16, 30, 38, 26, 34, 22, 28, 18, 24,
+  32, 20, 36, 26, 14, 30, 22, 34, 18, 28, 24, 12, 20, 16, 26, 22, 32, 18, 28,
+  14, 24, 20, 10, 16, 22, 12, 8,
 ];
 
 const BAR_COUNT = AMPLITUDES.length;
@@ -44,13 +43,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-function CueFlag({
-  x,
-  marker,
-}: {
-  x: number;
-  marker: CueMarker;
-}) {
+function CueFlag({ x, marker }: { x: number; marker: CueMarker }) {
   const flagY = WAVE_Y - 4;
   const flagSize = 10;
 
@@ -84,7 +77,7 @@ function CueFlag({
   );
 }
 
-export default function RekordboxCueMock() {
+export default function rekordboxCueMock() {
   return (
     <Wrapper>
       <svg
@@ -93,7 +86,7 @@ export default function RekordboxCueMock() {
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         role="img"
-        aria-label="RekordboxのCUEポイント読み込み"
+        aria-label="rekordboxのCUEポイント読み込み"
       >
         <rect width="480" height="220" fill="#141218" rx="4" />
 

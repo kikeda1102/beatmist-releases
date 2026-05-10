@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import RekordboxBackup from "../../components/RekordboxBackup";
+import rekordboxBackup from "../../components/rekordboxBackup";
 import { site } from "../../data/content";
 ---
 
@@ -8,5 +8,5 @@ import { site } from "../../data/content";
   title={`${site.name} - rekordboxデータベースのバックアップと復元`}
   description="BeatMistのrekordboxライブラリ更新機能で作成したバックアップからデータベースを復元する方法を説明します。"
 >
-  <RekordboxBackup client:only="react" />
+  <rekordboxBackup client:only="react" />
 </Layout>
