@@ -108,6 +108,12 @@ const docPages = [
     description:
       "CDJ機種別の対応フォーマット、自動最適化の変換ロジック、変換例、安全機能、技術仕様を詳しく説明します。",
   },
+  {
+    href: "/docs/rekordbox-backup",
+    title: "rekordboxデータベースのバックアップと復元",
+    description:
+      "rekordboxライブラリ更新機能で作成したバックアップからデータベースを復元する方法を説明します。",
+  },
 ];
 
 function DocsIndexContent() {

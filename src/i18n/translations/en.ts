@@ -547,6 +547,59 @@ const en: Record<string, string> = {
   "BeatMistは変換前に必ずオリジナルファイルを自動バックアップします。変換後も、ワンクリックでいつでも元の状態に戻せます。また、音声変換にはFFmpegを使用しており、ロスレス形式間の変換ではビット単位で完全な変換が行われます。ダウンサンプリングが必要な場合も、CDJの対応範囲内で最大のスペックを維持する設計です。":
     "BeatMist always backs up original files automatically before conversion. You can revert to the original at any time with one click. Audio conversion uses FFmpeg, which performs bit-perfect conversion between lossless formats. When downsampling is necessary, it maintains the highest specs within your CDJ's supported range.",
 
+  "、": ", ",
+
+  // docs: rekordbox backup
+  "rekordboxデータベースのバックアップと復元":
+    "Backing Up and Restoring the rekordbox Database",
+  "BeatMistの「rekordboxライブラリを更新する」機能を有効にすると、ファイル変換時にrekordboxのデータベースを直接書き換えます。この機能を有効にする際に、BeatMistからデータベースのバックアップを作成できます。":
+    'When you enable the "Update rekordbox library" feature in BeatMist, the rekordbox database is directly modified during file conversion. You can create a database backup from BeatMist when enabling this feature.',
+  "rekordboxライブラリ更新機能で作成したバックアップからデータベースを復元する方法を説明します。":
+    "Explains how to restore your database from a backup created by the rekordbox library update feature.",
+  バックアップの内容: "Backup Contents",
+  "BeatMistはrekordboxのデータベースファイルを、指定したフォルダにコピーします。":
+    "BeatMist copies the rekordbox database files to a folder you specify.",
+  バックアップフォルダ: "Backup folder",
+  "には以下のファイルが含まれます:":
+    " contains the following files:",
+  ファイル: "File",
+  説明: "Description",
+  rekordboxのメインデータベース: "rekordbox main database",
+  "Write-Ahead Log（存在する場合）": "Write-Ahead Log (if present)",
+  "Shared Memory（存在する場合）": "Shared Memory (if present)",
+  復元手順: "Restore Steps",
+  "rekordboxのデータベースに問題が発生した場合、バックアップからデータベースを復元できます。":
+    "If something goes wrong with your rekordbox database, you can restore it from a backup.",
+  事前準備: "Before You Begin",
+  rekordboxを終了する: "Quit rekordbox",
+  " — rekordboxが起動中はデータベースファイルを上書きできません":
+    " — you cannot overwrite the database files while rekordbox is running",
+  "バックアップフォルダを開き、中にあるファイルを確認する":
+    "Open the backup folder and verify the files inside",
+  Finderを開く: "Open Finder",
+  "メニューバーから": "From the menu bar, select ",
+  "移動 > フォルダへ移動": "Go > Go to Folder",
+  を選択する: "",
+  "以下のパスを入力して移動する:": "Enter the following path:",
+  "見つからない場合は以下を試す:":
+    "If not found, try the following:",
+  "フォルダ内の": "Replace ",
+  "（および": " (and ",
+  "があればそれも）をバックアップフォルダ内のファイルで上書きする":
+    " if present) in the folder with the files from your backup folder",
+  "rekordboxを起動し、ライブラリが復元されていることを確認する":
+    "Launch rekordbox and verify that your library has been restored",
+  エクスプローラーを開く: "Open File Explorer",
+  "アドレスバーに以下のパスを入力して移動する:":
+    "Enter the following path in the address bar:",
+  注意事項: "Important Notes",
+  "復元すると、バックアップ作成後にrekordboxで行った変更（プレイリストの編集、CUEポイントの設定など）は失われます":
+    "Restoring will discard any changes made in rekordbox after the backup was created (playlist edits, CUE point settings, etc.)",
+  "バックアップはBeatMistの設定画面で「rekordboxライブラリを更新する」を有効にする際に作成できます":
+    'You can create a backup when enabling "Update rekordbox library" in BeatMist settings',
+  "復元作業を行う前に、必ずrekordboxが完全に終了していることを確認してください。rekordboxが起動中にデータベースファイルを上書きすると、データが破損する可能性があります。":
+    "Before restoring, make sure rekordbox is completely closed. Overwriting the database files while rekordbox is running may cause data corruption.",
+
   // docs shared
   ドキュメント一覧に戻る: "Back to Docs",
 };
