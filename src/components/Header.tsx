@@ -44,11 +44,11 @@ const Nav = styled.nav<{ $open: boolean }>`
   display: flex;
   gap: 2rem;
 
-  ${media.md} {
+  ${media.lg} {
     display: flex;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     display: ${({ $open }) => ($open ? "flex" : "none")};
     position: absolute;
     top: ${spacing.headerHeight};
@@ -70,6 +70,7 @@ const NavLink = styled.a`
   color: ${colors.textSecondary};
   transition: color 0.2s ease;
   padding: 0.5rem 0;
+  white-space: nowrap;
 
   &:hover {
     color: ${colors.textPrimary};
@@ -87,7 +88,7 @@ const MenuButton = styled.button`
   cursor: pointer;
   padding: 0.25rem;
 
-  ${media.md} {
+  ${media.lg} {
     display: none;
   }
 `;
