@@ -2,9 +2,9 @@ import { displayRoadmap, displayUserVoices } from "../config";
 
 export const site = {
   name: "BeatMist",
-  tagline: "霧のように直感的。\nDJのための本格的な音源管理ツール",
+  tagline: "DJのためのプロフェッショナルな音源ライブラリ管理ツール",
   description:
-    "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。",
+    "DJのための音源ライブラリ管理ツール。楽曲をCDJごとの対応フォーマットに自動変換。rekordboxのプレイリスト、MyTagも一括編集可能。",
   url: "https://beatmist.com",
   ogImage: "/images/og-image.png",
 } as const;
@@ -36,6 +36,8 @@ export const introduction = {
 
 export const hero = {
   headline: "BeatMist",
+  subtext:
+    "楽曲をCDJごとの対応フォーマットに自動変換。\nrekordboxのプレイリスト、MyTagも一括編集可能。",
   cta: {
     label: "無料ではじめる",
     href: "/#download",

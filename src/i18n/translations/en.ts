@@ -1,12 +1,20 @@
 const en: Record<string, string> = {
   // site
-  "霧のように直感的。\nDJのための本格的な音源管理ツール":
-    "Intuitive like mist.\nA track management tool for DJs.",
-  "霧のように直感的。": "Intuitive like mist.",
-  DJのための本格的な: "A professional track management",
-  音源管理ツール: "tool for DJs.",
-  "DJ / Composerのための音源管理ツール。大量の楽曲ファイルのメタデータ把握、波形プレビュー、試聴、フォーマット一括変換を、霧のように直感的に。":
-    "A track management tool for DJs and Composers. Metadata overview, waveform preview, audition, and batch format conversion for large music libraries — intuitive like mist.",
+  "DJのためのプロフェッショナルな音源ライブラリ管理ツール":
+    "Professional music library management tool for DJs",
+  DJのための: "",
+  プロフェッショナルな: "Professional ",
+  音源ライブラリ管理ツール: "music library management tool for DJs",
+  "DJのための音源ライブラリ管理ツール。楽曲をCDJごとの対応フォーマットに自動変換。rekordboxのプレイリスト、MyTagも一括編集可能。":
+    "Professional music library management tool for DJs. Auto-convert tracks to CDJ-compatible formats. Batch edit rekordbox playlists and MyTags.",
+
+  // hero subtext
+  "楽曲をCDJごとの対応フォーマットに自動変換。\nrekordboxのプレイリスト、MyTagも一括編集可能。":
+    "Auto-convert tracks to CDJ-compatible formats.\nBatch edit rekordbox playlists and MyTags.",
+  楽曲をCDJごとの対応フォーマットに: "Auto-convert tracks to ",
+  "自動変換。": "CDJ-compatible formats.",
+  "rekordboxのプレイリスト、MyTagも": "Batch edit rekordbox playlists ",
+  "一括編集可能。": "and MyTags.",
 
   // introduction
   "BeatMistは、CDJに適応する楽曲フォーマットへの一括変換や\nRekordboxとのシームレスな連携など、\nDJのための本格的な音源管理を提供するデスクトップアプリケーションです。":
