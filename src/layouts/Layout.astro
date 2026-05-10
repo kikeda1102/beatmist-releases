@@ -57,6 +57,16 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
         box-sizing: border-box;
       }
 
+      :root {
+        --section-padding: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        :root {
+          --section-padding: 5rem;
+        }
+      }
+
       html {
         scroll-behavior: smooth;
       }

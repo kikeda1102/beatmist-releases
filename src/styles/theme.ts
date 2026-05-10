@@ -36,5 +36,5 @@ export const media = {
 export const spacing = {
   headerHeight: "64px",
   containerMax: "1200px",
-  sectionPadding: "5rem",
+  sectionPadding: "var(--section-padding)",
 } as const;
