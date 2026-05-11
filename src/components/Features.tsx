@@ -8,7 +8,7 @@ import BackupRevertMock from "./features/BackupRevertMock";
 import MetadataEditMock from "./features/MetadataEditMock";
 import RekordboxStatusMock from "./highlights/RekordboxStatusMock";
 import RekordboxPlaylistMock from "./features/RekordboxPlaylistMock";
-import MyTagEditMock from "./features/MyTagEditMock";
+import LibraryMock from "./features/LibraryMock";
 
 const svgMockComponents: Record<string, React.ComponentType> = {
   "/images/showcase/problem-badge.png": ProblemBadgeMock,
@@ -16,7 +16,7 @@ const svgMockComponents: Record<string, React.ComponentType> = {
   "/images/showcase/metadata-edit.png": MetadataEditMock,
   "/images/showcase/rekordbox-status.png": RekordboxStatusMock,
   "/images/showcase/rekordbox-playlist.png": RekordboxPlaylistMock,
-  "/images/showcase/mytag-edit.png": MyTagEditMock,
+  "/images/showcase/library.png": LibraryMock,
 };
 
 const Section = styled.section`

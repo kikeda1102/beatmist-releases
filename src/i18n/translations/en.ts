@@ -32,18 +32,18 @@ const en: Record<string, string> = {
   "自動バックアップ & ワンクリック復元": "Auto Backup & One-Click Revert",
   "変換時に元のファイルは自動的にバックアップされます。変換後でもワンクリックでいつでも元に戻せるので、安心して変換できます。":
     "Original files are automatically backed up before conversion. Revert to originals anytime with one click, ensuring safe conversion.",
-  rekordbox互換メタデータ編集: "rekordbox-Compatible Metadata Editing",
+  メタデータ編集: "Metadata Editing",
   "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。rekordboxに再インポートするだけで反映されます。":
     "Edit ID3 tags (Title, Artist, Key, Comment, etc.) in-app and update file tags directly. Changes are reflected in rekordbox by simply re-importing.",
   "rekordboxインポート・CUE状況の確認": "rekordbox Import & CUE Status",
-  "rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUEポイントの有無を一覧で表示。":
-    "Automatically reads the rekordbox database and shows each track's import status along with CUE point availability.",
-  "rekordboxプレイリスト読み込み・編集": "rekordbox Playlist Import & Edit",
-  "rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。":
-    "Import rekordbox playlist structure into BeatMist for playlist-based track management. Create playlists and add or remove tracks directly in BeatMist.",
-  マイタグ編集: "MyTag Editing",
-  "rekordboxのマイタグ（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。":
-    "Edit rekordbox MyTags (custom tags like Genre, Components, Situation) in BeatMist. Categorize tracks without leaving the app.",
+  "rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUE情報の有無を一覧で表示。rekordboxへのインポート漏れやCUEのうち忘れをすばやく確認できます。":
+    "Automatically read rekordbox's database and display the import status and CUE information for each track in a list. Quickly check for any tracks that haven't been imported into rekordbox or missing CUE points.",
+  プレイリスト・マイタグ編集: "Playlist & MyTag Editing",
+  "rekordboxのプレイリストをBeatMist側で自動的に取得し、プレイリスト登録やマイタグの編集が可能。rekordboxではできない複数トラックのマイタグ一括編集も、BeatMist Proで簡単に行えます。":
+    "Import rekordbox playlists into BeatMist for playlist-based track management. Batch edit MyTags (Genre, Situation, etc.) directly in the app, including multiple tracks at once with BeatMist Pro.",
+  楽曲ライブラリ管理: "Track Library Management",
+  "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。":
+    "Auto-detect WAV / MP3 / AIFF / FLAC / M4A from multiple folders. View metadata like Title, Artist, BPM, and Key at a glance, and quickly find tracks with search and sort.",
 
   // highlights section
   CDJ機種を選ぶだけで自動変換: "Auto-Convert by Selecting Your CDJ",
@@ -69,7 +69,7 @@ const en: Record<string, string> = {
     "List view showing rekordbox import and CUE status for each track",
   "rekordboxプレイリスト読み込み・編集画面":
     "rekordbox playlist import and edit screen",
-  マイタグ編集画面: "MyTag editing screen",
+  楽曲ライブラリの一覧表示画面: "Track library list view",
   CDJ機種選択と非対応フォーマットの自動検出画面:
     "CDJ model selection and automatic incompatible format detection",
 

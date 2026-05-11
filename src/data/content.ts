@@ -73,30 +73,30 @@ export const features: readonly Feature[] = [
   {
     title: "rekordboxインポート・CUE状況の確認",
     description:
-      "rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUEポイントの有無を一覧で表示。",
+      "rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUE情報の有無を一覧で表示。rekordboxへのインポート漏れやCUEのうち忘れをすばやく確認できます。",
     image: "/images/showcase/rekordbox-status.png",
     imageAlt: "各トラックのrekordboxインポート・CUE状況の一覧表示",
   },
   {
-    title: "rekordboxプレイリスト読み込み・編集",
+    title: "プレイリスト・マイタグ編集",
     description:
-      "rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。",
+      "rekordboxのプレイリストをBeatMist側で自動的に取得し、プレイリスト登録やマイタグの編集が可能。rekordboxではできない複数トラックのマイタグ一括編集も、BeatMist Proで簡単に行えます。",
     image: "/images/showcase/rekordbox-playlist.png",
     imageAlt: "rekordboxプレイリスト読み込み・編集画面",
   },
   {
-    title: "マイタグ編集",
-    description:
-      "rekordboxのマイタグ（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。",
-    image: "/images/showcase/mytag-edit.png",
-    imageAlt: "マイタグ編集画面",
-  },
-  {
-    title: "rekordbox互換メタデータ編集",
+    title: "メタデータ編集",
     description:
       "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。rekordboxに再インポートするだけで反映されます。",
     image: "/images/showcase/metadata-edit.png",
     imageAlt: "アプリ上でのメタデータ編集画面",
+  },
+  {
+    title: "楽曲ライブラリ管理",
+    description:
+      "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。",
+    image: "/images/showcase/library.png",
+    imageAlt: "楽曲ライブラリの一覧表示画面",
   },
 ];
 
