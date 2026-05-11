@@ -38,21 +38,12 @@ const en: Record<string, string> = {
   "rekordboxインポート・CUE状況の確認": "rekordbox Import & CUE Status",
   "rekordboxのデータベースを自動で読み取り、各トラックのインポート状況とCUEポイントの有無を一覧で表示。":
     "Automatically reads the rekordbox database and shows each track's import status along with CUE point availability.",
-  CUEポイント読み込み: "CUE Point Import",
-  "rekordboxで設定したCUEポイント（Hot Cue A〜Hなど）を自動で読み込み、各トラックのCUE情報を一覧表示。DJプレイで設定したポイントをBeatMist上で確認できます。":
-    "Automatically imports CUE points (Hot Cue A–H, etc.) set in rekordbox and displays CUE info for each track. View your DJ play points directly in BeatMist.",
-  "プレイリスト読み込み・編集": "Playlist Import & Edit",
+  "rekordboxプレイリスト読み込み・編集": "rekordbox Playlist Import & Edit",
   "rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。":
     "Import rekordbox playlist structure into BeatMist for playlist-based track management. Create playlists and add or remove tracks directly in BeatMist.",
   マイタグ編集: "MyTag Editing",
   "rekordboxのマイタグ（Genre、Components、Situationなどのカスタムタグ）をBeatMist上で編集。トラックのカテゴリ分けをアプリ上で完結できます。":
     "Edit rekordbox MyTags (custom tags like Genre, Components, Situation) in BeatMist. Categorize tracks without leaving the app.",
-  楽曲ライブラリ管理: "Track Library Management",
-  "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。":
-    "Auto-detect WAV / MP3 / AIFF / FLAC / M4A from multiple folders. View metadata like Title, Artist, BPM, and Key at a glance, and quickly find tracks with search and sort.",
-  "波形プレビュー & 試聴": "Waveform Preview & Playback",
-  "楽曲を選択すると波形を即座に描画。アプリ内でそのまま再生でき、シークバーで任意のポイントへジャンプ。視覚と聴覚で楽曲をすばやく確認できます。":
-    "Instantly render waveforms when you select a track. Play back directly in-app and jump to any point with the seek bar. Quickly evaluate tracks by sight and sound.",
 
   // highlights section
   CDJ機種を選ぶだけで自動変換: "Auto-Convert by Selecting Your CDJ",
@@ -76,13 +67,9 @@ const en: Record<string, string> = {
     "List view showing rekordbox import status for each track",
   "各トラックのrekordboxインポート・CUE状況の一覧表示":
     "List view showing rekordbox import and CUE status for each track",
-  rekordboxのCUEポイント読み込み画面: "rekordbox CUE point import screen",
   "rekordboxプレイリスト読み込み・編集画面":
     "rekordbox playlist import and edit screen",
   マイタグ編集画面: "MyTag editing screen",
-  楽曲ライブラリの一覧表示画面: "Track library list view",
-  波形プレビューと再生コントロールの画面:
-    "Waveform preview and playback controls",
   CDJ機種選択と非対応フォーマットの自動検出画面:
     "CDJ model selection and automatic incompatible format detection",
 

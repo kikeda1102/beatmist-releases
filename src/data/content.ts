@@ -78,14 +78,7 @@ export const features: readonly Feature[] = [
     imageAlt: "各トラックのrekordboxインポート・CUE状況の一覧表示",
   },
   {
-    title: "CUEポイント読み込み",
-    description:
-      "rekordboxで設定したCUEポイント（Hot Cue A〜Hなど）を自動で読み込み、各トラックのCUE情報を一覧表示。DJプレイで設定したポイントをBeatMist上で確認できます。",
-    image: "/images/showcase/rekordbox-cue.png",
-    imageAlt: "rekordboxのCUEポイント読み込み画面",
-  },
-  {
-    title: "プレイリスト読み込み・編集",
+    title: "rekordboxプレイリスト読み込み・編集",
     description:
       "rekordboxのプレイリスト構造をBeatMistに読み込み、プレイリスト単位でのトラック管理が可能に。プレイリストの作成やトラックの追加・削除もBeatMist上で行えます。",
     image: "/images/showcase/rekordbox-playlist.png",
@@ -104,20 +97,6 @@ export const features: readonly Feature[] = [
       "ID3タグ（Title、Artist、Key、Commentなど）をアプリ上で編集し、ファイルのタグを直接更新。rekordboxに再インポートするだけで反映されます。",
     image: "/images/showcase/metadata-edit.png",
     imageAlt: "アプリ上でのメタデータ編集画面",
-  },
-  {
-    title: "楽曲ライブラリ管理",
-    description:
-      "複数フォルダからWAV / MP3 / AIFF / FLAC / M4Aを自動検出。Title、Artist、BPM、Keyなどのメタデータを一覧表示し、検索やソートで目的の楽曲にすばやくアクセスできます。",
-    image: "/images/showcase/library.png",
-    imageAlt: "楽曲ライブラリの一覧表示画面",
-  },
-  {
-    title: "波形プレビュー & 試聴",
-    description:
-      "楽曲を選択すると波形を即座に描画。アプリ内でそのまま再生でき、シークバーで任意のポイントへジャンプ。視覚と聴覚で楽曲をすばやく確認できます。",
-    image: "/images/showcase/waveform.png",
-    imageAlt: "波形プレビューと再生コントロールの画面",
   },
 ];
 
