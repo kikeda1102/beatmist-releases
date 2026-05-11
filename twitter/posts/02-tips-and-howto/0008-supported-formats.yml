@@ -1,0 +1,19 @@
+id: tips-0008
+category: tips-and-howto
+tags: [format, wav, aiff, mp3, flac, m4a]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  BeatMistの対応フォーマットをまとめました。
+
+  入力: WAV / AIFF / MP3 / FLAC / M4A
+  出力: AIFF / WAV / MP3
+
+  デフォルトの変換先はAIFFです。主要なDJ向けフォーマットを幅広くカバーしています。
+
+  #BeatMist #DJ #フォーマット
+  https://beatmist.com

@@ -1,0 +1,18 @@
+id: rel-0001
+category: updates-releases
+tags: [update, version, release]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  BeatMist {VERSION} をリリースしました。
+
+  {CHANGES}
+
+  アップデートの詳細はリリースノートをご確認ください。
+
+  #BeatMist #DJ #アップデート
+  https://beatmist.com

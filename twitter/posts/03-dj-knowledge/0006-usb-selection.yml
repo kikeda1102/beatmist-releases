@@ -1,0 +1,21 @@
+id: know-0006
+category: dj-knowledge
+tags: [usb, hardware, preparation]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  DJ用USBメモリの選び方をまとめました。
+
+  ・USB 3.0以上（読み込み速度が安定）
+  ・容量は32GB以上を推奨
+  ・SanDiskやSamsungなど信頼できるメーカー
+  ・FAT32でフォーマット
+  ・予備のUSBも必ず持参
+
+  現場でのトラブル防止には、USBの品質が重要です。
+
+  #DJ #CDJ #USB #イベント準備

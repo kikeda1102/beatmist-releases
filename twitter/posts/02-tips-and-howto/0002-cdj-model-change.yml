@@ -1,0 +1,16 @@
+id: tips-0002
+category: tips-and-howto
+tags: [cdj, model-change, workflow]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  CDJの機種が変わっても安心です。
+
+  BeatMistで機種設定を切り替えるだけで、非対応ファイルを自動で再検出します。あとは変換ボタンを押すだけ。再インポートや手動チェックは必要ありません。
+
+  #BeatMist #DJ #CDJ
+  https://beatmist.com

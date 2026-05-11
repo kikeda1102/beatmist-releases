@@ -1,0 +1,40 @@
+id: feat-0002
+category: product-features
+tags: [rekordbox, thread]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: true
+notes: "rekordbox連携の全機能を紹介するスレッド"
+
+tweets:
+  - content: |
+      BeatMistはrekordboxと深く連携しています。ライブラリの取り込み状況の確認から、CUEポイント、プレイリスト、メタデータまで、まとめてご紹介します🧵
+
+      #BeatMist #DJ #rekordbox
+  - content: |
+      【プレイリスト連携】
+
+      rekordboxのプレイリストをそのまま読み込み、プレイリスト単位で一括変換が可能です。現場で使うセットをまとめて準備できます。
+
+      #BeatMist #rekordbox
+  - content: |
+      【My Tag連携】
+
+      rekordboxで設定したMy Tagを読み込み、Proプランなら一括編集にも対応しています。ジャンルや雰囲気のタグ管理がさらに効率的になります。
+
+      #BeatMist #rekordbox
+  - content: |
+      【CUEポイント連携】
+
+      Hot Cue A〜Hの情報を読み込み、波形上に表示します。変換後もCUEポイントはそのまま維持されるため、安心してご利用いただけます。
+
+      #BeatMist #rekordbox
+  - content: |
+      【メタデータ編集】
+
+      アーティスト名・タイトル・BPMなどのメタデータをBeatMist上で直接編集できます。rekordboxに戻らずに情報を整理できるのが便利です。
+
+      #BeatMist #rekordbox
+      https://beatmist.com

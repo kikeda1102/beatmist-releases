@@ -1,0 +1,20 @@
+id: know-0004
+category: dj-knowledge
+tags: [cdj, troubleshooting, playback, format]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  CDJで曲が再生できない主な原因はこちらです。
+
+  ・フォーマットが機種非対応（FLAC/ALACなど）
+  ・サンプルレートが対応範囲外
+  ・ビット深度が非対応（32bit floatなど）
+  ・ファイルが破損している
+
+  現場でのトラブルを防ぐため、事前にUSBでの再生確認をお勧めします。
+
+  #DJ #CDJ #トラブルシューティング

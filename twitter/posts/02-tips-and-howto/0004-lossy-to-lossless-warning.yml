@@ -1,0 +1,16 @@
+id: tips-0004
+category: tips-and-howto
+tags: [audio-quality, lossy, lossless, format]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  MP3などのロッシー音源をAIFFやWAVに変換しても、音質は向上しません。失われた情報は復元できないためです。
+
+  BeatMistはこのケースを自動で検出し、不要な変換をスキップします。ファイルサイズの無駄な増加を防ぎます。
+
+  #BeatMist #DJ #音質
+  https://beatmist.com

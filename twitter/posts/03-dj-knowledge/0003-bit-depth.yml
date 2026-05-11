@@ -1,0 +1,19 @@
+id: know-0003
+category: dj-knowledge
+tags: [bit-depth, audio-quality, cdj]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  ビット深度は音のダイナミックレンジ（音量の幅）を決める要素です。
+
+  16bit：CD品質。DJ用途では十分
+  24bit：プロ品質。より細やかな音の表現が可能
+  32bit float：制作向け。CDJでは非対応の場合あり
+
+  CDJで再生できない場合、ビット深度が原因のこともあります。
+
+  #DJ #CDJ #ビット深度 #音質

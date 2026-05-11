@@ -1,0 +1,16 @@
+id: tips-0005
+category: tips-and-howto
+tags: [manual-mode, format, sample-rate, bit-depth]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  変換設定を細かく指定したい方へ。
+
+  BeatMistのマニュアルモードなら、変換先のフォーマット・サンプルレート・ビット深度を自分で選べます。自動変換では対応しきれないこだわりの設定にも対応できます。
+
+  #BeatMist #DJ #音質
+  https://beatmist.com

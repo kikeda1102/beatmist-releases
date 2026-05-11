@@ -1,0 +1,19 @@
+id: know-0002
+category: dj-knowledge
+tags: [sample-rate, audio-quality, cdj]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  サンプルレートとは、1秒間の音声を何回記録するかの単位です。
+
+  44.1kHz：CD品質。DJ用途では標準
+  48kHz：映像制作の標準
+  96kHz：ハイレゾ品質
+
+  CDJ機種によって対応するサンプルレートが異なるため、事前の確認が重要です。
+
+  #DJ #CDJ #サンプルレート #音質
