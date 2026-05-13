@@ -73,7 +73,7 @@ const Viewport = styled.div`
 
 const EmblaContainer = styled.div`
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
 `;
 
 const Slide = styled.div`

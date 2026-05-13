@@ -1,12 +1,9 @@
 import { getTweet } from "react-tweet/api";
 import { writeFileSync } from "fs";
 import { resolve } from "path";
+import { userVoices } from "../src/data/content";
 
-const TWEET_IDS = [
-  "2050889538466447504",
-  "2050549215412318219",
-  "2049683478967693756",
-];
+const TWEET_IDS = userVoices.map((v) => v.id);
 
 interface CachedQuotedTweet {
   id_str: string;

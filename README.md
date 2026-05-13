@@ -23,6 +23,16 @@ pnpm build      # プロダクションビルド
 | `pnpm dev` | Astro 開発サーバーのみ | UI・コンポーネントの開発。軽量で高速 |
 | `pnpm dev:cf` | Wrangler 経由で Astro + Cloudflare Functions | API エンドポイント（`/api/*`）を含む完全な環境。Functions の動作確認が必要なときに使用 |
 
+## ユーザーの声（ツイート）
+
+トップページのカルーセルに表示するツイートは `src/data/tweets.json` から読み込まれます。
+
+### ツイートの追加・更新方法
+
+1. `src/data/content.ts` の `userVoices` 配列にツイートIDを追加
+2. `pnpm fetch-tweets` を実行して `tweets.json` を再生成
+3. 生成された `tweets.json` をコミットに含める（ビルド時には取得しない）
+
 ## 開発予定（ロードマップ）
 
 サイトの [/roadmap](https://beatmist.com/roadmap) ページに表示される開発予定は、リポジトリルートの `roadmap.yml` から動的に取得されます。

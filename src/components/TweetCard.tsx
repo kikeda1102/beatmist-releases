@@ -39,7 +39,7 @@ const Card = styled.div`
   color: #e7e9ea;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 18rem;
 `;
 
 const Header = styled.div`
@@ -170,7 +170,6 @@ const VideoPoster = styled.img`
   display: block;
 `;
 
-
 const PlayButton = styled.div`
   position: absolute;
   top: 50%;
@@ -224,6 +223,7 @@ const Footer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.25rem;
+  margin-top: auto;
   margin-bottom: 0.5rem;
 `;
 
@@ -294,7 +294,6 @@ const VerifiedBadge = () => (
   </svg>
 );
 
-
 function VideoThumbnail({
   video,
   tweetUrl,
@@ -336,16 +335,31 @@ export default function TweetCard({ tweet }: { tweet: CachedTweet }) {
           loading="lazy"
         />
         <UserInfo>
-          <UserNameLink href={`https://x.com/${tweet.user.screen_name}`} target="_blank" rel="noopener noreferrer">
+          <UserNameLink
+            href={`https://x.com/${tweet.user.screen_name}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {tweet.user.name}
             {tweet.user.is_blue_verified && <VerifiedBadge />}
           </UserNameLink>
           <HandleRow>
             @{tweet.user.screen_name} &middot;{" "}
-            <FollowLink href={`https://x.com/intent/follow?screen_name=${tweet.user.screen_name}`} target="_blank" rel="noopener noreferrer">Follow</FollowLink>
+            <FollowLink
+              href={`https://x.com/intent/follow?screen_name=${tweet.user.screen_name}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow
+            </FollowLink>
           </HandleRow>
         </UserInfo>
-        <a href={tweetUrl} target="_blank" rel="noopener noreferrer" aria-label="View on X">
+        <a
+          href={tweetUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View on X"
+        >
           <XLogo viewBox="0 0 24 24" aria-hidden="true">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
           </XLogo>
@@ -371,7 +385,10 @@ export default function TweetCard({ tweet }: { tweet: CachedTweet }) {
             <QuoteText>{tweet.quoted_tweet.text}</QuoteText>
           </QuoteContent>
           {tweet.quoted_tweet.video && (
-            <VideoThumbnail video={tweet.quoted_tweet.video} tweetUrl={tweetUrl} />
+            <VideoThumbnail
+              video={tweet.quoted_tweet.video}
+              tweetUrl={tweetUrl}
+            />
           )}
           {tweet.quoted_tweet.photos?.map((photo, i) => (
             <PhotoImg
@@ -387,12 +404,27 @@ export default function TweetCard({ tweet }: { tweet: CachedTweet }) {
       )}
 
       <Footer>
-        <DateText dateTime={tweet.created_at}>
-          {tweet.formatted_date}
-        </DateText>
+        <DateText dateTime={tweet.created_at}>{tweet.formatted_date}</DateText>
         <InfoIcon viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="10" fill="none" stroke="#71767b" strokeWidth="1.5" />
-          <text x="12" y="16.5" textAnchor="middle" fontSize="13" fill="#71767b" fontFamily="serif" fontStyle="italic">i</text>
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+            fill="none"
+            stroke="#71767b"
+            strokeWidth="1.5"
+          />
+          <text
+            x="12"
+            y="16.5"
+            textAnchor="middle"
+            fontSize="13"
+            fill="#71767b"
+            fontFamily="serif"
+            fontStyle="italic"
+          >
+            i
+          </text>
         </InfoIcon>
       </Footer>
 

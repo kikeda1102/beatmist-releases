@@ -142,5 +142,19 @@
         ]
       }
     }
+  },
+  {
+    "id_str": "2053994222890684712",
+    "text": "昨日BeatMistちょっと使ってみたけどnexus2対応とマイタグ、プレイリスト設定が楽でかなり良いね",
+    "created_at": "2026-05-12T00:22:38.000Z",
+    "formatted_date": "9:22 AM · May 12, 2026",
+    "favorite_count": 4,
+    "conversation_count": 0,
+    "user": {
+      "name": "めありー",
+      "screen_name": "MaryBreguet",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/2030677748512116736/H20CjD-x_normal.jpg",
+      "is_blue_verified": true
+    }
   }
 ]
