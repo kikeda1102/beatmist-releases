@@ -53,8 +53,8 @@ const en: Record<string, string> = {
   "各トラックのrekordboxインポート状況をひと目で確認できます。\nメタデータ編集、プレイリスト、マイタグの一括編集もBeatMist上で完結。":
     "Check the rekordbox import status of each track at a glance.\nEdit metadata, playlists, and MyTags in-app — changes apply by simply re-importing.",
   無料ですぐに始められる: "Get Started Free",
-  "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・マイタグの一括編集はProプランで利用可能です。":
-    "All essential features are fully available on the Free plan.\nPlaylist & MyTag batch editing requires the Pro plan.",
+  "Freeプランでもすべての基本機能を本格的にご利用いただけます。":
+    "All essential features are fully available on the Free plan.",
   料金プランを見る: "View pricing plans",
 
   // feature / highlight images

@@ -128,8 +128,7 @@ export const highlights: readonly Highlight[] = [
   },
   {
     title: "無料ですぐに始められる",
-    description:
-      "Freeプランでも基本機能を本格的にご利用いただけます。\nプレイリスト・マイタグの一括編集はProプランで利用可能です。",
+    description: "Freeプランでもすべての基本機能を本格的にご利用いただけます。",
     href: "/#pricing",
     hrefLabel: "料金プランを見る",
   },
