@@ -28,6 +28,7 @@ export const userVoices = [
   { id: "2050549215412318219" },
   { id: "2049683478967693756" },
   // { id: "2049494675829280993" },
+  { id: "2053994222890684712" },
 ] as const;
 
 export const introduction = {

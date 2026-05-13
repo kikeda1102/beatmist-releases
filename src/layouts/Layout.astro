@@ -39,7 +39,6 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preload" as="image" type="image/webp" href="/images/hero-bg.webp" imagesrcset="/images/hero-bg-960w.webp 960w, /images/hero-bg.webp 1920w" imagesizes="100vw" fetchpriority="high" />
     <meta name="build-date" content={buildDate} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,6 +95,7 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
       }
 
       [data-hero] {
+        position: relative;
         min-height: calc(100vh - 64px);
         min-height: calc(100svh - 64px);
         display: flex;
@@ -106,13 +106,7 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         transform: translateZ(0);
-        background:
-          linear-gradient(to bottom, transparent 0%, transparent 70%, #0D0B0F 100%),
-          url("/images/hero-bg.webp") center bottom / cover no-repeat,
-          radial-gradient(ellipse 50% 35% at 55% 10%, #FF2D8A 0%, rgba(200, 56, 126, 0.3) 40%, transparent 70%),
-          radial-gradient(ellipse 30% 25% at 10% 30%, rgba(200, 56, 126, 0.35) 0%, transparent 65%),
-          radial-gradient(ellipse 25% 20% at 90% 20%, rgba(255, 45, 138, 0.25) 0%, transparent 60%),
-          #0D0B0F;
+        background-color: #0D0B0F;
       }
 
       @media (min-width: 768px) {
