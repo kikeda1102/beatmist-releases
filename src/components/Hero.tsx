@@ -1,7 +1,18 @@
+import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { hero, site } from "../data/content";
 import { useTranslation } from "../i18n";
+
+const heroScreenshots = [
+  { src: "/images/hero-screenshot-1.png", alt: "BeatMist - Library" },
+  { src: "/images/hero-screenshot-2.png", alt: "BeatMist - Format Conversion" },
+  { src: "/images/hero-screenshot-3.png", alt: "BeatMist - Track Selection" },
+  { src: "/images/hero-screenshot-4.png", alt: "BeatMist - Settings" },
+];
 
 const Section = styled.section``;
 
@@ -248,17 +259,91 @@ const CtaButton = styled.a`
   }
 `;
 
-const ScreenshotImage = styled.img`
+const CarouselViewport = styled.div`
+  overflow: hidden;
   width: 100%;
-  max-width: 900px;
+  margin-top: 0.5rem;
+`;
+
+const CarouselContainer = styled.div`
+  display: flex;
+`;
+
+const CarouselSlide = styled.div`
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+`;
+
+const SlideImage = styled.img`
+  width: 100%;
+  max-width: ${spacing.containerMax};
   border-radius: 0.75rem;
   border: 1px solid ${colors.border};
-  margin-top: 0.5rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+`;
+
+const Dots = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+`;
+
+const Dot = styled.button<{ $active: boolean }>`
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  background-color: ${({ $active }) =>
+    $active ? colors.accent : colors.border};
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: ${({ $active }) =>
+      $active ? colors.accentHover : colors.borderHover};
+  }
 `;
 
 export default function Hero() {
   const { t } = useTranslation();
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "center" },
+    [
+      Autoplay({
+        delay: 5000,
+        stopOnInteraction: true,
+        stopOnMouseEnter: true,
+      }),
+      WheelGesturesPlugin(),
+    ],
+  );
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
+  const goTo = useCallback(
+    (index: number) => {
+      emblaApi?.scrollTo(index);
+    },
+    [emblaApi],
+  );
 
   return (
     <Section data-hero>
@@ -284,7 +369,25 @@ export default function Hero() {
           {t("一括編集可能。")}
         </Subtext>
         <CtaButton href={hero.cta.href}>{t(hero.cta.label)}</CtaButton>
-        <ScreenshotImage src="/images/screenshot.png" alt="BeatMist" />
+        <CarouselViewport ref={emblaRef}>
+          <CarouselContainer>
+            {heroScreenshots.map((screenshot) => (
+              <CarouselSlide key={screenshot.src}>
+                <SlideImage src={screenshot.src} alt={screenshot.alt} />
+              </CarouselSlide>
+            ))}
+          </CarouselContainer>
+        </CarouselViewport>
+        <Dots>
+          {heroScreenshots.map((screenshot, i) => (
+            <Dot
+              key={screenshot.src}
+              $active={i === selectedIndex}
+              onClick={() => goTo(i)}
+              aria-label={`Screenshot ${i + 1}`}
+            />
+          ))}
+        </Dots>
       </Container>
     </Section>
   );
