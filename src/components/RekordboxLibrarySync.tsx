@@ -206,8 +206,7 @@ const NumberedList = styled.ol`
 const tocSections = [
   { id: "features", label: "この機能でできること" },
   { id: "comparison", label: "オンとオフの比較" },
-  { id: "pros-cons", label: "オンにするメリット・デメリット" },
-  { id: "backup", label: "安全策: 自動バックアップ" },
+  { id: "backup", label: "自動バックアップ" },
   { id: "supported-versions", label: "対応バージョン" },
   { id: "free-plan", label: "Freeプランでの制限" },
   { id: "running-restriction", label: "rekordbox起動中の制限" },
@@ -327,42 +326,15 @@ function RekordboxLibrarySyncContent() {
               </tbody>
             </SpecTable>
           </TableWrapper>
-        </Section>
-
-        <Section id="pros-cons">
-          <SectionTitle>{t("オンにするメリット・デメリット")}</SectionTitle>
-
-          <SubTitle>{t("メリット")}</SubTitle>
-          <BulletList>
-            <ListItem>
-              {t("ファイル変換後にrekordbox側での手動操作が不要になる")}
-            </ListItem>
-            <ListItem>
-              {t("プレイリスト・マイタグをBeatMist上で一括管理できる")}
-            </ListItem>
-            <ListItem>
-              {t(
-                "rekordboxでのファイル参照が自動で追従するため、CUEポイントやループなどの既存設定がそのまま保持される",
-              )}
-            </ListItem>
-          </BulletList>
-
-          <SubTitle>{t("デメリット")}</SubTitle>
-          <BulletList>
-            <ListItem>
-              {t(
-                "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistの自動バックアップ機能（後述）により保護されており、以前の状態に復元することも可能です",
-              )}
-            </ListItem>
-            <ListItem>
-              {t("rekordboxが起動中は操作できない（終了する必要がある）")}
-            </ListItem>
-            <ListItem>{t("rekordbox 6.x / 7.xのみに対応している")}</ListItem>
-          </BulletList>
+          <Paragraph>
+            {t(
+              "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistの自動バックアップ機能（後述）により保護されており、以前の状態に復元することも可能です",
+            )}
+          </Paragraph>
         </Section>
 
         <Section id="backup">
-          <SectionTitle>{t("安全策: 自動バックアップ")}</SectionTitle>
+          <SectionTitle>{t("自動バックアップ")}</SectionTitle>
           <Paragraph>
             {t(
               "BeatMistはrekordboxのデータベースを安全に扱うために、以下のバックアップ機能を備えています。",
