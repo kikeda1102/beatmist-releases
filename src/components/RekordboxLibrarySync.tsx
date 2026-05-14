@@ -351,7 +351,7 @@ function RekordboxLibrarySyncContent() {
           <BulletList>
             <ListItem>
               {t(
-                "rekordboxのデータベースを直接書き換えるため、不整合が発生する可能性があります。バックアップの保存を推奨しています（後述の自動バックアップで対応可能です）",
+                "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistの自動バックアップ機能（後述）により保護されており、以前の状態に復元することも可能です",
               )}
             </ListItem>
             <ListItem>
