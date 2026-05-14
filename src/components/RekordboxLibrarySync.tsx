@@ -328,7 +328,7 @@ function RekordboxLibrarySyncContent() {
           </TableWrapper>
           <Paragraph>
             {t(
-              "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistのrekordboxデータベースのバックアップ機能（後述）により保護されており、以前の状態に復元することも可能です",
+              "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistのrekordboxデータベースのバックアップ機能（後述）により保護されており、以前の状態に復元することも可能です。",
             )}
           </Paragraph>
         </Section>
