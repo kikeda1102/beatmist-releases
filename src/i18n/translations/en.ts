@@ -627,8 +627,9 @@ const en: Record<string, string> = {
   rekordboxデータベースへの書き込み: "Writing to rekordbox database",
   あり: "Yes",
   なし: "No",
-  "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistの自動バックアップ機能（後述）により保護されており、以前の状態に復元することも可能です":
-    "When this feature is enabled, BeatMist directly writes changes to the rekordbox database, such as adding tracks and updating file paths. This means your converted files are immediately reflected when you open rekordbox. All database changes are protected by BeatMist's automatic backup feature (described below), and you can restore to a previous state at any time",
+  "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistのrekordboxデータベースのバックアップ機能（後述）により保護されており、以前の状態に復元することも可能です":
+    "When this feature is enabled, BeatMist directly writes changes to the rekordbox database, such as adding tracks and updating file paths. This means your converted files are immediately reflected when you open rekordbox. All database changes are protected by BeatMist's rekordbox database backup feature (described below), and you can restore to a previous state at any time",
+  rekordboxデータベースのバックアップ: "rekordbox Database Backup",
   自動バックアップ: "Automatic Backups",
   "BeatMistはrekordboxのデータベースを安全に扱うために、以下のバックアップ機能を備えています。":
     "BeatMist includes the following backup features to safely handle the rekordbox database.",
