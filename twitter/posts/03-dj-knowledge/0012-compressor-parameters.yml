@@ -1,0 +1,22 @@
+id: know-0012
+category: dj-knowledge
+tags: [compressor, dynamics, mixing, parameters]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】コンプレッサーの4大パラメータ
+
+  音のダイナミクスを制御するコンプレッサー。まずこの4つを理解するのが大事です
+
+  Threshold: この音量を超えた部分に圧縮がかかる
+  Ratio: どれだけ圧縮するか（2:1なら半分に）
+  Attack: 音が超えてから圧縮が始まるまでの速さ
+  Release: 音が下がってから圧縮が解除されるまでの速さ
+
+  最初はプリセットから始めて、パラメータを一つずつ動かして音の変化を聴くのがおすすめです
+
+  #DJ #DTM #コンプレッサー #ミキシング

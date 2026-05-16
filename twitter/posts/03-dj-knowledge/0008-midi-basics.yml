@@ -1,0 +1,21 @@
+id: know-0008
+category: dj-knowledge
+tags: [midi, controller, daw, basics]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】MIDIの基礎知識
+
+  MIDIコントローラーやDAWの設定で出てくる3つの用語:
+
+  Note: 鍵盤の「どの音を」「どの強さで」押したかの情報
+  CC（Control Change）: つまみやフェーダーの動きを伝える信号
+  Channel: 1〜16chで機器や音源を区別する番号
+
+  これを理解しておくと、MIDIマッピングのトラブルを自力で解決できるようになります
+
+  #DJ #DTM #MIDI

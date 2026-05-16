@@ -1,0 +1,19 @@
+id: know-0002
+category: dj-knowledge
+tags: [audio-format, flac, lossless, compression]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】FLAC形式を知っていますか？
+
+  FLAC: 可逆圧縮で音質の劣化がなく、wavの約60%のサイズに収まる
+  wav: 非圧縮で高音質だがファイルサイズが大きい
+  mp3: 不可逆圧縮で軽量だが元の音質には戻せない
+
+  アーカイブやバックアップ用途にはFLACが最適です。容量を節約しつつ原音を保持できます
+
+  #DJ #DTM #FLAC #音源管理

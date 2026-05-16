@@ -1,0 +1,22 @@
+id: know-0005
+category: dj-knowledge
+tags: [file-naming, library, cdj, compatibility]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】楽曲ファイルの命名規則
+
+  おすすめの形式:「アーティスト名 - 曲名」
+
+  注意点:
+  ・CDJのUSB読み込みでは日本語ファイル名が文字化けすることがある
+  ・特殊文字（/ : * ? " < > |）はOSによってエラーの原因になる
+  ・ファイル名が長すぎると一部のデバイスで表示が切れる
+
+  タグ情報を正しく埋め込んでおけば、ファイル名に頼らず管理できます
+
+  #DJ #DTM #ファイル管理

@@ -1,0 +1,20 @@
+id: know-0009
+category: dj-knowledge
+tags: [asio, core-audio, driver, latency, daw]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】オーディオドライバの話（ASIO / Core Audio）
+
+  DAWで音を鳴らすとき、ドライバ選択がレイテンシーを大きく左右します
+
+  Windows: 標準ドライバは遅延が大きいため、ASIO対応が必須。インターフェースに付属するASIOドライバを使うのが基本。なければASIO4ALLで代用可能
+  Mac: Core Audioが標準で低レイテンシーなので、特別な設定は不要
+
+  「音が遅れる」と感じたら、まずドライバ設定を確認してみてください
+
+  #DJ #DTM #ASIO #DAW

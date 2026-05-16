@@ -1,0 +1,21 @@
+id: know-0004
+category: dj-knowledge
+tags: [bpm, key, tagging, rekordbox, mixed-in-key]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】BPMとキー情報のタグ管理
+
+  rekordboxやTraktorの自動解析は便利ですが万能ではありません
+
+  ・BPMが倍/半分にズレることがある（例: 140BPMが70BPMと認識される）
+  ・Key解析は曲調が変化する曲で不正確になりがち
+  ・解析後に耳で確認し、おかしければ手動で修正する習慣が大事です
+
+  正確なBPMとKey情報は、現場での選曲スピードに直結します
+
+  #DJ #DTM #BPM #rekordbox

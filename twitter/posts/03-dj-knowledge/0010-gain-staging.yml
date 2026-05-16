@@ -1,0 +1,21 @@
+id: know-0010
+category: dj-knowledge
+tags: [gain-staging, mixing, volume, clipping]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】ゲインステージングとは
+
+  ミキシングの基本中の基本。各トラックの音量を適切に管理すること
+
+  ・各トラックのピークを-6dB前後に揃える
+  ・マスターが0dBを超えるとクリッピング（音割れ）が発生する
+  ・トラック数が増えるほど音量は積み重なるため、ヘッドルーム（余裕）の確保が重要
+
+  「音圧が足りない」と感じてもフェーダーを上げる前に、まず全体のバランスを見直してみてください
+
+  #DJ #DTM #ミキシング #ゲインステージング

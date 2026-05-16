@@ -1,0 +1,23 @@
+id: know-0013
+category: dj-knowledge
+tags: [loudness, lufs, mastering, streaming]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】ラウドネス基準 LUFSとは
+
+  配信プラットフォームはそれぞれ推奨ラウドネス値を持っています
+
+  Spotify: -14 LUFS
+  YouTube: -14 LUFS
+  Apple Music: -16 LUFS
+
+  推奨値より大きい音圧で入稿すると、プラットフォーム側で自動的に音量が下げられます。無理に音圧を上げても意味がないどころか、ダイナミクスが失われて逆効果です
+
+  DAWのラウドネスメーターで確認する習慣をつけましょう
+
+  #DJ #DTM #LUFS #マスタリング

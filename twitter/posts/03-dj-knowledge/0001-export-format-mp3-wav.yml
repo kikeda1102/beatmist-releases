@@ -1,0 +1,18 @@
+id: know-0001
+category: dj-knowledge
+tags: [audio-format, mp3, wav, export, distribution]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】音源を書き出して配布する際の形式について
+
+  mp3: タグ情報（曲名・アーティスト名など）をファイルに埋め込んで配布可能
+  wav: 非圧縮だがID3タグに標準対応しておらず、ファイル単体でタグ情報を保持した配布には向かない
+
+  なおmp3で書き出す場合は、ビットレート320kbpsが推奨です
+
+  #DJ #DTM #音源管理

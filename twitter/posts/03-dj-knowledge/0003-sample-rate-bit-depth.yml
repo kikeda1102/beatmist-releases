@@ -1,0 +1,23 @@
+id: know-0003
+category: dj-knowledge
+tags: [sample-rate, bit-depth, audio-quality]
+status: draft
+scheduled_date: null
+posted_date: null
+posted_url: null
+thread: false
+
+content: |
+  【DJ / DTM情報】サンプルレートとビット深度の基本
+
+  サンプルレート（1秒間の記録回数）:
+  44.1kHz = CD品質。DJ用途やリスニングではこれが標準
+  48kHz = 映像制作の標準。DAWのデフォルトがこれの場合も多い
+
+  ビット深度（音の細かさ）:
+  16bit = CD品質
+  24bit = 制作向け。ダイナミックレンジに余裕がある
+
+  制作は48kHz/24bit、最終書き出しは用途に合わせて変換するのが基本です
+
+  #DJ #DTM #サンプルレート
