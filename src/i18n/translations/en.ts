@@ -431,7 +431,6 @@ const en: Record<string, string> = {
     "Deleting backups permanently removes the ability to revert those tracks to their original format. Please confirm before deleting.",
 
   // getting-started: metadata
-  メタデータ編集: "Metadata Editing",
   "ライブラリに表示されたトラックのメタデータ（ID3タグ）をアプリ上で直接編集し、ファイルに書き戻すことができます。":
     "Edit track metadata (ID3 tags) directly in-app and write changes back to the file.",
   編集可能なフィールド: "Editable Fields",
@@ -630,7 +629,6 @@ const en: Record<string, string> = {
   "この機能を有効にすると、BeatMistがrekordboxのデータベースに対してトラックの追加やファイルパスの更新などを直接書き込みます。これにより、rekordboxを開いたときに変換済みファイルがすぐに反映された状態になります。データベースへの変更はBeatMistのrekordboxデータベースのバックアップ機能（後述）により保護されており、以前の状態に復元することも可能です。":
     "When this feature is enabled, BeatMist directly writes changes to the rekordbox database, such as adding tracks and updating file paths. This means your converted files are immediately reflected when you open rekordbox. All database changes are protected by BeatMist's rekordbox database backup feature (described below), and you can restore to a previous state at any time.",
   rekordboxデータベースのバックアップ: "rekordbox Database Backup",
-  自動バックアップ: "Automatic Backups",
   "BeatMistはrekordboxのデータベースを安全に扱うために、以下のバックアップ機能を備えています。":
     "BeatMist includes the following backup features to safely handle the rekordbox database.",
   有効化時のバックアップ: "Backup on activation",

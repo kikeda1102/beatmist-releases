@@ -23,6 +23,14 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      imagesrcset="/images/hero-bg-960w.webp 960w, /images/hero-bg.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:title" content={title} />
