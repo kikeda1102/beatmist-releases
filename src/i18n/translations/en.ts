@@ -443,7 +443,7 @@ const en: Record<string, string> = {
     "Metadata edited in BeatMist is written directly to the file's ID3 tags. Re-import the track in rekordbox (or refresh your collection) to reflect the changes.",
 
   // getting-started: rekordbox
-  rekordbox連携: "rekordbox Integration",
+  "rekordbox 連携": "rekordbox Integration",
   "BeatMistはrekordboxのコレクションデータベースを自動的に検出し、各トラックのインポート状況を表示します。":
     "BeatMist automatically detects rekordbox's collection database and displays the import status of each track.",
   自動検出: "Auto Detection",
@@ -485,7 +485,7 @@ const en: Record<string, string> = {
   // docs hub page
   "BeatMistの使い方や技術仕様について、以下のドキュメントをご用意しています。":
     "We provide the following documentation about how to use BeatMist and its technical specifications.",
-  "ライブラリ登録、波形プレビュー、CDJ変換、メタデータ編集、rekordbox連携など、BeatMistの基本的な使い方を説明します。":
+  "ライブラリ登録、波形プレビュー、CDJ変換、メタデータ編集、rekordbox 連携など、BeatMistの基本的な使い方を説明します。":
     "Covers the basics of BeatMist: library setup, waveform preview, CDJ conversion, metadata editing, and rekordbox integration.",
   "CDJ機種別の対応フォーマット、自動最適化の変換ロジック、変換例、安全機能、技術仕様を詳しく説明します。":
     "Detailed documentation on CDJ-specific format support, auto-optimization conversion logic, conversion examples, safety features, and technical specifications.",
@@ -537,10 +537,10 @@ const en: Record<string, string> = {
   // docs: rekordbox backup
   rekordboxデータベースのバックアップと復元:
     "Backing Up and Restoring the rekordbox Database",
-  "BeatMistの「rekordboxライブラリを更新する」機能を有効にすると、ファイル変換時にrekordboxのデータベースを直接書き換えます。この機能を有効にする際に、BeatMistからデータベースのバックアップを作成できます。":
-    'When you enable the "Update rekordbox library" feature in BeatMist, the rekordbox database is directly modified during file conversion. You can create a database backup from BeatMist when enabling this feature.',
-  "rekordboxライブラリ更新機能で作成したバックアップからデータベースを復元する方法を説明します。":
-    "Explains how to restore your database from a backup created by the rekordbox library update feature.",
+  "BeatMistの「rekordbox 連携」を有効にすると、ファイル変換時にrekordboxのデータベースを直接書き換えます。この機能を有効にする際に、BeatMistからデータベースのバックアップを作成できます。":
+    'When you enable "rekordbox Integration" in BeatMist, the rekordbox database is directly modified during file conversion. You can create a database backup from BeatMist when enabling this feature.',
+  "rekordbox 連携機能で作成したバックアップからデータベースを復元する方法を説明します。":
+    "Explains how to restore your database from a backup created by the rekordbox Integration feature.",
   バックアップの内容: "Backup Contents",
   "BeatMistはrekordboxのデータベースファイルを、指定したフォルダにコピーします。":
     "BeatMist copies the rekordbox database files to a folder you specify.",
@@ -578,17 +578,17 @@ const en: Record<string, string> = {
   注意事項: "Important Notes",
   "復元すると、バックアップ作成後にrekordboxで行った変更（プレイリストの編集、CUEポイントの設定など）は失われます":
     "Restoring will discard any changes made in rekordbox after the backup was created (playlist edits, CUE point settings, etc.)",
-  "バックアップはBeatMistの設定画面で「rekordboxライブラリを更新する」を有効にする際に作成できます":
-    'You can create a backup when enabling "Update rekordbox library" in BeatMist settings',
+  "バックアップはBeatMistの設定画面で「rekordbox 連携」を有効にする際に作成できます":
+    'You can create a backup when enabling "rekordbox Integration" in BeatMist settings',
   "復元作業を行う前に、必ずrekordboxが完全に終了していることを確認してください。rekordboxが起動中にデータベースファイルを上書きすると、データが破損する可能性があります。":
     "Before restoring, make sure rekordbox is completely closed. Overwriting the database files while rekordbox is running may cause data corruption.",
 
   // docs - rekordbox library sync
-  rekordboxライブラリの自動更新: "Auto-Updating Your rekordbox Library",
+  "rekordbox 連携": "rekordbox Integration",
   "ファイル変換やrekordboxプレイリスト・マイタグの操作をrekordboxデータベースに自動反映する機能について説明します。":
     "Learn about the feature that automatically syncs file conversions, playlist and MyTag changes to the rekordbox database.",
-  "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・マイタグの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。":
-    'When you enable "Update rekordbox library" in BeatMist settings, file conversions and playlist/MyTag changes in BeatMist are automatically reflected in the rekordbox database. This keeps your BeatMist and rekordbox libraries in sync at all times.',
+  "BeatMistの設定画面にある「rekordbox 連携」をオンにすると、BeatMistでのファイル変換やプレイリスト・マイタグの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。":
+    'When you enable "rekordbox Integration" in BeatMist settings, file conversions and playlist/MyTag changes in BeatMist are automatically reflected in the rekordbox database. This keeps your BeatMist and rekordbox libraries in sync at all times.',
   この機能でできること: "What This Feature Does",
   ファイル変換後のライブラリ自動追従:
     "Automatic Library Tracking After Conversion",
@@ -632,8 +632,8 @@ const en: Record<string, string> = {
   "BeatMistはrekordboxのデータベースを安全に扱うために、以下のバックアップ機能を備えています。":
     "BeatMist includes the following backup features to safely handle the rekordbox database.",
   有効化時のバックアップ: "Backup on activation",
-  " — 「rekordboxライブラリを更新する」を初めてオンにする際、rekordboxデータベースのバックアップを作成するモーダルが表示されます。任意のフォルダにバックアップを保存できます。":
-    ' — When enabling "Update rekordbox library" for the first time, a dialog appears to create a backup of the rekordbox database. You can save the backup to any folder.',
+  " — 「rekordbox 連携」を初めてオンにする際、rekordboxデータベースのバックアップを作成するモーダルが表示されます。任意のフォルダにバックアップを保存できます。":
+    ' — When enabling "rekordbox Integration" for the first time, a dialog appears to create a backup of the rekordbox database. You can save the backup to any folder.',
   " — 以降、rekordboxデータベースへの書き込みが発生するたびに、BeatMistが自動でタイムスタンプ付きのバックアップを作成します。":
     " — From then on, each time the rekordbox database is written to, BeatMist automatically creates a timestamped backup.",
   "復元について:": "About restoring:",

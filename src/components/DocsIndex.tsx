@@ -100,7 +100,7 @@ const docPages = [
     href: "/docs/getting-started",
     title: "使い方ガイド",
     description:
-      "ライブラリ登録、波形プレビュー、CDJ変換、メタデータ編集、rekordbox連携など、BeatMistの基本的な使い方を説明します。",
+      "ライブラリ登録、波形プレビュー、CDJ変換、メタデータ編集、rekordbox 連携など、BeatMistの基本的な使い方を説明します。",
   },
   {
     href: "/docs/conversion",
@@ -110,7 +110,7 @@ const docPages = [
   },
   {
     href: "/docs/rekordbox-library-sync",
-    title: "rekordboxライブラリの自動更新",
+    title: "rekordbox 連携",
     description:
       "ファイル変換やrekordboxプレイリスト・マイタグの操作をrekordboxデータベースに自動反映する機能について説明します。",
   },
@@ -118,7 +118,7 @@ const docPages = [
     href: "/docs/rekordbox-backup",
     title: "rekordboxデータベースのバックアップと復元",
     description:
-      "rekordboxライブラリ更新機能で作成したバックアップからデータベースを復元する方法を説明します。",
+      "rekordbox 連携機能で作成したバックアップからデータベースを復元する方法を説明します。",
   },
 ];
 

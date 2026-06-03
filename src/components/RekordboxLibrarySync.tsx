@@ -222,13 +222,13 @@ function RekordboxLibrarySyncContent() {
           items={[
             { label: "BeatMist", href: "/" },
             { label: t("ドキュメント"), href: "/docs" },
-            { label: t("rekordboxライブラリの自動更新") },
+            { label: t("rekordbox 連携") },
           ]}
         />
-        <Title>{t("rekordboxライブラリの自動更新")}</Title>
+        <Title>{t("rekordbox 連携")}</Title>
         <Lead>
           {t(
-            "BeatMistの設定画面にある「rekordboxライブラリを更新する」をオンにすると、BeatMistでのファイル変換やプレイリスト・マイタグの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。",
+            "BeatMistの設定画面にある「rekordbox 連携」をオンにすると、BeatMistでのファイル変換やプレイリスト・マイタグの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。",
           )}
         </Lead>
 
@@ -346,7 +346,7 @@ function RekordboxLibrarySyncContent() {
             <ListItem>
               <strong>{t("有効化時のバックアップ")}</strong>
               {t(
-                " — 「rekordboxライブラリを更新する」を初めてオンにする際、rekordboxデータベースのバックアップを作成するモーダルが表示されます。任意のフォルダにバックアップを保存できます。",
+                " — 「rekordbox 連携」を初めてオンにする際、rekordboxデータベースのバックアップを作成するモーダルが表示されます。任意のフォルダにバックアップを保存できます。",
               )}
             </ListItem>
             <ListItem>

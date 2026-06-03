@@ -257,7 +257,7 @@ function RekordboxBackupContent() {
         <Title>{t("rekordboxデータベースのバックアップと復元")}</Title>
         <Lead>
           {t(
-            "BeatMistの「rekordboxライブラリを更新する」機能を有効にすると、ファイル変換時にrekordboxのデータベースを直接書き換えます。この機能を有効にする際に、BeatMistからデータベースのバックアップを作成できます。",
+            "BeatMistの「rekordbox 連携」を有効にすると、ファイル変換時にrekordboxのデータベースを直接書き換えます。この機能を有効にする際に、BeatMistからデータベースのバックアップを作成できます。",
           )}
         </Lead>
 
@@ -424,7 +424,7 @@ function RekordboxBackupContent() {
             </ListItem>
             <ListItem>
               {t(
-                "バックアップはBeatMistの設定画面で「rekordboxライブラリを更新する」を有効にする際に作成できます",
+                "バックアップはBeatMistの設定画面で「rekordbox 連携」を有効にする際に作成できます",
               )}
             </ListItem>
           </BulletList>

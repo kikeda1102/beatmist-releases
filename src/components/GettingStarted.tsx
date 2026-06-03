@@ -244,7 +244,7 @@ const tocSections = [
   { id: "conversion", label: "CDJ機種別フォーマット変換" },
   { id: "backup", label: "バックアップと復元" },
   { id: "metadata", label: "メタデータ編集" },
-  { id: "rekordbox", label: "rekordbox連携" },
+  { id: "rekordbox", label: "rekordbox 連携" },
   { id: "license", label: "ライセンスについて" },
 ];
 
@@ -517,7 +517,7 @@ function GettingStartedContent() {
 
         {/* Section 6: rekordbox */}
         <Section id="rekordbox">
-          <SectionTitle>{t("rekordbox連携")}</SectionTitle>
+          <SectionTitle>{t("rekordbox 連携")}</SectionTitle>
           <Paragraph>
             {t(
               "BeatMistはrekordboxのコレクションデータベースを自動的に検出し、各トラックのインポート状況を表示します。",
