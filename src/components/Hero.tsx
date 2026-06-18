@@ -392,8 +392,10 @@ export default function Hero() {
         <img
           src="/images/hero-bg.webp"
           alt=""
+          width={1920}
+          height={1080}
           fetchPriority="high"
-          decoding="async"
+          decoding="auto"
           draggable={false}
         />
       </HeroBgPicture>
@@ -424,7 +426,12 @@ export default function Hero() {
           <CarouselContainer>
             {heroScreenshots.map((screenshot) => (
               <CarouselSlide key={screenshot.src}>
-                <SlideImage src={screenshot.src} alt={screenshot.alt} />
+                <SlideImage
+                  src={screenshot.src}
+                  alt={screenshot.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
               </CarouselSlide>
             ))}
           </CarouselContainer>
