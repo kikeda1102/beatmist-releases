@@ -34,6 +34,12 @@ interface CachedTweet {
     profile_image_url_https: string;
     is_blue_verified: boolean;
   };
+  video?: {
+    poster: string;
+    variants: { type: string; src: string; bitrate?: number }[];
+    aspectRatio: [number, number];
+  };
+  photos?: { url: string; width: number; height: number }[];
   quoted_tweet?: CachedQuotedTweet;
 }
 
@@ -68,6 +74,26 @@ async function main() {
         is_blue_verified: tweet.user.is_blue_verified,
       },
     };
+
+    if (tweet.video) {
+      cached.video = {
+        poster: tweet.video.poster,
+        variants: tweet.video.variants.map((v) => ({
+          type: v.type,
+          src: v.src,
+          ...("bitrate" in v ? { bitrate: v.bitrate } : {}),
+        })),
+        aspectRatio: tweet.video.aspectRatio,
+      };
+    }
+
+    if (tweet.photos && tweet.photos.length > 0) {
+      cached.photos = tweet.photos.map((p) => ({
+        url: p.url,
+        width: p.width,
+        height: p.height,
+      }));
+    }
 
     if (tweet.quoted_tweet) {
       const qt = tweet.quoted_tweet;
