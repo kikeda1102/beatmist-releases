@@ -28,6 +28,12 @@ export interface CachedTweet {
   favorite_count: number;
   conversation_count: number;
   user: TweetUser;
+  video?: {
+    poster: string;
+    variants: { type: string; src: string; bitrate?: number }[];
+    aspectRatio: [number, number];
+  };
+  photos?: { url: string; width: number; height: number }[];
   quoted_tweet?: QuotedTweet;
 }
 
@@ -219,6 +225,18 @@ const PhotoImg = styled.img`
   display: block;
 `;
 
+const MediaContainer = styled.div`
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+
+  & > ${PhotoImg} {
+    width: auto;
+    max-width: 60%;
+    max-height: 24rem;
+  }
+`;
+
 const Footer = styled.div`
   display: flex;
   align-items: center;
@@ -367,6 +385,24 @@ export default function TweetCard({ tweet }: { tweet: CachedTweet }) {
       </Header>
 
       <Body>{tweet.text}</Body>
+
+      {(tweet.video || tweet.photos) && (
+        <MediaContainer>
+          {tweet.video && (
+            <VideoThumbnail video={tweet.video} tweetUrl={tweetUrl} />
+          )}
+          {tweet.photos?.map((photo, i) => (
+            <PhotoImg
+              key={i}
+              src={photo.url}
+              width={photo.width}
+              height={photo.height}
+              loading="lazy"
+              alt=""
+            />
+          ))}
+        </MediaContainer>
+      )}
 
       {tweet.quoted_tweet && (
         <QuoteCard>
