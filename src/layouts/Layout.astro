@@ -128,6 +128,32 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
           padding: 5rem 2rem;
         }
       }
+
+      [data-hero-bg] {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      [data-hero-bg="radials"] {
+        z-index: 0;
+      }
+
+      [data-hero-bg="picture"] {
+        z-index: 1;
+      }
+
+      [data-hero-bg="picture"] > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
+      }
+
+      [data-hero-bg="fade"] {
+        z-index: 2;
+        background: linear-gradient(to bottom, transparent 0%, transparent 70%, #0D0B0F 100%);
+      }
     </style>
   </head>
   <body>

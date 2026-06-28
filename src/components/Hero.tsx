@@ -14,40 +14,13 @@ const heroScreenshots = [
   { src: "/images/hero-screenshot-4.png", alt: "BeatMist - Settings" },
 ];
 
-const Section = styled.section``;
-
-const HeroBgRadials = styled.div`
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(ellipse 50% 35% at 55% 10%, #FF2D8A 0%, rgba(200, 56, 126, 0.3) 40%, transparent 70%),
-    radial-gradient(ellipse 30% 25% at 10% 30%, rgba(200, 56, 126, 0.35) 0%, transparent 65%),
-    radial-gradient(ellipse 25% 20% at 90% 20%, rgba(255, 45, 138, 0.25) 0%, transparent 60%);
-`;
-
-const HeroBgPicture = styled.picture`
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-
-  & > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-  }
-`;
-
-const HeroBgFade = styled.div`
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(to bottom, transparent 0%, transparent 70%, #0D0B0F 100%);
-`;
+const heroBgRadialsStyle = {
+  background: [
+    "radial-gradient(ellipse 50% 35% at 55% 10%, #FF2D8A 0%, rgba(200, 56, 126, 0.3) 40%, transparent 70%)",
+    "radial-gradient(ellipse 30% 25% at 10% 30%, rgba(200, 56, 126, 0.35) 0%, transparent 65%)",
+    "radial-gradient(ellipse 25% 20% at 90% 20%, rgba(255, 45, 138, 0.25) 0%, transparent 60%)",
+  ].join(", "),
+};
 
 const Container = styled.div`
   position: relative;
@@ -381,9 +354,9 @@ export default function Hero() {
   );
 
   return (
-    <Section data-hero>
-      <HeroBgRadials />
-      <HeroBgPicture>
+    <section data-hero>
+      <div data-hero-bg="radials" style={heroBgRadialsStyle} />
+      <picture data-hero-bg="picture">
         <source
           type="image/webp"
           srcSet="/images/hero-bg-960w.webp 960w, /images/hero-bg.webp 1920w"
@@ -398,8 +371,8 @@ export default function Hero() {
           decoding="auto"
           draggable={false}
         />
-      </HeroBgPicture>
-      <HeroBgFade />
+      </picture>
+      <div data-hero-bg="fade" />
       <Container>
         <HeadlineWrapper>
           <AppIconBg src="/images/app-icon.webp" alt="" aria-hidden="true" />
@@ -447,6 +420,6 @@ export default function Hero() {
           ))}
         </Dots>
       </Container>
-    </Section>
+    </section>
   );
 }
