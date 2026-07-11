@@ -174,7 +174,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [website, setWebsite] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors | null>(null);
   const [responseMessage, setResponseMessage] = useState<string | null>(null);
@@ -201,7 +201,7 @@ export default function Contact() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message, website }),
+        body: JSON.stringify({ name, email, message, confirm_url_hp: honeypot }),
       });
 
       const data: ContactFormResponse = await res.json();
@@ -212,7 +212,7 @@ export default function Contact() {
         setName("");
         setEmail("");
         setMessage("");
-        setWebsite("");
+        setHoneypot("");
       } else if (data.errors) {
         setStatus("idle");
         setErrors(data.errors);
@@ -237,12 +237,12 @@ export default function Contact() {
           <Form onSubmit={handleSubmit}>
             <HoneypotField
               type="text"
-              name="website"
-              autoComplete="off"
+              name="confirm_url_hp"
+              autoComplete="new-password"
               tabIndex={-1}
               aria-hidden="true"
-              value={website}
-              onChange={(e) => setWebsite(e.target.value)}
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
             />
 
             <FieldGroup>

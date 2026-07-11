@@ -9,7 +9,7 @@ interface ContactRequestBody {
   name: string;
   email: string;
   message: string;
-  website?: string;
+  confirm_url_hp?: string;
 }
 
 interface ContactResponse {
@@ -87,7 +87,7 @@ export async function onRequestPost({
     );
   }
 
-  if (body.website) {
+  if (body.confirm_url_hp) {
     return Response.json({
       success: true,
       message:
