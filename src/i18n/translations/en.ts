@@ -656,6 +656,55 @@ const en: Record<string, string> = {
   "rekordboxが起動している間はデータベースがロックされるため、BeatMistからの書き込みができません。ファイル変換やプレイリスト・マイタグの操作を行う前に、rekordboxを終了してください。rekordboxの起動が検出された場合は、BeatMistが終了を促すメッセージを表示します。":
     "While rekordbox is running, the database is locked and BeatMist cannot write to it. Please close rekordbox before performing file conversions or playlist/MyTag operations. If rekordbox is detected as running, BeatMist will display a message prompting you to close it.",
 
+  // docs: wav header
+  WAVヘッダーの互換性について: "WAV Header Compatibility",
+  "CDJ機種によるWAVヘッダーの互換性問題と、BeatMistの自動検出・無劣化修復機能について説明します。":
+    "Learn about WAV header compatibility issues with CDJ models and BeatMist's automatic detection and lossless repair features.",
+  "一部のWAVファイルは、ファイル内部のヘッダー形式が原因で特定のCDJ機種で読み込めないことがあります。このページでは、その原因とBeatMistの対応について説明します。":
+    "Some WAV files may fail to load on certain CDJ models due to their internal header format. This page explains the cause and how BeatMist handles it.",
+  WAVヘッダーとは: "What Is a WAV Header?",
+  "WAVファイルはRIFFコンテナ形式で構成されており、ファイルの先頭付近にあるfmtチャンクに音声データのフォーマット情報（サンプルレート、ビット深度、チャンネル数など）が記録されています。CDJはこのfmtチャンクを読み取って音声を再生します。":
+    "WAV files use the RIFF container format. The fmt chunk near the beginning of the file contains format information (sample rate, bit depth, number of channels, etc.) about the audio data. CDJs read this fmt chunk to play the audio.",
+  "多くのDAW（Digital Audio Workstation）やオーディオ編集ソフトは、標準的なWAVヘッダー形式でファイルを出力しますが、一部のソフトウェアは異なるヘッダー形式を使用することがあります。":
+    "Most DAWs (Digital Audio Workstations) and audio editors export files with a standard WAV header format, but some software uses a different header format.",
+  CDJで読み込めない可能性のあるヘッダー形式:
+    "Header Formats That May Not Load on CDJs",
+  "通常のWAVファイルはフォーマットタグにWAVE_FORMAT_PCM（0x0001）を使用しますが、一部のソフトウェアはWAVE_FORMAT_EXTENSIBLE（0xFFFE）という拡張形式を使用します。この形式はマルチチャンネル音声やチャンネルマスクの指定に対応していますが、CDJ-2000NXS2以前の機種ではエラー（E-8305等）の原因となることがあります。":
+    "Standard WAV files use the WAVE_FORMAT_PCM (0x0001) format tag, but some software uses the extended format WAVE_FORMAT_EXTENSIBLE (0xFFFE). While this format supports multi-channel audio and channel masks, it can cause errors (such as E-8305) on CDJ-2000NXS2 and older models.",
+  fmtチャンクが先頭にない配置:
+    "Non-Leading fmt Chunk Placement",
+  "WAVファイルの仕様上、fmtチャンクはファイル先頭に配置される必要はありませんが、一部のCDJ機種はfmtチャンクがファイル先頭にない場合に正しく読み込めないことがあります。JUNKチャンクやbextチャンク（Broadcast Wave Format）がfmtチャンクより前に配置されている場合がこれに該当します。":
+    "The WAV specification does not require the fmt chunk to be placed at the beginning of the file, but some CDJ models cannot properly read files where the fmt chunk is not first. This occurs when JUNK chunks or bext chunks (Broadcast Wave Format) are placed before the fmt chunk.",
+  影響を受ける機種: "Affected Models",
+  "ヘッダー互換性の影響は機種によって異なります。":
+    "The impact of header compatibility varies by model.",
+  影響: "Impact",
+  "影響なし — 非標準ヘッダーでも問題なく読み込めます":
+    "No impact — reads non-standard headers without issues",
+  "影響あり — WAVE_FORMAT_EXTENSIBLEやfmt非先頭配置でエラーになる場合があります":
+    "Affected — WAVE_FORMAT_EXTENSIBLE or non-leading fmt placement may cause errors",
+  影響あり: "Affected",
+  BeatMistの対応: "How BeatMist Handles This",
+  "BeatMistはWAVファイルのスキャン時にヘッダー形式を自動検出し、CDJ非対応のヘッダーが見つかった場合にフォーマット列で警告を表示します。":
+    "BeatMist automatically detects header formats when scanning WAV files and displays a warning in the format column when a CDJ-incompatible header is found.",
+  "自動検出（WAVヘッダー）": "Automatic Detection",
+  "フォルダスキャン時にWAVファイルのfmtチャンクを解析し、フォーマットタグとチャンク配置をチェックします":
+    "During folder scanning, BeatMist analyzes the fmt chunk of WAV files and checks the format tag and chunk placement",
+  "非標準ヘッダーが検出された場合、トラック一覧のフォーマット列に警告アイコンが表示されます":
+    "When a non-standard header is detected, a warning icon appears in the format column of the track list",
+  "無劣化修復（リマックス）": "Lossless Repair (Remux)",
+  "BeatMistはWAVヘッダーの修復に「リマックス」方式を採用しています。これはファイルのヘッダー部分のみを書き換え、音声データには一切変更を加えない方式です。":
+    "BeatMist uses a 'remux' approach to repair WAV headers. This rewrites only the header portion of the file without modifying the audio data at all.",
+  "音声データの品質は完全に維持されます（ビットパーフェクト）":
+    "Audio data quality is fully preserved (bit-perfect)",
+  "WAVE_FORMAT_EXTENSIBLEはWAVE_FORMAT_PCMに変換され、fmtチャンクはファイル先頭に再配置されます":
+    "WAVE_FORMAT_EXTENSIBLE is converted to WAVE_FORMAT_PCM, and the fmt chunk is relocated to the beginning of the file",
+  "修復前のオリジナルファイルは自動的にバックアップされ、いつでも復元できます":
+    "The original file before repair is automatically backed up and can be restored at any time",
+  "ヘッダーの修復は変換機能から実行できます。スペック（サンプルレート・ビット深度）の変更が不要な場合、ヘッダーのみの無劣化修復が自動的に選択されます。変換仕様の詳細は":
+    "Header repair can be performed from the conversion feature. When no spec changes (sample rate, bit depth) are needed, lossless header-only repair is automatically selected. For details on conversion specifications, see",
+  "変換仕様についてはこちら": "Conversion Specifications",
+
   // docs shared
   ドキュメント一覧に戻る: "Back to Docs",
 };

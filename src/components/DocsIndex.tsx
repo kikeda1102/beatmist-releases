@@ -109,6 +109,12 @@ const docPages = [
       "CDJ機種別の対応フォーマット、自動最適化の変換ロジック、変換例、安全機能、技術仕様を詳しく説明します。",
   },
   {
+    href: "/docs/wav-header",
+    title: "WAVヘッダーの互換性について",
+    description:
+      "CDJ機種によるWAVヘッダーの互換性問題と、BeatMistの自動検出・無劣化修復機能について説明します。",
+  },
+  {
     href: "/docs/rekordbox-library-sync",
     title: "rekordbox 連携",
     description:

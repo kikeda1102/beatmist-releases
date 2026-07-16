@@ -1,0 +1,12 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import WavHeader from "../../components/WavHeader";
+import { site } from "../../data/content";
+---
+
+<Layout
+  title={`${site.name} - WAVヘッダーの互換性について`}
+  description="CDJ機種によるWAVヘッダーの互換性問題と、BeatMistの自動検出・修復機能について"
+>
+  <WavHeader client:only="react" />
+</Layout>
