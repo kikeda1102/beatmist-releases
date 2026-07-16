@@ -679,10 +679,9 @@ const en: Record<string, string> = {
   "ヘッダー互換性の影響は機種によって異なります。":
     "The impact of header compatibility varies by model.",
   影響: "Impact",
-  "影響なし — 非標準ヘッダーでも問題なく読み込めます":
-    "No impact — reads non-standard headers without issues",
-  "影響あり — WAVE_FORMAT_EXTENSIBLEやfmt非先頭配置でエラーになる場合があります":
-    "Affected — WAVE_FORMAT_EXTENSIBLE or non-leading fmt placement may cause errors",
+  "影響を受ける可能性あり — WAVE_FORMAT_EXTENSIBLEやfmt非先頭配置でエラーになる場合があります":
+    "May be affected — WAVE_FORMAT_EXTENSIBLE or non-leading fmt placement may cause errors",
+  "影響を受ける可能性あり": "May be affected",
   影響あり: "Affected",
   BeatMistの対応: "How BeatMist Handles This",
   "BeatMistはWAVファイルのスキャン時にヘッダー形式を自動検出し、CDJ非対応のヘッダーが見つかった場合にフォーマット列で警告を表示します。":

@@ -243,15 +243,15 @@ function WavHeaderContent() {
               <tbody>
                 <Tr>
                   <Td>CDJ-3000X / CDJ-3000</Td>
-                  <Td>{t("影響なし — 非標準ヘッダーでも問題なく読み込めます")}</Td>
+                  <Td>
+                    {t(
+                      "影響を受ける可能性あり — WAVE_FORMAT_EXTENSIBLEやfmt非先頭配置でエラーになる場合があります",
+                    )}
+                  </Td>
                 </Tr>
                 <Tr>
                   <Td>CDJ-2000NXS2</Td>
-                  <Td>
-                    {t(
-                      "影響あり — WAVE_FORMAT_EXTENSIBLEやfmt非先頭配置でエラーになる場合があります",
-                    )}
-                  </Td>
+                  <Td>{t("影響を受ける可能性あり")}</Td>
                 </Tr>
                 <Tr>
                   <Td>CDJ-2000NXS</Td>
