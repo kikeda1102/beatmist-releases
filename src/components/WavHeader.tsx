@@ -322,6 +322,90 @@ function WavHeaderContent() {
           </NoteBox>
         </Section>
 
+        <Section>
+          <SectionTitle>{t("参考リンク")}</SectionTitle>
+
+          <SubTitle>{t("WAV/RIFF仕様")}</SubTitle>
+          <BulletList>
+            <ListItem>
+              <DocLink
+                href="https://learn.microsoft.com/en-us/windows/win32/api/mmreg/ns-mmreg-waveformatextensible"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WAVEFORMATEXTENSIBLE (mmreg.h) — Microsoft Learn
+              </DocLink>
+            </ListItem>
+            <ListItem>
+              <DocLink
+                href="https://learn.microsoft.com/en-us/windows-hardware/drivers/audio/extensible-wave-format-descriptors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Extensible Wave-Format Descriptors — Microsoft Learn
+              </DocLink>
+            </ListItem>
+          </BulletList>
+
+          <SubTitle>{t("CDJ製品仕様")}</SubTitle>
+          <BulletList>
+            <ListItem>
+              <DocLink
+                href="https://www.pioneerdj.com/en/product/player/cdj-3000/black/specifications/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CDJ-3000 — Pioneer DJ
+              </DocLink>
+            </ListItem>
+            <ListItem>
+              <DocLink
+                href="https://www.pioneerdj.com/en/product/player/archive/cdj-2000nxs2/black/specifications/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CDJ-2000NXS2 — Pioneer DJ
+              </DocLink>
+            </ListItem>
+          </BulletList>
+
+          <SubTitle>{t("コミュニティ報告")}</SubTitle>
+          <Paragraph>
+            {t(
+              "以下はPioneer DJの公式見解ではなく、ユーザーコミュニティによる報告です。",
+            )}
+          </Paragraph>
+          <BulletList>
+            <ListItem>
+              <DocLink
+                href="https://forums.pioneerdj.com/hc/en-us/community/posts/360059172771-E-8305-Unsupported-File-Format"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                E-8305: Unsupported File Format — Pioneer DJ Forums
+              </DocLink>
+            </ListItem>
+            <ListItem>
+              <DocLink
+                href="https://forums.pioneerdj.com/hc/en-us/community/posts/900002116926-E-8305-unsupported-file-Format-WAV"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                E-8305: unsupported file Format WAV — Pioneer DJ Forums
+              </DocLink>
+            </ListItem>
+            <ListItem>
+              <DocLink
+                href="https://forums.pioneerdj.com/hc/en-us/community/posts/7040406130329-Error-E-8305-with-WAV-Files"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Error E-8305 with WAV Files — Pioneer DJ Forums
+              </DocLink>
+            </ListItem>
+          </BulletList>
+        </Section>
+
         <HomeLink href="/docs">&larr; {t("ドキュメント一覧に戻る")}</HomeLink>
       </Container>
     </Page>

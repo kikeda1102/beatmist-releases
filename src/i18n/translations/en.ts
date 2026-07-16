@@ -704,6 +704,12 @@ const en: Record<string, string> = {
   "ヘッダーの修復は変換機能から実行できます。スペック（サンプルレート・ビット深度）の変更が不要な場合、ヘッダーのみの無劣化修復が自動的に選択されます。変換仕様の詳細は":
     "Header repair can be performed from the conversion feature. When no spec changes (sample rate, bit depth) are needed, lossless header-only repair is automatically selected. For details on conversion specifications, see",
   "変換仕様についてはこちら": "Conversion Specifications",
+  参考リンク: "References",
+  "WAV/RIFF仕様": "WAV/RIFF Specification",
+  CDJ製品仕様: "CDJ Product Specifications",
+  コミュニティ報告: "Community Reports",
+  "以下はPioneer DJの公式見解ではなく、ユーザーコミュニティによる報告です。":
+    "The following are user community reports, not official statements from Pioneer DJ.",
 
   // docs shared
   ドキュメント一覧に戻る: "Back to Docs",
