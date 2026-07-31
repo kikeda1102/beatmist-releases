@@ -105,6 +105,9 @@ const en: Record<string, string> = {
   "読み込み中...": "Loading...",
   "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。":
     "Failed to fetch download links. Please try again later.",
+  再試行: "Retry",
+  GitHubのリリースページから直接ダウンロード:
+    "Download directly from the GitHub releases page",
   "動作環境: Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）":
     "System Requirements: Windows 10+ / macOS 12+ (Apple Silicon only)",
   "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が表示されます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。":

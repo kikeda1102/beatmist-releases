@@ -1,8 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { download } from "../data/content";
 import { useTranslation } from "../i18n";
+
+const MAX_RETRIES = 2;
+const RETRY_DELAYS = [500, 1500];
+const wait = (ms: number): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
 const Section = styled.section`
   padding: ${spacing.sectionPadding} 1.5rem;
@@ -157,6 +162,38 @@ const InstallGuideLink = styled.a`
   }
 `;
 
+const RetryButton = styled.button`
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: ${colors.textMuted};
+  background: transparent;
+  border: 1px solid ${colors.border};
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: ${colors.textPrimary};
+    border-color: ${colors.borderHover};
+  }
+`;
+
+const FallbackLink = styled.a`
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: ${colors.textMuted};
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: ${colors.accent};
+  }
+`;
+
 const InstallGuideBanner = styled.a`
   display: block;
   margin-top: 1.25rem;
@@ -199,13 +236,18 @@ export default function Download() {
     mac: false,
   });
 
-  useEffect(() => {
-    fetch("/api/releases/latest")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch releases");
-        return res.json();
-      })
-      .then((data: GitHubRelease) => {
+  const loadRelease = useCallback(async () => {
+    setError(false);
+    setLoading(true);
+
+    for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+      try {
+        if (attempt > 0) {
+          await wait(RETRY_DELAYS[attempt - 1]);
+        }
+        const res = await fetch("/api/releases/latest");
+        if (!res.ok) throw new Error(`Failed to fetch releases: ${res.status}`);
+        const data: GitHubRelease = await res.json();
         const macAsset = data.assets?.find((a) => a.name.endsWith(".dmg"));
         const winAsset = data.assets?.find((a) => a.name.endsWith(".exe"));
         setAssets({
@@ -214,12 +256,20 @@ export default function Download() {
         });
         setVersion(data.tag_name ?? null);
         setLoading(false);
-      })
-      .catch(() => {
-        setError(true);
-        setLoading(false);
-      });
+        return;
+      } catch (err) {
+        console.error("[Download] release fetch failed", { attempt, error: err });
+        if (attempt === MAX_RETRIES) {
+          setError(true);
+          setLoading(false);
+        }
+      }
+    }
   }, []);
+
+  useEffect(() => {
+    loadRelease();
+  }, [loadRelease]);
 
   return (
     <Section id="download">
@@ -235,11 +285,24 @@ export default function Download() {
         {loading && <StatusText>{t("読み込み中...")}</StatusText>}
 
         {error && (
-          <StatusText>
-            {t(
-              "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。",
-            )}
-          </StatusText>
+          <>
+            <StatusText>
+              {t(
+                "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。",
+              )}
+            </StatusText>
+            <RetryButton onClick={loadRelease}>
+              {t("再試行")}
+            </RetryButton>
+            <br />
+            <FallbackLink
+              href={`https://github.com/${download.githubRepo}/releases/latest`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("GitHubのリリースページから直接ダウンロード")} &rarr;
+            </FallbackLink>
+          </>
         )}
 
         {!loading && !error && (
@@ -318,6 +381,15 @@ export default function Download() {
             <InstallGuideLink href="/install-help">
               {t("インストールガイド")} &rarr;
             </InstallGuideLink>
+            {!assets.win && !assets.mac && (
+              <FallbackLink
+                href={`https://github.com/${download.githubRepo}/releases/latest`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("GitHubのリリースページから直接ダウンロード")} &rarr;
+              </FallbackLink>
+            )}
           </>
         )}
       </Container>

@@ -55,6 +55,10 @@ const ogImageUrl = new URL(site.ogImage, site.url).href;
       rel="stylesheet"
     />
     <title>{pageTitle}</title>
+    <script is:inline>
+      // Safari < 15.4 polyfill — Astro's island hydration script uses Object.hasOwn
+      if(!Object.hasOwn){Object.hasOwn=function(o,p){return Object.prototype.hasOwnProperty.call(o,p)}}
+    </script>
     <style is:global>
       *,
       *::before,
