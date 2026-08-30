@@ -1,11 +1,38 @@
 import { useState, useEffect, useCallback } from "react";
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { hero, site } from "../data/content";
 import { useTranslation } from "../i18n";
+
+const heroElementIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+`;
+
+const EASE_OUT_EXPO = "cubic-bezier(0.16, 1, 0.3, 1)";
+
+const heroEntrance = (delay: number, duration: number) => css`
+  opacity: 0;
+  animation: ${heroElementIn} ${duration}ms ${EASE_OUT_EXPO} ${delay}ms both;
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    animation: none;
+    transform: none;
+    filter: none;
+  }
+`;
 
 const heroScreenshots = [
   { src: "/images/hero-screenshot-1.png", alt: "BeatMist - Library" },
@@ -77,6 +104,7 @@ const Headline = styled.h1`
 `;
 
 const Tagline = styled.p`
+  ${heroEntrance(350, 700)}
   font-size: 1.625rem;
   line-height: 1.7;
   color: ${colors.textPrimary};
@@ -110,6 +138,7 @@ const HeadlineWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 5rem 0;
+  ${heroEntrance(200, 800)}
 
   ${media.md} {
     padding: 7rem 0;
@@ -147,6 +176,7 @@ const AppIconBg = styled.img`
 `;
 
 const Subtext = styled.p`
+  ${heroEntrance(500, 700)}
   font-size: 1.0625rem;
   line-height: 1.8;
   color: ${colors.textPrimary};
@@ -180,6 +210,7 @@ const MobileBr = styled.br`
 `;
 
 const CtaButton = styled.a`
+  ${heroEntrance(650, 600)}
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -268,6 +299,7 @@ const CtaButton = styled.a`
 `;
 
 const CarouselViewport = styled.div`
+  ${heroEntrance(800, 700)}
   overflow: hidden;
   width: 100%;
   margin-top: 0.5rem;
@@ -293,6 +325,7 @@ const SlideImage = styled.img`
 `;
 
 const Dots = styled.div`
+  ${heroEntrance(800, 700)}
   display: flex;
   justify-content: center;
   gap: 0.75rem;
