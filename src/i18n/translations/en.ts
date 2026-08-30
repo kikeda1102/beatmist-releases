@@ -595,8 +595,8 @@ const en: Record<string, string> = {
   この機能でできること: "What This Feature Does",
   ファイル変換後のライブラリ自動追従:
     "Automatic Library Tracking After Conversion",
-  "BeatMistでファイルを別フォーマットに変換すると、rekordboxのデータベースが自動で更新されます。ファイルパス・ファイルサイズ・フォーマット種別が書き換わるため、rekordbox上でトラックが「見つからない」状態になることはありません。CUEポイントやループなど、rekordboxで設定済みの情報もそのまま保持されます。":
-    'When you convert a file to another format in BeatMist, the rekordbox database is automatically updated. The file path, file size, and format type are rewritten, so tracks never appear as "missing" in rekordbox. CUE points, loops, and other settings configured in rekordbox are preserved.',
+  "BeatMistでファイルを別フォーマットに変換すると、rekordboxのデータベースが自動で更新されます。ファイルパス・ファイルサイズ・フォーマット種別・ビットレート・ビット深度・サンプルレートが書き換わるため、rekordbox上でトラックが「見つからない」状態になったり、変換前の情報が残ったりすることはありません。CUEポイントやループなど、rekordboxで設定済みの情報もそのまま保持されます。":
+    'When you convert a file to another format in BeatMist, the rekordbox database is automatically updated. The file path, file size, format type, bitrate, bit depth, and sample rate are rewritten, so tracks never appear as "missing" in rekordbox or display outdated audio properties. CUE points, loops, and other settings configured in rekordbox are preserved.',
   プレイリスト操作: "Playlist Management",
   "BeatMistのサイドバーにrekordboxのプレイリストツリーが表示されます。以下の操作が可能です:":
     "The rekordbox playlist tree is displayed in the BeatMist sidebar. The following operations are available:",
