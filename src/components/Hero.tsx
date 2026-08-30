@@ -156,7 +156,6 @@ const AppIconBg = styled.img`
   transform: translate(-50%, -50%);
   width: 220px;
   height: 220px;
-  border-radius: 22.37%;
   pointer-events: none;
   user-select: none;
 
