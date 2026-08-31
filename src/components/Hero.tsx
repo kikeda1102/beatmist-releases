@@ -43,9 +43,9 @@ const heroScreenshots = [
 
 const heroBgRadialsStyle = {
   background: [
-    "radial-gradient(ellipse 50% 35% at 55% 10%, #FF2D8A 0%, rgba(200, 56, 126, 0.3) 40%, transparent 70%)",
-    "radial-gradient(ellipse 30% 25% at 10% 30%, rgba(200, 56, 126, 0.35) 0%, transparent 65%)",
-    "radial-gradient(ellipse 25% 20% at 90% 20%, rgba(255, 45, 138, 0.25) 0%, transparent 60%)",
+    "radial-gradient(ellipse 50% 35% at 55% 10%, #F22ED6 0%, rgba(242, 46, 214, 0.3) 40%, transparent 70%)",
+    "radial-gradient(ellipse 30% 25% at 10% 30%, rgba(242, 46, 214, 0.35) 0%, transparent 65%)",
+    "radial-gradient(ellipse 25% 20% at 90% 20%, rgba(242, 46, 214, 0.25) 0%, transparent 60%)",
   ].join(", "),
 };
 
@@ -87,7 +87,7 @@ const Headline = styled.h1`
   filter:
     drop-shadow(0 0 6px rgba(0, 0, 0, 0.8))
     drop-shadow(0 0 20px rgba(0, 0, 0, 0.5))
-    drop-shadow(0 0 48px rgba(200, 56, 126, 0.25));
+    drop-shadow(0 0 48px rgba(242, 46, 214, 0.25));
 
   ${media.md} {
     font-size: 7rem;
@@ -227,19 +227,19 @@ const CtaButton = styled.a`
   border-radius: 0.75rem;
   background: linear-gradient(
     135deg,
-    #00E5C8 0%,
-    #2DB8B0 15%,
-    #4A7EB0 30%,
-    #6A50B0 45%,
-    #8B2FB0 60%,
-    ${colors.accent} 80%,
-    ${colors.accentHover} 100%
+    #34CCD0 0%,
+    #3496D4 15%,
+    #4A6AD4 30%,
+    #7A4AD4 45%,
+    #AA34D4 60%,
+    #D82ECC 80%,
+    ${colors.secondary} 100%
   );
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-top-color: rgba(255, 255, 255, 0.2);
   box-shadow:
-    0 0 24px rgba(200, 56, 126, 0.3),
+    0 0 24px rgba(242, 46, 214, 0.3),
     0 8px 24px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   transition:
@@ -252,18 +252,18 @@ const CtaButton = styled.a`
     transform: translateY(-2px);
     background: linear-gradient(
       135deg,
-      #00FFD9 0%,
-      #30C8B8 15%,
-      #5588B8 30%,
-      #7858B8 45%,
-      #A035C8 60%,
-      ${colors.accentHover} 80%,
-      #E85CA5 100%
+      #5DD6DA 0%,
+      #52A8DE 15%,
+      #6880DE 30%,
+      #9060DE 45%,
+      #BE4ADE 60%,
+      #E840D8 80%,
+      ${colors.secondaryHover} 100%
     );
-    border-color: rgba(0, 229, 200, 0.5);
+    border-color: rgba(52, 204, 208, 0.5);
     border-top-color: rgba(255, 255, 255, 0.3);
     box-shadow:
-      0 0 36px rgba(200, 56, 126, 0.4),
+      0 0 36px rgba(242, 46, 214, 0.4),
       0 12px 32px rgba(0, 0, 0, 0.35),
       inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
@@ -272,13 +272,13 @@ const CtaButton = styled.a`
     transform: translateY(0);
     background: linear-gradient(
       135deg,
-      #00CCB0 0%,
-      #28A8A0 15%,
-      #4470A0 30%,
-      #6048A0 45%,
-      #7A28A0 60%,
-      #B03068 80%,
-      ${colors.accent} 100%
+      #2AB0B4 0%,
+      #2A82B8 15%,
+      #3E58B8 30%,
+      #663EB8 45%,
+      #9028B8 60%,
+      #B824AC 80%,
+      #CC24B4 100%
     );
   }
 

@@ -13,7 +13,7 @@ const Section = styled.section`
   padding: ${spacing.sectionPadding} 1.5rem;
   background: radial-gradient(
     ellipse at 50% 0%,
-    rgba(200, 56, 126, 0.08) 0%,
+    rgba(52, 204, 208, 0.08) 0%,
     ${colors.bgPrimary} 70%
   );
 `;
@@ -75,7 +75,7 @@ const DownloadButton = styled.a`
     border-color: ${colors.accent};
     background: ${colors.bgCardHover};
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(200, 56, 126, 0.15);
+    box-shadow: 0 4px 20px rgba(52, 204, 208, 0.15);
   }
 
   &[data-clicked] {
@@ -208,7 +208,7 @@ const InstallGuideBanner = styled.a`
   transition: all 0.2s ease;
 
   &:hover {
-    background: rgba(200, 56, 126, 0.15);
+    background: rgba(52, 204, 208, 0.15);
   }
 `;
 

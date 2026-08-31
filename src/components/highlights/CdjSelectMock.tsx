@@ -68,7 +68,7 @@ export default function CdjSelectMock() {
         role="img"
         aria-label="CDJ機種選択ドロップダウンのアニメーション"
       >
-        <rect width="480" height="220" fill="#141218" rx="4" />
+        <rect width="480" height="220" fill="#161616" rx="4" />
 
         <rect
           x={dropdownX}
@@ -76,8 +76,8 @@ export default function CdjSelectMock() {
           width={dropdownW}
           height={ROW_HEIGHT * 6 + 8}
           rx="6"
-          fill="#1C1922"
-          stroke="#2E2838"
+          fill="#1E1E1E"
+          stroke="#2E2E2E"
           strokeWidth="1"
         />
 
@@ -107,7 +107,7 @@ export default function CdjSelectMock() {
             key={name}
             x={textX}
             y={dropdownY + 4 + ROW_HEIGHT * i + ROW_HEIGHT / 2 + 5}
-            fill="rgba(245, 240, 250, 0.95)"
+            fill="rgba(255, 255, 255, 0.95)"
             fontSize="14"
             fontFamily="'Noto Sans JP', system-ui, sans-serif"
           >

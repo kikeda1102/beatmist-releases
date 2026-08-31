@@ -46,21 +46,21 @@ export default function RekordboxPlaylistMock() {
         role="img"
         aria-label="rekordboxプレイリスト読み込み・編集"
       >
-        <rect width="480" height="300" fill="#141218" rx="4" />
+        <rect width="480" height="300" fill="#161616" rx="4" />
 
         <line
           x1={SIDEBAR_WIDTH}
           y1="0"
           x2={SIDEBAR_WIDTH}
           y2="300"
-          stroke="#2E2838"
+          stroke="#2E2E2E"
           strokeWidth="1"
         />
 
         <text
           x="16"
           y={headerY + 12}
-          fill="rgba(245, 240, 250, 0.5)"
+          fill="rgba(255, 255, 255, 0.5)"
           fontSize="10"
           fontWeight="600"
           fontFamily="'IBM Plex Sans', system-ui, sans-serif"
@@ -71,7 +71,7 @@ export default function RekordboxPlaylistMock() {
         <text
           x={SIDEBAR_WIDTH - 16}
           y={headerY + 12}
-          fill="rgba(245, 240, 250, 0.35)"
+          fill="rgba(255, 255, 255, 0.35)"
           fontSize="14"
           fontFamily="'IBM Plex Sans', system-ui, sans-serif"
           textAnchor="middle"
@@ -84,7 +84,7 @@ export default function RekordboxPlaylistMock() {
           y1={headerY + 22}
           x2={SIDEBAR_WIDTH - 8}
           y2={headerY + 22}
-          stroke="#2E2838"
+          stroke="#2E2E2E"
           strokeWidth="1"
         />
 
@@ -100,7 +100,7 @@ export default function RekordboxPlaylistMock() {
                   y={rowY}
                   width={SIDEBAR_WIDTH - 8}
                   height={ROW_HEIGHT}
-                  fill="rgba(200, 56, 126, 0.2)"
+                  fill="rgba(52, 204, 208, 0.2)"
                   rx="3"
                 />
               )}
@@ -109,8 +109,8 @@ export default function RekordboxPlaylistMock() {
                 y={textY}
                 fill={
                   item.selected
-                    ? "rgba(245, 240, 250, 0.95)"
-                    : "rgba(245, 240, 250, 0.72)"
+                    ? "rgba(255, 255, 255, 0.95)"
+                    : "rgba(255, 255, 255, 0.72)"
                 }
                 fontSize="11"
                 fontFamily="'IBM Plex Sans', system-ui, sans-serif"
@@ -120,7 +120,7 @@ export default function RekordboxPlaylistMock() {
               <text
                 x={SIDEBAR_WIDTH - 16}
                 y={textY}
-                fill="rgba(245, 240, 250, 0.35)"
+                fill="rgba(255, 255, 255, 0.35)"
                 fontSize="10"
                 fontFamily="'IBM Plex Sans', system-ui, sans-serif"
                 textAnchor="end"
@@ -136,8 +136,8 @@ export default function RekordboxPlaylistMock() {
           y={MENU_Y}
           width="120"
           height="100"
-          fill="#1C1922"
-          stroke="#2E2838"
+          fill="#1E1E1E"
+          stroke="#2E2E2E"
           strokeWidth="1"
           rx="6"
         />
@@ -151,7 +151,7 @@ export default function RekordboxPlaylistMock() {
               key={menuItem.label}
               x={MENU_X + 10}
               y={itemY + 14}
-              fill="rgba(245, 240, 250, 0.72)"
+              fill="rgba(255, 255, 255, 0.72)"
               fontSize="10"
               fontFamily="'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif"
             >
@@ -165,7 +165,7 @@ export default function RekordboxPlaylistMock() {
           y1={MENU_Y + 52}
           x2={MENU_X + 114}
           y2={MENU_Y + 52}
-          stroke="#2E2838"
+          stroke="#2E2E2E"
           strokeWidth="1"
         />
 
@@ -174,13 +174,13 @@ export default function RekordboxPlaylistMock() {
           y={MENU_Y + 56}
           width="114"
           height="22"
-          fill="rgba(200, 56, 126, 0.15)"
+          fill="rgba(52, 204, 208, 0.15)"
           rx="3"
         />
         <text
           x={MENU_X + 10}
           y={MENU_Y + 72}
-          fill="rgba(245, 240, 250, 0.95)"
+          fill="rgba(255, 255, 255, 0.95)"
           fontSize="10"
           fontWeight="500"
           fontFamily="'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif"
@@ -190,7 +190,7 @@ export default function RekordboxPlaylistMock() {
         <text
           x={MENU_X + 110}
           y={MENU_Y + 72}
-          fill="rgba(245, 240, 250, 0.5)"
+          fill="rgba(255, 255, 255, 0.5)"
           fontSize="10"
           fontFamily="'IBM Plex Sans', system-ui, sans-serif"
           textAnchor="end"
@@ -201,7 +201,7 @@ export default function RekordboxPlaylistMock() {
         <text
           x={MENU_X + 10}
           y={MENU_Y + 94}
-          fill="rgba(245, 240, 250, 0.72)"
+          fill="rgba(255, 255, 255, 0.72)"
           fontSize="10"
           fontFamily="'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif"
         >
@@ -213,8 +213,8 @@ export default function RekordboxPlaylistMock() {
           y={MENU_Y + 40}
           width="100"
           height={SUBMENU_ITEMS.length * 22 + 12}
-          fill="#1C1922"
-          stroke="#2E2838"
+          fill="#1E1E1E"
+          stroke="#2E2E2E"
           strokeWidth="1"
           rx="6"
         />
@@ -225,7 +225,7 @@ export default function RekordboxPlaylistMock() {
               key={name}
               x={SUBMENU_X + 10}
               y={itemY + 14}
-              fill="rgba(245, 240, 250, 0.72)"
+              fill="rgba(255, 255, 255, 0.72)"
               fontSize="9"
               fontFamily="'IBM Plex Sans', system-ui, sans-serif"
             >

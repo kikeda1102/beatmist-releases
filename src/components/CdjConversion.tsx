@@ -308,7 +308,7 @@ function CdjConversionContent() {
           {t("BeatMistの基本的な使い方については")}{" "}
           <a
             href="/docs/getting-started"
-            style={{ color: "#C8387E", textDecoration: "none" }}
+            style={{ color: colors.accent, textDecoration: "none" }}
           >
             {t("使い方ガイド")}
           </a>

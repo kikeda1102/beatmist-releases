@@ -137,13 +137,13 @@ const PriorityBadge = styled.span<{ $priority: RoadmapItem["priority"] }>`
         `;
       case "medium":
         return `
-          background: rgba(245, 240, 250, 0.08);
+          background: rgba(255, 255, 255, 0.08);
           color: ${colors.textMuted};
         `;
       case "low":
         return `
-          background: rgba(245, 240, 250, 0.04);
-          color: rgba(245, 240, 250, 0.45);
+          background: rgba(255, 255, 255, 0.04);
+          color: rgba(255, 255, 255, 0.45);
         `;
     }
   }}

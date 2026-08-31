@@ -212,7 +212,7 @@ const SubtotalBadge = styled.span`
   font-size: 0.75rem;
   font-weight: 600;
   color: ${colors.textSecondary};
-  background: rgba(245, 240, 250, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 0.25rem;
   padding: 0.1rem 0.5rem;
   margin-left: auto;

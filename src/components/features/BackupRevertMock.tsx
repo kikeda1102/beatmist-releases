@@ -68,10 +68,10 @@ export default function BackupRevertMock() {
         role="img"
         aria-label="バックアップとワンクリック復元の画面"
       >
-        <rect width="520" height="260" fill="#141218" rx="4" />
+        <rect width="520" height="260" fill="#161616" rx="4" />
 
         {/* Column Headers */}
-        <line x1="10" y1={HEADER_Y + 14} x2="510" y2={HEADER_Y + 14} stroke="#2E2838" strokeWidth="1" />
+        <line x1="10" y1={HEADER_Y + 14} x2="510" y2={HEADER_Y + 14} stroke="#2E2E2E" strokeWidth="1" />
         {[
           { label: "SR", x: COL_SR_X },
           { label: "BIT", x: COL_BD_X },
@@ -82,7 +82,7 @@ export default function BackupRevertMock() {
             key={col.label}
             x={col.x}
             y={HEADER_Y + 5}
-            fill="rgba(245, 240, 250, 0.5)"
+            fill="rgba(255, 255, 255, 0.5)"
             fontSize="10"
             fontWeight="600"
             fontFamily="'IBM Plex Sans', system-ui, sans-serif"
@@ -105,28 +105,28 @@ export default function BackupRevertMock() {
                 <rect x="10" y={rowY} width="500" height={ROW_HEIGHT} fill="rgba(255,255,255,0.02)" rx="2" />
               )}
 
-              <text x={COL_SR_X} y={textY} fill="rgba(245, 240, 250, 0.68)" fontSize="11" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
+              <text x={COL_SR_X} y={textY} fill="rgba(255, 255, 255, 0.68)" fontSize="11" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
                 {row.sr}
               </text>
 
               {is24 ? (
                 <>
-                  <rect x={COL_BD_X} y={rowY + 8} width={28} height={18} rx="3" fill="#C8387E" />
+                  <rect x={COL_BD_X} y={rowY + 8} width={28} height={18} rx="3" fill="#34CCD0" />
                   <text x={COL_BD_X + 6} y={textY} fill="#fff" fontSize="10" fontWeight="600" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
                     {row.bd}
                   </text>
                 </>
               ) : (
-                <text x={COL_BD_X} y={textY} fill="rgba(245, 240, 250, 0.68)" fontSize="11" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
+                <text x={COL_BD_X} y={textY} fill="rgba(255, 255, 255, 0.68)" fontSize="11" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
                   {row.bd}
                 </text>
               )}
 
-              <text x={COL_FMT_X} y={textY} fill="rgba(245, 240, 250, 0.68)" fontSize="11" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
+              <text x={COL_FMT_X} y={textY} fill="rgba(255, 255, 255, 0.68)" fontSize="11" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
                 {row.fmt}
               </text>
 
-              <text x={COL_FILE_X} y={textY} fill="rgba(245, 240, 250, 0.88)" fontSize="11" fontFamily="'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif">
+              <text x={COL_FILE_X} y={textY} fill="rgba(255, 255, 255, 0.88)" fontSize="11" fontFamily="'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif">
                 {row.file}
               </text>
 
@@ -134,8 +134,8 @@ export default function BackupRevertMock() {
 
               {row.revert && (
                 <>
-                  <rect x={COL_REVERT_X} y={rowY + 8} width={50} height={18} rx="4" fill="none" stroke="rgba(245, 240, 250, 0.3)" strokeWidth="1" />
-                  <text x={COL_REVERT_X + 8} y={textY} fill="rgba(245, 240, 250, 0.7)" fontSize="9" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
+                  <rect x={COL_REVERT_X} y={rowY + 8} width={50} height={18} rx="4" fill="none" stroke="rgba(255, 255, 255, 0.3)" strokeWidth="1" />
+                  <text x={COL_REVERT_X + 8} y={textY} fill="rgba(255, 255, 255, 0.7)" fontSize="9" fontFamily="'IBM Plex Sans', system-ui, sans-serif">
                     Revert
                   </text>
                 </>

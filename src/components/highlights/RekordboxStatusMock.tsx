@@ -41,7 +41,7 @@ function Dash({ x, y }: { x: number; y: number }) {
       y1={y}
       x2={x + 5}
       y2={y}
-      stroke="rgba(245, 240, 250, 0.35)"
+      stroke="rgba(255, 255, 255, 0.35)"
       strokeWidth="1.5"
       strokeLinecap="round"
     />
@@ -61,21 +61,21 @@ export default function RekordboxStatusMock() {
         role="img"
         aria-label="rekordboxインポート状況テーブル"
       >
-        <rect width="480" height="300" fill="#141218" rx="4" />
+        <rect width="480" height="300" fill="#161616" rx="4" />
 
         <line
           x1="20"
           y1={HEADER_Y + 18}
           x2="460"
           y2={HEADER_Y + 18}
-          stroke="#2E2838"
+          stroke="#2E2E2E"
           strokeWidth="1"
         />
 
         <text
           x={COL_NAME_X}
           y={HEADER_Y + 5}
-          fill="rgba(245, 240, 250, 0.5)"
+          fill="rgba(255, 255, 255, 0.5)"
           fontSize="11"
           fontWeight="600"
           fontFamily="'IBM Plex Sans', system-ui, sans-serif"
@@ -86,7 +86,7 @@ export default function RekordboxStatusMock() {
         <text
           x={COL_RB_X}
           y={HEADER_Y + 5}
-          fill="rgba(245, 240, 250, 0.5)"
+          fill="rgba(255, 255, 255, 0.5)"
           fontSize="11"
           fontWeight="600"
           fontFamily="'IBM Plex Sans', system-ui, sans-serif"
@@ -116,7 +116,7 @@ export default function RekordboxStatusMock() {
               <text
                 x={COL_NAME_X}
                 y={centerY + 4}
-                fill="rgba(245, 240, 250, 0.88)"
+                fill="rgba(255, 255, 255, 0.88)"
                 fontSize="13"
                 fontFamily="'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif"
               >

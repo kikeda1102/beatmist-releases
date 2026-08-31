@@ -125,7 +125,7 @@ const TypeBadge = styled.span<{ $variant: ReleaseChange["type"] }>`
         `;
       case "changed":
         return `
-          background: rgba(245, 240, 250, 0.08);
+          background: rgba(255, 255, 255, 0.08);
           color: ${colors.textMuted};
         `;
       case "fixed":

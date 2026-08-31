@@ -83,7 +83,7 @@ const PulseBadge = styled.rect`
 `;
 
 function BadgeRect({ x, y, w }: { x: number; y: number; w: number }) {
-  return <PulseBadge x={x} y={y} width={w} height={18} rx="3" fill="#C8387E" />;
+  return <PulseBadge x={x} y={y} width={w} height={18} rx="3" fill="#34CCD0" />;
 }
 
 export default function ProblemBadgeMock() {
@@ -99,14 +99,14 @@ export default function ProblemBadgeMock() {
         role="img"
         aria-label="CDJ非対応フォーマット検出画面"
       >
-        <rect width="520" height="300" fill="#141218" rx="4" />
+        <rect width="520" height="300" fill="#161616" rx="4" />
 
         {/* Toolbar */}
-        <rect x="0" y="0" width="520" height="36" fill="#1C1922" rx="4" />
+        <rect x="0" y="0" width="520" height="36" fill="#1E1E1E" rx="4" />
         <text
           x="16"
           y="23"
-          fill="#C8387E"
+          fill="#34CCD0"
           fontSize="13"
           fontWeight="700"
           fontFamily="'Outfit', system-ui, sans-serif"
@@ -130,7 +130,7 @@ export default function ProblemBadgeMock() {
           y1={HEADER_Y + 12}
           x2="510"
           y2={HEADER_Y + 12}
-          stroke="#2E2838"
+          stroke="#2E2E2E"
           strokeWidth="1"
         />
         {[
@@ -144,7 +144,7 @@ export default function ProblemBadgeMock() {
             key={col.label}
             x={col.x}
             y={HEADER_Y + 5}
-            fill="rgba(245, 240, 250, 0.5)"
+            fill="rgba(255, 255, 255, 0.5)"
             fontSize="9"
             fontWeight="600"
             fontFamily="'IBM Plex Sans', system-ui, sans-serif"
@@ -174,7 +174,7 @@ export default function ProblemBadgeMock() {
               <text
                 x={COL_TITLE_X}
                 y={textY}
-                fill="rgba(245, 240, 250, 0.88)"
+                fill="rgba(255, 255, 255, 0.88)"
                 fontSize="11"
                 fontFamily="'IBM Plex Sans', system-ui, sans-serif"
               >
@@ -183,7 +183,7 @@ export default function ProblemBadgeMock() {
               <text
                 x={COL_BPM_X}
                 y={textY}
-                fill="rgba(245, 240, 250, 0.68)"
+                fill="rgba(255, 255, 255, 0.68)"
                 fontSize="11"
                 fontFamily="'IBM Plex Sans', system-ui, sans-serif"
               >
@@ -220,7 +220,7 @@ export default function ProblemBadgeMock() {
                   <text
                     x={COL_SR_X}
                     y={textY}
-                    fill="rgba(245, 240, 250, 0.68)"
+                    fill="rgba(255, 255, 255, 0.68)"
                     fontSize="11"
                     fontFamily="'IBM Plex Sans', system-ui, sans-serif"
                   >
@@ -229,7 +229,7 @@ export default function ProblemBadgeMock() {
                   <text
                     x={COL_BD_X}
                     y={textY}
-                    fill="rgba(245, 240, 250, 0.68)"
+                    fill="rgba(255, 255, 255, 0.68)"
                     fontSize="11"
                     fontFamily="'IBM Plex Sans', system-ui, sans-serif"
                   >
@@ -241,7 +241,7 @@ export default function ProblemBadgeMock() {
               <text
                 x={COL_FMT_X}
                 y={textY}
-                fill="rgba(245, 240, 250, 0.68)"
+                fill="rgba(255, 255, 255, 0.68)"
                 fontSize="11"
                 fontFamily="'IBM Plex Sans', system-ui, sans-serif"
               >
@@ -252,12 +252,12 @@ export default function ProblemBadgeMock() {
         })}
 
         {/* Status Bar */}
-        <rect x="0" y="274" width="520" height="26" fill="#1C1922" rx="0" />
-        <path d="M18,290 l5,-8 l5,8 z" fill="#C8387E" opacity="0.8" />
+        <rect x="0" y="274" width="520" height="26" fill="#1E1E1E" rx="0" />
+        <path d="M18,290 l5,-8 l5,8 z" fill="#34CCD0" opacity="0.8" />
         <text
           x="34"
           y="291"
-          fill="rgba(245, 240, 250, 0.6)"
+          fill="rgba(255, 255, 255, 0.6)"
           fontSize="9"
           fontFamily="'IBM Plex Sans', 'Noto Sans JP', system-ui, sans-serif"
         >
