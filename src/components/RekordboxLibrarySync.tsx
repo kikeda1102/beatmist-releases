@@ -371,7 +371,7 @@ function RekordboxLibrarySyncContent() {
         <Section id="supported-versions">
           <SectionTitle>{t("対応バージョン")}</SectionTitle>
           <BulletList>
-            <ListItem>{t("rekordbox 6.xおよび7.xに対応しています")}</ListItem>
+            <ListItem>{t("rekordboxの最新バージョンに対応しています")}</ListItem>
             <ListItem>
               {t(
                 "非対応バージョンの場合、設定画面でチェックボックスがグレーアウトされ、有効化できません",

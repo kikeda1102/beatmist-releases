@@ -646,8 +646,8 @@ const en: Record<string, string> = {
     '"Backing Up and Restoring the rekordbox Database"',
   "を参照してください。": ".",
   対応バージョン: "Supported Versions",
-  "rekordbox 6.xおよび7.xに対応しています":
-    "Compatible with rekordbox 6.x and 7.x",
+  "rekordboxの最新バージョンに対応しています":
+    "Compatible with the latest version of rekordbox",
   "非対応バージョンの場合、設定画面でチェックボックスがグレーアウトされ、有効化できません":
     "For unsupported versions, the checkbox in settings is grayed out and cannot be enabled",
   Freeプランでの制限: "Free Plan Limitations",
