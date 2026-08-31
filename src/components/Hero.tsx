@@ -133,6 +133,10 @@ const Tagline = styled.p`
   }
 `;
 
+const AccentText = styled.span`
+  color: ${colors.accent};
+`;
+
 const HeadlineWrapper = styled.div`
   position: relative;
   display: flex;
@@ -396,7 +400,7 @@ export default function Hero() {
           <MobileBr />
           {t("プロフェッショナルな")}
           {"\n"}
-          {t("音源ライブラリ管理ツール")}
+          <AccentText>{t("音源ライブラリ管理ツール")}</AccentText>
         </Tagline>
         <Subtext>
           {t("楽曲をCDJごとの対応フォーマットに")}
