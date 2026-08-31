@@ -88,7 +88,7 @@ const en: Record<string, string> = {
     "rekordbox playlist & MyTag batch editing",
   rekordbox互換: "rekordbox compatible",
   優先サポート: "Priority support",
-  無料での一生涯アップデート: "Free lifetime updates",
+  "買い切り。今後のアップデートも追加料金なし": "One-time purchase. All future updates included at no extra cost",
   全機能解放: "Full Unlock",
   "Freeプランですべての基本機能をお使いいただけます。\nProライセンスではプレイリスト・マイタグの一括編集など全機能が解放されます。\n買い切りのため、将来のアップデートもすべて無料で受けることができます。":
     "All essential features are available with the Free plan.\nThe Pro license unlocks everything, including playlist & MyTag batch editing.\nIt's a one-time purchase — all future updates are included for free.",

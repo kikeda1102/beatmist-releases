@@ -277,7 +277,7 @@ export const pricingTiers: readonly PricingTier[] = [
       "ファイル数無制限での一括フォーマット変換",
       "rekordboxプレイリスト・マイタグの一括編集",
       "優先サポート",
-      "無料での一生涯アップデート",
+      "買い切り。今後のアップデートも追加料金なし",
     ],
     recommended: true,
     cta: {
