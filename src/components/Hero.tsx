@@ -386,7 +386,7 @@ export default function Hero() {
           {"\n"}
           {t("rekordboxのプレイリスト、マイタグも")}
           <MobileBr />
-          {t("一括編集可能。")}
+          {t("一括で編集可能です。")}
         </Subtext>
         <CtaButton href={hero.cta.href}>{t(hero.cta.label)}</CtaButton>
         <CarouselViewport ref={emblaRef}>

@@ -14,7 +14,7 @@ const en: Record<string, string> = {
   楽曲をCDJごとの対応フォーマットに: "Auto-convert tracks to ",
   "自動変換。": "CDJ-compatible formats.",
   "rekordboxのプレイリスト、マイタグも": "Batch edit rekordbox playlists ",
-  "一括編集可能。": "and MyTags.",
+  "一括で編集可能です。": "and MyTags.",
 
   // introduction
   "BeatMistは、CDJに適応する楽曲フォーマットへの一括変換や\nrekordboxとのシームレスな連携など、\nDJのための本格的な音源管理を提供するデスクトップアプリケーションです。":
@@ -674,8 +674,7 @@ const en: Record<string, string> = {
     "Header Formats That May Not Load on CDJs",
   "通常のWAVファイルはフォーマットタグにWAVE_FORMAT_PCM（0x0001）を使用しますが、一部のソフトウェアはWAVE_FORMAT_EXTENSIBLE（0xFFFE）という拡張形式を使用します。この形式はマルチチャンネル音声やチャンネルマスクの指定に対応していますが、CDJ-2000NXS2以前の機種ではエラー（E-8305等）の原因となることがあります。":
     "Standard WAV files use the WAVE_FORMAT_PCM (0x0001) format tag, but some software uses the extended format WAVE_FORMAT_EXTENSIBLE (0xFFFE). While this format supports multi-channel audio and channel masks, it can cause errors (such as E-8305) on CDJ-2000NXS2 and older models.",
-  fmtチャンクが先頭にない配置:
-    "Non-Leading fmt Chunk Placement",
+  fmtチャンクが先頭にない配置: "Non-Leading fmt Chunk Placement",
   "WAVファイルの仕様上、fmtチャンクはファイル先頭に配置される必要はありませんが、一部のCDJ機種はfmtチャンクがファイル先頭にない場合に正しく読み込めないことがあります。JUNKチャンクやbextチャンク（Broadcast Wave Format）がfmtチャンクより前に配置されている場合がこれに該当します。":
     "The WAV specification does not require the fmt chunk to be placed at the beginning of the file, but some CDJ models cannot properly read files where the fmt chunk is not first. This occurs when JUNK chunks or bext chunks (Broadcast Wave Format) are placed before the fmt chunk.",
   影響を受ける機種: "Affected Models",
@@ -684,7 +683,7 @@ const en: Record<string, string> = {
   影響: "Impact",
   "影響を受ける可能性あり — WAVE_FORMAT_EXTENSIBLEやfmt非先頭配置でエラーになる場合があります":
     "May be affected — WAVE_FORMAT_EXTENSIBLE or non-leading fmt placement may cause errors",
-  "影響を受ける可能性あり": "May be affected",
+  影響を受ける可能性あり: "May be affected",
   影響あり: "Affected",
   BeatMistの対応: "How BeatMist Handles This",
   "BeatMistはWAVファイルのスキャン時にヘッダー形式を自動検出し、CDJ非対応のヘッダーが見つかった場合にフォーマット列で警告を表示します。":
@@ -705,7 +704,7 @@ const en: Record<string, string> = {
     "The original file before repair is automatically backed up and can be restored at any time",
   "ヘッダーの修復は変換機能から実行できます。スペック（サンプルレート・ビット深度）の変更が不要な場合、ヘッダーのみの無劣化修復が自動的に選択されます。変換仕様の詳細は":
     "Header repair can be performed from the conversion feature. When no spec changes (sample rate, bit depth) are needed, lossless header-only repair is automatically selected. For details on conversion specifications, see",
-  "変換仕様についてはこちら": "Conversion Specifications",
+  変換仕様についてはこちら: "Conversion Specifications",
   参考リンク: "References",
   "WAV/RIFF仕様": "WAV/RIFF Specification",
   CDJ製品仕様: "CDJ Product Specifications",
