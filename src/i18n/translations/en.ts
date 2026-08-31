@@ -523,8 +523,8 @@ const en: Record<string, string> = {
   // faq section
   よくあるご質問: "FAQ",
   "ソフトウェアとしての品質は大丈夫ですか？": "Is the quality reliable?",
-  "BeatMistは高い頻度でアップデートを行い、ユーザーからのフィードバックに基づいて継続的に品質改善を行っています。{releaseNotes}から更新履歴をご確認いただけます。音声変換の核心部分には業界標準のFFmpegを採用しており、独自アルゴリズムによる予期しない不具合のリスクを排除しています。また、変換前の自動バックアップ機能により、万が一の問題が発生してもオリジナルファイルは常に安全に保護されています。":
-    "BeatMist receives frequent updates with continuous quality improvements based on user feedback. You can check the update history in the {releaseNotes}. The core audio conversion uses industry-standard FFmpeg, eliminating the risk of unexpected bugs from proprietary algorithms. Additionally, the automatic pre-conversion backup ensures your original files are always protected.",
+  "BeatMistはDJおよび本職のソフトウェアエンジニアとして活動している開発者によって開発されており、ユーザーからのフィードバックに基づいて継続的に品質改善を行っています。{releaseNotes}から更新履歴をご確認いただけます。音声変換の核心部分には業界標準のFFmpegを採用しており、独自アルゴリズムによる予期しない不具合のリスクを排除しています。また、変換前の自動バックアップ機能により、万が一の問題が発生してもオリジナルファイルは常に安全に保護されています。":
+    "BeatMist is developed by a developer who works as both a DJ and a professional software engineer, with continuous quality improvements based on user feedback. You can check the update history in the {releaseNotes}. The core audio conversion uses industry-standard FFmpeg, eliminating the risk of unexpected bugs from proprietary algorithms. Additionally, the automatic pre-conversion backup ensures your original files are always protected.",
   "使い方がわからなくなったらどうすればいいですか？":
     "What if I don't know how to use it?",
   "BeatMistには使い方ガイドと{docs}を用意しています。基本操作から変換ロジックの詳細まで、ステップバイステップで確認できます。また、{contact}や{twitter}、Discordコミュニティでもサポートを受け付けていますので、お気軽にご相談ください。":
@@ -646,7 +646,7 @@ const en: Record<string, string> = {
     '"Backing Up and Restoring the rekordbox Database"',
   "を参照してください。": ".",
   対応バージョン: "Supported Versions",
-  "rekordboxの最新バージョンに対応しています":
+  rekordboxの最新バージョンに対応しています:
     "Compatible with the latest version of rekordbox",
   "非対応バージョンの場合、設定画面でチェックボックスがグレーアウトされ、有効化できません":
     "For unsupported versions, the checkbox in settings is grayed out and cannot be enabled",
