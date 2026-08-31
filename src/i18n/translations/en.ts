@@ -587,7 +587,6 @@ const en: Record<string, string> = {
     "Before restoring, make sure rekordbox is completely closed. Overwriting the database files while rekordbox is running may cause data corruption.",
 
   // docs - rekordbox library sync
-  "rekordbox 連携": "rekordbox Integration",
   "ファイル変換やrekordboxプレイリスト・マイタグの操作をrekordboxデータベースに自動反映する機能について説明します。":
     "Learn about the feature that automatically syncs file conversions, playlist and MyTag changes to the rekordbox database.",
   "BeatMistの設定画面にある「rekordbox 連携」をオンにすると、BeatMistでのファイル変換やプレイリスト・マイタグの操作がrekordboxのデータベースに自動で反映されます。この機能により、BeatMistとrekordboxのライブラリを常に同期した状態に保てます。":
