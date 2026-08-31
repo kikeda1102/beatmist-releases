@@ -277,12 +277,19 @@ const CarouselSlide = styled.div`
   justify-content: center;
 `;
 
-const SlideImage = styled.img`
+const SlideImageWrapper = styled.div`
   width: 100%;
   max-width: ${spacing.containerMax};
   border-radius: 0.75rem;
   border: 1px solid ${colors.border};
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+`;
+
+const SlideImage = styled.img`
+  width: 100%;
+  display: block;
+  transform: scale(1.06) translateY(2%);
 `;
 
 const Dots = styled.div`
@@ -393,12 +400,14 @@ export default function Hero() {
           <CarouselContainer>
             {heroScreenshots.map((screenshot) => (
               <CarouselSlide key={screenshot.src}>
-                <SlideImage
-                  src={screenshot.src}
-                  alt={screenshot.alt}
-                  loading="lazy"
-                  decoding="async"
-                />
+                <SlideImageWrapper>
+                  <SlideImage
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </SlideImageWrapper>
               </CarouselSlide>
             ))}
           </CarouselContainer>
