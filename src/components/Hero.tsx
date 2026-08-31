@@ -404,7 +404,7 @@ export default function Hero() {
           {t("自動変換。")}
           {"\n"}
           {t("rekordboxのプレイリスト、マイタグも")}
-          <MobileBr />
+          {"\n"}
           {t("一括で編集可能です。")}
         </Subtext>
         <CtaButton href={hero.cta.href}>{t(hero.cta.label)}</CtaButton>
