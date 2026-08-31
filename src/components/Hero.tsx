@@ -4,8 +4,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { colors, fonts, media, spacing } from "../styles/theme";
-import { hero, site } from "../data/content";
+import { hero } from "../data/content";
 import { useTranslation } from "../i18n";
+import Lightbox from "./shared/Lightbox";
 
 const heroElementIn = keyframes`
   from {
@@ -284,12 +285,20 @@ const SlideImageWrapper = styled.div`
   border: 1px solid ${colors.border};
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  cursor: pointer;
 `;
 
 const SlideImage = styled.img`
   width: 100%;
   display: block;
   transform: scale(1.06) translateY(2%);
+`;
+
+const LightboxImage = styled.img`
+  width: 100%;
+  max-height: calc(90vh - 4rem);
+  object-fit: contain;
+  border-radius: 0.5rem;
 `;
 
 const Dots = styled.div`
@@ -317,9 +326,12 @@ const Dot = styled.button<{ $active: boolean }>`
   }
 `;
 
+type LightboxState = { src: string; alt: string } | null;
+
 export default function Hero() {
   const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const [lightbox, setLightbox] = useState<LightboxState>(null);
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: "center" },
@@ -400,7 +412,19 @@ export default function Hero() {
           <CarouselContainer>
             {heroScreenshots.map((screenshot) => (
               <CarouselSlide key={screenshot.src}>
-                <SlideImageWrapper>
+                <SlideImageWrapper
+                  role="button"
+                  tabIndex={0}
+                  onClick={() =>
+                    setLightbox({ src: screenshot.src, alt: screenshot.alt })
+                  }
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setLightbox({ src: screenshot.src, alt: screenshot.alt });
+                    }
+                  }}
+                >
                   <SlideImage
                     src={screenshot.src}
                     alt={screenshot.alt}
@@ -423,6 +447,15 @@ export default function Hero() {
           ))}
         </Dots>
       </Container>
+      {lightbox && (
+        <Lightbox
+          onClose={() => setLightbox(null)}
+          ariaLabel={lightbox.alt}
+          maxWidth="1200px"
+        >
+          <LightboxImage src={lightbox.src} alt={lightbox.alt} />
+        </Lightbox>
+      )}
     </section>
   );
 }

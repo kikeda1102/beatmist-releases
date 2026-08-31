@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { colors, fonts, media, spacing } from "../styles/theme";
 import { features } from "../data/content";
 import { useTranslation } from "../i18n";
+import Lightbox from "./shared/Lightbox";
 import ProblemBadgeMock from "./features/ProblemBadgeMock";
 import BackupRevertMock from "./features/BackupRevertMock";
 import MetadataEditMock from "./features/MetadataEditMock";
@@ -128,49 +129,10 @@ const CardLink = styled.a`
   }
 `;
 
-const Overlay = styled.div`
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
-`;
-
-const LightboxContent = styled.div`
-  position: relative;
-  max-width: 720px;
-  width: 90vw;
-  background-color: ${colors.bgCard};
-  border: 1px solid ${colors.border};
-  border-radius: 0.75rem;
-  padding: 1rem;
-`;
-
 const LightboxImage = styled.img`
   width: 100%;
   object-fit: contain;
   border-radius: 0.5rem;
-`;
-
-const CloseButton = styled.button`
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: none;
-  border: none;
-  color: ${colors.textSecondary};
-  font-size: 1.5rem;
-  cursor: pointer;
-  line-height: 1;
-  padding: 0.25rem 0.5rem;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: ${colors.textPrimary};
-  }
 `;
 
 type LightboxState =
@@ -182,18 +144,7 @@ export default function Features() {
   const { t } = useTranslation();
   const [lightbox, setLightbox] = useState<LightboxState>(null);
 
-  const closeLightbox = useCallback(() => {
-    setLightbox(null);
-  }, []);
-
-  useEffect(() => {
-    if (!lightbox) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeLightbox();
-    };
-    document.addEventListener("keydown", handleKeyDown);
-    return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [lightbox, closeLightbox]);
+  const closeLightbox = () => setLightbox(null);
 
   const openLightbox = (imageKey: string, alt: string) => {
     if (svgMockComponents[imageKey]) {
@@ -251,29 +202,20 @@ export default function Features() {
         </Grid>
       </Container>
       {lightbox && (
-        <Overlay
-          role="dialog"
-          aria-label={lightbox.alt}
-          onClick={closeLightbox}
-        >
-          <LightboxContent onClick={(e) => e.stopPropagation()}>
-            {lightbox.type === "mock" && svgMockComponents[lightbox.key] ? (
-              (() => {
-                const MockComponent = svgMockComponents[lightbox.key];
-                return (
-                  <LightboxMockWrapper>
-                    <MockComponent />
-                  </LightboxMockWrapper>
-                );
-              })()
-            ) : lightbox.type === "image" ? (
-              <LightboxImage src={lightbox.src} alt={lightbox.alt} />
-            ) : null}
-            <CloseButton onClick={closeLightbox} aria-label="Close">
-              &times;
-            </CloseButton>
-          </LightboxContent>
-        </Overlay>
+        <Lightbox onClose={closeLightbox} ariaLabel={lightbox.alt}>
+          {lightbox.type === "mock" && svgMockComponents[lightbox.key] ? (
+            (() => {
+              const MockComponent = svgMockComponents[lightbox.key];
+              return (
+                <LightboxMockWrapper>
+                  <MockComponent />
+                </LightboxMockWrapper>
+              );
+            })()
+          ) : lightbox.type === "image" ? (
+            <LightboxImage src={lightbox.src} alt={lightbox.alt} />
+          ) : null}
+        </Lightbox>
       )}
     </Section>
   );
