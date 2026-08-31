@@ -9,6 +9,7 @@ export const colors = {
   accent: "#34CCD0",
   accentHover: "#5DD6DA",
   accentSubtle: "rgba(52, 204, 208, 0.12)",
+  textOnAccent: "#0E0E0E",
   secondary: "#F22ED6",
   secondaryHover: "#F558DE",
   secondarySubtle: "rgba(242, 46, 214, 0.12)",

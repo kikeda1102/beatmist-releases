@@ -13,7 +13,7 @@ const StyledBadge = styled.span<{ $variant: "new" | "recommended" | "pro" }>`
     $variant === "new"
       ? css`
           background-color: ${colors.accent};
-          color: white;
+          color: ${colors.textOnAccent};
         `
       : $variant === "pro"
         ? css`

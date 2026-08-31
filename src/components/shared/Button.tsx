@@ -40,7 +40,7 @@ const buttonStyles = css<ButtonStyleProps>`
     $variant === "primary"
       ? css`
           background-color: ${colors.accent};
-          color: white;
+          color: ${colors.textOnAccent};
           border: none;
 
           &:hover {

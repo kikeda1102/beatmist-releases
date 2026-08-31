@@ -134,7 +134,7 @@ const SubmitButton = styled.button`
   cursor: pointer;
   transition: all 0.2s ease;
   background-color: ${colors.accent};
-  color: white;
+  color: ${colors.textOnAccent};
   border: none;
 
   &:hover:not(:disabled) {
