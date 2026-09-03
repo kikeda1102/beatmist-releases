@@ -76,11 +76,11 @@ export default function Tokushoho() {
           <tbody>
             <Row>
               <Header>販売業者</Header>
-              <Data>CuraRmx</Data>
+              <Data>BeatMist</Data>
             </Row>
             <Row>
               <Header>運営統括責任者</Header>
-              <Data>池田賢矢</Data>
+              <Data>請求があった場合に遅滞なく開示いたします。</Data>
             </Row>
             <Row>
               <Header>所在地</Header>
