@@ -288,7 +288,7 @@ export default function Download() {
           <>
             <StatusText>
               {t(
-                "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。",
+                "ダウンロードリンクを取得できませんでした。再試行しても表示されない場合は、お手数ですがお問い合わせフォームからお知らせください。",
               )}
             </StatusText>
             <RetryButton onClick={loadRelease}>
@@ -301,6 +301,10 @@ export default function Download() {
               rel="noopener noreferrer"
             >
               {t("GitHubのリリースページから直接ダウンロード")} &rarr;
+            </FallbackLink>
+            <br />
+            <FallbackLink href="/#contact">
+              {t("お問い合わせフォームを開く")} &rarr;
             </FallbackLink>
           </>
         )}

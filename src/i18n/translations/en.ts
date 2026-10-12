@@ -103,8 +103,9 @@ const en: Record<string, string> = {
   "さっそく使ってみましょう。すべての基本機能を無料でお使いいただけます。":
     "Get started now. All essential features are available for free.",
   "読み込み中...": "Loading...",
-  "ダウンロードリンクの取得に失敗しました。時間をおいて再度お試しください。":
-    "Failed to fetch download links. Please try again later.",
+  "ダウンロードリンクを取得できませんでした。再試行しても表示されない場合は、お手数ですがお問い合わせフォームからお知らせください。":
+    "Could not fetch the download links. If they still do not appear after retrying, please let us know via the contact form.",
+  お問い合わせフォームを開く: "Open the contact form",
   再試行: "Retry",
   GitHubのリリースページから直接ダウンロード:
     "Download directly from the GitHub releases page",
