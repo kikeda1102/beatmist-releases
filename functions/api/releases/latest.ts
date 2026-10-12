@@ -1,4 +1,10 @@
+import {
+  logGitHubRequestFailure,
+  logGitHubResponseError,
+} from "../../lib/logGitHubError";
+
 const GITHUB_REPO = "kikeda1102/beatmist-releases";
+const LOG_TAG = "Releases/latest";
 
 interface Env {
   GITHUB_TOKEN: string;
@@ -27,6 +33,7 @@ export const onRequestGet: PagesFunction<Env> = async ({ env }) => {
     );
 
     if (!res.ok) {
+      await logGitHubResponseError(LOG_TAG, res);
       return Response.json(
         { error: "Failed to fetch latest release from GitHub" },
         { status: 502 },
@@ -51,7 +58,8 @@ export const onRequestGet: PagesFunction<Env> = async ({ env }) => {
         },
       },
     );
-  } catch {
+  } catch (err) {
+    logGitHubRequestFailure(LOG_TAG, err);
     return Response.json(
       { error: "Failed to fetch latest release from GitHub" },
       { status: 502 },
