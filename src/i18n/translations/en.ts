@@ -109,8 +109,8 @@ const en: Record<string, string> = {
   再試行: "Retry",
   GitHubのリリースページから直接ダウンロード:
     "Download directly from the GitHub releases page",
-  "動作環境: Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）":
-    "System Requirements: Windows 10+ / macOS 12+ (Apple Silicon only)",
+  "動作環境: Windows 10以降 / macOS 13以降（Apple Siliconのみ対応）":
+    "System Requirements: Windows 10+ / macOS 13+ (Apple Silicon only)",
   "Windowsでインストール時に「WindowsによってPCが保護されました」と警告が表示されます。「詳細情報」→「実行」を押して、そのまま許可してインストールしてください。":
     'During Windows installation, you may see a "Windows protected your PC" warning. Click "More info" then "Run anyway" to proceed with the installation.',
   "macOSで初回起動時に確認ダイアログが表示されます。「開く」ボタンをクリックしてください。":

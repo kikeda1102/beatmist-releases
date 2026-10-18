@@ -278,7 +278,7 @@ export default function Download() {
         <Description>{t(download.description)}</Description>
         <SystemRequirements>
           {t(
-            "動作環境: Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）",
+            "動作環境: Windows 10以降 / macOS 13以降（Apple Siliconのみ対応）",
           )}
         </SystemRequirements>
 

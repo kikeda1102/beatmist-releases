@@ -129,7 +129,7 @@ export default function Tokushoho() {
             <Row>
               <Header>動作環境</Header>
               <Data>
-                Windows 10以降 / macOS 12以降（Apple Siliconのみ対応）
+                Windows 10以降 / macOS 13以降（Apple Siliconのみ対応）
               </Data>
             </Row>
           </tbody>
