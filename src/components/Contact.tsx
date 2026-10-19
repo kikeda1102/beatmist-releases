@@ -4,7 +4,13 @@ import { colors, fonts, media, spacing } from "../styles/theme";
 import { contact } from "../data/content";
 import { useTranslation } from "../i18n";
 import { contactFormSchema } from "../lib/validations/contact";
-import type { ContactFormResponse } from "../lib/types/contact";
+import {
+  type FieldErrors,
+  postContact,
+  resolveContactOutcome,
+  TURNSTILE_SITE_KEY,
+} from "../lib/contactApi";
+import { useTurnstile } from "../lib/useTurnstile";
 
 const Section = styled.section`
   padding: ${spacing.sectionPadding} 1.5rem;
@@ -163,12 +169,6 @@ const HoneypotField = styled.input`
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-interface FieldErrors {
-  name?: string[];
-  email?: string[];
-  message?: string[];
-}
-
 export default function Contact() {
   const { t } = useTranslation();
   const [name, setName] = useState("");
@@ -178,6 +178,7 @@ export default function Contact() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<FieldErrors | null>(null);
   const [responseMessage, setResponseMessage] = useState<string | null>(null);
+  const turnstile = useTurnstile(TURNSTILE_SITE_KEY);
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
@@ -195,38 +196,44 @@ export default function Contact() {
       return;
     }
 
+    // ボタンはトークンが取れるまで押せないが、Enter キーでの送信もここで止める
+    if (turnstile.token === null) return;
+
     setStatus("submitting");
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message, confirm_url_hp: honeypot }),
+      const response = await postContact({
+        ...parsed.data,
+        turnstileToken: turnstile.token,
+        honeypot,
       });
+      const outcome = resolveContactOutcome(response);
 
-      const data: ContactFormResponse = await res.json();
-
-      if (data.success) {
+      if (outcome.kind === "success") {
         setStatus("success");
         // 確認メールは送らないので、回答先のアドレスを画面に出して打ち間違いに気づけるようにする
-        setResponseMessage(t(contact.success).replace("{email}", email));
+        setResponseMessage(t(contact.success).replace("{email}", parsed.data.email));
         setName("");
         setEmail("");
         setMessage("");
         setHoneypot("");
-      } else if (data.errors) {
+      } else if (outcome.kind === "fieldErrors") {
         setStatus("idle");
-        setErrors(data.errors);
-        setResponseMessage(data.message);
+        setErrors(outcome.errors);
       } else {
         setStatus("error");
-        setResponseMessage(data.message);
+        setResponseMessage(t(outcome.message));
       }
     } catch {
       setStatus("error");
       setResponseMessage(t(contact.error));
+    } finally {
+      turnstile.reset();
     }
   }
+
+  const displayedMessage =
+    responseMessage ?? (turnstile.failed ? t(contact.turnstileError) : null);
 
   return (
     <Section id="contact">
@@ -297,9 +304,9 @@ export default function Contact() {
               )}
             </FieldGroup>
 
-            {responseMessage && !errors && (
+            {displayedMessage && !errors && (
               <MessageBox $success={status === "success"}>
-                {responseMessage.split("\n").map((line, i) => (
+                {displayedMessage.split("\n").map((line, i) => (
                   <span key={i}>
                     {i > 0 && <br />}
                     {line}
@@ -308,7 +315,12 @@ export default function Contact() {
               </MessageBox>
             )}
 
-            <SubmitButton type="submit" disabled={status === "submitting"}>
+            <div ref={turnstile.containerRef} />
+
+            <SubmitButton
+              type="submit"
+              disabled={status === "submitting" || turnstile.token === null}
+            >
               {status === "submitting" ? t(contact.submitting) : t(contact.submit)}
             </SubmitButton>
           </Form>

@@ -309,6 +309,8 @@ export const contact = {
   rateLimit:
     "送信回数の上限に達しました。しばらく経ってからもう一度お試しください。",
   validationError: "入力内容に誤りがあります。",
+  turnstileError:
+    "確認に失敗したため、送信できませんでした。お手数ですが、ページを読み込み直してもう一度お試しください。",
   validation: {
     nameRequired: "お名前を入力してください",
     nameMax: "お名前は100文字以内で入力してください",

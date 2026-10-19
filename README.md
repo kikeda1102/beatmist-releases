@@ -23,6 +23,18 @@ pnpm build      # プロダクションビルド
 | `pnpm dev` | Astro 開発サーバーのみ | UI・コンポーネントの開発。軽量で高速 |
 | `pnpm dev:cf` | Wrangler 経由で Astro + Cloudflare Functions | API エンドポイント（`/api/*`）を含む完全な環境。Functions の動作確認が必要なときに使用 |
 
+## お問い合わせフォーム
+
+フォームの送信は、共通のお問い合わせ API（`https://contact.sync-note.com/v1/contact/beatmist`、リポジトリは contact-api）に送ります。入力の確認、回数の上限、Turnstile の確認、メールの送信は API が行います。
+
+API の URL と Turnstile のサイトキーは、既定では本番の値を使います。ローカルで共通 API の `wrangler dev` に送るときは、`.env` に次のように書きます。
+
+```bash
+PUBLIC_CONTACT_API_URL=http://127.0.0.1:8787
+# Cloudflare のテスト用のサイトキー（必ず通る）
+PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA
+```
+
 ## ユーザーの声（ツイート）
 
 トップページのカルーセルに表示するツイートは `src/data/tweets.json` から読み込まれます。
@@ -93,10 +105,6 @@ GitHub Releases API からダウンロード数を取得して返します。`.d
   ]
 }
 ```
-
-### `POST /api/contact`
-
-お問い合わせフォームの送信を処理します。レート制限あり（60秒間に3回まで）。
 
 ### `GET /api/license`
 

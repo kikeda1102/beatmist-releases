@@ -133,6 +133,8 @@ const en: Record<string, string> = {
   "送信回数の上限に達しました。しばらく経ってからもう一度お試しください。":
     "Rate limit reached. Please try again later.",
   "入力内容に誤りがあります。": "There are errors in your input.",
+  "確認に失敗したため、送信できませんでした。お手数ですが、ページを読み込み直してもう一度お試しください。":
+    "Verification failed, so your message could not be sent. Please reload the page and try again.",
   お名前を入力してください: "Please enter your name",
   お名前は100文字以内で入力してください: "Name must be 100 characters or fewer",
   不正な文字が含まれています: "Contains invalid characters",
