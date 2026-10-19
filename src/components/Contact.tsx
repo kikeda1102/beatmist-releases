@@ -208,7 +208,8 @@ export default function Contact() {
 
       if (data.success) {
         setStatus("success");
-        setResponseMessage(data.message);
+        // 確認メールは送らないので、回答先のアドレスを画面に出して打ち間違いに気づけるようにする
+        setResponseMessage(t(contact.success).replace("{email}", email));
         setName("");
         setEmail("");
         setMessage("");

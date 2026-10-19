@@ -126,8 +126,8 @@ const en: Record<string, string> = {
   必須: "Required",
   送信する: "Submit",
   "送信中...": "Submitting...",
-  "お問い合わせを受け付けました。確認メールをお送りしましたのでご確認ください。\nもし届かない場合は、迷惑メールフォルダをご確認ください。":
-    "Your inquiry has been received. A confirmation email has been sent.\nIf you don't receive it, please check your spam folder.",
+  "お問い合わせを受け付けました。\n内容を確認して、{email} 宛てにメールで回答します。":
+    "Your inquiry has been received.\nWe will review it and reply by email to {email}.",
   "送信に失敗しました。お手数ですが、しばらく経ってからもう一度お試しください。":
     "Submission failed. Please try again later.",
   "送信回数の上限に達しました。しばらく経ってからもう一度お試しください。":
