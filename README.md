@@ -45,42 +45,6 @@ PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA
 2. `pnpm fetch-tweets` を実行して `tweets.json` を再生成
 3. 生成された `tweets.json` をコミットに含める（ビルド時には取得しない）
 
-## 開発予定（ロードマップ）
-
-サイトの [/roadmap](https://beatmist.com/roadmap) ページに表示される開発予定は、リポジトリルートの `roadmap.yml` から動的に取得されます。
-
-### 表示の制御
-
-`src/config.ts` の `displayRoadmap` フラグで、開発予定に関連する全UI（ヘッダーナビ・フッターリンク・トップページのバナー・`/roadmap` ページ）の表示/非表示を一括制御できます。
-
-```typescript
-// src/config.ts
-export const displayRoadmap = true;  // false にすると全て非表示
-```
-
-フラグを `false` にした場合、`/roadmap` への直接アクセスはトップページにリダイレクトされます。変更にはデプロイが必要です。
-
-### データの更新方法
-
-GitHub 上で [`roadmap.yml`](https://github.com/kikeda1102/beatmist-releases/blob/main/roadmap.yml) を直接編集・コミットするだけでサイトに反映されます（デプロイ不要）。GitHub CDN のキャッシュにより、反映まで最大約5分かかります。
-
-### YAML の構造
-
-```yaml
-last_updated: "2026-05-01"
-
-categories:
-  - id: planned          # planned / considering / completed
-    label: "対応予定"      # 日本語表示名
-    label_en: "Planned"   # 英語表示名
-    items:
-      - title: "機能名"
-        title_en: "Feature Name"
-        description: "説明"
-        description_en: "Description"
-        priority: high    # high / medium / low
-```
-
 ## API エンドポイント
 
 ### `GET /api/downloads`

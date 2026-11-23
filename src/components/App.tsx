@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { displayRoadmap, displayUserVoices } from "../config";
+import { displayUserVoices } from "../config";
 import { TranslationProvider } from "../i18n";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -8,7 +8,6 @@ import Highlights from "./Highlights";
 import UserVoices from "./UserVoices";
 import Download from "./Download";
 import ReleaseNotes from "./ReleaseNotes";
-import RoadmapBanner from "./RoadmapBanner";
 import Pricing from "./Pricing";
 import Faq from "./Faq";
 import Contact from "./Contact";
@@ -63,7 +62,6 @@ export default function App() {
         {displayUserVoices && <UserVoices />}
         <Pricing />
         <Download />
-        {displayRoadmap && <RoadmapBanner />}
         <Faq />
         <ReleaseNotes />
         <Contact />
